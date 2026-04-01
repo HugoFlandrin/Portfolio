@@ -1,0 +1,277 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #43424b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #232020;
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background-color: #1a1818;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 9999px;
+    padding: 4px 16px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.search-icon {
+    color: #232020;
+}
+
+/* About Section */
+.about-section {
+    background-color: #5e616c;
+    padding: 64px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.profile-image {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.about-text p {
+    font-size: 20px;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 64px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 192px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    text-align: center;
+}
+
+.project-title h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #2f2e35;
+    padding: 64px 0;
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    background-color: #43424b;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+    background-color: #5e616c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .search-container {
+        width: 100%;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+}
