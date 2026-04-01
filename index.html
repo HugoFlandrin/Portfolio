@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <!-- <label>
+        <span style="visibility:hidden; overflow: hidden; position: absolute;">Search</span>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Research">
+            <div class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+        </div>
+        </label> -->
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="img/AboutMe.jpg" alt="Profile">
+                </div>
+                <div class="about-text">
+                    <h1>About me</h1>
+                    <p>I am a gameplay and engine programmer, specializing in scalable gameplay systems and modular technical architecture. I have experience in C++, C#, Unreal Engine, Unity, and custom engine development, gained through university and personal projects. Alongside my university studies, I work on freelance projects to apply my skills to concrete and rewarding projects in the fields of web and video games. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/HugoFlandrin/Escape" target="_blank" rel="noopener noreferrer"> 
+                        <!-- pages/escape.html -->
+                        <img src="img/Escape.png" alt="Escape">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <h3>Escape</h3>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/HugoFlandrin/PokemonMonster" target="_blank" rel="noopener noreferrer"> 
+                        <!-- pages/pokemon_monster.html -->
+                        <img src="img/PokemonMonster.jpg" alt="Pokemon Monster">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <h3>Pokemon Monster</h3>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/HugoFlandrin/Gametalk" target="_blank" rel="noopener noreferrer">
+                        <!-- pages/gametalk.html -->
+                        <img src="img/Gametalk.png" alt="Gametalk">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <h3>Gametalk</h3>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/HugoFlandrin/NightLife" target="_blank" rel="noopener noreferrer">
+                        <!-- pages/nightlife.html -->
+                        <img src="img/NightLife.png" alt="Nightlife">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <h3>Nightlife</h3>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/HugoFlandrin/2D-Game-Engine" target="_blank" rel="noopener noreferrer">
+                        <!-- pages/game_engine.html -->
+                        <img src="img/2DGameEngineDemo.png" alt="2D/3D Game Engine">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <h3>Game Engine 2D/3D</h3>
+                    </div>
+                </div>
+                <!-- <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/HugoFlandrin/Taisaku-no-Shima" target="_blank" rel="noopener noreferrer">
+                        <img src="img/TaisakuNoShima.png" alt="Taisaku no Shima">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <h3>Taisaku no Shima</h3>
+                    </div>
+                </div> -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/HugoFlandrin/PlatypusOfCorner" target="_blank" rel="noopener noreferrer">
+                        <!-- pages/platypus_of_corner.html -->
+                        <img src="img/PlatypusOfCorner.png" alt="PlatypusOfCorner">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <h3>Platypus Of Corner</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form class="contact-form" action="https://formspree.io/f/mkgjydkg" method="POST" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+    
+                <button type="submit" class="submit-button">Send</button>
+    
+                <p id="formMessage" style="margin-top: 16px; display: none;"></p>
+            </form>
+        </div>
+    </section>    
+</body>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+    
+        const form = e.target;
+        const data = new FormData(form);
+        const messageEl = document.getElementById('formMessage');
+    
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+    
+            if (response.ok) {
+                messageEl.style.display = 'block';
+                messageEl.style.color = 'lightgreen';
+                messageEl.textContent = "✅ Your message has been sent!";
+                form.reset();
+            } else {
+                const result = await response.json();
+                throw new Error(result.error || "An error occurred.");
+            }
+        } catch (err) {
+            messageEl.style.display = 'block';
+            messageEl.style.color = 'salmon';
+            messageEl.textContent = `❌ Failed to send message: ${err.message}`;
+        }
+    });
+</script>
+
+</html>
