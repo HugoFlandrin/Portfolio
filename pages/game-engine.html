@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Engine 2D/3D - Hugo Flandrin</title>
+    <link rel="icon" type="image/png" href="../static/icons/favicon-engine.png">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-theme="engine">
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+    </div>
+</nav>
+
+<div class="project-container">
+    <div class="project-left">
+        <h1>Game Engine 2D/3D</h1>
+
+        <p class="subtitle">
+            A C++ 2D game engine (SFML + Box2D) with a platformer demo.
+        </p>
+
+        <p>
+            This project is a custom 2D engine built in C++ using SFML for rendering/input and Box2D for physics.
+            A platformer demo validates the engine systems through a concrete gameplay scenario (movement, collisions, enemies, levels, UI).
+        </p>
+
+        <h2 data-i18n="project.challenges">Challenges</h2>
+        <p class="highlight">
+            Building a modular engine means defining clear system boundaries while keeping the demo game fun and stable.
+        </p>
+        <ul>
+            <li>Integrating Box2D physics cleanly with gameplay logic</li>
+            <li>Scene/level management and reliable transitions</li>
+            <li>Maintaining a predictable game loop and update order</li>
+        </ul>
+
+        <h2 data-i18n="project.whatBuilt">What I built</h2>
+        <ul>
+            <li>Core engine systems: game loop, scenes/levels, rendering pipeline</li>
+            <li>Entity/gameplay systems: player controller, collisions, basic enemies, health & game state</li>
+            <li>Level management: two playable levels with structured platformer layout</li>
+            <li>UI systems: main menu, game over, score & timer</li>
+        </ul>
+
+        <h2 data-i18n="project.technologies">Technologies used</h2>
+        <ul>
+            <li>C++</li>
+            <li>SFML</li>
+            <li>Box2D</li>
+        </ul>
+
+        <h2 data-i18n="project.links">Links</h2>
+        <div class="links">
+            <a href="https://github.com/HugoFlandrin/2D-Game-Engine" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
+        </div>
+    </div>
+
+    <div class="project-right">
+        <div class="media-images">
+            <div class="media-item">
+                <img src="../static/img/2DGameEngineDemo.png" alt="Game Engine screenshot">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="image-modal" aria-hidden="true">
+    <img id="modal-img" alt="Expanded screenshot">
+</div>
+
+<script src="../static/js/i18n.js"></script>
+<script>
+const navbar = document.querySelector(".navbar");
+const setNavShadow = () => {
+    if (!navbar) return;
+    navbar.classList.toggle("scrolled", window.scrollY > 8);
+};
+window.addEventListener("scroll", setNavShadow, { passive: true });
+setNavShadow();
+
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+
+document.querySelectorAll(".media-item img").forEach((img) => {
+    img.addEventListener("click", () => {
+        modalImg.src = img.src;
+        modal.style.display = "flex";
+        modal.setAttribute("aria-hidden", "false");
+    });
+});
+
+modal.addEventListener("click", () => {
+    modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
+    modalImg.src = "";
+});
+</script>
+
+</body>
+</html>

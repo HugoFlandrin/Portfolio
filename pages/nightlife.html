@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightlife - Hugo Flandrin</title>
+    <link rel="icon" type="image/png" href="../static/icons/favicon-nightlife.png">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-theme="nightlife">
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+    </div>
+</nav>
+
+<div class="project-container">
+    <div class="project-left">
+        <h1>Nightlife</h1>
+
+        <p class="subtitle">
+            A 3D first-person Unreal Engine 5 game made in 5 days (hackathon).
+        </p>
+
+        <p>
+            NightLife was created during a five-day hackathon with the theme “nightlife”. The game starts inside a nightclub, then sends
+            the player into the city at night, where choices, exploration, and unexpected events drive a comedic and absurd adventure.
+        </p>
+
+        <h2 data-i18n="project.challenges">Challenges</h2>
+        <p class="highlight">
+            Shipping a complete Unreal project in 5 days means ruthless prioritization: readable levels, stable interactions, and fast iteration.
+        </p>
+        <ul>
+            <li>Designing a branching, choice-driven flow under tight time constraints</li>
+            <li>Maintaining strong atmosphere (night city) while keeping navigation clear</li>
+            <li>Audio integration with all voices in French to support the comedic tone</li>
+        </ul>
+
+        <h2 data-i18n="project.whatBuilt">What I built</h2>
+        <ul>
+            <li>First-person exploration and interaction moments (club → city)</li>
+            <li>Choice-driven situations (talk, drink, bouncer conflict, etc.)</li>
+            <li>Easter eggs and “inside jokes” for an unpredictable run</li>
+        </ul>
+
+        <h2 data-i18n="project.technologies">Technologies used</h2>
+        <ul>
+            <li>Unreal Engine 5</li>
+            <li>Gameplay scripting</li>
+            <li>Audio integration</li>
+        </ul>
+
+        <h2 data-i18n="project.links">Links</h2>
+        <div class="links">
+            <a href="https://github.com/HugoFlandrin/NightLife" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
+            <a href="https://hugoflandrin.itch.io/nightlife" target="_blank" rel="noopener noreferrer" data-i18n="project.itch">Itch.io</a>
+        </div>
+    </div>
+
+    <div class="project-right">
+        <div class="media-images">
+            <div class="media-item">
+                <img src="../static/img/NightLife.png" alt="Nightlife screenshot">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="image-modal" aria-hidden="true">
+    <img id="modal-img" alt="Expanded screenshot">
+</div>
+
+<script src="../static/js/i18n.js"></script>
+<script>
+const navbar = document.querySelector(".navbar");
+const setNavShadow = () => {
+    if (!navbar) return;
+    navbar.classList.toggle("scrolled", window.scrollY > 8);
+};
+window.addEventListener("scroll", setNavShadow, { passive: true });
+setNavShadow();
+
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+
+document.querySelectorAll(".media-item img").forEach((img) => {
+    img.addEventListener("click", () => {
+        modalImg.src = img.src;
+        modal.style.display = "flex";
+        modal.setAttribute("aria-hidden", "false");
+    });
+});
+
+modal.addEventListener("click", () => {
+    modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
+    modalImg.src = "";
+});
+</script>
+
+</body>
+</html>
