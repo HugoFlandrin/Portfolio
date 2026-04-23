@@ -1,0 +1,122 @@
+/* Shared navbar (must look identical on every page) */
+
+:root {
+    --nav-height: 64px;
+    --nav-bg: #0b2631;
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --nav-text: rgba(255, 255, 255, 0.92);
+    --nav-text-muted: rgba(255, 255, 255, 0.72);
+    --nav-glow: rgba(77, 163, 255, 0.22);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    height: var(--nav-height);
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--nav-border);
+
+    transition: box-shadow 0.25s ease;
+}
+
+.navbar.scrolled {
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 0 40px var(--nav-glow);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    position: relative;
+    padding: 10px 6px;
+    opacity: 0.95;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(77,163,255,0.0), rgba(77,163,255,1), rgba(255,138,101,0.0));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.lang-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: var(--nav-text);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    border-radius: 999px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-toggle:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 14px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 10px 4px;
+        color: var(--nav-text-muted);
+    }
+
+    .nav-link:hover {
+        color: var(--nav-text);
+    }
+
+    .lang-toggle {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+
