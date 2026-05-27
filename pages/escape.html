@@ -18,6 +18,7 @@
         <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
         <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="freelance.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
         <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
     </div>
 </nav>
@@ -38,6 +39,28 @@
             Escape is a first-person thriller blending exploration, tension, and puzzle-solving. You wake up in a dark room with only a flickering flashlight.
             To survive, you must investigate, solve escape room-style puzzles, and uncover fragments of the story before time runs out.
         </p>
+
+        <div class="tech-badges-row">
+            <span class="tech-badge">Unreal Engine 5</span>
+            <span class="tech-badge">Blueprint</span>
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">Gameplay</span>
+        </div>
+
+        <h2 data-i18n="project.tech.title">Technical focus</h2>
+        <p class="tech-note" data-i18n="project.escape.tech.note">
+            Gameplay systems prioritize readable interaction in low light: flashlight-driven exploration, inspectable objects, and puzzle gates tied to narrative beats.
+        </p>
+
+        <h2 data-i18n="project.decisions.title">Key decisions</h2>
+        <ul>
+            <li data-i18n="project.escape.decision1">Implicit time pressure via audio/visual cues instead of on-screen timers</li>
+            <li data-i18n="project.escape.decision2">Modular puzzle actors with shared interaction interface</li>
+            <li data-i18n="project.escape.decision3">Lighting volumes tuned per room for consistent readability</li>
+        </ul>
+
+        <h2 data-i18n="project.workflow.title">Workflow</h2>
+        <p data-i18n="project.escape.workflow">Blockout → gameplay pass → lighting/audio polish → playtest for puzzle clarity and pacing.</p>
 
         <h2 data-i18n="project.challenges">Challenges</h2>
         <p class="highlight" data-i18n="project.escape.challengeHighlight">
@@ -77,28 +100,28 @@
     <div class="project-right">
         <div class="media-images">
 
-            <div class="media-item">
+            <figure class="media-item">
                 <img src="../static/img/Escape.png" alt="Escape screenshot 1">
-            </div>
+                <figcaption class="media-caption" data-i18n="project.escape.caption1">Low-light exploration — flashlight as primary navigation tool</figcaption>
+            </figure>
 
-            <div class="media-item">
+            <figure class="media-item">
                 <img src="../static/img/Escape2.png" alt="Escape screenshot 2">
-            </div>
+                <figcaption class="media-caption" data-i18n="project.escape.caption2">Puzzle space designed for investigation and environmental storytelling</figcaption>
+            </figure>
         </div>
 
-        <!-- VIDEO SLIDER -->
         <div class="media-video">
             <div class="video-viewer">
                 <div class="video-slide active">
-                    <video controls>
+                    <video controls poster="../static/img/Escape.png">
                         <source src="../static/mp4/Escape-AprilDemo.mp4" type="video/mp4">
                     </video>
                 </div>
-
-                <!-- ARROWS -->
-                <button class="prev-video">&#10094;</button>
-                <button class="next-video">&#10095;</button>
+                <button class="prev-video" type="button" aria-label="Previous video">&#10094;</button>
+                <button class="next-video" type="button" aria-label="Next video">&#10095;</button>
             </div>
+            <p class="media-caption" data-i18n="project.escape.captionVideo">April demo — interaction loop and atmosphere pacing</p>
         </div>
     </div>
 </div>
@@ -109,68 +132,7 @@
 </div>
 
 <script src="../static/js/i18n.js"></script>
-<script>
-// Navbar shadow on scroll (shared behavior)
-const navbar = document.querySelector(".navbar");
-const setNavShadow = () => {
-    if (!navbar) return;
-    navbar.classList.toggle("scrolled", window.scrollY > 8);
-};
-window.addEventListener("scroll", setNavShadow, { passive: true });
-setNavShadow();
-
-// Video slider (supports 1+ videos; arrows hide if not needed)
-const videoSlides = Array.from(document.querySelectorAll(".video-slide"));
-const prevVideoBtn = document.querySelector(".prev-video");
-const nextVideoBtn = document.querySelector(".next-video");
-let videoIndex = 0;
-
-function showVideo(i) {
-    videoSlides.forEach((slide) => slide.classList.remove("active"));
-    videoSlides[i].classList.add("active");
-}
-
-function stopAllVideos() {
-    document.querySelectorAll("video").forEach((v) => {
-        try { v.pause(); } catch {}
-    });
-}
-
-if (videoSlides.length <= 1) {
-    prevVideoBtn.style.display = "none";
-    nextVideoBtn.style.display = "none";
-} else {
-    prevVideoBtn.addEventListener("click", () => {
-        stopAllVideos();
-        videoIndex = (videoIndex - 1 + videoSlides.length) % videoSlides.length;
-        showVideo(videoIndex);
-    });
-
-    nextVideoBtn.addEventListener("click", () => {
-        stopAllVideos();
-        videoIndex = (videoIndex + 1) % videoSlides.length;
-        showVideo(videoIndex);
-    });
-}
-
-// Image modal
-const modal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-img");
-
-document.querySelectorAll(".media-item img").forEach((img) => {
-    img.addEventListener("click", () => {
-        modalImg.src = img.src;
-        modal.style.display = "flex";
-        modal.setAttribute("aria-hidden", "false");
-    });
-});
-
-modal.addEventListener("click", () => {
-    modal.style.display = "none";
-    modal.setAttribute("aria-hidden", "true");
-    modalImg.src = "";
-});
-</script>
+<script src="../static/js/project.js"></script>
 
 </body>
 </html>

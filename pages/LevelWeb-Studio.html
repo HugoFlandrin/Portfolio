@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="freelance.meta.title">LevelWeb-Studio - Hugo Flandrin</title>
+    <link rel="icon" type="image/png" href="../static/img/Logo.png">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-theme="engine">
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="../index.html#top" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+    </div>
+</nav>
+
+<div class="project-container">
+    <div class="project-left">
+        <h1 data-i18n="freelance.title">LevelWeb-Studio</h1>
+
+        <p class="subtitle" data-i18n="freelance.subtitle">
+            LevelWeb Studio is my freelance activity focused on web and video game development. Through this structure, I work on concrete and rewarding projects, ranging from modern web applications to gameplay and technical programming. It allows me to continuously improve my skills while gaining real-world experience in software development, client communication, and project management.
+        </p>
+
+        <h2 data-i18n="freelance.what.title">What I can help with</h2>
+        <ul>
+            <li data-i18n="freelance.what.item1">Web development (front-end & back-end)</li>
+            <li data-i18n="freelance.what.item2">Video game development (gameplay / tools / prototypes)</li>
+            <li data-i18n="freelance.what.item3">Improving and maintaining existing projects</li>
+        </ul>
+
+        <h2 data-i18n="freelance.profile.title">Profile</h2>
+        <p data-i18n="freelance.profile.body">
+            I have around 1 year of experience, mainly doing front-end and back-end modifications on existing websites. I position myself as a junior / beginner profile: motivated, rigorous, and focused on shipping useful improvements.
+        </p>
+
+        <h2 data-i18n="freelance.rates.title">Rates</h2>
+        <p data-i18n="freelance.rates.body">
+            Negotiable depending on scope, timeline, and project constraints.
+        </p>
+
+        <h2 data-i18n="freelance.cta.title">Let’s talk</h2>
+        <p data-i18n="freelance.cta.body">
+            If you have a project in mind (new build, improvements, bug fixes, or a prototype), send me a message and we’ll discuss the best collaboration format.
+        </p>
+
+        <div class="links">
+            <a href="../index.html#contact" data-i18n="freelance.cta.contactLink">Go to contact</a>
+        </div>
+    </div>
+
+    <div class="project-right">
+        <div class="media-images">
+            <div class="media-item">
+                <img src="../static/img/AboutMe.jpg" alt="Profile picture">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/i18n.js"></script>
+<script>
+// Navbar shadow on scroll (shared behavior)
+const navbar = document.querySelector(".navbar");
+const setNavShadow = () => {
+    if (!navbar) return;
+    navbar.classList.toggle("scrolled", window.scrollY > 8);
+};
+window.addEventListener("scroll", setNavShadow, { passive: true });
+setNavShadow();
+</script>
+
+</body>
+</html>
+

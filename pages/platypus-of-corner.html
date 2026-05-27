@@ -17,6 +17,7 @@
         <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
         <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="freelance.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
         <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
     </div>
 </nav>
@@ -33,6 +34,24 @@
             Platypus of Corner is a short 3D platformer created in 48 hours with the theme “Onirique” (dreamlike).
             You play as a mysterious creature trapped in a surreal floating world, racing against time to recover 3 dream fragments.
         </p>
+
+        <div class="tech-badges-row">
+            <span class="tech-badge">Unity</span>
+            <span class="tech-badge">C#</span>
+            <span class="tech-badge">48h Game Jam</span>
+        </div>
+
+        <h2 data-i18n="project.tech.title">Technical focus</h2>
+        <p class="tech-note" data-i18n="project.platypus.tech.note">
+            Tight scope: one movement controller, three collectibles, timer-driven pressure, and E-key interactions reused across levels.
+        </p>
+
+        <h2 data-i18n="project.decisions.title">Key decisions</h2>
+        <ul>
+            <li data-i18n="project.platypus.decision1">Single interaction component for puzzles and pickups</li>
+            <li data-i18n="project.platypus.decision2">Readable silhouettes and floating paths for dreamlike navigation</li>
+            <li data-i18n="project.platypus.decision3">Polish budget spent on jump feel and camera</li>
+        </ul>
 
         <h2 data-i18n="project.challenges">Challenges</h2>
         <p class="highlight" data-i18n="project.platypus.challengeHighlight">
@@ -68,9 +87,10 @@
 
     <div class="project-right">
         <div class="media-images">
-            <div class="media-item">
+            <figure class="media-item">
                 <img src="../static/img/PlatypusOfCorner.png" alt="Platypus Of Corner screenshot">
-            </div>
+                <figcaption class="media-caption" data-i18n="project.platypus.caption1">3D platforming layout — time-limited fragment collection</figcaption>
+            </figure>
         </div>
     </div>
 </div>
@@ -80,32 +100,7 @@
 </div>
 
 <script src="../static/js/i18n.js"></script>
-<script>
-const navbar = document.querySelector(".navbar");
-const setNavShadow = () => {
-    if (!navbar) return;
-    navbar.classList.toggle("scrolled", window.scrollY > 8);
-};
-window.addEventListener("scroll", setNavShadow, { passive: true });
-setNavShadow();
-
-const modal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-img");
-
-document.querySelectorAll(".media-item img").forEach((img) => {
-    img.addEventListener("click", () => {
-        modalImg.src = img.src;
-        modal.style.display = "flex";
-        modal.setAttribute("aria-hidden", "false");
-    });
-});
-
-modal.addEventListener("click", () => {
-    modal.style.display = "none";
-    modal.setAttribute("aria-hidden", "true");
-    modalImg.src = "";
-});
-</script>
+<script src="../static/js/project.js"></script>
 
 </body>
 </html>
