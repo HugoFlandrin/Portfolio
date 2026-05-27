@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Engine 2D/3D - Hugo Flandrin</title>
+    <title>2D Game Engine - Hugo Flandrin</title>
     <link rel="icon" type="image/png" href="../static/img/Logo.png">
     <link rel="stylesheet" href="../static/css/project.css">
     <link rel="stylesheet" href="../static/css/navbar.css">
@@ -17,22 +17,124 @@
         <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
         <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="freelance.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
         <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
     </div>
 </nav>
 
 <div class="project-container">
     <div class="project-left">
-        <h1>Game Engine 2D/3D</h1>
+        <h1>2D Game Engine</h1>
 
         <p class="subtitle" data-i18n="project.engine.subtitle">
             A C++ 2D game engine (SFML + Box2D) with a platformer demo.
         </p>
 
+        <div class="tech-badges-row">
+            <span class="tech-badge">C++17</span>
+            <span class="tech-badge">SFML</span>
+            <span class="tech-badge">Box2D</span>
+            <span class="tech-badge">Custom ECS-lite</span>
+        </div>
+
         <p data-i18n="project.engine.description">
             This project is a custom 2D engine built in C++ using SFML for rendering/input and Box2D for physics.
             A platformer demo validates the engine systems through a concrete gameplay scenario (movement, collisions, enemies, levels, UI).
         </p>
+
+        <h2 data-i18n="project.engine.arch.title">Architecture</h2>
+        <p class="tech-note" data-i18n="project.engine.arch.note">
+            Systems are layered: a fixed-timestep game loop drives scene updates; each scene owns entity lists and delegates rendering, physics, and gameplay in a strict order.
+        </p>
+        <div class="diagram-wrap" role="img" aria-label="Engine architecture diagram">
+            <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="200" y="8" width="120" height="36" rx="6" fill="#1e3a5f" stroke="#3b82f6"/>
+                <text x="260" y="31" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter,sans-serif">Game Loop</text>
+                <line x1="260" y1="44" x2="260" y2="58" stroke="#3b82f6" stroke-width="2"/>
+                <rect x="180" y="58" width="160" height="36" rx="6" fill="#1e3a5f" stroke="#3b82f6"/>
+                <text x="260" y="81" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter,sans-serif">Scene Manager</text>
+                <line x1="260" y1="94" x2="260" y2="108" stroke="#3b82f6" stroke-width="2"/>
+                <rect x="60" y="108" width="100" height="32" rx="6" fill="#111827" stroke="#6b7280"/>
+                <text x="110" y="129" text-anchor="middle" fill="#e5e7eb" font-size="11" font-family="Inter,sans-serif">Input</text>
+                <rect x="180" y="108" width="100" height="32" rx="6" fill="#111827" stroke="#6b7280"/>
+                <text x="230" y="129" text-anchor="middle" fill="#e5e7eb" font-size="11" font-family="Inter,sans-serif">Physics</text>
+                <rect x="300" y="108" width="100" height="32" rx="6" fill="#111827" stroke="#6b7280"/>
+                <text x="350" y="129" text-anchor="middle" fill="#e5e7eb" font-size="11" font-family="Inter,sans-serif">Gameplay</text>
+                <rect x="420" y="108" width="80" height="32" rx="6" fill="#111827" stroke="#6b7280"/>
+                <text x="460" y="129" text-anchor="middle" fill="#e5e7eb" font-size="11" font-family="Inter,sans-serif">Render</text>
+                <line x1="110" y1="140" x2="110" y2="168" stroke="#6b7280"/>
+                <line x1="230" y1="140" x2="230" y2="168" stroke="#6b7280"/>
+                <line x1="350" y1="140" x2="350" y2="168" stroke="#6b7280"/>
+                <line x1="460" y1="140" x2="460" y2="168" stroke="#6b7280"/>
+                <rect x="20" y="168" width="480" height="28" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-dasharray="4 2"/>
+                <text x="260" y="186" text-anchor="middle" fill="#93c5fd" font-size="11" font-family="Inter,sans-serif">Platformer Demo (validation layer)</text>
+            </svg>
+        </div>
+
+        <h2 data-i18n="project.engine.core.title">Engine core</h2>
+        <ul>
+            <li data-i18n="project.engine.core1">Fixed update step with accumulator (decouples physics from frame rate)</li>
+            <li data-i18n="project.engine.core2">Scene stack: menu, gameplay levels, game over</li>
+            <li data-i18n="project.engine.core3">Centralized resource loading for textures and fonts</li>
+        </ul>
+
+        <h2 data-i18n="project.engine.systems2d.title">2D systems</h2>
+        <ul>
+            <li data-i18n="project.engine.systems2d1">Sprite rendering pipeline with camera-relative transforms</li>
+            <li data-i18n="project.engine.systems2d2">Tile-based level layout with collision proxies</li>
+            <li data-i18n="project.engine.systems2d3">Player controller, enemies, health, and game state flags</li>
+        </ul>
+
+        <h2 data-i18n="project.engine.render.title">Rendering</h2>
+        <p data-i18n="project.engine.render.body">
+            SFML handles windowing, input polling, and draw calls. The render pass runs after simulation so visuals always reflect the latest physics state.
+        </p>
+
+        <h2 data-i18n="project.engine.physics.title">Physics</h2>
+        <p data-i18n="project.engine.physics.body">
+            Box2D bodies are owned by gameplay entities. Collisions trigger gameplay events (damage, pickups) without tight coupling to the physics library internals.
+        </p>
+        <pre class="code-snippet" aria-label="Update order pseudocode">// Fixed update order (simplified)
+while (accumulator >= FIXED_DT) {
+  scene-&gt;processInput();
+  scene-&gt;updatePhysics(FIXED_DT);
+  scene-&gt;updateGameplay(FIXED_DT);
+  accumulator -= FIXED_DT;
+}
+scene-&gt;render();</pre>
+
+        <h2 data-i18n="project.engine.modular.title">Modular growth (3D-ready separation)</h2>
+        <p data-i18n="project.engine.modular.body">
+            Rendering and simulation are isolated behind scene interfaces so future 3D backends could replace SFML draw paths without rewriting gameplay rules.
+        </p>
+
+        <h2 data-i18n="project.engine.decisions.title">Key engineering decisions</h2>
+        <ul>
+            <li data-i18n="project.engine.decision1">Single-threaded loop first — predictable debugging before optimization</li>
+            <li data-i18n="project.engine.decision2">Data-oriented entity lists per scene instead of deep inheritance trees</li>
+            <li data-i18n="project.engine.decision3">Explicit scene transitions to avoid stale physics bodies</li>
+        </ul>
+
+        <h2 data-i18n="project.engine.workflow.title">Development workflow</h2>
+        <p data-i18n="project.engine.workflow.body">
+            Iteration cycle: implement engine feature → validate in platformer demo → refactor boundaries → document update order. Git branches per system (physics, UI, levels).
+        </p>
+
+        <h2 data-i18n="project.engine.timeline.title">Progression</h2>
+        <ul class="timeline">
+            <li>
+                <strong data-i18n="project.engine.t1.title">Phase 1 — Core loop</strong>
+                <span data-i18n="project.engine.t1.body">Window, input, scene switching, empty gameplay scene</span>
+            </li>
+            <li>
+                <strong data-i18n="project.engine.t2.title">Phase 2 — Physics & player</strong>
+                <span data-i18n="project.engine.t2.body">Box2D integration, movement, collisions, basic enemies</span>
+            </li>
+            <li>
+                <strong data-i18n="project.engine.t3.title">Phase 3 — Content & UI</strong>
+                <span data-i18n="project.engine.t3.body">Two levels, menus, score/timer, game over flow</span>
+            </li>
+        </ul>
 
         <h2 data-i18n="project.challenges">Challenges</h2>
         <p class="highlight" data-i18n="project.engine.challengeHighlight">
@@ -52,24 +154,19 @@
             <li data-i18n="project.engine.built4">UI systems: main menu, game over, score & timer</li>
         </ul>
 
-        <h2 data-i18n="project.technologies">Technologies used</h2>
-        <ul>
-            <li>C++</li>
-            <li>SFML</li>
-            <li>Box2D</li>
-        </ul>
-
         <h2 data-i18n="project.links">Links</h2>
         <div class="links">
             <a href="https://github.com/HugoFlandrin/2D-Game-Engine" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
+            <a href="../static/resume/Hugo_Flandrin_Resume.pdf" download data-i18n="home.cta.resume">Resume</a>
         </div>
     </div>
 
     <div class="project-right">
         <div class="media-images">
-            <div class="media-item">
-                <img src="../static/img/2DGameEngineDemo.png" alt="Game Engine screenshot">
-            </div>
+            <figure class="media-item">
+                <img src="../static/img/2DGameEngineDemo.png" alt="Platformer demo — level layout and collision">
+                <figcaption class="media-caption" data-i18n="project.engine.caption1">Platformer demo validating physics, level transitions, and UI flow</figcaption>
+            </figure>
         </div>
     </div>
 </div>
@@ -79,32 +176,6 @@
 </div>
 
 <script src="../static/js/i18n.js"></script>
-<script>
-const navbar = document.querySelector(".navbar");
-const setNavShadow = () => {
-    if (!navbar) return;
-    navbar.classList.toggle("scrolled", window.scrollY > 8);
-};
-window.addEventListener("scroll", setNavShadow, { passive: true });
-setNavShadow();
-
-const modal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-img");
-
-document.querySelectorAll(".media-item img").forEach((img) => {
-    img.addEventListener("click", () => {
-        modalImg.src = img.src;
-        modal.style.display = "flex";
-        modal.setAttribute("aria-hidden", "false");
-    });
-});
-
-modal.addEventListener("click", () => {
-    modal.style.display = "none";
-    modal.setAttribute("aria-hidden", "true");
-    modalImg.src = "";
-});
-</script>
-
+<script src="../static/js/project.js"></script>
 </body>
 </html>

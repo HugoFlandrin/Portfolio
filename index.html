@@ -3,185 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugo Flandrin - Game & Engine developer</title>
+    <title>Hugo Flandrin — Gameplay & Engine Programmer</title>
+    <meta name="description" content="Junior Gameplay & Engine Programmer portfolio — C++, custom engines, Unreal Engine, Unity.">
     <link rel="icon" type="image/png" href="static/img/Logo.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-links">
-            <a href="#" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="#top" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
             <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
             <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+            <a href="pages/LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
             <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
         </div>
     </nav>
 
-    <!-- About Me Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="profile-image">
-                    <img src="static/img/AboutMe.jpg" alt="Profile">
-                </div>
-                <div class="about-text">
-                    <h1 data-i18n="home.about.title">About me</h1>
-                    <p data-i18n="home.about.body">I am a gameplay and engine programmer, specializing in scalable gameplay systems and modular technical architecture. I have experience in C++, C#, Unreal Engine, Unity, and custom engine development, gained through university and personal projects. Alongside my university studies, I work on freelance projects to apply my skills to concrete and rewarding projects in the fields of web and video games. </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <a href="pages/escape.html">
-                        <img src="static/img/Escape.png" alt="Escape">
-                        </a>
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero-section section-reveal">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <p class="hero-eyebrow" data-i18n="home.hero.eyebrow">Gameplay & Engine Programmer</p>
+                        <h1 class="hero-title">Hugo Flandrin</h1>
+                        <p class="hero-lead" data-i18n="home.hero.lead">
+                            I build modular gameplay systems and engine foundations in C++, with hands-on experience on custom engines, Unreal Engine, and Unity.
+                        </p>
+                        <div class="tech-badges" aria-label="Core technologies">
+                            <span class="badge">C++</span>
+                            <span class="badge">C#</span>
+                            <span class="badge">Unreal Engine</span>
+                            <span class="badge">Unity</span>
+                            <span class="badge">SFML</span>
+                            <span class="badge">Box2D</span>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="static/resume/Hugo_Flandrin_Resume.pdf" class="btn btn-primary" download data-i18n="home.cta.resume">View Resume</a>
+                            <a href="https://github.com/HugoFlandrin" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.github">GitHub</a>
+                            <a href="https://www.linkedin.com/in/hugoflandrin" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.linkedin">LinkedIn</a>
+                        </div>
                     </div>
-                    <div class="project-title">
-                        <h3>Escape</h3>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <a href="pages/pokemon-monster.html">
-                        <img src="static/img/PokemonMonster.jpg" alt="Pokemon Monster">
-                        </a>
-                    </div>
-                    <div class="project-title">
-                        <h3>Pokemon Monster</h3>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <a href="pages/gametalk.html">
-                        <img src="static/img/Gametalk.png" alt="Gametalk">
-                        </a>
-                    </div>
-                    <div class="project-title">
-                        <h3>Gametalk</h3>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <a href="pages/nightlife.html">
-                        <img src="static/img/NightLife.png" alt="Nightlife">
-                        </a>
-                    </div>
-                    <div class="project-title">
-                        <h3>Nightlife</h3>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <a href="pages/game-engine.html">
-                        <img src="static/img/2DGameEngineDemo.png" alt="2D/3D Game Engine">
-                        </a>
-                    </div>
-                    <div class="project-title">
-                        <h3>Game Engine 2D/3D</h3>
-                    </div>
-                </div>
-                <!-- <div class="project-card">
-                    <div class="project-image">
-                        <a href="https://github.com/HugoFlandrin/Taisaku-no-Shima" target="_blank" rel="noopener noreferrer">
-                        <img src="img/TaisakuNoShima.png" alt="Taisaku no Shima">
-                        </a>
-                    </div>
-                    <div class="project-title">
-                        <h3>Taisaku no Shima</h3>
-                    </div>
-                </div> -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <a href="pages/platypus-of-corner.html">
-                        <img src="static/img/PlatypusOfCorner.png" alt="PlatypusOfCorner">
-                        </a>
-                    </div>
-                    <div class="project-title">
-                        <h3>Platypus Of Corner</h3>
+                    <div class="hero-visual">
+                        <div class="profile-image hero-profile">
+                            <img src="static/img/AboutMe.jpg" alt="Hugo Flandrin">
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Currently looking for -->
+        <section class="status-strip section-reveal">
+            <div class="container">
+                <div class="status-card">
+                    <span class="status-label" data-i18n="home.status.label">Currently looking for</span>
+                    <p class="status-text" data-i18n="home.status.text">
+                        Internship or junior role — Gameplay Programmer, Engine Programmer, or Generalist Programmer (C++ / Unreal / custom engine).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured project -->
+        <section class="featured-section section-reveal" id="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="home.featured.title">Featured project</h2>
+                </div>
+                <article class="featured-card">
+                    <a href="pages/game-engine.html" class="featured-media">
+                        <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine demo">
+                        <span class="featured-tag" data-i18n="home.featured.tag">Engine · C++ · SFML · Box2D</span>
+                    </a>
+                    <div class="featured-body">
+                        <h3>2D Game Engine</h3>
+                        <p class="featured-summary" data-i18n="home.featured.summary">
+                            Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo.
+                        </p>
+                        <ul class="featured-points">
+                            <li data-i18n="home.featured.point1">Deterministic update order & scene transitions</li>
+                            <li data-i18n="home.featured.point2">Box2D integrated with gameplay entities</li>
+                            <li data-i18n="home.featured.point3">Architecture designed for maintainable engine growth</li>
+                        </ul>
+                        <a href="pages/game-engine.html" class="btn btn-primary" data-i18n="home.featured.cta">Explore technical breakdown</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Professional experience -->
+        <section class="experience-section section-reveal" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="home.experience.title">Professional experience</h2>
+                    <p class="section-sub" data-i18n="home.experience.sub">Real-world exposure alongside academic engine work</p>
+                </div>
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <div class="experience-meta">
+                            <span class="experience-type" data-i18n="home.exp1.type">Freelance</span>
+                            <span class="experience-period" data-i18n="home.exp1.period">2024 — Present</span>
+                        </div>
+                        <h3 data-i18n="home.exp1.role">Web & Game Development — Freelance</h3>
+                        <p class="experience-tech">HTML · CSS · JS · Go · C# · Git</p>
+                        <ul>
+                            <li data-i18n="home.exp1.item1">Front-end and back-end updates on production websites</li>
+                            <li data-i18n="home.exp1.item2">Feature delivery, bug fixes, and iterative client feedback loops</li>
+                            <li data-i18n="home.exp1.item3">Small-scope game and web prototypes under time constraints</li>
+                        </ul>
+                    </article>
+                    <article class="experience-card">
+                        <div class="experience-meta">
+                            <span class="experience-type" data-i18n="home.exp2.type">Academic / Personal</span>
+                            <span class="experience-period" data-i18n="home.exp2.period">2023 — Present</span>
+                        </div>
+                        <h3 data-i18n="home.exp2.role">Gameplay & Engine Projects — Lead Programmer</h3>
+                        <p class="experience-tech">C++ · Unreal · Unity · SFML · Box2D</p>
+                        <ul>
+                            <li data-i18n="home.exp2.item1">Designed and implemented a modular 2D game engine (SFML + Box2D)</li>
+                            <li data-i18n="home.exp2.item2">Shipped gameplay systems for UE5 and Unity projects (jam & semester scope)</li>
+                            <li data-i18n="home.exp2.item3">Owned technical architecture decisions, debugging, and milestone delivery</li>
+                        </ul>
+                    </article>
+                    <article class="experience-card">
+                        <div class="experience-meta">
+                            <span class="experience-type" data-i18n="home.exp3.type">University</span>
+                            <span class="experience-period" data-i18n="home.exp3.period">Team projects</span>
+                        </div>
+                        <h3 data-i18n="home.exp3.role">Game Development — Programmer</h3>
+                        <p class="experience-tech">Unreal Engine 5 · Blueprint / C++ · Unity · C#</p>
+                        <ul>
+                            <li data-i18n="home.exp3.item1">Collaborated on multidisciplinary teams (design, art, audio)</li>
+                            <li data-i18n="home.exp3.item3">Built player interactions, pacing systems, and level scripting</li>
+                            <li data-i18n="home.exp3.item2">Delivered playable builds under hackathon and coursework deadlines</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About (condensed) -->
+        <section class="about-section section-reveal" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 data-i18n="home.about.title">About</h2>
+                        <p data-i18n="home.about.body">I am a gameplay and engine programmer, specializing in scalable gameplay systems and modular technical architecture. I have experience in C++, C#, Unreal Engine, Unity, and custom engine development, gained through university and personal projects. Alongside my university studies, I work on freelance projects to apply my skills to concrete and rewarding projects in the fields of web and video games.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="home.projects.title">Projects</h2>
+                    <p class="section-sub" data-i18n="home.projects.sub">Technical case studies — select a project for engineering details</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card project-card--featured-grid">
+                        <a href="pages/game-engine.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.engine.tag">Engine</span>
+                                <h3>2D Game Engine</h3>
+                                <p class="project-card-summary" data-i18n="home.card.engine.summary">C++ · SFML · Box2D · modular architecture</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="pages/escape.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="static/img/Escape.png" alt="Escape">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.escape.tag">Gameplay · UE5</span>
+                                <h3>Escape</h3>
+                                <p class="project-card-summary" data-i18n="home.card.escape.summary">First-person thriller · puzzles · atmosphere</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="pages/nightlife.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="static/img/NightLife.png" alt="Nightlife">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.nightlife.tag">Gameplay · UE5</span>
+                                <h3>Nightlife</h3>
+                                <p class="project-card-summary" data-i18n="home.card.nightlife.summary">5-day hackathon · branching choices</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="pages/platypus-of-corner.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="static/img/PlatypusOfCorner.png" alt="Platypus Of Corner">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.platypus.tag">Gameplay · Unity</span>
+                                <h3>Platypus Of Corner</h3>
+                                <p class="project-card-summary" data-i18n="home.card.platypus.summary">48h jam · 3D platformer</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="pages/gametalk.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="static/img/Gametalk.png" alt="Gametalk">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.gametalk.tag">Full-stack · Go</span>
+                                <h3>Gametalk</h3>
+                                <p class="project-card-summary" data-i18n="home.card.gametalk.summary">API + server · forum systems</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="pages/pokemon-monster.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="static/img/PokemonMonster.jpg" alt="Pokemon Monster">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.pokemon.tag">Application · C#</span>
+                                <h3>Pokemon Monster</h3>
+                                <p class="project-card-summary" data-i18n="home.card.pokemon.summary">WPF · MVVM · SQL Server</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section section-reveal" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="home.contact.title">Contact</h2>
+                    <p class="section-sub" data-i18n="home.contact.sub">Recruiters and collaborators — I reply within a few days</p>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/mkgjydkg" method="POST" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" data-i18n="home.contact.name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="home.contact.email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="home.contact.message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button" data-i18n="home.contact.send">Send</button>
+                    <p id="formMessage" class="form-message" hidden></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-links">
+                <a href="static/resume/Hugo_Flandrin_Resume.pdf" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.resume">Resume</a>
+                <a href="https://github.com/HugoFlandrin" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/hugo-flandrin-104476294/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+            </div>
+            <p class="footer-meta">
+                <span data-i18n="home.footer.version">Portfolio v.1.0</span>
+                ·
+                <span data-i18n="home.footer.updated">Updated May 2026</span>
+            </p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <h2 data-i18n="home.contact.title">Contact</h2>
-            <form class="contact-form" action="https://formspree.io/f/mkgjydkg" method="POST" id="contactForm">
-                <div class="form-group">
-                    <label for="name" data-i18n="home.contact.name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="email" data-i18n="home.contact.email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="message" data-i18n="home.contact.message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-    
-                <button type="submit" class="submit-button" data-i18n="home.contact.send">Send</button>
-    
-                <p id="formMessage" style="margin-top: 16px; display: none;"></p>
-            </form>
-        </div>
-    </section>    
-</body>
+    <script src="static/js/i18n.js"></script>
+    <script src="static/js/home.js"></script>
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const setNavShadow = () => {
+            if (!navbar) return;
+            navbar.classList.toggle("scrolled", window.scrollY > 8);
+        };
+        window.addEventListener("scroll", setNavShadow, { passive: true });
+        setNavShadow();
 
-<script src="static/js/i18n.js"></script>
-<script>
-    // Navbar shadow on scroll
-    const navbar = document.querySelector(".navbar");
-    const setNavShadow = () => {
-        if (!navbar) return;
-        navbar.classList.toggle("scrolled", window.scrollY > 8);
-    };
-    window.addEventListener("scroll", setNavShadow, { passive: true });
-    setNavShadow();
+        document.getElementById("contactForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const messageEl = document.getElementById("formMessage");
 
-    document.getElementById('contactForm').addEventListener('submit', async function (e) {
-        e.preventDefault();
-    
-        const form = e.target;
-        const data = new FormData(form);
-        const messageEl = document.getElementById('formMessage');
-    
-        try {
-            const response = await fetch(form.action, {
-                method: form.method,
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-    
-            if (response.ok) {
-                messageEl.style.display = 'block';
-                messageEl.style.color = 'lightgreen';
-                messageEl.textContent = `✅ ${window.__i18n?.t("home.contact.sent") ?? "Your message has been sent!"}`;
-                form.reset();
-            } else {
-                const result = await response.json();
-                throw new Error(result.error || "An error occurred.");
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { Accept: "application/json" },
+                });
+
+                if (response.ok) {
+                    messageEl.hidden = false;
+                    messageEl.style.color = "lightgreen";
+                    messageEl.textContent = `✅ ${window.__i18n?.t("home.contact.sent") ?? "Your message has been sent!"}`;
+                    form.reset();
+                } else {
+                    const result = await response.json();
+                    throw new Error(result.error || "An error occurred.");
+                }
+            } catch (err) {
+                messageEl.hidden = false;
+                messageEl.style.color = "salmon";
+                const prefix = window.__i18n?.t("home.contact.fail") ?? "Failed to send message:";
+                messageEl.textContent = `❌ ${prefix} ${err.message}`;
             }
-        } catch (err) {
-            messageEl.style.display = 'block';
-            messageEl.style.color = 'salmon';
-            const prefix = window.__i18n?.t("home.contact.fail") ?? "Failed to send message:";
-            messageEl.textContent = `❌ ${prefix} ${err.message}`;
-        }
-    });
-</script>
-
+        });
+    </script>
+</body>
 </html>
