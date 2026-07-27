@@ -14,11 +14,17 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-links" id="nav-menu">
         <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
-        <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
-        <a href="freelance.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+        <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
         <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
     </div>
 </nav>
@@ -102,12 +108,10 @@
 
             <figure class="media-item">
                 <img src="../static/img/Escape.png" alt="Escape screenshot 1">
-                <figcaption class="media-caption" data-i18n="project.escape.caption1">Low-light exploration — flashlight as primary navigation tool</figcaption>
             </figure>
 
             <figure class="media-item">
                 <img src="../static/img/Escape2.png" alt="Escape screenshot 2">
-                <figcaption class="media-caption" data-i18n="project.escape.caption2">Puzzle space designed for investigation and environmental storytelling</figcaption>
             </figure>
         </div>
 
@@ -115,13 +119,12 @@
             <div class="video-viewer">
                 <div class="video-slide active">
                     <video controls poster="../static/img/Escape.png">
-                        <source src="../static/mp4/Escape-AprilDemo.mp4" type="video/mp4">
+                        <source src="../static/mp4/Projects/Escape%20-%20DemoDev.mp4" type="video/mp4">
                     </video>
                 </div>
                 <button class="prev-video" type="button" aria-label="Previous video">&#10094;</button>
                 <button class="next-video" type="button" aria-label="Next video">&#10095;</button>
             </div>
-            <p class="media-caption" data-i18n="project.escape.captionVideo">April demo — interaction loop and atmosphere pacing</p>
         </div>
     </div>
 </div>
@@ -132,6 +135,7 @@
 </div>
 
 <script src="../static/js/i18n.js"></script>
+<script src="../static/js/navbar.js"></script>
 <script src="../static/js/project.js"></script>
 
 </body>

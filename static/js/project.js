@@ -1,12 +1,4 @@
 (() => {
-  const navbar = document.querySelector(".navbar");
-  const setNavShadow = () => {
-    if (!navbar) return;
-    navbar.classList.toggle("scrolled", window.scrollY > 8);
-  };
-  window.addEventListener("scroll", setNavShadow, { passive: true });
-  setNavShadow();
-
   const modal = document.getElementById("image-modal");
   const modalImg = document.getElementById("modal-img");
 

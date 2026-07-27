@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Game Engine - Hugo Flandrin</title>
+    <link rel="icon" type="image/png" href="../static/img/Logo.png">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-theme="engine3d">
+
+<nav class="navbar">
+    <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-links" id="nav-menu">
+        <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+    </div>
+</nav>
+
+<div class="project-container">
+    <div class="project-left">
+        <h1>3D Game Engine</h1>
+
+        <h2 data-i18n="project.overview">Overview</h2>
+        <p class="subtitle" data-i18n="project.engine3d.subtitle">
+            A C++ 3D game engine built with OpenGL — modular rendering architecture validated through a basic demo scene.
+        </p>
+
+        <p data-i18n="project.engine3d.description">
+            This project is a custom 3D engine developed in C++ with OpenGL. It focuses on building a modular and extensible architecture capable of handling core 3D rendering features such as lighting, shadows, and model loading. Unlike a full game project, the engine does not include a gameplay demo — instead, a basic scene composed of a textured cube and lighting validates the rendering pipeline.
+        </p>
+
+        <div class="tech-badges-row">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">OpenGL</span>
+            <span class="tech-badge">GLAD</span>
+            <span class="tech-badge">GLM</span>
+        </div>
+
+        <h2 data-i18n="project.techChallenges">Technical Challenges</h2>
+        <p class="highlight" data-i18n="project.engine3d.challengeHighlight">
+            Building a 3D rendering pipeline from scratch requires careful separation between rendering, materials, and asset loading while keeping the architecture extensible.
+        </p>
+        <ul>
+            <li data-i18n="project.engine3d.challenge1">Implementing multiple light types (directional, point, spotlight) with shadow mapping</li>
+            <li data-i18n="project.engine3d.challenge2">Parsing OBJ/MTL files and structuring mesh and submesh data</li>
+            <li data-i18n="project.engine3d.challenge3">Designing a material and texture system integrated with the OpenGL pipeline</li>
+        </ul>
+
+        <h2 data-i18n="project.technologies">Technologies</h2>
+        <ul>
+            <li data-i18n="project.engine3d.tech1">C++ — core engine implementation</li>
+            <li data-i18n="project.engine3d.tech2">OpenGL — rendering pipeline</li>
+            <li data-i18n="project.engine3d.tech3">GLAD — OpenGL loader</li>
+            <li data-i18n="project.engine3d.tech4">GLM — mathematics library</li>
+        </ul>
+
+        <h2 data-i18n="project.links">Links</h2>
+        <div class="links">
+            <a href="https://github.com/HugoFlandrin/3D-Game-Engine" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
+        </div>
+    </div>
+
+    <div class="project-right">
+        <div class="media-images">
+            <figure class="media-item">
+                <img src="../static/img/3DGameEngine.png" alt="3D Game Engine demo scene">
+            </figure>
+        </div>
+    </div>
+</div>
+
+<div id="image-modal" aria-hidden="true">
+    <img id="modal-img" alt="Expanded screenshot">
+</div>
+
+<script src="../static/js/i18n.js"></script>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/project.js"></script>
+
+</body>
+</html>

@@ -60,11 +60,30 @@ body[data-theme="nightlife"] {
 }
 
 body[data-theme="platypus"] {
-    --bg-color: #8993bf;
+    --bg-color: #373068;
     --card-bg: #0b2631;
-    --text-color: #4c428c;
-    --secondary-text: #f6efff;
+    --text-color: #a8b0d6;
+    --secondary-text: #eabb99;
     --primary-color: #f6efff; 
+}
+
+body[data-theme="engine3d"] {
+    --bg-color: #0c1220;
+    --card-bg: #111827;
+    --primary-color: #22d3ee;
+}
+
+/* ANCIENT TEMPLE */
+body[data-theme="lifeawake"] {
+    --bg-color: #1a1409;
+    --card-bg: #241d10;
+    --primary-color: #8ed45a;
+}
+
+body[data-theme="prototype"] {
+    --bg-color: #0f1419;
+    --card-bg: #151b22;
+    --primary-color: #0ea5e9;
 }
 
 /* =========================
@@ -152,6 +171,14 @@ body {
 .project-left {
     flex: 1;
     max-width: 600px;
+}
+
+.freelance-logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    margin: 12px auto 40px;
 }
 
 .project-left h1 {
@@ -325,13 +352,6 @@ body {
     color: var(--secondary-text);
 }
 
-.media-caption {
-    font-size: 13px;
-    color: var(--secondary-text);
-    margin-top: 8px;
-    line-height: 1.45;
-}
-
 .media-item {
     border-radius: 10px;
     overflow: hidden;
@@ -490,6 +510,7 @@ body {
     .project-container {
         flex-direction: column;
         align-items: center;
+        margin: 40px auto;
     }
 
     .project-left,
@@ -497,5 +518,13 @@ body {
         max-width: 100%;
         min-width: 0;
         position: static;
+    }
+
+    .prev-video,
+    .next-video,
+    .prev,
+    .next {
+        padding: 12px 16px;
+        font-size: 26px;
     }
 }

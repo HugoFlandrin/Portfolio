@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Work - Hugo Flandrin</title>
+    <meta name="description" content="Complete portfolio of game engines, Unreal Engine projects, Unity games, web development, and technical prototypes.">
+    <link rel="icon" type="image/png" href="../static/img/Logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
+            <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+            <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+            <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+            <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+            <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+        </div>
+    </nav>
+
+    <main class="all-work-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="home.allWork.title">All my work</h2>
+            </div>
+
+            <section class="all-work-category">
+                <h3 data-i18n="home.allWork.cat.engines">Game Engines</h3>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <a href="game-engine.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/2DGameEngineDemo.png" alt="2D Game Engine">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.engine.tag">Engine</span>
+                                <h3>2D Game Engine</h3>
+                                <p class="project-card-summary" data-i18n="home.card.engine.summary">C++ · SFML · Box2D · modular architecture</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="3d-game-engine.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/3DGameEngine.png" alt="3D Game Engine">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.engine3d.tag">Engine · 3D</span>
+                                <h3>3D Game Engine</h3>
+                                <p class="project-card-summary" data-i18n="home.card.engine3d.summary">C++ · OpenGL · lighting · model loading</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="all-work-category">
+                <h3 data-i18n="home.allWork.cat.unreal">Unreal Engine Projects</h3>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <a href="escape.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/Escape.png" alt="Escape">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.escape.tag">Gameplay · UE5</span>
+                                <h3>Escape</h3>
+                                <p class="project-card-summary" data-i18n="home.card.escape.summary">First-person thriller · puzzles · atmosphere</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="nightlife.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/NightLife.png" alt="Nightlife">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.nightlife.tag">Gameplay · UE5</span>
+                                <h3>Nightlife</h3>
+                                <p class="project-card-summary" data-i18n="home.card.nightlife.summary">5-day hackathon · branching choices</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="lifeawake.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/LifeAwakeLevelDemo.png" alt="LifeAwake">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.lifeawake.tag">Gameplay · UE</span>
+                                <h3>LifeAwake</h3>
+                                <p class="project-card-summary" data-i18n="home.card.lifeawake.summary">Atmospheric level design · ambiance</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="all-work-category">
+                <h3 data-i18n="home.allWork.cat.unity">Unity Projects</h3>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <a href="platypus-of-corner.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/PlatypusOfCorner.png" alt="Platypus Of Corner">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.platypus.tag">Gameplay · Unity</span>
+                                <h3>Platypus Of Corner</h3>
+                                <p class="project-card-summary" data-i18n="home.card.platypus.summary">48h jam · 3D platformer</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="all-work-category">
+                <h3 data-i18n="home.allWork.cat.web">Web Development</h3>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <a href="gametalk.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/Gametalk.png" alt="Gametalk">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.gametalk.tag">Full-stack · Go</span>
+                                <h3>Gametalk</h3>
+                                <p class="project-card-summary" data-i18n="home.card.gametalk.summary">API + server · forum systems</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="all-work-category">
+                <h3 data-i18n="home.allWork.cat.prototypes">Technical Prototypes</h3>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <a href="ue-minecraft-prototype.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/Minecraft.png" alt="Minecraft Prototype">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.ue.minecraft.tag">Prototype · UE</span>
+                                <h3>Minecraft Prototype</h3>
+                                <p class="project-card-summary" data-i18n="home.card.ue.minecraft.summary">Block placement &amp; destruction</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="ue-stamina-system.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/Stamina.png" alt="Stamina System">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.ue.stamina.tag">Prototype · UE</span>
+                                <h3>Stamina System</h3>
+                                <p class="project-card-summary" data-i18n="home.card.ue.stamina.summary">Running · exhaustion · recovery</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="ue-board-game-prototype.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/DiceGame.png" alt="Board Game Prototype">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.ue.boardgame.tag">Prototype · UE</span>
+                                <h3>Board Game Prototype</h3>
+                                <p class="project-card-summary" data-i18n="home.card.ue.boardgame.summary">Dice rolling &amp; movement</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="all-work-category">
+                <h3 data-i18n="home.allWork.cat.applications">Applications</h3>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <a href="pokemon-monster.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/PokemonMonster.jpg" alt="Pokemon Monster">
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.pokemon.tag">Application · C#</span>
+                                <h3>Pokemon Monster</h3>
+                                <p class="project-card-summary" data-i18n="home.card.pokemon.summary">WPF · MVVM · SQL Server</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-links">
+                <a href="../static/resume/Hugo_Flandrin_Resume.pdf" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.resume">Resume</a>
+                <a href="https://github.com/HugoFlandrin" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/hugo-flandrin-104476294/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+            </div>
+            <p class="footer-meta">
+                <span data-i18n="home.footer.version">Portfolio v1.1</span>
+                ·
+                <span data-i18n="home.footer.updated">Updated June 2026</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../static/js/i18n.js"></script>
+    <script src="../static/js/navbar.js"></script>
+    <script src="../static/js/home.js"></script>
+</body>
+</html>

@@ -11,6 +11,7 @@
       "nav.freelance": "LevelWeb-Studio",
       "nav.contact": "Contact",
       "nav.lang": "FR",
+      "nav.menuToggle": "Open navigation menu",
 
       "home.hero.eyebrow": "Gameplay & Engine Programmer",
       "home.hero.lead":
@@ -18,6 +19,7 @@
       "home.cta.resume": "View Resume",
       "home.cta.github": "GitHub",
       "home.cta.linkedin": "LinkedIn",
+      "home.cta.freelance": "My freelance activity",
       "home.status.label": "Currently looking for",
       "home.status.text":
         "Internship or junior role — Gameplay Programmer, Engine Programmer, or Generalist Programmer (C++ / Unreal / custom engine).",
@@ -30,9 +32,8 @@
       "home.featured.point3": "Architecture designed for maintainable engine growth",
       "home.featured.cta": "Explore technical breakdown",
       "home.experience.title": "Professional experience",
-      "home.experience.sub": "Real-world exposure alongside academic engine work",
       "home.exp1.type": "Freelance",
-      "home.exp1.period": "2024 — Present",
+      "home.exp1.period": "2025 — Present",
       "home.exp1.role": "Web & Game Development — Freelance",
       "home.exp1.item1": "Front-end and back-end updates on production websites",
       "home.exp1.item2": "Feature delivery, bug fixes, and iterative client feedback loops",
@@ -50,9 +51,26 @@
       "home.exp3.item2": "Delivered playable builds under hackathon and coursework deadlines",
       "home.exp3.item3": "Built player interactions, pacing systems, and level scripting",
       "home.projects.title": "Projects",
-      "home.projects.sub": "Technical case studies — select a project for engineering details",
+      "home.projects.viewAll": "View all my work",
+      "home.allWork.title": "All my work",
+      "home.allWork.cat.engines": "Game Engines",
+      "home.allWork.cat.unreal": "Unreal Engine Projects",
+      "home.allWork.cat.unity": "Unity Projects",
+      "home.allWork.cat.web": "Web Development",
+      "home.allWork.cat.prototypes": "Technical Prototypes",
+      "home.allWork.cat.applications": "Applications",
       "home.card.engine.tag": "Engine",
       "home.card.engine.summary": "C++ · SFML · Box2D · modular architecture",
+      "home.card.engine3d.tag": "Engine · 3D",
+      "home.card.engine3d.summary": "C++ · OpenGL · lighting · model loading",
+      "home.card.lifeawake.tag": "Gameplay · UE",
+      "home.card.lifeawake.summary": "Atmospheric level design · ambiance",
+      "home.card.ue.minecraft.tag": "Prototype · UE",
+      "home.card.ue.minecraft.summary": "Block placement & destruction",
+      "home.card.ue.stamina.tag": "Prototype · UE",
+      "home.card.ue.stamina.summary": "Running · exhaustion · recovery",
+      "home.card.ue.boardgame.tag": "Prototype · UE",
+      "home.card.ue.boardgame.summary": "Dice rolling & movement",
       "home.card.escape.tag": "Gameplay · UE5",
       "home.card.escape.summary": "First-person thriller · puzzles · atmosphere",
       "home.card.nightlife.tag": "Gameplay · UE5",
@@ -63,15 +81,11 @@
       "home.card.gametalk.summary": "API + server · forum systems",
       "home.card.pokemon.tag": "Application · C#",
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
-      "home.contact.sub": "Recruiters and collaborators — I reply within a few days",
       "home.footer.about":
         "This portfolio highlights engineering decisions and system design — built as a lightweight static site (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v.0.3",
-      "home.footer.updated": "Updated May 2026",
+      "home.footer.version": "Portfolio v1.1",
+      "home.footer.updated": "Updated June 2026",
 
-      "home.about.title": "About",
-      "home.about.body":
-        "I am a gameplay and engine programmer, specializing in scalable gameplay systems and modular technical architecture. I have experience in C++, C#, Unreal Engine, Unity, and custom engine development, gained through university and personal projects. Alongside my university studies, I work on freelance projects to apply my skills to concrete and rewarding projects in the fields of web and video games.",
 
       "home.contact.title": "Contact",
       "home.contact.name": "Name",
@@ -82,6 +96,8 @@
       "home.contact.fail": "Failed to send message:",
 
       "project.challenges": "Challenges",
+      "project.techChallenges": "Technical Challenges",
+      "project.overview": "Overview",
       "project.whatBuilt": "What I built",
       "project.technologies": "Technologies used",
       "project.tech.title": "Technical focus",
@@ -117,12 +133,6 @@
       "project.escape.decision3": "Lighting volumes tuned per room for consistent readability",
       "project.escape.workflow":
         "Blockout → gameplay pass → lighting/audio polish → playtest for puzzle clarity and pacing.",
-      "project.escape.caption1":
-        "Low-light exploration — flashlight as primary navigation tool",
-      "project.escape.caption2":
-        "Puzzle space designed for investigation and environmental storytelling",
-      "project.escape.captionVideo": "April demo — interaction loop and atmosphere pacing",
-
       "project.pokemon.subtitle":
         "A C# / WPF app inspired by the Pokemon battle system.",
       "project.pokemon.description":
@@ -150,7 +160,6 @@
         "ViewModels expose commands for navigation — no logic in code-behind",
       "project.pokemon.decision2": "Repository layer for Pokémon/ability data initialization",
       "project.pokemon.decision3": "Battle rules kept deterministic and easy to extend",
-      "project.pokemon.caption1": "Battle UI and catalog navigation — MVVM-bound views",
 
       "project.gametalk.subtitle":
         "A video game forum built with Go (API + server) and vanilla web tech.",
@@ -175,7 +184,6 @@
       "project.gametalk.decision1": "Separate API binary for clearer deployment and testing",
       "project.gametalk.decision2": "Session/auth handled before topic mutations",
       "project.gametalk.decision3": "CORS configuration documented for local dev",
-      "project.gametalk.caption1": "Topic list and category navigation — client/server split",
 
       "project.nightlife.subtitle":
         "A 3D first-person Unreal Engine 5 game made in 5 days (hackathon).",
@@ -200,7 +208,6 @@
       "project.nightlife.decision1": "Priority on stable interactions over content volume",
       "project.nightlife.decision2": "French VO integrated early for comedic timing",
       "project.nightlife.decision3": "Navigation landmarks in night city for readability",
-      "project.nightlife.caption1": "Night city navigation and choice-driven encounters",
 
       "project.engine.subtitle":
         "A C++ 2D game engine (SFML + Box2D) with a platformer demo.",
@@ -256,8 +263,84 @@
       "project.engine.t2.body": "Box2D integration, movement, collisions, basic enemies",
       "project.engine.t3.title": "Phase 3 — Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
-      "project.engine.caption1":
-        "Platformer demo validating physics, level transitions, and UI flow",
+
+      "project.engine3d.subtitle":
+        "A C++ 3D game engine built with OpenGL — modular rendering architecture validated through a basic demo scene.",
+      "project.engine3d.description":
+        "This project is a custom 3D engine developed in C++ with OpenGL. It focuses on building a modular and extensible architecture capable of handling core 3D rendering features such as lighting, shadows, and model loading. Unlike a full game project, the engine does not include a gameplay demo — instead, a basic scene composed of a textured cube and lighting validates the rendering pipeline.",
+      "project.engine3d.challengeHighlight":
+        "Building a 3D rendering pipeline from scratch requires careful separation between rendering, materials, and asset loading while keeping the architecture extensible.",
+      "project.engine3d.challenge1":
+        "Implementing multiple light types (directional, point, spotlight) with shadow mapping",
+      "project.engine3d.challenge2":
+        "Parsing OBJ/MTL files and structuring mesh and submesh data",
+      "project.engine3d.challenge3":
+        "Designing a material and texture system integrated with the OpenGL pipeline",
+      "project.engine3d.tech1": "C++ — core engine implementation",
+      "project.engine3d.tech2": "OpenGL — rendering pipeline",
+      "project.engine3d.tech3": "GLAD — OpenGL loader",
+      "project.engine3d.tech4": "GLM — mathematics library",
+
+      "project.lifeawake.subtitle":
+        "An Unreal Engine project focused on atmosphere and level presentation.",
+      "project.lifeawake.description":
+        "LifeAwake is an Unreal Engine project built around environmental ambiance and level design. A video demonstration showcases the mood and visual direction of the experience.",
+      "project.lifeawake.challengeHighlight":
+        "Establishing a cohesive atmospheric experience through lighting, level layout, and environmental storytelling.",
+      "project.lifeawake.challenge1":
+        "Building readable navigation while preserving a strong mood-driven aesthetic",
+      "project.lifeawake.challenge2":
+        "Integrating visual and audio elements for consistent ambiance",
+      "project.lifeawake.challenge3":
+        "Iterating on level presentation under production constraints",
+      "project.lifeawake.tech1": "Unreal Engine",
+      "project.lifeawake.tech2": "Level design & lighting tools",
+      "project.lifeawake.demoVideo": "Demo video",
+      "project.ue.minecraft.subtitle":
+        "Unreal Engine technical prototype — block placement and destruction system.",
+      "project.ue.minecraft.description":
+        "This Unreal Engine prototype isolates a voxel-style block interaction system: placing and destroying blocks in a grid-based world. It is a technical demonstration of an isolated gameplay system, not a complete game.",
+      "project.ue.minecraft.challengeHighlight":
+        "Implementing reliable block placement and destruction with grid alignment and player interaction feedback.",
+      "project.ue.minecraft.challenge1":
+        "Grid-based block placement with valid placement rules",
+      "project.ue.minecraft.challenge2":
+        "Block destruction and world state updates",
+      "project.ue.minecraft.challenge3":
+        "Player interaction raycasting and block targeting",
+      "project.ue.minecraft.tech1": "Unreal Engine",
+      "project.ue.minecraft.tech2": "Gameplay scripting",
+
+      "project.ue.stamina.subtitle":
+        "Unreal Engine technical prototype — running, exhaustion, recovery, and animations.",
+      "project.ue.stamina.description":
+        "This Unreal Engine prototype demonstrates an isolated stamina gameplay system: running consumes stamina, exhaustion limits player actions, and recovery restores capacity over time with supporting animations. It is a technical demonstration, not a complete game.",
+      "project.ue.stamina.challengeHighlight":
+        "Coordinating stamina drain, recovery rates, movement states, and animation transitions for responsive player feedback.",
+      "project.ue.stamina.challenge1":
+        "Balancing stamina drain during running vs recovery at rest",
+      "project.ue.stamina.challenge2":
+        "Handling exhaustion state and movement restrictions",
+      "project.ue.stamina.challenge3":
+        "Syncing animation states with stamina-driven gameplay",
+      "project.ue.stamina.tech1": "Unreal Engine",
+      "project.ue.stamina.tech2": "Animation Blueprint",
+      "project.ue.stamina.tech3": "Gameplay scripting",
+
+      "project.ue.boardgame.subtitle":
+        "Unreal Engine technical prototype — dice rolling and board movement.",
+      "project.ue.boardgame.description":
+        "This Unreal Engine prototype isolates core board game mechanics: dice rolling to determine movement and token progression along a board path. It is a technical demonstration of an isolated gameplay system, not a complete game.",
+      "project.ue.boardgame.challengeHighlight":
+        "Connecting dice roll results to deterministic board movement with clear player feedback.",
+      "project.ue.boardgame.challenge1":
+        "Dice roll randomization and result presentation",
+      "project.ue.boardgame.challenge2":
+        "Token movement along board waypoints",
+      "project.ue.boardgame.challenge3":
+        "Turn flow and state management for board progression",
+      "project.ue.boardgame.tech1": "Unreal Engine",
+      "project.ue.boardgame.tech2": "Gameplay scripting",
 
       "project.platypus.subtitle":
         "A dreamlike 3D platformer made in Unity during a 48h Game Jam.",
@@ -282,7 +365,6 @@
       "project.platypus.decision1": "Single interaction component for puzzles and pickups",
       "project.platypus.decision2": "Readable silhouettes and floating paths for dreamlike navigation",
       "project.platypus.decision3": "Polish budget spent on jump feel and camera",
-      "project.platypus.caption1": "3D platforming layout — time-limited fragment collection",
 
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",
@@ -295,6 +377,13 @@
       "freelance.profile.title": "Profile",
       "freelance.profile.body":
         "I have around 1 year of experience, mainly doing front-end and back-end modifications on existing websites. I position myself as a junior / beginner profile: motivated, rigorous, and focused on shipping useful improvements.",
+      "freelance.experience.title": "Past freelance missions",
+      "freelance.exp1.title": "Ongoing website maintenance — front-end, back-end & SQL",
+      "freelance.exp1.body":
+        "First freelance mission: maintaining a client's production website, handling front-end, back-end, and SQL changes whenever new features or fixes were requested.",
+      "freelance.exp2.title": "Full website rebuild — ASP.NET Core",
+      "freelance.exp2.body":
+        "The same client then brought me on to fully rebuild the site on a more modern stack (ASP.NET Core), replacing the legacy implementation.",
       "freelance.rates.title": "Rates",
       "freelance.rates.body":
         "Negotiable depending on scope, timeline, and project constraints.",
@@ -310,6 +399,7 @@
       "nav.freelance": "LevelWeb-Studio",
       "nav.contact": "Contact",
       "nav.lang": "EN",
+      "nav.menuToggle": "Ouvrir le menu de navigation",
 
       "home.hero.eyebrow": "Programmeur Gameplay & Moteur",
       "home.hero.lead":
@@ -317,6 +407,7 @@
       "home.cta.resume": "Voir le CV",
       "home.cta.github": "GitHub",
       "home.cta.linkedin": "LinkedIn",
+      "home.cta.freelance": "Mon activité freelance",
       "home.status.label": "Actuellement à la recherche de",
       "home.status.text":
         "Stage ou poste junior — Programmeur Gameplay, Programmeur Moteur, ou Programmeur Généraliste (C++ / Unreal / moteur maison).",
@@ -329,9 +420,8 @@
       "home.featured.point3": "Architecture pensée pour faire évoluer le moteur",
       "home.featured.cta": "Voir le détail technique",
       "home.experience.title": "Expérience professionnelle",
-      "home.experience.sub": "Exposition terrain et projets moteur académiques",
       "home.exp1.type": "Freelance",
-      "home.exp1.period": "2024 — Aujourd'hui",
+      "home.exp1.period": "2025 — Aujourd'hui",
       "home.exp1.role": "Développement Web & Jeu — Freelance",
       "home.exp1.item1": "Modifications front-end et back-end sur des sites en production",
       "home.exp1.item2": "Livraison de fonctionnalités, corrections et boucles client",
@@ -349,9 +439,26 @@
       "home.exp3.item2": "Builds jouables livrés en hackathon et projets de cours",
       "home.exp3.item3": "Interactions joueur, rythme et scripting de niveaux",
       "home.projects.title": "Projets",
-      "home.projects.sub": "Études de cas techniques — cliquez pour les détails d'ingénierie",
+      "home.projects.viewAll": "Voir tout mon travail",
+      "home.allWork.title": "Tous mes projets",
+      "home.allWork.cat.engines": "Moteurs de jeu",
+      "home.allWork.cat.unreal": "Projets Unreal Engine",
+      "home.allWork.cat.unity": "Projets Unity",
+      "home.allWork.cat.web": "Développement web",
+      "home.allWork.cat.prototypes": "Prototypes techniques",
+      "home.allWork.cat.applications": "Applications",
       "home.card.engine.tag": "Moteur",
       "home.card.engine.summary": "C++ · SFML · Box2D · architecture modulaire",
+      "home.card.engine3d.tag": "Moteur · 3D",
+      "home.card.engine3d.summary": "C++ · OpenGL · éclairage · chargement de modèles",
+      "home.card.lifeawake.tag": "Gameplay · UE",
+      "home.card.lifeawake.summary": "Level design atmosphérique · ambiance",
+      "home.card.ue.minecraft.tag": "Prototype · UE",
+      "home.card.ue.minecraft.summary": "Placement & destruction de blocs",
+      "home.card.ue.stamina.tag": "Prototype · UE",
+      "home.card.ue.stamina.summary": "Course · épuisement · récupération",
+      "home.card.ue.boardgame.tag": "Prototype · UE",
+      "home.card.ue.boardgame.summary": "Lancer de dés & déplacement",
       "home.card.escape.tag": "Gameplay · UE5",
       "home.card.escape.summary": "Thriller FPS · énigmes · atmosphère",
       "home.card.nightlife.tag": "Gameplay · UE5",
@@ -362,15 +469,11 @@
       "home.card.gametalk.summary": "API + serveur · système forum",
       "home.card.pokemon.tag": "Application · C#",
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
-      "home.contact.sub": "Recruteurs et collaborateurs — réponse sous quelques jours",
       "home.footer.about":
         "Ce portfolio met en avant les choix d'ingénierie et l'organisation des systèmes — site statique léger (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v.0.3",
-      "home.footer.updated": "Mis à jour — mai 2026",
+      "home.footer.version": "Portfolio v1.1",
+      "home.footer.updated": "Mis à jour — juin 2026",
 
-      "home.about.title": "À propos",
-      "home.about.body":
-        "Je suis programmeur spécialisé dans le gameplay et les moteurs de jeu, plus particulièrement dans les systèmes de gameplay évolutifs et les architectures techniques modulaires. J'ai de l'expérience en C++, C#, Unreal Engine, Unity et dans le développement de moteurs personnalisés, acquise dans le cadre de projets universitaires et personnels. En parallèle de mes études, je travaille sur des missions en freelance afin de mettre mes compétences au service de projets concrets et enrichissants dans les domaines du web et des jeux vidéo.",
 
       "home.contact.title": "Contact",
       "home.contact.name": "Nom",
@@ -381,6 +484,8 @@
       "home.contact.fail": "Échec de l’envoi :",
 
       "project.challenges": "Défis",
+      "project.techChallenges": "Défis techniques",
+      "project.overview": "Aperçu",
       "project.whatBuilt": "Ce que j’ai fait",
       "project.technologies": "Technologies utilisées",
       "project.tech.title": "Focus technique",
@@ -417,12 +522,6 @@
       "project.escape.decision3": "Volumes de lumière réglés par pièce pour une lisibilité constante",
       "project.escape.workflow":
         "Blockout → passe gameplay → polish lumière/audio → playtests clarté des énigmes.",
-      "project.escape.caption1":
-        "Exploration en basse lumière — lampe torche comme outil de navigation",
-      "project.escape.caption2":
-        "Espace d'énigme conçu pour l'enquête et la narration environnementale",
-      "project.escape.captionVideo": "Démo d'avril — boucle d'interaction et rythme d'atmosphère",
-
       "project.pokemon.subtitle":
         "Une application C# / WPF inspirée du système de combat de Pokemon.",
       "project.pokemon.description":
@@ -450,7 +549,6 @@
         "ViewModels avec commandes de navigation — pas de logique dans le code-behind",
       "project.pokemon.decision2": "Couche repository pour l'initialisation des données Pokémon/capacités",
       "project.pokemon.decision3": "Règles de combat déterministes et faciles à étendre",
-      "project.pokemon.caption1": "UI de combat et navigation catalogues — vues liées MVVM",
 
       "project.gametalk.subtitle":
         "Un forum de jeux vidéo construit avec Go (API + serveur) et des technos web natives.",
@@ -479,7 +577,6 @@
       "project.gametalk.decision1": "Binaire API distinct pour déploiement et tests plus clairs",
       "project.gametalk.decision2": "Auth/session avant les mutations de contenu",
       "project.gametalk.decision3": "Configuration CORS documentée pour le dev local",
-      "project.gametalk.caption1": "Liste de sujets et catégories — architecture client/serveur",
 
       "project.nightlife.subtitle":
         "Un jeu 3D à la première personne sous Unreal Engine 5 réalisé en 5 jours (hackathon).",
@@ -504,7 +601,6 @@
       "project.nightlife.decision1": "Priorité aux interactions stables plutôt qu'au volume de contenu",
       "project.nightlife.decision2": "VO française intégrée tôt pour le timing comique",
       "project.nightlife.decision3": "Repères de navigation dans la ville nocturne",
-      "project.nightlife.caption1": "Navigation nocturne et rencontres basées sur les choix",
 
       "project.engine.subtitle":
         "Un moteur de jeu 2D en C++ (SFML + Box2D) avec une démo de platformer.",
@@ -560,8 +656,84 @@
       "project.engine.t2.body": "Intégration Box2D, déplacements, collisions, ennemis basiques",
       "project.engine.t3.title": "Phase 3 — Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
-      "project.engine.caption1":
-        "Démo platformer validant physique, transitions et UI",
+
+      "project.engine3d.subtitle":
+        "Un moteur de jeu 3D en C++ avec OpenGL — architecture de rendu modulaire validée par une scène de démo basique.",
+      "project.engine3d.description":
+        "Ce projet est un moteur 3D personnalisé développé en C++ avec OpenGL. Il se concentre sur une architecture modulaire et extensible capable de gérer les fonctionnalités de rendu 3D essentielles : éclairage, ombres et chargement de modèles. Contrairement à un jeu complet, le moteur n'inclut pas de démo gameplay — une scène basique avec un cube texturé et un éclairage valide le pipeline de rendu.",
+      "project.engine3d.challengeHighlight":
+        "Construire un pipeline de rendu 3D from scratch exige une séparation claire entre rendu, matériaux et chargement d'assets tout en gardant une architecture extensible.",
+      "project.engine3d.challenge1":
+        "Implémenter plusieurs types de lumières (directionnelle, ponctuelle, spot) avec shadow mapping",
+      "project.engine3d.challenge2":
+        "Parser les fichiers OBJ/MTL et structurer les meshes et sous-meshes",
+      "project.engine3d.challenge3":
+        "Concevoir un système de matériaux et textures intégré au pipeline OpenGL",
+      "project.engine3d.tech1": "C++ — implémentation cœur du moteur",
+      "project.engine3d.tech2": "OpenGL — pipeline de rendu",
+      "project.engine3d.tech3": "GLAD — chargeur OpenGL",
+      "project.engine3d.tech4": "GLM — bibliothèque mathématique",
+
+      "project.lifeawake.subtitle":
+        "Un projet Unreal Engine centré sur l'atmosphère et la présentation de niveau.",
+      "project.lifeawake.description":
+        "LifeAwake est un projet Unreal Engine construit autour de l'ambiance environnementale et du level design. Une vidéo de démonstration présente l'ambiance et la direction visuelle de l'expérience.",
+      "project.lifeawake.challengeHighlight":
+        "Établir une expérience atmosphérique cohérente via l'éclairage, la disposition du niveau et la narration environnementale.",
+      "project.lifeawake.challenge1":
+        "Construire une navigation lisible tout en préservant une esthétique forte axée sur l'ambiance",
+      "project.lifeawake.challenge2":
+        "Intégrer les éléments visuels et audio pour une ambiance constante",
+      "project.lifeawake.challenge3":
+        "Itérer sur la présentation du niveau sous contraintes de production",
+      "project.lifeawake.tech1": "Unreal Engine",
+      "project.lifeawake.tech2": "Level design & outils d'éclairage",
+      "project.lifeawake.demoVideo": "Vidéo de démo",
+      "project.ue.minecraft.subtitle":
+        "Prototype technique Unreal Engine — système de placement et destruction de blocs.",
+      "project.ue.minecraft.description":
+        "Ce prototype Unreal Engine isole un système d'interaction type voxel : placer et détruire des blocs dans un monde basé sur une grille. C'est une démonstration technique d'un système gameplay isolé, pas un jeu complet.",
+      "project.ue.minecraft.challengeHighlight":
+        "Implémenter un placement et une destruction de blocs fiables avec alignement sur grille et retour d'interaction joueur.",
+      "project.ue.minecraft.challenge1":
+        "Placement de blocs sur grille avec règles de validité",
+      "project.ue.minecraft.challenge2":
+        "Destruction de blocs et mise à jour de l'état du monde",
+      "project.ue.minecraft.challenge3":
+        "Raycast d'interaction joueur et ciblage de blocs",
+      "project.ue.minecraft.tech1": "Unreal Engine",
+      "project.ue.minecraft.tech2": "Scripting gameplay",
+
+      "project.ue.stamina.subtitle":
+        "Prototype technique Unreal Engine — course, épuisement, récupération et animations.",
+      "project.ue.stamina.description":
+        "Ce prototype Unreal Engine démontre un système de stamina isolé : la course consomme la stamina, l'épuisement limite les actions du joueur, et la récupération restaure la capacité au fil du temps avec des animations associées. C'est une démonstration technique, pas un jeu complet.",
+      "project.ue.stamina.challengeHighlight":
+        "Coordonner la consommation de stamina, les taux de récupération, les états de déplacement et les transitions d'animation pour un retour joueur réactif.",
+      "project.ue.stamina.challenge1":
+        "Équilibrer la consommation de stamina en course vs récupération au repos",
+      "project.ue.stamina.challenge2":
+        "Gérer l'état d'épuisement et les restrictions de mouvement",
+      "project.ue.stamina.challenge3":
+        "Synchroniser les états d'animation avec le gameplay basé sur la stamina",
+      "project.ue.stamina.tech1": "Unreal Engine",
+      "project.ue.stamina.tech2": "Animation Blueprint",
+      "project.ue.stamina.tech3": "Scripting gameplay",
+
+      "project.ue.boardgame.subtitle":
+        "Prototype technique Unreal Engine — lancer de dés et déplacement sur plateau.",
+      "project.ue.boardgame.description":
+        "Ce prototype Unreal Engine isole les mécaniques de base d'un jeu de plateau : lancer de dés pour déterminer le déplacement et progression du pion le long d'un chemin. C'est une démonstration technique d'un système gameplay isolé, pas un jeu complet.",
+      "project.ue.boardgame.challengeHighlight":
+        "Relier les résultats du lancer de dés à un déplacement déterministe sur le plateau avec un retour joueur clair.",
+      "project.ue.boardgame.challenge1":
+        "Randomisation du lancer de dés et présentation du résultat",
+      "project.ue.boardgame.challenge2":
+        "Déplacement du pion le long des waypoints du plateau",
+      "project.ue.boardgame.challenge3":
+        "Flux de tour et gestion d'état pour la progression sur le plateau",
+      "project.ue.boardgame.tech1": "Unreal Engine",
+      "project.ue.boardgame.tech2": "Scripting gameplay",
 
       "project.platypus.subtitle":
         "Un platformer 3D onirique réalisé sur Unity pendant une Game Jam de 48h.",
@@ -586,7 +758,6 @@
       "project.platypus.decision1": "Un composant d'interaction pour énigmes et collectibles",
       "project.platypus.decision2": "Silhouettes lisibles et chemins flottants pour l'exploration onirique",
       "project.platypus.decision3": "Budget polish sur le saut et la caméra",
-      "project.platypus.caption1": "Layout platformer 3D — collecte de fragments limitée dans le temps",
 
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",
@@ -600,6 +771,13 @@
       "freelance.profile.title": "Profil",
       "freelance.profile.body":
         "J’ai environ 1 an d’expérience, principalement sur des prestations de modifications front-end et back-end sur des sites internet existants. Je me positionne comme un profil jeune / débutant : motivé, rigoureux, et orienté résultats.",
+      "freelance.experience.title": "Missions freelance passées",
+      "freelance.exp1.title": "Maintenance de site — front-end, back-end & SQL",
+      "freelance.exp1.body":
+        "Première mission freelance : maintenance du site en production d'un client, avec des modifications front-end, back-end et SQL à chaque nouvelle demande de fonctionnalité ou correctif.",
+      "freelance.exp2.title": "Refonte complète du site — ASP.NET Core",
+      "freelance.exp2.body":
+        "Le même client m'a ensuite confié une refonte complète du site sur une stack plus moderne (ASP.NET Core), en remplacement de l'implémentation existante.",
       "freelance.rates.title": "Rémunération",
       "freelance.rates.body":
         "Négociable selon le périmètre, les délais et les contraintes du projet.",
@@ -648,6 +826,15 @@
       el.setAttribute(
         "placeholder",
         dict[lang]?.[key] ?? dict.en[key] ?? el.getAttribute("placeholder") ?? ""
+      );
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria-label");
+      if (!key) return;
+      el.setAttribute(
+        "aria-label",
+        dict[lang]?.[key] ?? dict.en[key] ?? el.getAttribute("aria-label") ?? ""
       );
     });
 
