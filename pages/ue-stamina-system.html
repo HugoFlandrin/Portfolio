@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stamina System - Hugo Flandrin</title>
+    <link rel="icon" type="image/png" href="../static/img/Logo.png">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-theme="prototype">
+
+<nav class="navbar">
+    <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-links" id="nav-menu">
+        <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+    </div>
+</nav>
+
+<div class="project-container">
+    <div class="project-left">
+        <h1>Stamina System</h1>
+
+        <h2 data-i18n="project.overview">Overview</h2>
+        <p class="subtitle" data-i18n="project.ue.stamina.subtitle">
+            Unreal Engine technical prototype — running, exhaustion, recovery, and animations.
+        </p>
+
+        <p data-i18n="project.ue.stamina.description">
+            This Unreal Engine prototype demonstrates an isolated stamina gameplay system: running consumes stamina, exhaustion limits player actions, and recovery restores capacity over time with supporting animations. It is a technical demonstration, not a complete game.
+        </p>
+        <!-- TODO: Add repository link, demo media, and detailed implementation notes -->
+
+        <div class="tech-badges-row">
+            <span class="tech-badge">Unreal Engine</span>
+            <span class="tech-badge">Prototype</span>
+            <span class="tech-badge">Stamina</span>
+        </div>
+
+        <h2 data-i18n="project.techChallenges">Technical Challenges</h2>
+        <!-- TODO: Document specific implementation challenges -->
+        <p class="highlight" data-i18n="project.ue.stamina.challengeHighlight">
+            Coordinating stamina drain, recovery rates, movement states, and animation transitions for responsive player feedback.
+        </p>
+        <ul>
+            <li data-i18n="project.ue.stamina.challenge1">Balancing stamina drain during running vs recovery at rest</li>
+            <li data-i18n="project.ue.stamina.challenge2">Handling exhaustion state and movement restrictions</li>
+            <li data-i18n="project.ue.stamina.challenge3">Syncing animation states with stamina-driven gameplay</li>
+        </ul>
+
+        <h2 data-i18n="project.technologies">Technologies</h2>
+        <!-- TODO: Confirm Blueprint vs C++ split and additional tools -->
+        <ul>
+            <li data-i18n="project.ue.stamina.tech1">Unreal Engine</li>
+            <li data-i18n="project.ue.stamina.tech2">Animation Blueprint</li>
+            <li data-i18n="project.ue.stamina.tech3">Gameplay scripting</li>
+        </ul>
+
+    </div>
+
+    <div class="project-right">
+        <!-- TODO: Add screenshot once available -->
+        <div class="media-video">
+            <div class="video-viewer">
+                <div class="video-slide active">
+                    <video controls>
+                        <source src="../static/mp4/Prototypes/StaminaPrototype.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <button class="prev-video" type="button" aria-label="Previous video">&#10094;</button>
+                <button class="next-video" type="button" aria-label="Next video">&#10095;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="image-modal" aria-hidden="true">
+    <img id="modal-img" alt="Expanded screenshot">
+</div>
+
+<script src="../static/js/i18n.js"></script>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/project.js"></script>
+
+</body>
+</html>

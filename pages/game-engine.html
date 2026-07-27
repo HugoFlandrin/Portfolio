@@ -13,11 +13,17 @@
 <body data-theme="engine">
 
 <nav class="navbar">
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-links" id="nav-menu">
         <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
-        <a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
-        <a href="freelance.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+        <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
         <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
     </div>
 </nav>
@@ -157,7 +163,6 @@ scene-&gt;render();</pre>
         <h2 data-i18n="project.links">Links</h2>
         <div class="links">
             <a href="https://github.com/HugoFlandrin/2D-Game-Engine" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
-            <a href="../static/resume/Hugo_Flandrin_Resume.pdf" download data-i18n="home.cta.resume">Resume</a>
         </div>
     </div>
 
@@ -165,7 +170,6 @@ scene-&gt;render();</pre>
         <div class="media-images">
             <figure class="media-item">
                 <img src="../static/img/2DGameEngineDemo.png" alt="Platformer demo — level layout and collision">
-                <figcaption class="media-caption" data-i18n="project.engine.caption1">Platformer demo validating physics, level transitions, and UI flow</figcaption>
             </figure>
         </div>
     </div>
@@ -176,6 +180,7 @@ scene-&gt;render();</pre>
 </div>
 
 <script src="../static/js/i18n.js"></script>
+<script src="../static/js/navbar.js"></script>
 <script src="../static/js/project.js"></script>
 </body>
 </html>
