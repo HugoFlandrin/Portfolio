@@ -6,7 +6,7 @@
     <title>2D Game Engine - Hugo Flandrin</title>
     <meta name="description" content="A C++ 2D game engine (SFML + Box2D) with a platformer demo.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hugoflandrin.github.io/Portfolio/pages/game-engine.html">
+    <meta property="og:url" content="https://hugoflandrin.github.io/Portfolio/pages/2d-game-engine.html">
     <meta property="og:title" content="2D Game Engine - Hugo Flandrin">
     <meta property="og:description" content="A C++ 2D game engine (SFML + Box2D) with a platformer demo.">
     <meta property="og:image" content="https://hugoflandrin.github.io/Portfolio/static/img/2DGameEngineDemo.png">
@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" href="../static/img/Logo.png">
     <link rel="stylesheet" href="../static/css/project.css">
     <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/game-embed.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -182,6 +183,10 @@ scene-&gt;render();</pre>
                 <img src="../static/img/2DGameEngineDemo.png" alt="Platformer demo — level layout and collision">
             </figure>
         </div>
+        <button type="button" class="play-project-button" data-game-trigger>
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span data-i18n="project.engine.playButton">Play the demo</span>
+        </button>
     </div>
 </div>
 
@@ -189,8 +194,36 @@ scene-&gt;render();</pre>
     <img id="modal-img" alt="Expanded screenshot">
 </div>
 
+<div id="game-overlay" aria-hidden="true">
+    <div class="game-overlay-frame">
+        <button type="button" class="game-overlay-close" id="game-overlay-close" aria-label="Close game">✕</button>
+        <iframe id="game-frame" title="2D Game Engine — playable demo"></iframe>
+    </div>
+</div>
+
+<div id="game-result-popup" aria-hidden="true">
+    <div class="game-result-card">
+        <h3 id="game-result-title"></h3>
+        <p id="game-result-score"></p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-primary" id="game-result-retry" data-i18n="home.featured.playAgain">Play again</button>
+            <button type="button" class="btn btn-secondary" id="game-result-close" data-i18n="home.featured.closeGame">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="game-mobile-notice" aria-hidden="true">
+    <div class="game-result-card">
+        <p data-i18n="home.featured.mobileNotice">This demo needs a keyboard and isn't playable on mobile yet — come back on a desktop to try it!</p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-primary" id="game-mobile-notice-close" data-i18n="home.featured.closeGame">Close</button>
+        </div>
+    </div>
+</div>
+
 <script src="../static/js/i18n.js"></script>
 <script src="../static/js/navbar.js"></script>
 <script src="../static/js/project.js"></script>
+<script src="../static/js/game-embed.js"></script>
 </body>
 </html>

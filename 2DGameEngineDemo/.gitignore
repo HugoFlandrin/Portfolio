@@ -1,0 +1,14 @@
+# Build artifacts (desktop / MSBuild)
+x64/
+Debug/
+Release/
+.vs/
+*.pdb
+*.ilk
+
+# vcpkg
+vcpkg_installed/
+
+# Web toolchain / build (Emscripten)
+web/emsdk/
+web/build*/

@@ -1,0 +1,238 @@
+/* Playable game overlay (Featured project) */
+#game-overlay {
+    display: flex;
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 3, 8, 0.92);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+    padding: 32px;
+}
+
+#game-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.game-overlay-frame {
+    position: relative;
+    width: min(1280px, 100%);
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+    box-shadow: var(--shadow, 0 18px 55px rgba(0, 0, 0, 0.55));
+    transform: scale(0.97);
+    transition: transform 0.28s ease;
+}
+
+#game-overlay.is-open .game-overlay-frame {
+    transform: scale(1);
+}
+
+.game-overlay-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.game-overlay-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+    background: rgba(10, 12, 20, 0.75);
+    backdrop-filter: blur(4px);
+    color: var(--text, rgba(255, 255, 255, 0.92));
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.game-overlay-close:hover {
+    background: var(--accent, #ff8a65);
+    color: #1a1a1a;
+    transform: scale(1.06);
+}
+
+/* End-of-run result popup, shown over the overlay */
+#game-result-popup {
+    display: flex;
+    position: fixed;
+    z-index: 3100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 3, 8, 0.75);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.24s ease, visibility 0.24s ease;
+    padding: 24px;
+}
+
+#game-result-popup.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile "desktop only" notice - shares the result popup's overlay/card look */
+#game-mobile-notice {
+    display: flex;
+    position: fixed;
+    z-index: 3100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 3, 8, 0.75);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.24s ease, visibility 0.24s ease;
+    padding: 24px;
+}
+
+#game-mobile-notice.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.game-result-card {
+    width: min(420px, 100%);
+    background: var(--bg1, #0b0f1f);
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+    border-radius: 14px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: var(--shadow, 0 18px 55px rgba(0, 0, 0, 0.55));
+    transform: translateY(8px);
+    transition: transform 0.24s ease;
+}
+
+#game-result-popup.is-open .game-result-card {
+    transform: translateY(0);
+}
+
+.game-result-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    color: var(--text, rgba(255, 255, 255, 0.92));
+}
+
+.game-result-card h3.is-win {
+    color: var(--brand, #4da3ff);
+}
+
+.game-result-card h3.is-loss {
+    color: var(--accent, #ff8a65);
+}
+
+.game-result-card p {
+    color: var(--muted, rgba(255, 255, 255, 0.70));
+    margin-bottom: 24px;
+}
+
+.game-result-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Self-contained button look for the popup actions, so this file doesn't
+   depend on the host page also loading styles.css (project pages only load
+   project.css, which has no .btn classes). */
+.game-result-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.game-result-actions .btn:hover {
+    transform: translateY(-1px);
+}
+
+.game-result-actions .btn-primary {
+    background: linear-gradient(90deg, rgba(77,163,255,0.95), rgba(77,163,255,0.75));
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(77, 163, 255, 0.25);
+}
+
+.game-result-actions .btn-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--border, rgba(255, 255, 255, 0.10));
+    color: var(--text, rgba(255, 255, 255, 0.92));
+}
+
+.game-result-actions .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* "Play the demo" button on the project page, under the screenshot. */
+.play-project-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    border: none;
+    background: var(--primary-color, var(--brand, #3b82f6));
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.play-project-button:hover {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.play-project-button svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+}
+
+@media (max-width: 640px) {
+    #game-overlay {
+        padding: 12px;
+    }
+
+    .game-overlay-close {
+        top: 8px;
+        right: 8px;
+    }
+}
