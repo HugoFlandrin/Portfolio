@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" href="static/img/Logo.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/game-embed.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -90,21 +91,27 @@
                     <h2 data-i18n="home.featured.title">Featured project</h2>
                 </div>
                 <article class="featured-card">
-                    <a href="pages/game-engine.html" class="featured-media">
-                        <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine demo">
+                    <a href="pages/2d-game-engine.html" class="featured-media" id="featured-play-trigger" data-game-trigger>
+                        <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine demo — click to play">
                         <span class="featured-tag" data-i18n="home.featured.tag">Engine · C++ · SFML · Box2D</span>
+                        <span class="featured-play-badge" aria-hidden="true">
+                            <span class="featured-play-circle">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                            <span class="featured-play-text" data-i18n="home.featured.playCue">Cliquer pour jouer</span>
+                        </span>
                     </a>
                     <div class="featured-body">
                         <h3>2D Game Engine</h3>
                         <p class="featured-summary" data-i18n="home.featured.summary">
-                            Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo.
+                            Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo. This demo is playable directly in your browser — just click the screenshot.
                         </p>
                         <ul class="featured-points">
                             <li data-i18n="home.featured.point1">Deterministic update order & scene transitions</li>
                             <li data-i18n="home.featured.point2">Box2D integrated with gameplay entities</li>
                             <li data-i18n="home.featured.point3">Architecture designed for maintainable engine growth</li>
                         </ul>
-                        <a href="pages/game-engine.html" class="btn btn-primary" data-i18n="home.featured.cta">Explore technical breakdown</a>
+                        <a href="pages/2d-game-engine.html" class="btn btn-primary" data-i18n="home.featured.cta">Explore technical breakdown</a>
                     </div>
                 </article>
             </div>
@@ -168,7 +175,7 @@
                 </div>
                 <div class="projects-grid">
                     <article class="project-card project-card--featured-grid">
-                        <a href="pages/game-engine.html" class="project-card-link">
+                        <a href="pages/2d-game-engine.html" class="project-card-link">
                             <div class="project-image">
                                 <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine">
                             </div>
@@ -288,9 +295,37 @@
         </div>
     </footer>
 
+    <div id="game-overlay" aria-hidden="true">
+        <div class="game-overlay-frame">
+            <button type="button" class="game-overlay-close" id="game-overlay-close" aria-label="Close game">✕</button>
+            <iframe id="game-frame" title="2D Game Engine — playable demo"></iframe>
+        </div>
+    </div>
+
+    <div id="game-result-popup" aria-hidden="true">
+        <div class="game-result-card">
+            <h3 id="game-result-title"></h3>
+            <p id="game-result-score"></p>
+            <div class="game-result-actions">
+                <button type="button" class="btn btn-primary" id="game-result-retry" data-i18n="home.featured.playAgain">Play again</button>
+                <button type="button" class="btn btn-secondary" id="game-result-close" data-i18n="home.featured.closeGame">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-mobile-notice" aria-hidden="true">
+        <div class="game-result-card">
+            <p data-i18n="home.featured.mobileNotice">This demo needs a keyboard and isn't playable on mobile yet — come back on a desktop to try it!</p>
+            <div class="game-result-actions">
+                <button type="button" class="btn btn-primary" id="game-mobile-notice-close" data-i18n="home.featured.closeGame">Close</button>
+            </div>
+        </div>
+    </div>
+
     <script src="static/js/i18n.js"></script>
     <script src="static/js/navbar.js"></script>
     <script src="static/js/home.js"></script>
+    <script src="static/js/game-embed.js"></script>
     <script>
         document.getElementById("contactForm").addEventListener("submit", async function (e) {
             e.preventDefault();

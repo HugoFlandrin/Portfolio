@@ -1,0 +1,1113 @@
+
+  AComponent.cpp
+  AScene.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,37): error C2143: erreur de syntaxe : absence de ')' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,47): error C2059: erreur de syntaxe : ',' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,53): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,67): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,79): error C2059: erreur de syntaxe : ')' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,46): error C2143: erreur de syntaxe : absence de ';' avant '}' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.h(14,36): error C2039: 'Rect2i' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.h(14,36): error C2061: erreur de syntaxe : identificateur 'Rect2i' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,12): error C3646: 'getPosition' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,23): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,32): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,12): error C3646: 'getScale' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,20): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,29): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,12): error C3646: 'getOrigin' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,21): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,30): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,42): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,53): error C2065: '_position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,33): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,45): error C2065: '_offset' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,44): error C2065: '_scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,36): error C2659: '=' : fonction comme opérande gauche [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,38): error C2065: 'origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,47): error C2065: '_origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(25,41): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(26,42): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AScene.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(92,28): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(92,14): error C2761: 'void AScene::setCamera(void)' : la redéclaration du membre n'est pas autorisée [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(92,28): error C2065: 'Vec2f' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(92,34): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur '_center' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(92,47): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(92,60): error C2143: erreur de syntaxe : absence de ';' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(92,60): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?) [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(118,34): error C2039: 'size' n'est pas membre de 'sf::View' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\View.hpp(45,25):
+      voir la déclaration de 'sf::View'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(127,5): error C2660: 'AScene::setCamera' : la fonction ne prend pas 1 arguments [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,7):
+      voir la déclaration de 'AScene::setCamera'
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(127,5):
+      lors de la tentative de mise en correspondance de la liste des arguments '(initializer list)'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,17): error C2665: 'sf::RenderTarget::draw' : aucune fonction surchargée n’a pu convertir tous les types d’arguments. [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(331,10):
+      est peut-être 'void sf::RenderTarget::draw(const sf::VertexBuffer &,const sf::RenderStates &)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,17):
+          'void sf::RenderTarget::draw(const sf::VertexBuffer &,const sf::RenderStates &)' : impossible de convertir l'argument 1 de 'Entity' en 'const sf::VertexBuffer &'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,22):
+              Raison : impossible de convertir de 'Entity' en 'const sf::VertexBuffer'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,22):
+              utilisation du type non défini 'sf::VertexBuffer'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(56,7):
+              voir la déclaration de 'sf::VertexBuffer'
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(308,10):
+      ou       'void sf::RenderTarget::draw(const sf::Drawable &,const sf::RenderStates &)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,17):
+          'void sf::RenderTarget::draw(const sf::Drawable &,const sf::RenderStates &)' : impossible de convertir l'argument 1 de 'Entity' en 'const sf::Drawable &'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,22):
+              Raison : impossible de convertir de 'Entity' en 'const sf::Drawable'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,22):
+              Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(133,17):
+      lors de la tentative de mise en correspondance de la liste des arguments '(Entity, sf::RenderStates)'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(138,18): error C2039: 'view' n'est pas membre de 'sf::RenderStates' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderStates.hpp(47,26):
+      voir la déclaration de 'sf::RenderStates'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(138,33): error C2039: 'computeView' n'est pas membre de 'sf::RenderTarget' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(62,25):
+      voir la déclaration de 'sf::RenderTarget'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,21): error C2665: 'sf::RenderTarget::draw' : aucune fonction surchargée n’a pu convertir tous les types d’arguments. [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(331,10):
+      est peut-être 'void sf::RenderTarget::draw(const sf::VertexBuffer &,const sf::RenderStates &)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,21):
+          'void sf::RenderTarget::draw(const sf::VertexBuffer &,const sf::RenderStates &)' : impossible de convertir l'argument 1 de 'Entity' en 'const sf::VertexBuffer &'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,26):
+              Raison : impossible de convertir de 'Entity' en 'const sf::VertexBuffer'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,26):
+              utilisation du type non défini 'sf::VertexBuffer'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(56,7):
+              voir la déclaration de 'sf::VertexBuffer'
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(308,10):
+      ou       'void sf::RenderTarget::draw(const sf::Drawable &,const sf::RenderStates &)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,21):
+          'void sf::RenderTarget::draw(const sf::Drawable &,const sf::RenderStates &)' : impossible de convertir l'argument 1 de 'Entity' en 'const sf::Drawable &'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,26):
+              Raison : impossible de convertir de 'Entity' en 'const sf::Drawable'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,26):
+              Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.cpp(141,21):
+      lors de la tentative de mise en correspondance de la liste des arguments '(Entity, sf::RenderStates)'
+  
+  ACollider.cpp
+  AliveComponent.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Time.inl(35,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,37): error C2143: erreur de syntaxe : absence de ')' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,47): error C2059: erreur de syntaxe : ',' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,53): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Time.inl(35,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,67): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,79): error C2059: erreur de syntaxe : ')' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,46): error C2143: erreur de syntaxe : absence de ';' avant '}' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'AliveComponent.cpp')
+  
+  BoxCollider.cpp
+  ButtonComponent.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(10,19): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Text.hpp(47,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(10,19): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(13,19): error C2039: 'Utf8String' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Text.hpp(47,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(13,19): error C2061: erreur de syntaxe : identificateur 'Utf8String' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,37): error C2143: erreur de syntaxe : absence de ')' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,47): error C2059: erreur de syntaxe : ',' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,53): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,67): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,79): error C2059: erreur de syntaxe : ')' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,46): error C2143: erreur de syntaxe : absence de ';' avant '}' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.h(2,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics/GraphicsContext.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'ButtonComponent.cpp')
+  
+  Engine.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.h(2,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics/GraphicsContext.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Engine.cpp')
+  
+  Entity.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,12): error C3646: 'getPosition' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,23): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,32): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,12): error C3646: 'getScale' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,20): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,29): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,12): error C3646: 'getOrigin' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,21): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,30): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Transformable.hpp(37,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,42): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,53): error C2065: '_position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,33): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,45): error C2065: '_offset' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,44): error C2065: '_scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,36): error C2659: '=' : fonction comme opérande gauche [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,38): error C2065: 'origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,47): error C2065: '_origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(25,41): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(26,42): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.h(14,36): error C2039: 'Rect2i' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Texture.hpp(45,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.h(14,36): error C2061: erreur de syntaxe : identificateur 'Rect2i' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Entity.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,11): error C2665: 'sf::RenderTarget::draw' : aucune fonction surchargée n’a pu convertir tous les types d’arguments. [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(331,10):
+      est peut-être 'void sf::RenderTarget::draw(const sf::VertexBuffer &,const sf::RenderStates &)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,11):
+          'void sf::RenderTarget::draw(const sf::VertexBuffer &,const sf::RenderStates &)' : impossible de convertir l'argument 1 de 'AComponent' en 'const sf::VertexBuffer &'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,16):
+              Raison : impossible de convertir de 'AComponent' en 'const sf::VertexBuffer'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,16):
+              utilisation du type non défini 'sf::VertexBuffer'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(56,7):
+              voir la déclaration de 'sf::VertexBuffer'
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(308,10):
+      ou       'void sf::RenderTarget::draw(const sf::Drawable &,const sf::RenderStates &)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,11):
+          'void sf::RenderTarget::draw(const sf::Drawable &,const sf::RenderStates &)' : impossible de convertir l'argument 1 de 'AComponent' en 'const sf::Drawable &'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,16):
+              Raison : impossible de convertir de 'AComponent' en 'const sf::Drawable'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,16):
+              Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Entity.cpp(39,11):
+      lors de la tentative de mise en correspondance de la liste des arguments '(AComponent, sf::RenderStates)'
+  
+  HealthBarUI.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,16): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,16): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,34): error C2143: erreur de syntaxe : absence de ')' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,48): error C2059: erreur de syntaxe : ',' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,54): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,68): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,83): error C2059: erreur de syntaxe : ')' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.h(13,47): error C2143: erreur de syntaxe : absence de ';' avant '}' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,37): error C2143: erreur de syntaxe : absence de ')' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,47): error C2059: erreur de syntaxe : ',' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,53): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,67): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,79): error C2059: erreur de syntaxe : ')' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,46): error C2143: erreur de syntaxe : absence de ';' avant '}' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'HealthBarUI.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(7,28): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(7,19): error C2761: 'void HealthBarUI::init(void)' : la redéclaration du membre n'est pas autorisée [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(7,28): error C2065: 'Vec2f' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(7,34): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur '_position' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(7,49): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(7,62): error C2143: erreur de syntaxe : absence de ';' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(7,62): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?) [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,6): error C2065: 'Vec2f' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,12): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'fullSize' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,12): error C2065: 'fullSize' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,50): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,50): error C3861: 'Vec2f' : identificateur introuvable [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41): error C2678: '-' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'sf::Vector2f' (ou il n'existe pas de conversion acceptable) [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\box2d\math_functions.h(725,15):
+      est peut-être 'b2Vec2 operator -(b2Vec2,b2Vec2)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+          'b2Vec2 operator -(b2Vec2,b2Vec2)' : impossible de convertir l'argument 1 de 'sf::Vector2f' en 'b2Vec2'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+              Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Color.inl(91,17):
+      ou       'sf::Color sf::operator -(sf::Color,sf::Color)' [trouvé à l'aide d'une recherche dépendante d'un argument]
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+          'sf::Color sf::operator -(sf::Color,sf::Color)' : impossible de convertir l'argument 1 de 'sf::Vector2f' en 'sf::Color'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+              Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Angle.inl(160,17):
+      ou       'sf::Angle sf::operator -(sf::Angle,sf::Angle)' [trouvé à l'aide d'une recherche dépendante d'un argument]
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+          'sf::Angle sf::operator -(sf::Angle,sf::Angle)' : impossible de convertir l'argument 1 de 'sf::Vector2f' en 'sf::Angle'
+              C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+              Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Vector2.hpp(222,36):
+      ou       'sf::Vector2<T> sf::operator -(sf::Vector2<T>)'
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Vector2.hpp(280,36):
+      ou       'sf::Vector2<T> sf::operator -(sf::Vector2<T>,sf::Vector2<T>)'
+          C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+          'sf::Vector2<T> sf::operator -(sf::Vector2<T>,sf::Vector2<T>)' : nous n’avons pas pu déduire modèle de l'argument 'sf::Vector2<T>' de '<error type>'.
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(29,41):
+      lors de la tentative de mise en correspondance de la liste des arguments '(sf::Vector2f, <error type>)'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(30,17): error C2065: 'fullSize' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\HealthBarUI.cpp(30,46): error C2065: 'fullSize' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  ICollisionEvent.cpp
+  MovableComponent.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\MovableComponent.h(2,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/System/Vec2.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'MovableComponent.cpp')
+  
+  PhysicSystem.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.h(2,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics/GraphicsContext.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'PhysicSystem.cpp')
+  
+  Render.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.h(14,36): error C2039: 'Rect2i' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.h(14,36): error C2061: erreur de syntaxe : identificateur 'Rect2i' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,12): error C3646: 'getPosition' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,23): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,32): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,12): error C3646: 'getScale' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,20): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,29): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,12): error C3646: 'getOrigin' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,21): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,30): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,42): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,53): error C2065: '_position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,33): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,45): error C2065: '_offset' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,44): error C2065: '_scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,36): error C2659: '=' : fonction comme opérande gauche [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,38): error C2065: 'origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,47): error C2065: '_origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(25,41): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(26,42): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'Render.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(6,43): error C2039: 'Rect2i' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(6,43): error C2061: erreur de syntaxe : identificateur 'Rect2i' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(6,84): error C2512: 'sf::Sprite::Sprite' : aucun constructeur par défaut approprié disponible [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(6,84):
+      lors de la tentative de mise en correspondance de la liste des arguments '()'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(7,9): error C2039: 'textureRect' n'est pas membre de 'sf::Sprite' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Sprite.hpp(50,25):
+      voir la déclaration de 'sf::Sprite'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(7,23): error C2065: '_rect' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(8,9): error C2039: 'origin' n'est pas membre de 'sf::Sprite' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Sprite.hpp(50,25):
+      voir la déclaration de 'sf::Sprite'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(8,18): error C2065: '_origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(24,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(24,6): error C2065: 'Vec2f' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(24,12): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'scale' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(24,12): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(24,27): error C3867: 'sf::Transformable::scale' : syntaxe non-standard ; utilisez '&' pour créer un pointeur vers un membre [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(25,37): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(25,57): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(25,67): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(25,15): error C3079: une liste d'initialiseurs ne peut pas être utilisée en tant qu'opérande droit de cet opérateur d'assignation [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(29,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(29,6): error C2065: 'Vec2f' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(29,12): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'scale' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(29,12): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(29,27): error C3867: 'sf::Transformable::scale' : syntaxe non-standard ; utilisez '&' pour créer un pointeur vers un membre [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(30,19): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(30,46): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(30,66): error C2065: 'scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Render.cpp(30,15): error C3079: une liste d'initialiseurs ne peut pas être utilisée en tant qu'opérande droit de cet opérateur d'assignation [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  ResourceManager.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\ResourceManager.cpp(2,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/System/Path.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  RigidBody.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.h(2,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics/GraphicsContext.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'RigidBody.cpp')
+  
+  SceneManager.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,37): error C2143: erreur de syntaxe : absence de ')' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,47): error C2059: erreur de syntaxe : ',' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,53): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,67): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,79): error C2059: erreur de syntaxe : ')' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,46): error C2143: erreur de syntaxe : absence de ';' avant '}' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\SceneManager.cpp(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.h(2,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics/GraphicsContext.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'SceneManager.cpp')
+  
+  ScoreUpdate.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\ScoreUpdate.cpp(3,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/System/Utf8String.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  TextRenderer.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(10,19): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(10,19): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(13,19): error C2039: 'Utf8String' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(13,19): error C2061: erreur de syntaxe : identificateur 'Utf8String' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,12): error C3646: 'getPosition' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,23): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,32): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,12): error C3646: 'getScale' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,20): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,29): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,12): error C3646: 'getOrigin' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,21): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,30): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,42): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,53): error C2065: '_position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,33): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,45): error C2065: '_offset' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,44): error C2065: '_scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,36): error C2659: '=' : fonction comme opérande gauche [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,38): error C2065: 'origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,47): error C2065: '_origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(25,41): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(26,42): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TextRenderer.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(5,32): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(5,15): error C7550: 'TextRenderer::{ctor}' : le nom qualifié dans ce contexte nomme un constructeur et non un type [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(5,32): error C2065: 'Vec2f' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(5,38): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur '_position' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(5,70): error C2039: 'Utf8String' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,2): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,7): error C2065: '_font' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,28): error C2065: '_position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,49): error C2065: '_text' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,99): error C2065: '_characterSize' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,129): error C2065: '_color' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,6): error C2440: 'initialisation' : impossible de convertir de 'initializer list' en 'int' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,6):
+      L'initialiseur contient trop d'éléments
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,139): error C2059: erreur de syntaxe : '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,139): error C2143: erreur de syntaxe : absence de ';' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(6,139): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?) [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(14,32): error C2039: 'Utf8String' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(14,20): error C2761: 'void TextRenderer::setText(void)' : la redéclaration du membre n'est pas autorisée [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(14,32): error C2065: 'Utf8String' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(14,43): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur '_text' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(14,50): error C2143: erreur de syntaxe : absence de ';' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.cpp(14,50): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?) [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  TimerUpdate.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,37): error C2143: erreur de syntaxe : absence de ')' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,47): error C2059: erreur de syntaxe : ',' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,53): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\System\Clock.hpp(41,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,67): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,79): error C2059: erreur de syntaxe : ')' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\AScene.h(51,46): error C2143: erreur de syntaxe : absence de ';' avant '}' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(10,19): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Text.hpp(47,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(10,19): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(13,19): error C2039: 'Utf8String' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\Text.hpp(47,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TextRenderer.h(13,19): error C2061: erreur de syntaxe : identificateur 'Utf8String' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TimerUpdate.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TimerUpdate.cpp(4,10): error C1083: Impossible d'ouvrir le fichier include : 'SFML/System/Utf8String.hpp' : No such file or directory [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  TransformComponent.cpp
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(10,17): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,12): error C3646: 'getPosition' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,23): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(18,32): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,23): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,16): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,12): error C3646: 'getScale' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,20): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(21,29): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,20): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,6): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,12): error C3646: 'getOrigin' : spécificateur de substitution inconnu [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,21): error C2059: erreur de syntaxe : '(' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(23,30): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,21): error C2061: erreur de syntaxe : identificateur 'Vec2f' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,42): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(19,53): error C2065: '_position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,33): error C2065: 'position' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(20,45): error C2065: '_offset' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,44): error C2065: '_scale' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(22,36): error C2659: '=' : fonction comme opérande gauche [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,38): error C2065: 'origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(24,47): error C2065: '_origin' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(25,41): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.h(26,42): error C2065: 'rotation' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  (compiler le fichier source 'TransformComponent.cpp')
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.cpp(7,35): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.cpp(7,26): error C2761: 'void TransformComponent::init(void)' : la redéclaration du membre n'est pas autorisée [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.cpp(7,35): error C2065: 'Vec2f' : identificateur non déclaré [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.cpp(7,41): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur '_position' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.cpp(7,56): error C2039: 'Vec2f' n'est pas membre de 'sf' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+      C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\vcpkg_installed\x64-windows\x64-windows\include\SFML\Graphics\RenderTarget.hpp(50,11):
+      voir la déclaration de 'sf'
+  
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.cpp(8,1): error C2143: erreur de syntaxe : absence de ';' avant '{' [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\TransformComponent.cpp(8,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?) [C:\Users\hugof\Documents\LevelWeb Studio\Portfolio\2DGameEngineDemo\Engine\Engine.vcxproj]
+  Génération de code en cours...

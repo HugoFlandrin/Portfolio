@@ -26,11 +26,19 @@
       "home.featured.title": "Featured project",
       "home.featured.tag": "Engine · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo.",
+        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo. This demo is playable directly in your browser — just click the screenshot.",
       "home.featured.point1": "Deterministic update order & scene transitions",
       "home.featured.point2": "Box2D integrated with gameplay entities",
       "home.featured.point3": "Architecture designed for maintainable engine growth",
       "home.featured.cta": "Explore technical breakdown",
+      "home.featured.playCue": "Click to play",
+      "home.featured.playAgain": "Play again",
+      "home.featured.closeGame": "Close",
+      "home.featured.mobileNotice":
+        "This demo needs a keyboard and isn't playable on mobile yet — come back on a desktop to try it!",
+      "home.featured.resultWin": "Victory!",
+      "home.featured.resultLoss": "Defeat",
+      "home.featured.resultScore": "Score:",
       "home.experience.title": "Professional experience",
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 — Present",
@@ -263,6 +271,7 @@
       "project.engine.t2.body": "Box2D integration, movement, collisions, basic enemies",
       "project.engine.t3.title": "Phase 3 — Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
+      "project.engine.playButton": "Play the demo",
 
       "project.engine3d.subtitle":
         "A C++ 3D game engine built with OpenGL — modular rendering architecture validated through a basic demo scene.",
@@ -414,11 +423,19 @@
       "home.featured.title": "Projet phare",
       "home.featured.tag": "Moteur · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique) validé par une démo platformer complète.",
+        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique) validé par une démo platformer complète. Cette démo est jouable directement dans votre navigateur — il suffit de cliquer sur la capture d'écran.",
       "home.featured.point1": "Ordre d'update déterministe et transitions de scènes",
       "home.featured.point2": "Box2D intégré aux entités gameplay",
       "home.featured.point3": "Architecture pensée pour faire évoluer le moteur",
       "home.featured.cta": "Voir le détail technique",
+      "home.featured.playCue": "Cliquer pour jouer",
+      "home.featured.playAgain": "Rejouer",
+      "home.featured.closeGame": "Fermer",
+      "home.featured.mobileNotice":
+        "Cette démo nécessite un clavier et n'est pas encore jouable sur mobile — revenez sur ordinateur pour l'essayer !",
+      "home.featured.resultWin": "Victoire !",
+      "home.featured.resultLoss": "Défaite",
+      "home.featured.resultScore": "Score :",
       "home.experience.title": "Expérience professionnelle",
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 — Aujourd'hui",
@@ -656,6 +673,7 @@
       "project.engine.t2.body": "Intégration Box2D, déplacements, collisions, ennemis basiques",
       "project.engine.t3.title": "Phase 3 — Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
+      "project.engine.playButton": "Jouer à la démo",
 
       "project.engine3d.subtitle":
         "Un moteur de jeu 3D en C++ avec OpenGL — architecture de rendu modulaire validée par une scène de démo basique.",

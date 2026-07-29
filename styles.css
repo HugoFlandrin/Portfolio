@@ -277,6 +277,7 @@ a {
     display: block;
     min-height: 280px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .featured-media img {
@@ -284,10 +285,82 @@ a {
     height: 100%;
     object-fit: cover;
     transition: transform 0.35s ease;
+    transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
 }
 
 .featured-card:hover .featured-media img {
-    transform: scale(1.03);
+    transform: scale(1.15);
+}
+
+/* "Click to play" cue: a play-button badge that gently pulses to draw the
+   eye, and comes fully alive on hover/focus. */
+.featured-play-badge {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.featured-media:hover .featured-play-badge,
+.featured-media:focus-visible .featured-play-badge {
+    opacity: 1;
+}
+
+.featured-play-circle {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: rgba(10, 12, 20, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 0 rgba(77, 163, 255, 0.55);
+    animation: featured-play-pulse 2.2s ease-out infinite;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.featured-media:hover .featured-play-circle {
+    background: var(--brand);
+    transform: scale(1.08);
+    animation-play-state: paused;
+}
+
+.featured-play-circle svg {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+    fill: #fff;
+}
+
+.featured-play-text {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: rgba(10, 12, 20, 0.55);
+    backdrop-filter: blur(3px);
+    color: var(--text);
+}
+
+@keyframes featured-play-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(77, 163, 255, 0.45); }
+    70%  { box-shadow: 0 0 0 18px rgba(77, 163, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(77, 163, 255, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .featured-play-circle {
+        animation: none;
+    }
 }
 
 .featured-tag {
