@@ -43,6 +43,22 @@
     mobileNotice.setAttribute("aria-hidden", "true");
   };
 
+  // The game reads keyboard input via the browser, which only delivers it to
+  // whichever element/frame currently has focus - without this, the player
+  // has to click a second time inside the iframe before movement keys work.
+  const focusGameFrame = () => {
+    frame.focus();
+    try {
+      frame.contentWindow?.focus();
+      frame.contentDocument?.getElementById("canvas")?.focus();
+    } catch {
+      // Cross-origin iframe (shouldn't happen here, same-origin game build)
+      // - nothing more we can do, fall back to just the frame having focus.
+    }
+  };
+
+  frame.addEventListener("load", focusGameFrame);
+
   const openOverlay = () => {
     const lang = window.__i18n?.getLang() ?? "en";
     frame.src = `${GAME_SRC}?lang=${lang}`;
