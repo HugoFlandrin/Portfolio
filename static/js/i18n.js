@@ -22,39 +22,39 @@
       "home.cta.freelance": "My freelance activity",
       "home.status.label": "Currently looking for",
       "home.status.text":
-        "Internship or junior role — Gameplay Programmer, Engine Programmer, or Generalist Programmer (C++ / Unreal / custom engine).",
+        "Internship or junior role - Gameplay Programmer, Engine Programmer, or Generalist Programmer (C++ / Unreal / custom engine).",
       "home.featured.title": "Featured project",
       "home.featured.tag": "Engine · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo. This demo is playable directly in your browser — just click the screenshot.",
+        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo. This demo is playable directly in your browser - just click the screenshot.",
       "home.featured.point1": "Deterministic update order & scene transitions",
       "home.featured.point2": "Box2D integrated with gameplay entities",
       "home.featured.point3": "Architecture designed for maintainable engine growth",
       "home.featured.cta": "Explore technical breakdown",
       "home.featured.playCue": "Click to play",
       "home.featured.playAgain": "Play again",
-      "home.featured.closeGame": "Close",
+      "home.featured.closeGame": "Close", 
       "home.featured.mobileNotice":
-        "This demo needs a keyboard and isn't playable on mobile yet — come back on a desktop to try it!",
+        "This demo needs a keyboard and isn't playable on mobile yet - come back on a desktop to try it!",
       "home.featured.resultWin": "Victory!",
       "home.featured.resultLoss": "Defeat",
       "home.featured.resultScore": "Score:",
       "home.experience.title": "Professional experience",
       "home.exp1.type": "Freelance",
-      "home.exp1.period": "2025 — Present",
-      "home.exp1.role": "Web & Game Development — Freelance",
+      "home.exp1.period": "2025 - Present",
+      "home.exp1.role": "Web & Game Development - Freelance",
       "home.exp1.item1": "Front-end and back-end updates on production websites",
       "home.exp1.item2": "Feature delivery, bug fixes, and iterative client feedback loops",
       "home.exp1.item3": "Small-scope game and web prototypes under time constraints",
       "home.exp2.type": "Academic / Personal",
-      "home.exp2.period": "2023 — Present",
-      "home.exp2.role": "Gameplay & Engine Projects — Lead Programmer",
+      "home.exp2.period": "2023 - Present",
+      "home.exp2.role": "Gameplay & Engine Projects - Lead Programmer",
       "home.exp2.item1": "Designed and implemented a modular 2D game engine (SFML + Box2D)",
       "home.exp2.item2": "Shipped gameplay systems for UE5 and Unity projects (jam & semester scope)",
       "home.exp2.item3": "Owned technical architecture decisions, debugging, and milestone delivery",
       "home.exp3.type": "University",
       "home.exp3.period": "Team projects",
-      "home.exp3.role": "Game Development — Programmer",
+      "home.exp3.role": "Game Development - Programmer",
       "home.exp3.item1": "Collaborated on multidisciplinary teams (design, art, audio)",
       "home.exp3.item2": "Delivered playable builds under hackathon and coursework deadlines",
       "home.exp3.item3": "Built player interactions, pacing systems, and level scripting",
@@ -90,9 +90,9 @@
       "home.card.pokemon.tag": "Application · C#",
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
-        "This portfolio highlights engineering decisions and system design — built as a lightweight static site (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.1",
-      "home.footer.updated": "Updated June 2026",
+        "This portfolio highlights engineering decisions and system design - built as a lightweight static site (HTML/CSS/JS).",
+      "home.footer.version": "Portfolio v1.2",
+      "home.footer.updated": "Updated July 2026",
 
 
       "home.contact.title": "Contact",
@@ -165,7 +165,7 @@
       "project.pokemon.tech.note":
         "MVVM separation keeps views thin; battle logic and data access live in testable services with SQL-backed catalogs.",
       "project.pokemon.decision1":
-        "ViewModels expose commands for navigation — no logic in code-behind",
+        "ViewModels expose commands for navigation - no logic in code-behind",
       "project.pokemon.decision2": "Repository layer for Pokémon/ability data initialization",
       "project.pokemon.decision3": "Battle rules kept deterministic and easy to extend",
 
@@ -258,25 +258,25 @@
       "project.engine.modular.body":
         "Rendering and simulation are isolated behind scene interfaces so future 3D backends could replace SFML draw paths without rewriting gameplay rules.",
       "project.engine.decisions.title": "Key engineering decisions",
-      "project.engine.decision1": "Single-threaded loop first — predictable debugging before optimization",
+      "project.engine.decision1": "Single-threaded loop first - predictable debugging before optimization",
       "project.engine.decision2": "Data-oriented entity lists per scene instead of deep inheritance trees",
       "project.engine.decision3": "Explicit scene transitions to avoid stale physics bodies",
       "project.engine.workflow.title": "Development workflow",
       "project.engine.workflow.body":
         "Iteration cycle: implement engine feature → validate in platformer demo → refactor boundaries → document update order. Git branches per system (physics, UI, levels).",
       "project.engine.timeline.title": "Progression",
-      "project.engine.t1.title": "Phase 1 — Core loop",
+      "project.engine.t1.title": "Phase 1 - Core loop",
       "project.engine.t1.body": "Window, input, scene switching, empty gameplay scene",
-      "project.engine.t2.title": "Phase 2 — Physics & player",
+      "project.engine.t2.title": "Phase 2 - Physics & player",
       "project.engine.t2.body": "Box2D integration, movement, collisions, basic enemies",
-      "project.engine.t3.title": "Phase 3 — Content & UI",
+      "project.engine.t3.title": "Phase 3 - Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
       "project.engine.playButton": "Play the demo",
 
       "project.engine3d.subtitle":
-        "A C++ 3D game engine built with OpenGL — modular rendering architecture validated through a basic demo scene.",
+        "A C++ 3D game engine built with OpenGL - modular rendering architecture validated through a basic demo scene.",
       "project.engine3d.description":
-        "This project is a custom 3D engine developed in C++ with OpenGL. It focuses on building a modular and extensible architecture capable of handling core 3D rendering features such as lighting, shadows, and model loading. Unlike a full game project, the engine does not include a gameplay demo — instead, a basic scene composed of a textured cube and lighting validates the rendering pipeline.",
+        "This project is a custom 3D engine developed in C++ with OpenGL. It focuses on building a modular and extensible architecture capable of handling core 3D rendering features such as lighting, shadows, and model loading. Unlike a full game project, the engine does not include a gameplay demo - instead, a basic scene composed of a textured cube and lighting validates the rendering pipeline.",
       "project.engine3d.challengeHighlight":
         "Building a 3D rendering pipeline from scratch requires careful separation between rendering, materials, and asset loading while keeping the architecture extensible.",
       "project.engine3d.challenge1":
@@ -285,10 +285,10 @@
         "Parsing OBJ/MTL files and structuring mesh and submesh data",
       "project.engine3d.challenge3":
         "Designing a material and texture system integrated with the OpenGL pipeline",
-      "project.engine3d.tech1": "C++ — core engine implementation",
-      "project.engine3d.tech2": "OpenGL — rendering pipeline",
-      "project.engine3d.tech3": "GLAD — OpenGL loader",
-      "project.engine3d.tech4": "GLM — mathematics library",
+      "project.engine3d.tech1": "C++ - core engine implementation",
+      "project.engine3d.tech2": "OpenGL - rendering pipeline",
+      "project.engine3d.tech3": "GLAD - OpenGL loader",
+      "project.engine3d.tech4": "GLM - mathematics library",
 
       "project.lifeawake.subtitle":
         "An Unreal Engine project focused on atmosphere and level presentation.",
@@ -306,7 +306,7 @@
       "project.lifeawake.tech2": "Level design & lighting tools",
       "project.lifeawake.demoVideo": "Demo video",
       "project.ue.minecraft.subtitle":
-        "Unreal Engine technical prototype — block placement and destruction system.",
+        "Unreal Engine technical prototype - block placement and destruction system.",
       "project.ue.minecraft.description":
         "This Unreal Engine prototype isolates a voxel-style block interaction system: placing and destroying blocks in a grid-based world. It is a technical demonstration of an isolated gameplay system, not a complete game.",
       "project.ue.minecraft.challengeHighlight":
@@ -321,7 +321,7 @@
       "project.ue.minecraft.tech2": "Gameplay scripting",
 
       "project.ue.stamina.subtitle":
-        "Unreal Engine technical prototype — running, exhaustion, recovery, and animations.",
+        "Unreal Engine technical prototype - running, exhaustion, recovery, and animations.",
       "project.ue.stamina.description":
         "This Unreal Engine prototype demonstrates an isolated stamina gameplay system: running consumes stamina, exhaustion limits player actions, and recovery restores capacity over time with supporting animations. It is a technical demonstration, not a complete game.",
       "project.ue.stamina.challengeHighlight":
@@ -337,7 +337,7 @@
       "project.ue.stamina.tech3": "Gameplay scripting",
 
       "project.ue.boardgame.subtitle":
-        "Unreal Engine technical prototype — dice rolling and board movement.",
+        "Unreal Engine technical prototype - dice rolling and board movement.",
       "project.ue.boardgame.description":
         "This Unreal Engine prototype isolates core board game mechanics: dice rolling to determine movement and token progression along a board path. It is a technical demonstration of an isolated gameplay system, not a complete game.",
       "project.ue.boardgame.challengeHighlight":
@@ -387,10 +387,10 @@
       "freelance.profile.body":
         "I have around 1 year of experience, mainly doing front-end and back-end modifications on existing websites. I position myself as a junior / beginner profile: motivated, rigorous, and focused on shipping useful improvements.",
       "freelance.experience.title": "Past freelance missions",
-      "freelance.exp1.title": "Ongoing website maintenance — front-end, back-end & SQL",
+      "freelance.exp1.title": "Ongoing website maintenance - front-end, back-end & SQL",
       "freelance.exp1.body":
         "First freelance mission: maintaining a client's production website, handling front-end, back-end, and SQL changes whenever new features or fixes were requested.",
-      "freelance.exp2.title": "Full website rebuild — ASP.NET Core",
+      "freelance.exp2.title": "Full website rebuild - ASP.NET Core",
       "freelance.exp2.body":
         "The same client then brought me on to fully rebuild the site on a more modern stack (ASP.NET Core), replacing the legacy implementation.",
       "freelance.rates.title": "Rates",
@@ -419,11 +419,11 @@
       "home.cta.freelance": "Mon activité freelance",
       "home.status.label": "Actuellement à la recherche de",
       "home.status.text":
-        "Stage ou poste junior — Programmeur Gameplay, Programmeur Moteur, ou Programmeur Généraliste (C++ / Unreal / moteur maison).",
+        "Stage ou poste junior - Programmeur Gameplay, Programmeur Moteur, ou Programmeur Généraliste (C++ / Unreal / moteur maison).",
       "home.featured.title": "Projet phare",
       "home.featured.tag": "Moteur · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique) validé par une démo platformer complète. Cette démo est jouable directement dans votre navigateur — il suffit de cliquer sur la capture d'écran.",
+        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique) validé par une démo platformer complète. Cette démo est jouable directement dans votre navigateur - il suffit de cliquer sur la capture d'écran.",
       "home.featured.point1": "Ordre d'update déterministe et transitions de scènes",
       "home.featured.point2": "Box2D intégré aux entités gameplay",
       "home.featured.point3": "Architecture pensée pour faire évoluer le moteur",
@@ -432,26 +432,26 @@
       "home.featured.playAgain": "Rejouer",
       "home.featured.closeGame": "Fermer",
       "home.featured.mobileNotice":
-        "Cette démo nécessite un clavier et n'est pas encore jouable sur mobile — revenez sur ordinateur pour l'essayer !",
+        "Cette démo nécessite un clavier et n'est pas encore jouable sur mobile - revenez sur ordinateur pour l'essayer !",
       "home.featured.resultWin": "Victoire !",
       "home.featured.resultLoss": "Défaite",
       "home.featured.resultScore": "Score :",
       "home.experience.title": "Expérience professionnelle",
       "home.exp1.type": "Freelance",
-      "home.exp1.period": "2025 — Aujourd'hui",
-      "home.exp1.role": "Développement Web & Jeu — Freelance",
+      "home.exp1.period": "2025 - Aujourd'hui",
+      "home.exp1.role": "Développement Web & Jeu - Freelance",
       "home.exp1.item1": "Modifications front-end et back-end sur des sites en production",
       "home.exp1.item2": "Livraison de fonctionnalités, corrections et boucles client",
       "home.exp1.item3": "Prototypes web et jeu à périmètre réduit sous contrainte de temps",
       "home.exp2.type": "Académique / Personnel",
-      "home.exp2.period": "2023 — Aujourd'hui",
-      "home.exp2.role": "Projets Gameplay & Moteur — Lead programmeur",
+      "home.exp2.period": "2023 - Aujourd'hui",
+      "home.exp2.role": "Projets Gameplay & Moteur - Lead programmeur",
       "home.exp2.item1": "Conception et implémentation d'un moteur 2D modulaire (SFML + Box2D)",
       "home.exp2.item2": "Systèmes gameplay livrés sur UE5 et Unity (jam & projets universitaires)",
       "home.exp2.item3": "Décisions d'architecture, debug et respect des jalons",
       "home.exp3.type": "Université",
       "home.exp3.period": "Projets d'équipe",
-      "home.exp3.role": "Développement Jeu — Programmeur",
+      "home.exp3.role": "Développement Jeu - Programmeur",
       "home.exp3.item1": "Collaboration multidisciplinaire (game design, art, audio)",
       "home.exp3.item2": "Builds jouables livrés en hackathon et projets de cours",
       "home.exp3.item3": "Interactions joueur, rythme et scripting de niveaux",
@@ -487,9 +487,9 @@
       "home.card.pokemon.tag": "Application · C#",
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
-        "Ce portfolio met en avant les choix d'ingénierie et l'organisation des systèmes — site statique léger (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.1",
-      "home.footer.updated": "Mis à jour — juin 2026",
+        "Ce portfolio met en avant les choix d'ingénierie et l'organisation des systèmes - site statique léger (HTML/CSS/JS).",
+      "home.footer.version": "Portfolio v1.2",
+      "home.footer.updated": "Mis à jour - juillet 2026",
 
 
       "home.contact.title": "Contact",
@@ -563,7 +563,7 @@
       "project.pokemon.tech.note":
         "Séparation MVVM : vues légères, logique de combat et accès données dans des services testables avec catalogues SQL.",
       "project.pokemon.decision1":
-        "ViewModels avec commandes de navigation — pas de logique dans le code-behind",
+        "ViewModels avec commandes de navigation - pas de logique dans le code-behind",
       "project.pokemon.decision2": "Couche repository pour l'initialisation des données Pokémon/capacités",
       "project.pokemon.decision3": "Règles de combat déterministes et faciles à étendre",
 
@@ -660,25 +660,25 @@
       "project.engine.modular.body":
         "Rendu et simulation isolés derrière des interfaces de scène pour pouvoir remplacer le backend draw plus tard.",
       "project.engine.decisions.title": "Décisions d'ingénierie",
-      "project.engine.decision1": "Boucle mono-thread d'abord — debug prévisible avant optimisation",
+      "project.engine.decision1": "Boucle mono-thread d'abord - debug prévisible avant optimisation",
       "project.engine.decision2": "Listes d'entités orientées données plutôt qu'arbres d'héritage profonds",
       "project.engine.decision3": "Transitions de scène explicites pour éviter les corps physiques obsolètes",
       "project.engine.workflow.title": "Workflow de développement",
       "project.engine.workflow.body":
         "Feature moteur → validation dans la démo platformer → refactor des frontières → documentation de l'ordre d'update.",
       "project.engine.timeline.title": "Progression",
-      "project.engine.t1.title": "Phase 1 — Boucle cœur",
+      "project.engine.t1.title": "Phase 1 - Boucle cœur",
       "project.engine.t1.body": "Fenêtre, entrées, changement de scène, scène gameplay vide",
-      "project.engine.t2.title": "Phase 2 — Physique & joueur",
+      "project.engine.t2.title": "Phase 2 - Physique & joueur",
       "project.engine.t2.body": "Intégration Box2D, déplacements, collisions, ennemis basiques",
-      "project.engine.t3.title": "Phase 3 — Contenu & UI",
+      "project.engine.t3.title": "Phase 3 - Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
       "project.engine.playButton": "Jouer à la démo",
 
       "project.engine3d.subtitle":
-        "Un moteur de jeu 3D en C++ avec OpenGL — architecture de rendu modulaire validée par une scène de démo basique.",
+        "Un moteur de jeu 3D en C++ avec OpenGL - architecture de rendu modulaire validée par une scène de démo basique.",
       "project.engine3d.description":
-        "Ce projet est un moteur 3D personnalisé développé en C++ avec OpenGL. Il se concentre sur une architecture modulaire et extensible capable de gérer les fonctionnalités de rendu 3D essentielles : éclairage, ombres et chargement de modèles. Contrairement à un jeu complet, le moteur n'inclut pas de démo gameplay — une scène basique avec un cube texturé et un éclairage valide le pipeline de rendu.",
+        "Ce projet est un moteur 3D personnalisé développé en C++ avec OpenGL. Il se concentre sur une architecture modulaire et extensible capable de gérer les fonctionnalités de rendu 3D essentielles : éclairage, ombres et chargement de modèles. Contrairement à un jeu complet, le moteur n'inclut pas de démo gameplay - une scène basique avec un cube texturé et un éclairage valide le pipeline de rendu.",
       "project.engine3d.challengeHighlight":
         "Construire un pipeline de rendu 3D from scratch exige une séparation claire entre rendu, matériaux et chargement d'assets tout en gardant une architecture extensible.",
       "project.engine3d.challenge1":
@@ -687,10 +687,10 @@
         "Parser les fichiers OBJ/MTL et structurer les meshes et sous-meshes",
       "project.engine3d.challenge3":
         "Concevoir un système de matériaux et textures intégré au pipeline OpenGL",
-      "project.engine3d.tech1": "C++ — implémentation cœur du moteur",
-      "project.engine3d.tech2": "OpenGL — pipeline de rendu",
-      "project.engine3d.tech3": "GLAD — chargeur OpenGL",
-      "project.engine3d.tech4": "GLM — bibliothèque mathématique",
+      "project.engine3d.tech1": "C++ - implémentation cœur du moteur",
+      "project.engine3d.tech2": "OpenGL - pipeline de rendu",
+      "project.engine3d.tech3": "GLAD - chargeur OpenGL",
+      "project.engine3d.tech4": "GLM - bibliothèque mathématique",
 
       "project.lifeawake.subtitle":
         "Un projet Unreal Engine centré sur l'atmosphère et la présentation de niveau.",
@@ -708,7 +708,7 @@
       "project.lifeawake.tech2": "Level design & outils d'éclairage",
       "project.lifeawake.demoVideo": "Vidéo de démo",
       "project.ue.minecraft.subtitle":
-        "Prototype technique Unreal Engine — système de placement et destruction de blocs.",
+        "Prototype technique Unreal Engine - système de placement et destruction de blocs.",
       "project.ue.minecraft.description":
         "Ce prototype Unreal Engine isole un système d'interaction type voxel : placer et détruire des blocs dans un monde basé sur une grille. C'est une démonstration technique d'un système gameplay isolé, pas un jeu complet.",
       "project.ue.minecraft.challengeHighlight":
@@ -723,7 +723,7 @@
       "project.ue.minecraft.tech2": "Scripting gameplay",
 
       "project.ue.stamina.subtitle":
-        "Prototype technique Unreal Engine — course, épuisement, récupération et animations.",
+        "Prototype technique Unreal Engine - course, épuisement, récupération et animations.",
       "project.ue.stamina.description":
         "Ce prototype Unreal Engine démontre un système de stamina isolé : la course consomme la stamina, l'épuisement limite les actions du joueur, et la récupération restaure la capacité au fil du temps avec des animations associées. C'est une démonstration technique, pas un jeu complet.",
       "project.ue.stamina.challengeHighlight":
@@ -739,7 +739,7 @@
       "project.ue.stamina.tech3": "Scripting gameplay",
 
       "project.ue.boardgame.subtitle":
-        "Prototype technique Unreal Engine — lancer de dés et déplacement sur plateau.",
+        "Prototype technique Unreal Engine - lancer de dés et déplacement sur plateau.",
       "project.ue.boardgame.description":
         "Ce prototype Unreal Engine isole les mécaniques de base d'un jeu de plateau : lancer de dés pour déterminer le déplacement et progression du pion le long d'un chemin. C'est une démonstration technique d'un système gameplay isolé, pas un jeu complet.",
       "project.ue.boardgame.challengeHighlight":
@@ -790,10 +790,10 @@
       "freelance.profile.body":
         "J’ai environ 1 an d’expérience, principalement sur des prestations de modifications front-end et back-end sur des sites internet existants. Je me positionne comme un profil jeune / débutant : motivé, rigoureux, et orienté résultats.",
       "freelance.experience.title": "Missions freelance passées",
-      "freelance.exp1.title": "Maintenance de site — front-end, back-end & SQL",
+      "freelance.exp1.title": "Maintenance de site - front-end, back-end & SQL",
       "freelance.exp1.body":
         "Première mission freelance : maintenance du site en production d'un client, avec des modifications front-end, back-end et SQL à chaque nouvelle demande de fonctionnalité ou correctif.",
-      "freelance.exp2.title": "Refonte complète du site — ASP.NET Core",
+      "freelance.exp2.title": "Refonte complète du site - ASP.NET Core",
       "freelance.exp2.body":
         "Le même client m'a ensuite confié une refonte complète du site sur une stack plus moderne (ASP.NET Core), en remplacement de l'implémentation existante.",
       "freelance.rates.title": "Rémunération",
