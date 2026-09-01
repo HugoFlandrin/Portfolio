@@ -61,10 +61,10 @@ body[data-theme="nightlife"] {
 
 body[data-theme="platypus"] {
     --bg-color: #373068;
-    --card-bg: #0b2631;
+    --card-bg: #241d3a;
     --text-color: #a8b0d6;
     --secondary-text: #eabb99;
-    --primary-color: #f6efff; 
+    --primary-color: #f2946b;
 }
 
 body[data-theme="engine3d"] {

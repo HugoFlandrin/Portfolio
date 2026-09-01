@@ -18,9 +18,29 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link rel="stylesheet" href="static/css/game-embed.css">
+    <link rel="stylesheet" href="static/css/game-ui.css">
+    <!-- Companion temporarily disabled — re-add to bring it back:
+    <link rel="stylesheet" href="static/css/companion.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Page transition temporarily disabled — remove this comment wrapper to restore:
+    <div id="page-transition" aria-hidden="true">
+        <div class="pt-badge">
+            <svg class="pt-ring" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="pt-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="240" y2="0">
+                        <stop offset="0" stop-color="#4da3ff"/>
+                        <stop offset="1" stop-color="#9966ff"/>
+                    </linearGradient>
+                </defs>
+                <rect x="5" y="5" width="230" height="50" rx="25" fill="none" stroke="url(#pt-grad)" stroke-width="8"/>
+                <rect class="pt-bar" x="20" y="18" width="200" height="24" rx="12" fill="url(#pt-grad)"/>
+            </svg>
+        </div>
+    </div>
+    -->
+
     <nav class="navbar">
         <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
             <span class="nav-toggle-bar"></span>
@@ -174,10 +194,11 @@
                     <h2 data-i18n="home.projects.title">Projects</h2>
                 </div>
                 <div class="projects-grid">
-                    <article class="project-card project-card--featured-grid">
+                    <article class="project-card project-card--featured-grid" style="--accent:#3b82f6">
                         <a href="pages/2d-game-engine.html" class="project-card-link">
                             <div class="project-image">
                                 <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine">
+                                <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
                             </div>
                             <div class="project-title">
                                 <span class="project-tag" data-i18n="home.card.engine.tag">Engine</span>
@@ -186,10 +207,11 @@
                             </div>
                         </a>
                     </article>
-                    <article class="project-card">
+                    <article class="project-card" style="--accent:#ff4d4d">
                         <a href="pages/escape.html" class="project-card-link">
                             <div class="project-image">
-                                <img src="static/img/Escape.png" alt="Escape">
+                                <img src="static/img/Escape.jpg" alt="Escape">
+                                <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
                             </div>
                             <div class="project-title">
                                 <span class="project-tag" data-i18n="home.card.escape.tag">Gameplay · UE5</span>
@@ -198,10 +220,11 @@
                             </div>
                         </a>
                     </article>
-                    <article class="project-card">
+                    <article class="project-card" style="--accent:#22d3ee">
                         <a href="pages/3d-game-engine.html" class="project-card-link">
                             <div class="project-image">
-                                <img src="static/img/3DGameEngine.png" alt="3D Game Engine">
+                                <img src="static/img/3DGameEngine.jpg" alt="3D Game Engine">
+                                <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
                             </div>
                             <div class="project-title">
                                 <span class="project-tag" data-i18n="home.card.engine3d.tag">Engine · 3D</span>
@@ -210,10 +233,11 @@
                             </div>
                         </a>
                     </article>
-                    <article class="project-card">
+                    <article class="project-card" style="--accent:#f2946b">
                         <a href="pages/platypus-of-corner.html" class="project-card-link">
                             <div class="project-image">
-                                <img src="static/img/PlatypusOfCorner.png" alt="Platypus Of Corner">
+                                <img src="static/img/PlatypusOfCorner.jpg" alt="Platypus Of Corner">
+                                <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
                             </div>
                             <div class="project-title">
                                 <span class="project-tag" data-i18n="home.card.platypus.tag">Gameplay · Unity</span>
@@ -222,10 +246,11 @@
                             </div>
                         </a>
                     </article>
-                    <article class="project-card">
+                    <article class="project-card" style="--accent:#a78bfa">
                         <a href="pages/gametalk.html" class="project-card-link">
                             <div class="project-image">
-                                <img src="static/img/Gametalk.png" alt="Gametalk">
+                                <img src="static/img/Gametalk.jpg" alt="Gametalk">
+                                <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
                             </div>
                             <div class="project-title">
                                 <span class="project-tag" data-i18n="home.card.gametalk.tag">Full-stack · Go</span>
@@ -234,10 +259,11 @@
                             </div>
                         </a>
                     </article>
-                    <article class="project-card">
+                    <article class="project-card" style="--accent:#8ed45a">
                         <a href="pages/lifeawake.html" class="project-card-link">
                             <div class="project-image">
-                                <img src="static/img/LifeAwakeLevelDemo.png" alt="LifeAwake">
+                                <img src="static/img/LifeAwakeLevelDemo.jpg" alt="LifeAwake">
+                                <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
                             </div>
                             <div class="project-title">
                                 <span class="project-tag" data-i18n="home.card.lifeawake.tag">Gameplay · UE</span>
@@ -328,6 +354,9 @@
     <script src="static/js/game-embed.js"></script>
     <script data-goatcounter="https://levelweb-studio.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
+    <script src="static/js/game-ui.js"></script>
+    <!-- Companion temporarily disabled — re-add to bring it back:
+    <script src="static/js/companion.js"></script> -->
     <script>
         document.getElementById("contactForm").addEventListener("submit", async function (e) {
             e.preventDefault();

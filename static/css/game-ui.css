@@ -1,0 +1,171 @@
+/* =========================
+   CUSTOM CURSOR
+   Brand-tinted arrow as the site-wide default; the classic pixel-art
+   hand-pointer (blue outline) takes over on anything clickable.
+========================= */
+
+html {
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCIgeTE9IjAiIHgyPSIyNCIgeTI9IjI0Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM0ZGEzZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM5OTY2ZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNMyAyIEwzIDE5IEw3LjUgMTUuMiBMMTAuNCAyMS42IEwxMyAyMC40IEwxMC4yIDE0LjIgTDE2IDE0IFoiIGZpbGw9IndoaXRlIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4K") 2 2, auto;
+}
+
+a, button, .btn, .nav-link, .lang-toggle, .nav-toggle,
+.project-card-link, .video-thumb, .prev-video, .next-video,
+.prev, .next, input[type="submit"], .submit-button {
+    cursor: url("../img/cursor-hand.png") 6 0, pointer;
+}
+
+/* Text fields keep the browser's I-beam so typing still reads clearly,
+   instead of inheriting the site-wide arrow. */
+input[type="text"], input[type="email"], input[type="search"],
+input[type="tel"], input[type="url"], input[type="password"],
+input:not([type]), textarea {
+    cursor: text;
+}
+
+/* =========================
+   PAGE TRANSITION
+   Loading veil shown between page navigations, built from the
+   LevelWeb-Studio logo motif (pill outline + animated inner bar).
+========================= */
+
+/* Temporarily disabled — delete this rule to bring it back (also flip
+   PAGE_TRANSITION_ENABLED in game-ui.js). Everything below is untouched. */
+#page-transition {
+    display: none;
+}
+
+#page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #070811;
+    opacity: 1;
+    pointer-events: none;
+    /* Pure-CSS safety net: if JS never runs, still fade out and get out
+       of the way rather than blocking the page forever. */
+    animation: pt-failsafe 1.6s ease forwards;
+}
+
+/* Once game-ui.js is running it takes over via opacity transitions;
+   the failsafe keyframe above is no longer needed. */
+#page-transition.pt-js {
+    animation: none;
+    transition: opacity 220ms ease;
+}
+
+#page-transition.pt-js.pt-active {
+    pointer-events: auto;
+}
+
+#page-transition.pt-js.pt-hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes pt-failsafe {
+    0%, 85% { opacity: 1; }
+    100%    { opacity: 0; pointer-events: none; }
+}
+
+.pt-badge {
+    width: min(240px, 70vw);
+}
+
+.pt-ring {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 8px 24px rgba(77, 163, 255, 0.25));
+}
+
+/* Resting state is FULL — this is what an arriving page shows immediately,
+   with no JS needed and no risk of a first-paint race. A page that's about
+   to navigate away explicitly resets to .pt-empty first (see game-ui.js). */
+.pt-bar {
+    transform: scaleX(1);
+    transform-origin: 20px 30px;
+    transition: transform 300ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.pt-bar.pt-empty {
+    transform: scaleX(0);
+}
+
+/* Applied only for the instant it takes to snap back to .pt-empty, so that
+   reset never itself plays as a visible "un-fill" animation. */
+.pt-bar.pt-instant {
+    transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #page-transition { animation-duration: 0.3s; }
+    #page-transition.pt-js { transition-duration: 80ms; }
+    .pt-bar { transition: none; }
+}
+
+/* =========================
+   ACHIEVEMENT TOAST
+========================= */
+
+.ach-toast {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(77, 163, 255, 0.35);
+    background: linear-gradient(180deg, rgba(20, 24, 38, 0.97), rgba(10, 12, 22, 0.97));
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    transform: translateY(16px) scale(0.96);
+    opacity: 0;
+    transition: transform 0.32s cubic-bezier(.2, .9, .3, 1.3), opacity 0.28s ease;
+    pointer-events: none;
+    max-width: min(320px, calc(100vw - 40px));
+}
+
+.ach-toast--show {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.ach-icon {
+    font-size: 26px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.ach-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 13px;
+}
+
+.ach-text strong {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4da3ff;
+}
+
+.ach-text span {
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .ach-toast {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        max-width: none;
+    }
+}

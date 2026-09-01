@@ -17,10 +17,28 @@
     <link rel="icon" type="image/png" href="../static/img/Logo.png">
     <link rel="stylesheet" href="../static/css/project.css">
     <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/game-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body data-theme="engine">
+
+<!-- Page transition temporarily disabled — remove this comment wrapper to restore:
+<div id="page-transition" aria-hidden="true">
+    <div class="pt-badge">
+        <svg class="pt-ring" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pt-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="240" y2="0">
+                    <stop offset="0" stop-color="#4da3ff"/>
+                    <stop offset="1" stop-color="#9966ff"/>
+                </linearGradient>
+            </defs>
+            <rect x="5" y="5" width="230" height="50" rx="25" fill="none" stroke="url(#pt-grad)" stroke-width="8"/>
+            <rect class="pt-bar" x="20" y="18" width="200" height="24" rx="12" fill="url(#pt-grad)"/>
+        </svg>
+    </div>
+</div>
+-->
 
 <nav class="navbar">
     <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
@@ -100,6 +118,7 @@
 <script src="../static/js/navbar.js"></script>
 <script data-goatcounter="https://levelweb-studio.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script src="../static/js/game-ui.js"></script>
 
 </body>
 </html>
