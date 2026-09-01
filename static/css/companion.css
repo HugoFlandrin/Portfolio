@@ -1,0 +1,130 @@
+/* =========================
+   COMPANION
+   A small character derived from the logo's pill motif —
+   floats in a corner and reacts to what the visitor reaches.
+========================= */
+
+#companion {
+    position: fixed;
+    z-index: 9000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    pointer-events: none;
+    /* left/top are set from JS (game-ui companion script) — this is what
+       makes it glide to stand next to whatever it's talking about instead
+       of teleporting. */
+    transition: left 0.6s cubic-bezier(.4, 0, .2, 1), top 0.6s cubic-bezier(.4, 0, .2, 1);
+}
+
+.comp-sprite {
+    width: 62px;
+    height: 70px;
+    cursor: pointer;
+    pointer-events: auto;
+    animation: comp-bob 3.2s ease-in-out infinite;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
+    transition: transform 0.2s ease;
+}
+
+.comp-sprite:hover {
+    transform: scale(1.06);
+}
+
+.comp-sprite svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.comp-eye {
+    fill: #0b0f1f;
+    animation: comp-blink 5.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.comp-eye-r {
+    animation-delay: 0.12s;
+}
+
+@keyframes comp-bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+@keyframes comp-blink {
+    0%, 92%, 100% { transform: scaleY(1); }
+    96%           { transform: scaleY(0.12); }
+}
+
+/* Resting smile by default; while a bubble is up (.comp-talking on
+   #companion) it swaps to a small open mouth that chatters. */
+.comp-mouth-open {
+    opacity: 0;
+    transform: scaleY(0.4);
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#companion.comp-talking .comp-mouth-closed {
+    opacity: 0;
+}
+
+#companion.comp-talking .comp-mouth-open {
+    opacity: 1;
+    animation: comp-talk 0.32s steps(2, jump-none) infinite;
+}
+
+@keyframes comp-talk {
+    0%   { transform: scaleY(0.4); }
+    50%  { transform: scaleY(1); }
+    100% { transform: scaleY(0.4); }
+}
+
+.comp-bubble {
+    position: relative;
+    max-width: 240px;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(77, 163, 255, 0.3);
+    background: linear-gradient(180deg, rgba(20, 24, 38, 0.97), rgba(10, 12, 22, 0.97));
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.92);
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.comp-bubble--show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.comp-bubble::after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    bottom: -6px;
+    width: 12px;
+    height: 12px;
+    background: rgba(10, 12, 22, 0.97);
+    border-right: 1px solid rgba(77, 163, 255, 0.3);
+    border-bottom: 1px solid rgba(77, 163, 255, 0.3);
+    transform: rotate(45deg);
+}
+
+@media (max-width: 640px) {
+    .comp-sprite { width: 46px; height: 52px; }
+    .comp-bubble { max-width: 190px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .comp-sprite, .comp-eye { animation: none; }
+    #companion { transition: none; }
+    #companion.comp-talking .comp-mouth-open { animation: none; transform: scaleY(0.75); }
+}
