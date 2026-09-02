@@ -72,8 +72,8 @@
       "home.card.engine.summary": "C++ · SFML · Box2D · modular architecture",
       "home.card.engine3d.tag": "Engine · 3D",
       "home.card.engine3d.summary": "C++ · OpenGL · lighting · model loading",
-      "home.card.lifeawake.tag": "Gameplay · UE",
-      "home.card.lifeawake.summary": "Atmospheric level design · ambiance",
+      "home.card.lifeawake.tag": "Puzzle · UE5",
+      "home.card.lifeawake.summary": "3D puzzle-adventure · portals & puzzles",
       "home.card.ue.minecraft.tag": "Prototype · UE",
       "home.card.ue.minecraft.summary": "Block placement & destruction",
       "home.card.ue.stamina.tag": "Prototype · UE",
@@ -96,24 +96,24 @@
       "home.footer.updated": "Updated July 2026",
 
       "ach.unlocked": "Achievement unlocked",
-      "ach.explorer": "Explorer — 3 projects visited",
-      "ach.cartographer": "Cartographer — opened the full project archive",
-      "ach.curious": "Curious — zoomed into a screenshot",
-      "ach.cinephile": "Cinephile — watched a demo video to the end",
-      "ach.completionist": "Completionist — visited every project & prototype",
-      "ach.clientReady": "Client-ready — checked out the freelance page",
+      "ach.explorer": "Explorer (3 projects visited)",
+      "ach.cartographer": "Cartographer (opened the full project archive)",
+      "ach.curious": "Curious (zoomed into a screenshot)",
+      "ach.cinephile": "Cinephile (watched a demo video to the end)",
+      "ach.completionist": "Completionist (visited every project & prototype)",
+      "ach.clientReady": "Client-ready (checked out the freelance page)",
 
       "comp.home.greet": "Hi! I'm exploring this portfolio with you 👋",
-      "comp.home.featured": "This is the one I'm most proud of — a full 2D engine, playable right here in the browser.",
-      "comp.home.experience": "Freelance work, personal engines, university projects — a bit of everything.",
+      "comp.home.featured": "This is the one I'm most proud of: a full 2D engine, playable right here in the browser.",
+      "comp.home.experience": "Freelance work, personal engines, university projects: a bit of everything.",
       "comp.home.projects": "Escape, LifeAwake, Nightlife... all built in Unreal Engine 5.",
       "comp.home.contact": "Got a project in mind? This is the place to reach out.",
-      "comp.allwork.greet": "Six worlds, one dev — let's take a look around.",
-      "comp.allwork.engines": "Built from scratch — no Unity, no Unreal, just C++.",
+      "comp.allwork.greet": "Six worlds, one dev. Let's take a look around.",
+      "comp.allwork.engines": "Built from scratch: no Unity, no Unreal, just C++.",
       "comp.allwork.unreal": "Three UE5 projects, three very different vibes.",
-      "comp.allwork.unity": "A 48-hour game jam sprint — my only Unity project so far.",
+      "comp.allwork.unity": "A 48-hour game jam sprint (my only Unity project so far).",
       "comp.allwork.web": "Full-stack Go, because gameplay isn't the only thing I ship.",
-      "comp.allwork.prototypes": "Isolated systems, not full games — proving one mechanic at a time.",
+      "comp.allwork.prototypes": "Isolated systems, not full games: proving one mechanic at a time.",
       "comp.allwork.applications": "A WPF desktop app, just to prove I'm not only a web/game dev.",
 
 
@@ -313,19 +313,37 @@
       "project.engine3d.tech4": "GLM - mathematics library",
 
       "project.lifeawake.subtitle":
-        "An Unreal Engine project focused on atmosphere and level presentation.",
+        "A puzzle-adventure built in Unreal Engine 5.",
       "project.lifeawake.description":
-        "LifeAwake is an Unreal Engine project built around environmental ambiance and level design. A video demonstration showcases the mood and visual direction of the experience.",
+        "In Life Awake, you guide a small gecko on a journey to bring Isumera, the great tree whose roots once linked every world, back to life. Traveling between distinct realms through interactive portals, you solve a variety of puzzles, each one restoring a piece of Isumera.",
+      "project.lifeawake.tech.note":
+        "Shared interaction, portal-traversal, and progression systems let each world plug in its own puzzle logic without ever breaking the game's overall consistency.",
+      "project.lifeawake.decision1":
+        "Isumera's visible regrowth as tangible progress, not a checklist",
+      "project.lifeawake.decision2":
+        "One shared interaction system (clues, keys, chests) across all worlds",
+      "project.lifeawake.decision3":
+        "Contemplative pacing: observation and understanding over reflexes or timers",
+      "project.lifeawake.workflow":
+        "Puzzle design → Blueprint prototyping → integration into each world → playtest to tune difficulty and pacing.",
       "project.lifeawake.challengeHighlight":
-        "Establishing a cohesive atmospheric experience through lighting, level layout, and environmental storytelling.",
+        "Two things shaped most of the year: keeping distinct, recognizable worlds feeling like one coherent game, and getting the camera system right.",
       "project.lifeawake.challenge1":
-        "Building readable navigation while preserving a strong mood-driven aesthetic",
+        "Designing worlds distinct and recognizable enough to feel varied, without breaking the game's overall coherence",
       "project.lifeawake.challenge2":
-        "Integrating visual and audio elements for consistent ambiance",
+        "Camera placement, plus a dedicated top-down \"overview\" mode to read the level from above",
       "project.lifeawake.challenge3":
-        "Iterating on level presentation under production constraints",
-      "project.lifeawake.tech1": "Unreal Engine",
-      "project.lifeawake.tech2": "Level design & lighting tools",
+        "Reworking player movement to stay readable relative to the camera at all times",
+      "project.lifeawake.challenge4":
+        "Shaping level and game design decisions around the camera's constraints all year",
+      "project.lifeawake.built1":
+        "Puzzle and trial systems: rotating valves, light-reflection puzzles, and telescope observation",
+      "project.lifeawake.built2":
+        "Portal traversal connecting the game's distinct worlds",
+      "project.lifeawake.built3":
+        "Interaction and inventory systems (clue papers, keys, and chests)",
+      "project.lifeawake.built4":
+        "Progression logic tying puzzle completion to Isumera's regrowth",
       "project.lifeawake.demoVideo": "Demo video",
       "project.ue.minecraft.subtitle":
         "Unreal Engine technical prototype - block placement and destruction system.",
@@ -491,8 +509,8 @@
       "home.card.engine.summary": "C++ · SFML · Box2D · architecture modulaire",
       "home.card.engine3d.tag": "Moteur · 3D",
       "home.card.engine3d.summary": "C++ · OpenGL · éclairage · chargement de modèles",
-      "home.card.lifeawake.tag": "Gameplay · UE",
-      "home.card.lifeawake.summary": "Level design atmosphérique · ambiance",
+      "home.card.lifeawake.tag": "Puzzle · UE5",
+      "home.card.lifeawake.summary": "Aventure-puzzle en 3D · portails & énigmes",
       "home.card.ue.minecraft.tag": "Prototype · UE",
       "home.card.ue.minecraft.summary": "Placement & destruction de blocs",
       "home.card.ue.stamina.tag": "Prototype · UE",
@@ -515,24 +533,24 @@
       "home.footer.updated": "Mis à jour - juillet 2026",
 
       "ach.unlocked": "Succès débloqué",
-      "ach.explorer": "Explorateur — 3 projets visités",
-      "ach.cartographer": "Cartographe — archive complète des projets ouverte",
-      "ach.curious": "Curieux — zoom sur une capture d'écran",
-      "ach.cinephile": "Cinéphile — vidéo de démo regardée jusqu'au bout",
-      "ach.completionist": "Complétionniste — tous les projets et prototypes visités",
-      "ach.clientReady": "Prêt pour un client — page freelance consultée",
+      "ach.explorer": "Explorateur (3 projets visités)",
+      "ach.cartographer": "Cartographe (archive complète des projets ouverte)",
+      "ach.curious": "Curieux (zoom sur une capture d'écran)",
+      "ach.cinephile": "Cinéphile (vidéo de démo regardée jusqu'au bout)",
+      "ach.completionist": "Complétionniste (tous les projets et prototypes visités)",
+      "ach.clientReady": "Prêt pour un client (page freelance consultée)",
 
       "comp.home.greet": "Salut ! J'explore ce portfolio avec toi 👋",
-      "comp.home.featured": "Celui-là, c'est mon préféré — un moteur 2D complet, jouable directement dans le navigateur.",
-      "comp.home.experience": "Freelance, moteurs perso, projets universitaires — un peu de tout.",
+      "comp.home.featured": "Celui-là, c'est mon préféré : un moteur 2D complet, jouable directement dans le navigateur.",
+      "comp.home.experience": "Freelance, moteurs perso, projets universitaires : un peu de tout.",
       "comp.home.projects": "Escape, LifeAwake, Nightlife... tous faits sous Unreal Engine 5.",
       "comp.home.contact": "Un projet en tête ? C'est par ici pour me contacter.",
-      "comp.allwork.greet": "Six mondes, un seul développeur — jetons un œil.",
-      "comp.allwork.engines": "Fait à la main — pas d'Unity, pas d'Unreal, juste du C++.",
+      "comp.allwork.greet": "Six mondes, un seul développeur. Jetons un œil.",
+      "comp.allwork.engines": "Fait à la main : pas d'Unity, pas d'Unreal, juste du C++.",
       "comp.allwork.unreal": "Trois projets UE5, trois ambiances très différentes.",
-      "comp.allwork.unity": "Un sprint de 48h en game jam — mon seul projet Unity pour l'instant.",
+      "comp.allwork.unity": "Un sprint de 48h en game jam (mon seul projet Unity pour l'instant).",
       "comp.allwork.web": "Full-stack en Go, parce que le gameplay n'est pas la seule chose que je livre.",
-      "comp.allwork.prototypes": "Des systèmes isolés, pas des jeux complets — une mécanique à la fois.",
+      "comp.allwork.prototypes": "Des systèmes isolés, pas des jeux complets : une mécanique à la fois.",
       "comp.allwork.applications": "Une appli desktop en WPF, histoire de prouver que je ne fais pas que du web/jeu.",
 
 
@@ -737,19 +755,37 @@
       "project.engine3d.tech4": "GLM - bibliothèque mathématique",
 
       "project.lifeawake.subtitle":
-        "Un projet Unreal Engine centré sur l'atmosphère et la présentation de niveau.",
+        "Un jeu d'aventure-puzzle, développé sous Unreal Engine 5.",
       "project.lifeawake.description":
-        "LifeAwake est un projet Unreal Engine construit autour de l'ambiance environnementale et du level design. Une vidéo de démonstration présente l'ambiance et la direction visuelle de l'expérience.",
+        "Dans Life Awake, vous incarnez un petit gecko parti raviver Isumera, le grand arbre dont les racines reliaient autrefois tous les mondes. En voyageant entre des royaumes distincts grâce à des portails interactifs, vous résolvez des énigmes variées, chacune ramenant une partie d'Isumera à la vie.",
+      "project.lifeawake.tech.note":
+        "Des systèmes d'interaction, de traversée de portails et de progression partagés permettent à chaque monde de brancher sa propre logique de puzzle, sans jamais casser la cohérence d'ensemble du jeu.",
+      "project.lifeawake.decision1":
+        "Repousse visible d'Isumera à chaque énigme résolue, pour une progression tangible",
+      "project.lifeawake.decision2":
+        "Système d'interaction commun (indices, clés, coffres) partagé par tous les mondes",
+      "project.lifeawake.decision3":
+        "Rythme contemplatif : l'observation prime sur les réflexes ou le chronométrage",
+      "project.lifeawake.workflow":
+        "Conception des énigmes → prototypage en Blueprint → intégration dans chaque monde → playtest pour ajuster la difficulté et le rythme.",
       "project.lifeawake.challengeHighlight":
-        "Établir une expérience atmosphérique cohérente via l'éclairage, la disposition du niveau et la narration environnementale.",
+        "Deux choses ont occupé l'essentiel de l'année : donner à chaque monde une identité distincte et reconnaissable sans casser la cohérence du jeu, et faire fonctionner le système de caméra.",
       "project.lifeawake.challenge1":
-        "Construire une navigation lisible tout en préservant une esthétique forte axée sur l'ambiance",
+        "Concevoir des mondes assez distincts et reconnaissables pour varier l'expérience, sans nuire à la cohérence globale",
       "project.lifeawake.challenge2":
-        "Intégrer les éléments visuels et audio pour une ambiance constante",
+        "Emplacement de la caméra, plus un mode \"vue globale\" dédié pour lire le niveau depuis le dessus",
       "project.lifeawake.challenge3":
-        "Itérer sur la présentation du niveau sous contraintes de production",
-      "project.lifeawake.tech1": "Unreal Engine",
-      "project.lifeawake.tech2": "Level design & outils d'éclairage",
+        "Retravailler le déplacement du joueur pour qu'il reste lisible par rapport à la caméra",
+      "project.lifeawake.challenge4":
+        "Adapter le level design et le game design aux contraintes de la caméra tout au long de l'année",
+      "project.lifeawake.built1":
+        "Systèmes d'énigmes et d'épreuves : valves rotatives, jeux de réflexion de lumière et observation au télescope",
+      "project.lifeawake.built2":
+        "Traversée des portails reliant les différents mondes du jeu",
+      "project.lifeawake.built3":
+        "Systèmes d'interaction et d'inventaire (indices, clés et coffres)",
+      "project.lifeawake.built4":
+        "Logique de progression reliant la résolution des énigmes à la renaissance d'Isumera",
       "project.lifeawake.demoVideo": "Vidéo de démo",
       "project.ue.minecraft.subtitle":
         "Prototype technique Unreal Engine - système de placement et destruction de blocs.",
