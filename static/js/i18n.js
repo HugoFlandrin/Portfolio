@@ -93,7 +93,7 @@
       "home.footer.about":
         "This portfolio highlights engineering decisions and system design - built as a lightweight static site (HTML/CSS/JS).",
       "home.footer.version": "Portfolio v1.2",
-      "home.footer.updated": "Updated July 2026",
+      "home.footer.updated": "Updated September 2026",
 
       "ach.unlocked": "Achievement unlocked",
       "ach.explorer": "Explorer (3 projects visited)",
@@ -530,7 +530,7 @@
       "home.footer.about":
         "Ce portfolio met en avant les choix d'ingénierie et l'organisation des systèmes - site statique léger (HTML/CSS/JS).",
       "home.footer.version": "Portfolio v1.2",
-      "home.footer.updated": "Mis à jour - juillet 2026",
+      "home.footer.updated": "Mis à jour - septembre 2026",
 
       "ach.unlocked": "Succès débloqué",
       "ach.explorer": "Explorateur (3 projets visités)",
