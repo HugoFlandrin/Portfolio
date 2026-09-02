@@ -197,22 +197,31 @@ scene-&gt;render();</pre>
 
     <div class="project-right">
         <div class="media-images">
+            <!-- Desktop: each screenshot gets its own play button right
+                 below it (see .hide-on-mobile - both hidden on mobile,
+                 replaced by the single button after this gallery). -->
             <figure class="media-item">
                 <img src="../static/img/2DGameEngineDemo.png" alt="Platformer demo - level layout and collision">
+                <button type="button" class="play-project-button hide-on-mobile" data-game-trigger data-device="desktop">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <span data-i18n="project.engine.playButton">Play the demo</span>
+                </button>
+            </figure>
+            <figure class="media-item">
+                <img src="../static/img/ShmupDemo.png" alt="Space Shooter demo - vertical shoot-em-up">
+                <button type="button" class="play-project-button play-project-button--secondary hide-on-mobile" data-game-trigger data-game-src="../static/shmup/index.html" data-game-aspect="portrait">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <span data-i18n="project.engine.playShmupButton">Try the Space Shooter</span>
+                </button>
             </figure>
         </div>
-        <button type="button" class="play-project-button" data-game-trigger data-device="desktop">
+        <!-- Mobile only: the Platformer needs a keyboard it doesn't have,
+             so this single CTA goes straight to the touch-friendly Space
+             Shooter instead - same pairing as the home page's featured
+             project slot, just as a button here instead of an image. -->
+        <button type="button" class="play-project-button hide-on-desktop" data-game-trigger data-game-src="../static/shmup/index.html" data-game-aspect="portrait" data-device="mobile">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             <span data-i18n="project.engine.playButton">Play the demo</span>
-        </button>
-        <!-- Desktop-only, separate from the demo above (not a button inside
-             the Platformer's own gameplay loop) - on mobile this same game
-             is already the featured project on the home page, so this extra
-             entry point only makes sense here on non-touch/wide devices
-             (see .hide-on-mobile in game-embed.css). -->
-        <button type="button" class="play-project-button play-project-button--secondary hide-on-mobile" data-game-trigger data-game-src="../static/shmup/index.html" data-game-aspect="portrait">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <span data-i18n="project.engine.playShmupButton">Also try the Space Shooter</span>
         </button>
     </div>
 </div>

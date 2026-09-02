@@ -391,6 +391,20 @@ a {
     transition: opacity 0.25s ease;
 }
 
+/* Touch devices have no persistent hover state, so this cue would
+   otherwise never be seen unless actively mid-tap - most visitors are on
+   mobile, so show it (and the same zoom the desktop hover applies) at all
+   times there instead, to actually invite the tap. */
+@media (pointer: coarse), (max-width: 640px) {
+    .featured-play-badge {
+        opacity: 1;
+    }
+
+    .featured-media img {
+        transform: scale(1.15);
+    }
+}
+
 .featured-media:hover .featured-play-badge,
 .featured-media:focus-visible .featured-play-badge {
     opacity: 1;

@@ -305,7 +305,7 @@
       "project.engine.t3.title": "Phase 3 - Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
       "project.engine.playButton": "Play the demo",
-      "project.engine.playShmupButton": "Also try the Space Shooter",
+      "project.engine.playShmupButton": "Try the Space Shooter",
 
       "project.engine3d.subtitle":
         "A C++ 3D game engine built with OpenGL - modular rendering architecture validated through a basic demo scene.",
@@ -759,7 +759,7 @@
       "project.engine.t3.title": "Phase 3 - Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
       "project.engine.playButton": "Jouer à la démo",
-      "project.engine.playShmupButton": "Essayer aussi le Space Shooter",
+      "project.engine.playShmupButton": "Essayer le Space Shooter",
 
       "project.engine3d.subtitle":
         "Un moteur de jeu 3D en C++ avec OpenGL - architecture de rendu modulaire validée par une scène de démo basique.",

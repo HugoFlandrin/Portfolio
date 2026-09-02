@@ -45,4 +45,9 @@ private:
     void events();
     void update(float _deltaTime);
     void render();
+#ifdef __EMSCRIPTEN__
+    // See the comment above its definition in Engine.cpp - works around a
+    // VRSFML/Emscripten bug that drops touch-drag motion on the web build.
+    void updateWebTouchInput();
+#endif
 };

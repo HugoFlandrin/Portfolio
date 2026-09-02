@@ -60,6 +60,11 @@
     height: 100%;
     border: 0;
     display: block;
+    /* Belt-and-suspenders alongside the shmup shell's own touch-action:none
+       on its canvas - stops the host page's browser chrome from treating a
+       sustained drag on this element as a scroll/gesture before it even
+       reaches the iframe's content. */
+    touch-action: none;
 }
 
 .game-overlay-close {
@@ -290,6 +295,22 @@
 @media (pointer: coarse), (max-width: 640px) {
     .hide-on-mobile {
         display: none !important;
+    }
+}
+
+/* Complement of .hide-on-mobile above: shown only on touch/narrow devices,
+   hidden otherwise - e.g. the mobile variant of a primary CTA that swaps
+   games by device (see 2d-game-engine.html's two "Play the demo" buttons).
+   Hardcodes inline-flex for the shown state since every current use is on
+   a .play-project-button-shaped element; revisit if reused on something
+   with a different natural display value. */
+.hide-on-desktop {
+    display: none;
+}
+
+@media (pointer: coarse), (max-width: 640px) {
+    .hide-on-desktop {
+        display: inline-flex !important;
     }
 }
 
