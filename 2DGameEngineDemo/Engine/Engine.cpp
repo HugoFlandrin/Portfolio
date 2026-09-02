@@ -1,5 +1,6 @@
 #include "Engine.h"
 #include "SceneManager.h"
+#include "TouchInput.h"
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Keyboard.hpp>
 #include <ctime>
@@ -10,6 +11,8 @@
 #endif
 
 Engine* Engine::m_instance = nullptr;
+sf::Vec2u Engine::s_windowSize = { 1920u, 1080u };
+sf::Utf8String Engine::s_windowTitle = "Platformer";
 
 Engine* Engine::instance()
 {
@@ -19,9 +22,14 @@ Engine* Engine::instance()
     return m_instance;
 }
 
+void Engine::configureWindow(sf::Vec2u _size, sf::Utf8String _title) {
+    s_windowSize = _size;
+    s_windowTitle = _title;
+}
+
 Engine::Engine() :
     graphicsContext(sf::GraphicsContext::create().value()),
-    window(sf::RenderWindow::create({ .size = { 1920u, 1080u }, .title = "Platformer" }).value())
+    window(sf::RenderWindow::create({ .size = s_windowSize, .title = s_windowTitle }).value())
 {
     init();
 }
@@ -89,6 +97,19 @@ void Engine::events()
                 WebBridge::requestQuit();
         }
 #endif
+
+        // Generic touch polling state, mirroring sf::Keyboard::isKeyPressed -
+        // harmless on platforms/games that never read TouchInput (nothing in
+        // the platformer does).
+        if (const auto* touchBegan = event->getIf<sf::Event::TouchBegan>()) {
+            TouchInput::instance()->setDown(true, touchBegan->position.toVec2f());
+        }
+        else if (const auto* touchMoved = event->getIf<sf::Event::TouchMoved>()) {
+            TouchInput::instance()->setPosition(touchMoved->position.toVec2f());
+        }
+        else if (const auto* touchEnded = event->getIf<sf::Event::TouchEnded>()) {
+            TouchInput::instance()->setDown(false, touchEnded->position.toVec2f());
+        }
     }
 }
 

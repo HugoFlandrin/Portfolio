@@ -1,0 +1,21 @@
+# ninja log v6
+8	137	8100659636595398	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-mkdir	54cf9af2c8976fc2
+8	137	8100659636595398	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-mkdir	54cf9af2c8976fc2
+139	17293	8100659808152934	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-download	2e44b11ccc6f85f9
+139	17293	8100659808152934	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-download	2e44b11ccc6f85f9
+17339	17597	8100659808738440	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-update	719a6df3de13848e
+17339	17597	8100659808738440	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-update	719a6df3de13848e
+17597	17699	8100659812225398	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-patch	3ea91d2a57bd4a61
+17597	17699	8100659812225398	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-patch	3ea91d2a57bd4a61
+17700	17800	8100659813178002	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-configure	935f6550566f0b0f
+17700	17800	8100659813178002	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-configure	935f6550566f0b0f
+17800	17982	8100659814921656	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-build	f3f6a923861fb1d1
+17800	17982	8100659814921656	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-build	f3f6a923861fb1d1
+17983	18109	8100659816200934	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-install	2562feef9100ca98
+17983	18109	8100659816200934	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-install	2562feef9100ca98
+18109	18228	8100659817519289	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-test	2abbe0c7c6bf9683
+18109	18228	8100659817519289	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-test	2abbe0c7c6bf9683
+18229	18396	8100659819185383	CMakeFiles/sdl-populate-complete	2d2aaea2dd3bf832
+18229	18396	8100659819185383	sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-done	2d2aaea2dd3bf832
+18229	18396	8100659819185383	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/CMakeFiles/sdl-populate-complete	2d2aaea2dd3bf832
+18229	18396	8100659819185383	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-done	2d2aaea2dd3bf832

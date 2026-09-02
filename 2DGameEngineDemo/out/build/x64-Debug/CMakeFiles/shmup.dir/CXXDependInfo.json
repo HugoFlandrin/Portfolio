@@ -1,0 +1,169 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug",
+	"dir-cur-src" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo",
+	"dir-top-bld" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug",
+	"dir-top-src" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"C:\\Users\\hugof\\Documents\\LevelWeb Studio\\Projects\\MyProjects\\Portfolio\\2DGameEngineDemo\\Engine",
+		"C:\\Users\\hugof\\Documents\\LevelWeb Studio\\Projects\\MyProjects\\Portfolio\\2DGameEngineDemo\\Shmup",
+		"_deps\\sfml-src\\include",
+		"_deps\\box2d-src\\src\\..\\include",
+		"_deps\\box2d-build\\src"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/CMakeFiles/shmup.dir",
+	"sources" : 
+	{
+		"CMakeFiles/shmup.dir/Engine/ACollider.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ACollider.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/AComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/AComponent.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/AScene.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/AScene.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/AliveComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/AliveComponent.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/BoxCollider.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/BoxCollider.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/ButtonComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ButtonComponent.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/Engine.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/Engine.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/Entity.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/Entity.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/HealthBarUI.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/HealthBarUI.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/ICollisionEvent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ICollisionEvent.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/MovableComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/MovableComponent.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/PhysicSystem.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/PhysicSystem.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/Render.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/Render.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/ResourceManager.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ResourceManager.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/RigidBody.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/RigidBody.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/SceneManager.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/SceneManager.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/ScoreUpdate.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ScoreUpdate.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/TextRenderer.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TextRenderer.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/TimerUpdate.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TimerUpdate.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/TouchInput.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TouchInput.cpp"
+		},
+		"CMakeFiles/shmup.dir/Engine/TransformComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TransformComponent.cpp"
+		},
+		"CMakeFiles/shmup.dir/Shmup/BulletBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/BulletBehavior.cpp"
+		},
+		"CMakeFiles/shmup.dir/Shmup/EnemySpawner.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/EnemySpawner.cpp"
+		},
+		"CMakeFiles/shmup.dir/Shmup/ScrollingBackground.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ScrollingBackground.cpp"
+		},
+		"CMakeFiles/shmup.dir/Shmup/ShipBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShipBehavior.cpp"
+		},
+		"CMakeFiles/shmup.dir/Shmup/Shmup.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/Shmup.cpp"
+		},
+		"CMakeFiles/shmup.dir/Shmup/ShmupEnemyBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupEnemyBehavior.cpp"
+		},
+		"CMakeFiles/shmup.dir/Shmup/ShmupScene.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupScene.cpp"
+		}
+	}
+}

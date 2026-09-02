@@ -1,0 +1,24 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": { "major": 3, "minor": 28, "patch": 0 },
+    "configurePresets": [
+        {
+            "name": "windows-clangcl-x64",
+            "displayName": "Windows x64 (clang-cl)",
+            "description": "VRSFML requires a GCC/Clang-family compiler (see SFML/Base/UIntPtrT.hpp) - plain MSVC cl.exe cannot build it.",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build_native",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "toolset": {
+                "value": "ClangCL",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ]
+}

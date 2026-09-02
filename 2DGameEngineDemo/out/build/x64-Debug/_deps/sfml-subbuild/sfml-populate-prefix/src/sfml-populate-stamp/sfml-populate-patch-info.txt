@@ -1,0 +1,6 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The update step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+command=C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe;-DSFML_PATCH_TARGET=<SOURCE_DIR>/src/SFML/System/Unity/Path.cpp;-P;C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/cmake/patch_sfml_path.cmake
+work_dir=C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src

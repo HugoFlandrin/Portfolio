@@ -10,7 +10,7 @@ protected:
 	b2ShapeId shapeId;
 
 public:
-	void init(RigidBody* _rigidBody);
+	void init(RigidBody* _rigidBody, bool _isSensor = false);
 	virtual void setShape(b2BodyId _body) = 0;
 
 	void setDensity(float _density);

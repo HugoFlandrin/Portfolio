@@ -31,5 +31,12 @@ private:
 	// ground within the same update(), which read as "still grounded" and
 	// let the player re-jump mid-air).
 	void processContactEvents();
+
+	// Sensor shapes (ACollider created with isSensor=true) never appear in
+	// b2World_GetContactEvents - Box2D reports their overlaps through this
+	// separate API instead, and skips physical collision response entirely
+	// for them. Used by fast projectiles that must detect what they hit
+	// without shoving it around (see BulletBehavior::spawn()).
+	void processSensorEvents();
 };
 

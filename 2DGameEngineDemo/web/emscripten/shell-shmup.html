@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shmup</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* No width/height rule on the canvas itself: its size is set via
+       attributes below (matching the iframe's real viewport), and a canvas
+       with no competing CSS naturally displays at its attribute size - see
+       the inline script for why this matters. */
+    canvas#canvas {
+      display: block;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+  <script>
+    // The canvas's backing-buffer resolution is set here, in JS, to exactly
+    // match the actual on-screen size game-embed.js measured for this
+    // iframe's box (passed as ?w=&h=) - BEFORE the wasm module (and SDL)
+    // ever sees the canvas. This matters because SDL/Emscripten checks
+    // whether CSS is "externally" controlling the canvas's size by briefly
+    // resizing it and comparing; if the canvas were instead styled with
+    // e.g. width:100%/height:100% (letting CSS stretch a fixed-resolution
+    // canvas to fit), SDL detects that and permanently reports its own
+    // wrong, CSS-derived size from getSize() afterwards - regardless of
+    // what size the C++ code explicitly requests - leaving the real
+    // rendering resolution and SDL's internal bookkeeping out of sync
+    // (visible as game content confined to a fraction of the canvas, and
+    // touch positions scaled wrong). Since this canvas has no such
+    // competing CSS rule, its own attributes ARE its displayed size, so
+    // there is nothing for SDL to treat as "external" - the exact size
+    // requested from C++ takes effect consistently everywhere.
+    //
+    // The size comes from the query string, not this iframe's own
+    // window.innerWidth/innerHeight: measured that way instead, it was
+    // unreliable right after the parent page applies the portrait aspect
+    // class - this iframe's own layout hadn't necessarily caught up yet,
+    // so the canvas ended up sized for stale dimensions.
+    var params = new URLSearchParams(window.location.search);
+    var canvas = document.getElementById("canvas");
+    var shmupWidth = parseInt(params.get("w"), 10) || window.innerWidth;
+    var shmupHeight = parseInt(params.get("h"), 10) || window.innerHeight;
+    canvas.width = shmupWidth;
+    canvas.height = shmupHeight;
+    // Read by Shmup.cpp (via EM_ASM) before creating the window, so the
+    // requested SFML window size always matches what's set here.
+    window.__shmupCanvasSize = { w: shmupWidth, h: shmupHeight };
+    // Read by Shmup.cpp (via EM_ASM) to decide whether to show the
+    // "use the arrow keys" onboarding hint (see game-embed.js, which sets
+    // this based on its own coarse-pointer/narrow-viewport heuristic) -
+    // showing keyboard advice to a touch player would be actively wrong.
+    window.__shmupDevice = params.get("device") || "desktop";
+
+    // Must stay `var`, not `const`/`let`: the Emscripten-generated script
+    // that follows also declares `var Module = ...` at the top level, and
+    // redeclaring a `const`/`let` binding with `var` in the same scope is a
+    // SyntaxError that silently kills the whole script (no console output).
+    var Module = {
+      canvas: canvas,
+      print: (...args) => console.log(...args),
+      printErr: (...args) => console.error(...args),
+    };
+  </script>
+  {{{ SCRIPT }}}
+</body>
+</html>

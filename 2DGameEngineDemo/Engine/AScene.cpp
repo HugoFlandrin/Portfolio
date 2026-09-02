@@ -49,7 +49,9 @@ void AScene::end() {
     uiEntities.clear();
     uiEntitiesToAdd.clear();
     cameraTarget = nullptr;
+    followCameraTarget = true;
     hasCameraBounds = false;
+    hasCustomUIFrame = false;
     score = 0;
 }
 
@@ -74,7 +76,10 @@ void AScene::setScore() {
 }
 
 void AScene::addScore(int _amount) {
-    score += _amount;
+    // Clamped so a penalty (see ShmupEnemyBehavior::update()) can never push
+    // the score negative - every other caller only ever adds positive
+    // amounts, so this is a no-op for them.
+    score = std::max(0, score + _amount);
 }
 
 float AScene::getTimer() {
@@ -94,9 +99,20 @@ void AScene::setCamera(sf::Vec2f _center, sf::Vec2f _size) {
     camera.size = _size;
 }
 
+void AScene::setCameraLetterboxSize(sf::Vec2f _widerSize) {
+    camera.size = _widerSize;
+}
 
-void AScene::setCameraTarget(Entity* _entity) {
+void AScene::setUIFrame(sf::Vec2f _center, sf::Vec2f _size) {
+    hasCustomUIFrame = true;
+    uiCenter = _center;
+    uiSize = _size;
+}
+
+
+void AScene::setCameraTarget(Entity* _entity, bool _followWithCamera) {
     cameraTarget = _entity;
+    followCameraTarget = _followWithCamera;
 }
 
 Entity* AScene::getCameraTarget() {
@@ -139,7 +155,17 @@ void AScene::draw(sf::RenderTarget& _target, sf::RenderStates _states) const
 
     if (!uiEntities.empty()) {
         sf::RenderStates uiStates = _states;
-        uiStates.view = _target.computeView();
+        // Fixed screen-space view, like _target.computeView() would give -
+        // independent of the gameplay camera's own center so a follow/scroll
+        // camera never drags the HUD with it. Uses the explicit UI frame a
+        // scene pinned via setUIFrame() if there is one (needed once
+        // setCameraLetterboxSize() has widened the gameplay camera past its
+        // own true content), otherwise falls back to camera.size/2 -
+        // correct as long as the camera exactly spans the window, true for
+        // every scene that doesn't call setCameraLetterboxSize().
+        sf::Vec2f uiViewCenter = hasCustomUIFrame ? uiCenter : camera.size / 2.f;
+        sf::Vec2f uiViewSize = hasCustomUIFrame ? uiSize : camera.size;
+        uiStates.view = sf::View{ .center = uiViewCenter, .size = uiViewSize };
 
         for (auto it = uiEntities.begin(); it != uiEntities.end(); ++it) {
             _target.draw(*(*it), uiStates);
@@ -180,7 +206,7 @@ void AScene::update(float _deltaTime) {
     entitiesToAdd.clear();
     entitiesToDelete.clear();
 
-    if (cameraTarget) {
+    if (cameraTarget && followCameraTarget) {
         setViewFromPlayer(cameraTarget);
     }
 }

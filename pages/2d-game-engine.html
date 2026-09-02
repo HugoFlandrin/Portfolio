@@ -201,9 +201,18 @@ scene-&gt;render();</pre>
                 <img src="../static/img/2DGameEngineDemo.png" alt="Platformer demo - level layout and collision">
             </figure>
         </div>
-        <button type="button" class="play-project-button" data-game-trigger>
+        <button type="button" class="play-project-button" data-game-trigger data-device="desktop">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             <span data-i18n="project.engine.playButton">Play the demo</span>
+        </button>
+        <!-- Desktop-only, separate from the demo above (not a button inside
+             the Platformer's own gameplay loop) - on mobile this same game
+             is already the featured project on the home page, so this extra
+             entry point only makes sense here on non-touch/wide devices
+             (see .hide-on-mobile in game-embed.css). -->
+        <button type="button" class="play-project-button play-project-button--secondary hide-on-mobile" data-game-trigger data-game-src="../static/shmup/index.html" data-game-aspect="portrait">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span data-i18n="project.engine.playShmupButton">Also try the Space Shooter</span>
         </button>
     </div>
 </div>
@@ -217,7 +226,7 @@ scene-&gt;render();</pre>
             <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
         </div>
         <p class="footer-meta">
-            <span data-i18n="home.footer.version">Portfolio v1.2</span>
+            <span data-i18n="home.footer.version">Portfolio v1.3</span>
             ·
             <span data-i18n="home.footer.updated">Updated September 2026</span>
         </p>

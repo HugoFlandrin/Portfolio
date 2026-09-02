@@ -1,0 +1,632 @@
+{
+	"archive" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/machine:x64",
+				"role" : "flags"
+			}
+		]
+	},
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/sfml-build/lib/sfml-glutils-s-d.lib"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_library",
+			"add_library",
+			"sfml_add_library",
+			"install",
+			"target_compile_options",
+			"set_target_warnings",
+			"add_definitions",
+			"target_compile_definitions",
+			"target_include_directories",
+			"target_compile_features"
+		],
+		"files" : 
+		[
+			"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/buildsystems/vcpkg.cmake",
+			"out/build/x64-Debug/_deps/sfml-src/cmake/Macros.cmake",
+			"out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/CMakeLists.txt",
+			"out/build/x64-Debug/_deps/sfml-src/cmake/CompilerWarnings.cmake",
+			"out/build/x64-Debug/_deps/sfml-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 45,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 105,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 641,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 298,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 149,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 10,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 355,
+				"parent" : 1
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 89,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 97,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 93,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 125,
+				"parent" : 1
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 350,
+				"parent" : 1
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 87,
+				"parent" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 52,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 88,
+				"parent" : 5
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 338,
+				"parent" : 1
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 141,
+				"parent" : 1
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/W4"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14242"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14254"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14263"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14265"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14287"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/we4289"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14296"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14311"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14545"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14546"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14547"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14549"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14555"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14619"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14640"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14826"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14905"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14906"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14928"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/permissive-"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4068"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4505"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4800"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4275"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "/utf-8"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "SFML_BUILD_GLUTILS"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "SFML_BUILD_GRAPHICS"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "SFML_BUILD_WINDOW"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "SFML_ENABLE_LIFETIME_TRACKING"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "SFML_STATIC"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "_LIBCPP_REMOVE_TRANSITIVE_INCLUDES"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_WINSOCK_DEPRECATED_NO_WARNINGS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 17,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src"
+				},
+				{
+					"backtrace" : 18,
+					"isSystem" : true,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/extlibs/headers/glad/include"
+				},
+				{
+					"backtrace" : 19,
+					"isSystem" : true,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/extlibs/headers/vulkan"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					20
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				13,
+				15,
+				17,
+				18,
+				19,
+				21,
+				22,
+				24,
+				25,
+				26,
+				27,
+				29,
+				32,
+				34
+			]
+		}
+	],
+	"folder" : 
+	{
+		"name" : "SFML"
+	},
+	"id" : "sfml-glutils::@7caf7c7c0ecf3438050a",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 4,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/install/x64-Debug"
+		}
+	},
+	"name" : "sfml-glutils",
+	"nameOnDisk" : "sfml-glutils-s-d.lib",
+	"paths" : 
+	{
+		"build" : "_deps/sfml-build/src/SFML/GLUtils",
+		"source" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				14,
+				16,
+				20,
+				23,
+				28,
+				30,
+				31,
+				33
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				13,
+				15,
+				17,
+				18,
+				19,
+				21,
+				22,
+				24,
+				25,
+				26,
+				27,
+				29,
+				32,
+				34
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/FenceUtils.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/FramebufferSaver.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLBufferObject.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLContextSaver.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLFenceSync.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLPersistentBuffer.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLPersistentRingBuffer.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLRenderBufferObject.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLSharedContextGuard.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLUniqueResource.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLVAOGroup.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/GLVertexArrayObject.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/GLUtils/TextureSaver.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/BlitFramebuffer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/BlitFramebuffer.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/CopyFramebuffer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/CopyFramebuffer.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/FenceUtils.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/FramebufferSaver.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLCheck.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLCheck.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLContextSaver.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLDebugCallback.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLDebugCallback.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLFenceSync.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLPersistentBuffer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLSharedContextGuard.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLUtils.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLUtils.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GlContext.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GlContext.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GlFuncTypesImpl.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/Glad.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/Glad.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/TextureSaver.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

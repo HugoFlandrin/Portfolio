@@ -12,3 +12,19 @@ vcpkg_installed/
 # Web toolchain / build (Emscripten)
 web/emsdk/
 web/build*/
+
+# Native CMake build (FetchContent pulls VRSFML/Box2D/SDL3 here - large, disposable)
+build_native/
+
+# Scratch scripts/logs used while iterating on the native build
+configure_native*.bat
+reconfigure_native*.bat
+build_native.bat
+build_others.bat
+install_clang.ps1
+*.log
+
+# Scratch scripts used while iterating on the web (Emscripten) build
+web/build_web.bat
+web/reconfigure_web.bat
+web/build_shmup_only.bat

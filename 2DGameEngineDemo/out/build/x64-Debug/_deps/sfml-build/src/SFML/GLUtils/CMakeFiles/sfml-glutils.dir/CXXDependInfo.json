@@ -1,0 +1,109 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-build/src/SFML/GLUtils",
+	"dir-cur-src" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils",
+	"dir-top-bld" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug",
+	"dir-top-src" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo",
+	"exports" : 
+	[
+		{
+			"cxx-module-info-dir" : "",
+			"destination" : "lib/cmake/SFML",
+			"export-name" : "SFML::GLUtils",
+			"export-prefix" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-build/CMakeFiles/Export/3937c6824958577f216dad0a66bc6149",
+			"filesystem-export-name" : "SFML_c_cGLUtils",
+			"install" : true,
+			"namespace" : ""
+		}
+	],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"_deps\\sfml-src\\include",
+		"_deps\\sfml-src\\src",
+		"_deps\\sfml-src\\extlibs\\headers\\glad\\include",
+		"_deps\\sfml-src\\extlibs\\headers\\vulkan"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir",
+	"sources" : 
+	{
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/BlitFramebuffer.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/BlitFramebuffer.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/CopyFramebuffer.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/CopyFramebuffer.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/FenceUtils.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/FenceUtils.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/FramebufferSaver.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/FramebufferSaver.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLCheck.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLCheck.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLContextSaver.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLContextSaver.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLDebugCallback.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLDebugCallback.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLFenceSync.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLFenceSync.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLPersistentBuffer.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLPersistentBuffer.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLSharedContextGuard.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLSharedContextGuard.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLUtils.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GLUtils.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GlContext.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/GlContext.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/Glad.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/Glad.cpp"
+		},
+		"_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/TextureSaver.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src/SFML/GLUtils/TextureSaver.cpp"
+		}
+	}
+}

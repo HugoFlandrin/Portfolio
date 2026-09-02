@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "_deps\\sdl-build\\CMakeFiles\\SDL3-static.dir\\src\\core\\windows\\SDL_gameinput.cpp.obj",
+            "outputs": [
+                "C:\\Users\\hugof\\Documents\\LevelWeb Studio\\Projects\\MyProjects\\Portfolio\\2DGameEngineDemo\\out\\build\\x64-Debug\\vc140.pdb",
+                "_deps\\sdl-build\\CMakeFiles\\SDL3-static.dir\\src\\core\\windows\\SDL_gameinput.cpp.obj.ddi",
+                "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sdl-build/CMakeFiles/SDL3-static.dir/./cmake_pch.cxx.pch"
+            ],
+            "requires": []
+        }
+    ]
+}

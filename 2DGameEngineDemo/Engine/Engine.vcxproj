@@ -132,7 +132,9 @@
     <ClCompile Include="ScoreUpdate.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
     <ClCompile Include="TimerUpdate.cpp" />
+    <ClCompile Include="TouchInput.cpp" />
     <ClCompile Include="TransformComponent.cpp" />
+    <ClCompile Include="WebGameOverScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AComponent.h" />
@@ -154,7 +156,9 @@
     <ClInclude Include="ScoreUpdate.h" />
     <ClInclude Include="TextRenderer.h" />
     <ClInclude Include="TimerUpdate.h" />
+    <ClInclude Include="TouchInput.h" />
     <ClInclude Include="TransformComponent.h" />
+    <ClInclude Include="WebGameOverScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

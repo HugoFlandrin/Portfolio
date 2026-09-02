@@ -32,6 +32,9 @@ void RigidBody::setLinearVelocity(b2Vec2 _linearVelocity) {
 void RigidBody::setAngularVelocity(float _angularVelocity) {
 	bodyDef.angularVelocity = _angularVelocity;
 }
+void RigidBody::setGravityScale(float _scale) {
+	b2Body_SetGravityScale(body, _scale);
+}
 
 b2Vec2 RigidBody::getBodyPosition() {
 	return bodyDef.position;
