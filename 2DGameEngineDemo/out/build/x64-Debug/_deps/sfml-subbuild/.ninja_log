@@ -1,0 +1,21 @@
+# ninja log v6
+11	150	8100659342026624	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	afd66baa07386e5
+11	150	8100659342026624	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	afd66baa07386e5
+152	20815	8100659548688984	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	ce3b2467e2e4f5d4
+152	20815	8100659548688984	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	ce3b2467e2e4f5d4
+20862	23384	8100659549237499	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	eee82b72194912e5
+20862	23384	8100659549237499	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	eee82b72194912e5
+23385	23531	8100659575801449	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	2fd5aa2433c1a724
+23385	23531	8100659575801449	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	2fd5aa2433c1a724
+23531	23662	8100659577125949	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	bb4c7a91e0309e83
+23531	23662	8100659577125949	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	bb4c7a91e0309e83
+23662	23829	8100659578786822	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	feea447ffe2eb635
+23662	23829	8100659578786822	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	feea447ffe2eb635
+23830	23957	8100659580059142	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	534c9d6e7c199363
+23830	23957	8100659580059142	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	534c9d6e7c199363
+23958	24128	8100659581693387	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	650ea733e32970e6
+23958	24128	8100659581693387	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	650ea733e32970e6
+24129	24330	8100659583797130	CMakeFiles/sfml-populate-complete	1fa8b347c54115a1
+24129	24330	8100659583797130	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	1fa8b347c54115a1
+24129	24330	8100659583797130	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	1fa8b347c54115a1
+24129	24330	8100659583797130	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	1fa8b347c54115a1

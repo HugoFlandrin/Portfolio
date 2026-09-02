@@ -1,0 +1,44 @@
+# ninja log v6
+182	290	8100660661595183	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/CMakeFiles/cmake.verify_globs	7d0cbb41970a0052
+417	789	8100660663932426	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/LifetimeDependant.cpp.obj.ddi	dae5c279382b0e25
+442	803	8100660664182151	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/LifetimeTrackingABICheck.cpp.obj.ddi	d06595b40f0babbf
+513	818	8100660664890882	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/SignalErrHandler.cpp.obj.ddi	df003749dcab76b1
+543	834	8100660665205024	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vec2.cpp.obj.ddi	c989e34f66764c6f
+556	845	8100660665297892	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vec3.cpp.obj.ddi	47eff44cb624e6c0
+500	858	8100660664756990	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/RectPacker.cpp.obj.ddi	2ebfb61103e0b6e9
+485	939	8100660664611744	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Rect.cpp.obj.ddi	6003cc102c6e312d
+392	955	8100660663667718	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj.ddi	b14e1b8a22f82e5e
+567	956	8100660665434811	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/Abort.cpp.obj.ddi	1619d5ad244c5ce6
+457	959	8100660664337635	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj.ddi	ed680e4e140c2147
+791	960	8100660667681456	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/Assert.cpp.obj.ddi	c7f7fcafda684ba3
+803	963	8100660667800604	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/Fmt/Fmt.cpp.obj.ddi	728630fd2aa6dcbe
+429	1048	8100660663984029	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/LifetimeDependee.cpp.obj.ddi	66d32825ae8a2d15
+835	1051	8100660668099779	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/Optional.cpp.obj.ddi	5c3de4840bd376b4
+404	1054	8100660663792885	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileUtils.cpp.obj.ddi	cd3eeb1aaf569454
+819	1057	8100660667964801	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/Fmt/FmtNumeric.cpp.obj.ddi	324e5cd089c6b90c
+858	1058	8100660668354674	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/SinCosLookup.cpp.obj.ddi	bafd3191c4a48580
+846	1060	8100660668219075	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/Scn/ScnStdin.cpp.obj.ddi	3b2bf25ef45e45a1
+940	1069	8100660669170406	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/StackTrace.cpp.obj.ddi	21669573dac10c09
+469	1097	8100660664446021	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/PathStreamOp.cpp.obj.ddi	acb8ea14fa78d659
+366	1128	8100660663422222	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj.ddi	7e8b6cda05a4c50c
+527	1156	8100660665018076	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj.ddi	b226082d4c266dd
+377	1331	8100660663518071	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ErrIOUnity.cpp.obj.ddi	163e96028dfdb60b
+336	1337	8100660662974269	_deps/sdl-build/CMakeFiles/SDL3-static.dir/cmake_pch.cxx.obj	d44f7eb0f530f95c
+205	281	8100660916016920	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/CMakeFiles/cmake.verify_globs	7d0cbb41970a0052
+456	664	8100660918534075	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLFenceSync.cpp.obj.ddi	aad781deb408d44
+384	667	8100660917806948	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/CopyFramebuffer.cpp.obj.ddi	7f6856ddf767dce7
+407	668	8100660918029782	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/FramebufferSaver.cpp.obj.ddi	bc5ff116986f0149
+349	670	8100660917418127	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/String.cpp.obj.ddi	d3774654dc24f71a
+372	756	8100660917696254	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/BlitFramebuffer.cpp.obj.ddi	b2977fa5f6fa05ab
+496	758	8100660918929480	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLUtils.cpp.obj.ddi	5d111a9568fa1940
+431	761	8100660918274978	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLContextSaver.cpp.obj.ddi	63562e7d0bf6a405
+533	763	8100660919300600	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/TextureSaver.cpp.obj.ddi	8db6275a94fbad4f
+396	765	8100660917929179	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/FenceUtils.cpp.obj.ddi	66872c2c31fad235
+443	768	8100660918396060	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLDebugCallback.cpp.obj.ddi	b82c0120327014fb
+521	770	8100660919189669	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/Glad.cpp.obj.ddi	643bfffd63c0dbb3
+469	772	8100660918634258	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLPersistentBuffer.cpp.obj.ddi	77eee1d671eaae69
+483	775	8100660918810186	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLSharedContextGuard.cpp.obj.ddi	a7b40b16e816eed3
+511	798	8100660919032127	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GlContext.cpp.obj.ddi	6f0f89cac54df28a
+420	810	8100660918177506	_deps/sfml-build/src/SFML/GLUtils/CMakeFiles/sfml-glutils.dir/GLCheck.cpp.obj.ddi	b154b4b466abdb93
+361	974	8100660917559671	_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/__/Base/ThreadPool.cpp.obj.ddi	72ce1d396eb1290
+544	1151	8100660919419839	_deps/sdl-build/CMakeFiles/SDL3-static.dir/src/core/windows/SDL_gameinput.cpp.obj.ddi	d92ca0948325ac16

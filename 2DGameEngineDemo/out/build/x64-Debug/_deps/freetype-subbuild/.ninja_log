@@ -1,0 +1,21 @@
+# ninja log v6
+6	105	8100660026051809	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	ca373a4a288f46bd
+6	105	8100660026051809	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	ca373a4a288f46bd
+107	9623	8100660121338326	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	f5c1e19b9f9a65cc
+107	9623	8100660121338326	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	f5c1e19b9f9a65cc
+9660	9961	8100660121832672	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	10d74d6e6d40a398
+9660	9961	8100660121832672	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	10d74d6e6d40a398
+9962	10132	8100660126402830	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	1a31d8a918a46689
+9962	10132	8100660126402830	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	1a31d8a918a46689
+10133	10260	8100660127692798	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	84f05c57ce09ab25
+10133	10260	8100660127692798	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	84f05c57ce09ab25
+10260	10411	8100660129133597	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	9431fc49d39bdde2
+10260	10411	8100660129133597	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	9431fc49d39bdde2
+10412	10531	8100660130386937	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	37b6e9aff064165d
+10412	10531	8100660130386937	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	37b6e9aff064165d
+10532	10637	8100660131414445	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	96d705951dd26c52
+10532	10637	8100660131414445	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	96d705951dd26c52
+10638	10778	8100660132848605	CMakeFiles/freetype-populate-complete	35e6b04aebed05bd
+10638	10778	8100660132848605	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	35e6b04aebed05bd
+10638	10778	8100660132848605	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/CMakeFiles/freetype-populate-complete	35e6b04aebed05bd
+10638	10778	8100660132848605	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	35e6b04aebed05bd

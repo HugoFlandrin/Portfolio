@@ -32,6 +32,7 @@
       "home.featured.point3": "Architecture designed for maintainable engine growth",
       "home.featured.cta": "Explore technical breakdown",
       "home.featured.playCue": "Click to play",
+      "home.featured.playCueMobile": "Tap to play",
       "home.featured.playAgain": "Play again",
       "home.featured.closeGame": "Close", 
       "home.featured.mobileNotice":
@@ -39,6 +40,16 @@
       "home.featured.resultWin": "Victory!",
       "home.featured.resultLoss": "Defeat",
       "home.featured.resultScore": "Score:",
+      "home.shmup.badge": "Mobile exclusive",
+      "home.shmup.badgeDesktop": "Bonus game",
+      "home.shmup.title": "Space Shooter",
+      "home.shmup.summary":
+        "A small vertical shoot-em-up built with the same C++ engine, made for touch: drag to move, it fires on its own.",
+      "home.shmup.summaryDesktop":
+        "A small vertical shoot-em-up built with the same C++ engine - play it with your mouse or the arrow keys.",
+      "home.shmup.play": "Play on your phone",
+      "home.shmup.playDesktop": "Play the Space Shooter",
+      "home.shmup.desktopNotice": "This game is built for touch controls - come back on your phone to try it!",
       "home.experience.title": "Professional experience",
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 - Present",
@@ -92,7 +103,7 @@
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
         "This portfolio highlights engineering decisions and system design - built as a lightweight static site (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.2",
+      "home.footer.version": "Portfolio v1.3",
       "home.footer.updated": "Updated September 2026",
 
       "ach.unlocked": "Achievement unlocked",
@@ -294,6 +305,7 @@
       "project.engine.t3.title": "Phase 3 - Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
       "project.engine.playButton": "Play the demo",
+      "project.engine.playShmupButton": "Also try the Space Shooter",
 
       "project.engine3d.subtitle":
         "A C++ 3D game engine built with OpenGL - modular rendering architecture validated through a basic demo scene.",
@@ -469,6 +481,7 @@
       "home.featured.point3": "Architecture pensée pour faire évoluer le moteur",
       "home.featured.cta": "Voir le détail technique",
       "home.featured.playCue": "Cliquer pour jouer",
+      "home.featured.playCueMobile": "Toucher pour jouer",
       "home.featured.playAgain": "Rejouer",
       "home.featured.closeGame": "Fermer",
       "home.featured.mobileNotice":
@@ -476,6 +489,16 @@
       "home.featured.resultWin": "Victoire !",
       "home.featured.resultLoss": "Défaite",
       "home.featured.resultScore": "Score :",
+      "home.shmup.badge": "Exclusivité mobile",
+      "home.shmup.badgeDesktop": "Jeu bonus",
+      "home.shmup.title": "Space Shooter",
+      "home.shmup.summary":
+        "Un petit shoot-em-up vertical construit avec le même moteur C++, pensé pour le tactile : glissez pour vous déplacer, il tire tout seul.",
+      "home.shmup.summaryDesktop":
+        "Un petit shoot-em-up vertical construit avec le même moteur C++ - jouable à la souris ou avec les flèches directionnelles.",
+      "home.shmup.play": "Jouer sur ton téléphone",
+      "home.shmup.playDesktop": "Jouer au Space Shooter",
+      "home.shmup.desktopNotice": "Ce jeu est pensé pour le tactile - reviens depuis ton téléphone pour l'essayer !",
       "home.experience.title": "Expérience professionnelle",
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 - Aujourd'hui",
@@ -529,7 +552,7 @@
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
         "Ce portfolio met en avant les choix d'ingénierie et l'organisation des systèmes - site statique léger (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.2",
+      "home.footer.version": "Portfolio v1.3",
       "home.footer.updated": "Mis à jour - septembre 2026",
 
       "ach.unlocked": "Succès débloqué",
@@ -736,6 +759,7 @@
       "project.engine.t3.title": "Phase 3 - Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
       "project.engine.playButton": "Jouer à la démo",
+      "project.engine.playShmupButton": "Essayer aussi le Space Shooter",
 
       "project.engine3d.subtitle":
         "Un moteur de jeu 3D en C++ avec OpenGL - architecture de rendu modulaire validée par une scène de démo basique.",

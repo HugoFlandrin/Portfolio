@@ -1,0 +1,189 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug",
+	"dir-cur-src" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo",
+	"dir-top-bld" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug",
+	"dir-top-src" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"C:\\Users\\hugof\\Documents\\LevelWeb Studio\\Projects\\MyProjects\\Portfolio\\2DGameEngineDemo\\Engine",
+		"C:\\Users\\hugof\\Documents\\LevelWeb Studio\\Projects\\MyProjects\\Portfolio\\2DGameEngineDemo\\Platformer",
+		"_deps\\sfml-src\\include",
+		"_deps\\box2d-src\\src\\..\\include",
+		"_deps\\box2d-build\\src"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/CMakeFiles/platformer.dir",
+	"sources" : 
+	{
+		"CMakeFiles/platformer.dir/Engine/ACollider.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ACollider.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/AComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/AComponent.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/AScene.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/AScene.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/AliveComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/AliveComponent.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/BoxCollider.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/BoxCollider.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/ButtonComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ButtonComponent.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/Engine.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/Engine.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/Entity.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/Entity.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/HealthBarUI.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/HealthBarUI.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/ICollisionEvent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ICollisionEvent.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/MovableComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/MovableComponent.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/PhysicSystem.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/PhysicSystem.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/Render.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/Render.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/ResourceManager.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ResourceManager.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/RigidBody.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/RigidBody.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/SceneManager.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/SceneManager.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/ScoreUpdate.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/ScoreUpdate.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/TextRenderer.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TextRenderer.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/TimerUpdate.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TimerUpdate.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/TouchInput.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TouchInput.cpp"
+		},
+		"CMakeFiles/platformer.dir/Engine/TransformComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Engine/TransformComponent.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/CoinBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/CoinBehavior.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/EnemyBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/EnemyBehavior.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/FirstMarioScene.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/FirstMarioScene.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/FlagBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/FlagBehavior.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/GameOverScene.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/GameOverScene.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/MapBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/MapBehavior.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/MarioLike.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/MarioLike.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/MenuScene.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/MenuScene.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/PlayerBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/PlayerBehavior.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/SettingsScene.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/SettingsScene.cpp"
+		},
+		"CMakeFiles/platformer.dir/Platformer/SpikeBehavior.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Platformer/SpikeBehavior.cpp"
+		}
+	}
+}

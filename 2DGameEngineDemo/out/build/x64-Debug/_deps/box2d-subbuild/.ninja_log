@@ -1,0 +1,21 @@
+# ninja log v6
+9	139	8100660142934822	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-mkdir	ceda5c9c9429a8c6
+9	139	8100660142934822	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-mkdir	ceda5c9c9429a8c6
+142	3791	8100660179575600	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-download	2c0ef67ef3fefa34
+142	3791	8100660179575600	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-download	2c0ef67ef3fefa34
+3796	4055	8100660179736899	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-update	5c2d85bef6c151dc
+3796	4055	8100660179736899	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-update	5c2d85bef6c151dc
+4055	4167	8100660183322168	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-patch	799c734d6bc7ee52
+4055	4167	8100660183322168	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-patch	799c734d6bc7ee52
+4167	4318	8100660184745026	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-configure	f0f002d227703ca2
+4167	4318	8100660184745026	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-configure	f0f002d227703ca2
+4319	4452	8100660186092842	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-build	85b3fc0e600cb6a7
+4319	4452	8100660186092842	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-build	85b3fc0e600cb6a7
+4453	4559	8100660187201641	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-install	88dd80e98e2bee25
+4453	4559	8100660187201641	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-install	88dd80e98e2bee25
+4560	4683	8100660188482981	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-test	e4b6eb99198d4f9c
+4560	4683	8100660188482981	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-test	e4b6eb99198d4f9c
+4684	4894	8100660190539725	CMakeFiles/box2d-populate-complete	65e963a04552c353
+4684	4894	8100660190539725	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-done	65e963a04552c353
+4684	4894	8100660190539725	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/CMakeFiles/box2d-populate-complete	65e963a04552c353
+4684	4894	8100660190539725	C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-done	65e963a04552c353

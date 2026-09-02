@@ -111,7 +111,12 @@
                     <h2 data-i18n="home.featured.title">Featured project</h2>
                 </div>
                 <article class="featured-card">
-                    <a href="pages/2d-game-engine.html" class="featured-media" id="featured-play-trigger" data-game-trigger>
+                    <!-- Two variants of the same slot, swapped by CSS breakpoint
+                         (see .featured-media--desktop/--mobile in styles.css) -
+                         the Platformer needs a keyboard, so mobile visitors get
+                         the touch-friendly Space Shooter instead, with no choice
+                         screen or fallback notice in between. -->
+                    <a href="pages/2d-game-engine.html" class="featured-media featured-media--desktop" id="featured-play-trigger" data-game-trigger data-device="desktop">
                         <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine demo - click to play">
                         <span class="featured-tag" data-i18n="home.featured.tag">Engine · C++ · SFML · Box2D</span>
                         <span class="featured-play-badge" aria-hidden="true">
@@ -119,6 +124,16 @@
                                 <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                             </span>
                             <span class="featured-play-text" data-i18n="home.featured.playCue">Cliquer pour jouer</span>
+                        </span>
+                    </a>
+                    <a href="pages/2d-game-engine.html" class="featured-media featured-media--mobile" data-game-trigger data-game-src="static/shmup/index.html" data-game-aspect="portrait" data-device="mobile">
+                        <img src="static/img/ShmupDemo.png" alt="Space Shooter demo - tap to play">
+                        <span class="featured-tag" data-i18n="home.featured.tag">Engine · C++ · SFML · Box2D</span>
+                        <span class="featured-play-badge" aria-hidden="true">
+                            <span class="featured-play-circle">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                            <span class="featured-play-text" data-i18n="home.featured.playCueMobile">Toucher pour jouer</span>
                         </span>
                     </a>
                     <div class="featured-body">
@@ -134,6 +149,26 @@
                         <a href="pages/2d-game-engine.html" class="btn btn-primary" data-i18n="home.featured.cta">Explore technical breakdown</a>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <!-- Desktop-only bonus game: on mobile the Space Shooter is already
+             the featured project itself (see .featured-media--mobile
+             above), so this second entry point only shows on non-touch/wide
+             devices (see .desktop-game-section in styles.css) - deliberately
+             NOT part of the Platformer's own gameplay loop, just a separate
+             page-level CTA into the same overlay every other trigger uses. -->
+        <section class="desktop-game-section section-reveal" id="desktop-game">
+            <div class="container">
+                <div class="mobile-game-card">
+                    <div class="mobile-game-icon" aria-hidden="true">🚀</div>
+                    <div class="mobile-game-body">
+                        <span class="mobile-game-badge" data-i18n="home.shmup.badgeDesktop">Bonus game</span>
+                        <h3 data-i18n="home.shmup.title">Space Shooter</h3>
+                        <p data-i18n="home.shmup.summaryDesktop">A small vertical shoot-em-up built with the same C++ engine - play it with your mouse or the arrow keys.</p>
+                        <button type="button" class="btn btn-primary" data-game-trigger data-game-src="static/shmup/index.html" data-game-aspect="portrait" data-i18n="home.shmup.playDesktop">Play the Space Shooter</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -314,7 +349,7 @@
                 <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
             </div>
             <p class="footer-meta">
-                <span data-i18n="home.footer.version">Portfolio v1.2</span>
+                <span data-i18n="home.footer.version">Portfolio v1.3</span>
                 ·
                 <span data-i18n="home.footer.updated">Updated September 2026</span>
             </p>
@@ -344,6 +379,15 @@
             <p data-i18n="home.featured.mobileNotice">This demo needs a keyboard and isn't playable on mobile yet - come back on a desktop to try it!</p>
             <div class="game-result-actions">
                 <button type="button" class="btn btn-primary" id="game-mobile-notice-close" data-i18n="home.featured.closeGame">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-desktop-notice" aria-hidden="true">
+        <div class="game-result-card">
+            <p data-i18n="home.shmup.desktopNotice">This game is built for touch controls - come back on your phone to try it!</p>
+            <div class="game-result-actions">
+                <button type="button" class="btn btn-primary" id="game-desktop-notice-close" data-i18n="home.featured.closeGame">Close</button>
             </div>
         </div>
     </div>

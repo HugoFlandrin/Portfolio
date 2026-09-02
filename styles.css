@@ -255,9 +255,74 @@ a {
     margin: 0 auto;
 }
 
+/* Desktop-only bonus game card: on mobile the Space Shooter is already the
+   featured project itself (see .featured-media--mobile below), so this
+   extra promo card would just be a redundant second entry point there -
+   hidden on touch/narrow devices (roughly matches game-embed.js's
+   isMobile() heuristic), shown otherwise. */
+.desktop-game-section {
+    display: block;
+    padding-bottom: var(--section-gap);
+}
+
+@media (pointer: coarse), (max-width: 640px) {
+    .desktop-game-section {
+        display: none;
+    }
+}
+
+.mobile-game-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, var(--panel), rgba(255,255,255,0.02));
+    box-shadow: var(--shadow);
+}
+
+.mobile-game-icon {
+    font-size: 40px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.mobile-game-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 6px;
+}
+
+.mobile-game-body h3 {
+    margin: 2px 0 8px;
+}
+
+.mobile-game-body p {
+    color: var(--muted);
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
 /* Featured */
 .featured-section {
-    padding-bottom: var(--section-gap);
+    /* Small on purpose (not var(--section-gap)): on desktop this section is
+       immediately followed by .desktop-game-section, and a full section gap
+       there read as a whole separate section rather than a "bonus" attached
+       to this one. Restored to the normal gap on mobile below, where
+       .desktop-game-section is hidden and the next visible section really
+       is a new one (Experience). */
+    padding-bottom: 20px;
+}
+
+@media (pointer: coarse), (max-width: 640px) {
+    .featured-section {
+        padding-bottom: var(--section-gap);
+    }
 }
 
 .featured-card {
@@ -278,6 +343,25 @@ a {
     min-height: 280px;
     overflow: hidden;
     cursor: pointer;
+}
+
+/* Two variants of the same slot, swapped by device instead of picked at
+   runtime: on mobile the Platformer needs a keyboard it doesn't have, so
+   the featured project becomes the touch-friendly Space Shooter there -
+   no choice/fallback screen, the platformer variant simply isn't in the
+   page at all as far as a mobile visitor can tell. */
+.featured-media--mobile {
+    display: none;
+}
+
+@media (pointer: coarse), (max-width: 640px) {
+    .featured-media--desktop {
+        display: none;
+    }
+
+    .featured-media--mobile {
+        display: block;
+    }
 }
 
 .featured-media img {

@@ -18,6 +18,13 @@ public:
 	void setBodyPosition(b2Vec2 _position);
 	void setLinearVelocity(b2Vec2 _linearVelocity);
 	void setAngularVelocity(float _angularVelocity);
+	// Box2D only generates contact events when at least one of the two
+	// bodies is dynamic (kinematic-vs-kinematic and kinematic-vs-static
+	// pairs are skipped entirely by the broadphase) - entities that need to
+	// be driven by script (constant velocity, no forces) but still need
+	// collision detection against each other must be dynamic with gravity
+	// scale zeroed out, not kinematic.
+	void setGravityScale(float _scale);
 
 	b2Vec2 getBodyPosition();
 	float getBodyAngle();

@@ -1,0 +1,2114 @@
+{
+	"archive" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/machine:x64",
+				"role" : "flags"
+			}
+		]
+	},
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/sfml-build/lib/sfml-system-s-d.lib"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_library",
+			"add_library",
+			"sfml_add_library",
+			"install",
+			"target_compile_options",
+			"set_target_warnings",
+			"add_definitions",
+			"target_compile_definitions",
+			"target_include_directories",
+			"target_compile_features"
+		],
+		"files" : 
+		[
+			"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/buildsystems/vcpkg.cmake",
+			"out/build/x64-Debug/_deps/sfml-src/cmake/Macros.cmake",
+			"out/build/x64-Debug/_deps/sfml-src/src/SFML/System/CMakeLists.txt",
+			"out/build/x64-Debug/_deps/sfml-src/cmake/CompilerWarnings.cmake",
+			"out/build/x64-Debug/_deps/sfml-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 105,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 641,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 298,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 149,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 10,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 355,
+				"parent" : 1
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 89,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 97,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 93,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 125,
+				"parent" : 1
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 350,
+				"parent" : 1
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 87,
+				"parent" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 52,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 88,
+				"parent" : 5
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 338,
+				"parent" : 1
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 44,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 141,
+				"parent" : 1
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/W4"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14242"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14254"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14263"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14265"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14287"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/we4289"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14296"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14311"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14545"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14546"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14547"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14549"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14555"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14619"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14640"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14826"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14905"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14906"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/w14928"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/permissive-"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4068"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4505"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4800"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "/wd4275"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "/utf-8"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "SFML_BUILD_GLUTILS"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "SFML_BUILD_GRAPHICS"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "SFML_BUILD_WINDOW"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "SFML_ENABLE_LIFETIME_TRACKING"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "SFML_STATIC"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "_LIBCPP_REMOVE_TRANSITIVE_INCLUDES"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_WINSOCK_DEPRECATED_NO_WARNINGS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 17,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/src"
+				},
+				{
+					"backtrace" : 18,
+					"isSystem" : true,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/extlibs/headers/moodycamel"
+				},
+				{
+					"backtrace" : 19,
+					"isSystem" : true,
+					"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-src/extlibs/headers/stb_rect_pack"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					20
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				32,
+				33,
+				34,
+				35,
+				36,
+				38,
+				39,
+				40,
+				41,
+				42,
+				44,
+				45,
+				46,
+				48,
+				49,
+				50,
+				267,
+				268,
+				269,
+				270,
+				271,
+				272,
+				273,
+				274,
+				276,
+				277
+			]
+		}
+	],
+	"folder" : 
+	{
+		"name" : "SFML"
+	},
+	"id" : "sfml-system::@8cb1db2982443611e568",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 4,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/install/x64-Debug"
+		}
+	},
+	"name" : "sfml-system",
+	"nameOnDisk" : "sfml-system-s-d.lib",
+	"paths" : 
+	{
+		"build" : "_deps/sfml-build/src/SFML/System",
+		"source" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				37,
+				43,
+				47,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126,
+				127,
+				128,
+				129,
+				130,
+				131,
+				132,
+				133,
+				134,
+				135,
+				136,
+				137,
+				138,
+				139,
+				140,
+				141,
+				142,
+				143,
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197,
+				198,
+				199,
+				200,
+				201,
+				202,
+				203,
+				204,
+				205,
+				206,
+				207,
+				208,
+				209,
+				210,
+				211,
+				212,
+				213,
+				214,
+				215,
+				216,
+				217,
+				218,
+				219,
+				220,
+				221,
+				222,
+				223,
+				224,
+				225,
+				226,
+				227,
+				228,
+				229,
+				230,
+				231,
+				232,
+				233,
+				234,
+				235,
+				236,
+				237,
+				238,
+				239,
+				240,
+				241,
+				242,
+				243,
+				244,
+				245,
+				246,
+				247,
+				248,
+				249,
+				250,
+				251,
+				252,
+				253,
+				254,
+				255,
+				256,
+				257,
+				258,
+				259,
+				260,
+				261,
+				262,
+				263,
+				264,
+				265,
+				266,
+				275
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				32,
+				33,
+				34,
+				35,
+				36,
+				38,
+				39,
+				40,
+				41,
+				42,
+				44,
+				45,
+				46,
+				48,
+				49,
+				50,
+				267,
+				268,
+				269,
+				270,
+				271,
+				272,
+				273,
+				274,
+				276,
+				277
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Angle.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Atomic.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/AtomicMutex.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/AutoWrapAngle.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Clock.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Err.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Export.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/FileInputStream.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/GlobalAnchorPointMixin.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/IO.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/InputStream.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/LifetimeDependant.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/LifetimeDependee.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/LocalAnchorPointMixin.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/LockGuard.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/NativeActivity.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Path.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/PathStreamOp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Rect2.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/RectPacker.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/RectUtils.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/SuspendAwareClock.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Thread.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Time.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/TimeChronoUtil.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Utf.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Utf8String.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Utf8StringCodepoints.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Vec2.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/Vec3.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/System/WindowsHeader.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/AtomicWait.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/Clock.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/ErrIOUnity.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/FileInputStream.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/FileUtils.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/FileUtils.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/LifetimeDependant.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/LifetimeDependee.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/LifetimeTrackingABICheck.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/PathStreamOp.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/PathUtils.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/Rect.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/RectPacker.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/SignalErrHandler.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/SignalErrHandler.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/Thread.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/Vec2.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/System/Vec3.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Abort.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/AdjacentFind.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/AllOf.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/AnyOf.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Copy.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Count.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Erase.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Find.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/IsSorted.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/MaxElement.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Remove.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Rotate.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Shuffle.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Sort.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/SwapAndPop.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Algorithm/Unique.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/AnkerlUnorderedDense.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Array.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Assert.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/AssertAndAssume.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/BackInserter.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Bitset.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/BitCast.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Bswap64.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Clzll.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Ctzll.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/IsInf.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/IsNan.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Memcmp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Memcpy.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Memmove.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Memset.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/OffsetOf.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Popcountll.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Pragma.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Prefetch.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Restrict.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Signbit.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Strcmp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Strlen.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Strncmp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Strncpy.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Strstr.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Builtin/Unreachable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/ChunkedVector.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Clamp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/ClampMacro.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Constants.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/DeclVal.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/DoubleMax.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/EnumArray.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/EnumClassBitwiseOps.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Exchange.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FixedFunction.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FloatEpsilon.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FloatMax.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FloatTypes.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/Fmt.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtAppendMixin.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtAppendMixinFwd.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtArgDefaultAlign.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtCString.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtNumeric.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtResult.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtSink.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtSinkRef.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtSpan.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtSpec.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtString.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Fmt/FmtToString.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FromChars.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FromCharsRadix.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FromCharsResult.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FunctionRef.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FwdStdAlignedNewDelete.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FwdStdHash.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FwdStdLocale.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/FwdStdString.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/GetArraySize.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/InPlacePImpl.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/InPlaceVector.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/IndexSequence.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/InitializerList.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/IntTypes.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/InterferenceSize.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Launder.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/LongDoubleMax.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Macros.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/MakeIndexSequence.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Acos.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Asin.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Atan.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Atan2.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Ceil.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Cos.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Cosh.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Exp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Fabs.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Floor.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Fmax.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Fmin.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Fmod.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Frexp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Ldexp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Log.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Log10.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Lround.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Pow.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Priv/Impl.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Rint.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Round.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Sin.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Sqrt.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Math/Tan.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/MaxAlignT.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/MinMax.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/MinMaxMacros.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/MiniPFR.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/NonDeduced.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Optional.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/OverloadSet.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/PassKey.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/PlacementNew.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Priv/ConstexprSinCos.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Priv/VectorUtils.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/PtrDiffT.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Radix.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/RegularizeVoid.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Remainder.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/RequireDesignatedInitializers.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Scn/Scn.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Scn/ScnChar.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Scn/ScnCore.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Scn/ScnNumeric.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Scn/ScnStdin.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Scn/ScnString.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Scn/ScnStringSource.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/ScopeGuard.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/SinCosLookup.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/SizeT.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/SmallVector.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/SourceLocation.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Span.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/StdChrono.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/String.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/StringStreamOp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/StringView.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/StringViewSplits.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/StringViewStreamOp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Swap.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/ThreadPool.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/ToChars.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/ToCharsRadix.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/ToString.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/TokenPaste.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/AddConst.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/AddLvalueReference.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/AddPointer.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/CommonType.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/Conditional.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/CopyCV.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/Decay.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/EnableIf.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/HasVirtualDestructor.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsAggregate.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsArray.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsAssignable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsBaseOf.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsConst.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsConvertible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsCopyAssignable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsCopyConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsDefaultConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsEmpty.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsEnum.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsFloatingPoint.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsIntegral.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsMemberPointer.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsMoveAssignable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsMoveConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsNothrowMoveAssignable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsNothrowMoveConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsNothrowSwappable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsPointer.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsReference.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsRvalueReference.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsSame.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsStandardLayout.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTrivial.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyAssignable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyCopyAssignable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyCopyConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyCopyable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyDestructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyMoveAssignable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyMoveConstructible.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsTriviallyRelocatable.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsUnion.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsUnsigned.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/IsVoid.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/MakeUnsigned.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/RemoveCV.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/RemoveCVRef.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/RemoveConst.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/RemoveReference.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/UnderlyingType.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Trait/VoidT.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/TrivialAbi.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/TypePackElement.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/TypePackIndex.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/UIntPtrT.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/UniquePtr.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Variant.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/include/SFML/Base/Vector.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/Abort.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/Assert.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/Fmt/Fmt.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/Fmt/FmtNumeric.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/Optional.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/Scn/ScnStdin.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/SinCosLookup.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/StackTrace.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/StackTrace.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/String.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-Debug/_deps/sfml-src/src/SFML/Base/ThreadPool.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

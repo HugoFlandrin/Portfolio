@@ -1,8 +1,16 @@
 #include "ACollider.h"
 
-void ACollider::init(RigidBody* _rigidBody) {
+void ACollider::init(RigidBody* _rigidBody, bool _isSensor) {
 	shapeDef = b2DefaultShapeDef();
 	shapeDef.enableContactEvents = true;
+	shapeDef.isSensor = _isSensor;
+	// Box2D disables sensor overlap reporting by default on EVERY shape, be
+	// it the sensor itself or whatever it's meant to detect ("this applies
+	// to sensors and non-sensors" per b2ShapeDef::enableSensorEvents) - so
+	// without this, a sensor bullet would silently stop generating any hit
+	// at all instead of just losing its physical push (confirmed: this was
+	// the actual cause of bullets no longer damaging enemies).
+	shapeDef.enableSensorEvents = true;
 	setShape(_rigidBody->getBody());
 }
 

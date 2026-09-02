@@ -33,6 +33,7 @@ void PhysicSystem::update(float _deltaTime) {
 		accumulator -= fixedTimestep;
 		// Must run once per sub-step (see header comment) - not after the loop.
 		processContactEvents();
+		processSensorEvents();
 	}
 
 	for (Entity* entity : *sm->getCurrentScene()->getEntities()) {
@@ -97,6 +98,62 @@ void PhysicSystem::processContactEvents() {
 			}
 			if (ICollisionEvent* t = colliderB->getParent()->getComponent<ICollisionEvent>()) {
 				t->endCollision(colliderB, colliderA);
+			}
+		}
+	}
+}
+
+void PhysicSystem::processSensorEvents() {
+	SceneManager* sm = SceneManager::instance();
+	b2SensorEvents sensorEvents = b2World_GetSensorEvents(world);
+
+	for (int i = 0; i < sensorEvents.beginCount; i++) {
+		auto event = sensorEvents.beginEvents[i];
+		ACollider* sensorCollider = nullptr;
+		ACollider* visitorCollider = nullptr;
+		for (Entity* entity : *sm->getCurrentScene()->getEntities()) {
+			if (ACollider* c = entity->getComponent<ACollider>()) {
+				if (B2_ID_EQUALS(c->shapeId, event.sensorShapeId)) {
+					sensorCollider = c;
+				}
+				if (B2_ID_EQUALS(c->shapeId, event.visitorShapeId)) {
+					visitorCollider = c;
+				}
+			}
+		}
+		if (sensorCollider != nullptr && visitorCollider != nullptr) {
+			// Sensor overlaps carry no manifold, so there's no meaningful
+			// normal to report - callers of a sensor pair don't use it
+			// (see BulletBehavior/ShmupEnemyBehavior::beginCollision()).
+			if (ICollisionEvent* t = sensorCollider->getParent()->getComponent<ICollisionEvent>()) {
+				t->beginCollision(sensorCollider, visitorCollider, { 0.f, 0.f });
+			}
+			if (ICollisionEvent* t = visitorCollider->getParent()->getComponent<ICollisionEvent>()) {
+				t->beginCollision(visitorCollider, sensorCollider, { 0.f, 0.f });
+			}
+		}
+	}
+
+	for (int i = 0; i < sensorEvents.endCount; i++) {
+		auto event = sensorEvents.endEvents[i];
+		ACollider* sensorCollider = nullptr;
+		ACollider* visitorCollider = nullptr;
+		for (Entity* entity : *sm->getCurrentScene()->getEntities()) {
+			if (ACollider* c = entity->getComponent<ACollider>()) {
+				if (B2_ID_EQUALS(c->shapeId, event.sensorShapeId)) {
+					sensorCollider = c;
+				}
+				if (B2_ID_EQUALS(c->shapeId, event.visitorShapeId)) {
+					visitorCollider = c;
+				}
+			}
+		}
+		if (sensorCollider != nullptr && visitorCollider != nullptr) {
+			if (ICollisionEvent* t = sensorCollider->getParent()->getComponent<ICollisionEvent>()) {
+				t->endCollision(sensorCollider, visitorCollider);
+			}
+			if (ICollisionEvent* t = visitorCollider->getParent()->getComponent<ICollisionEvent>()) {
+				t->endCollision(visitorCollider, sensorCollider);
 			}
 		}
 	}

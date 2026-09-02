@@ -45,14 +45,14 @@ void Entity::addComponent(AComponent* _component) {
 	components.push_back(_component);
 }
 
-void Entity::createPhysics(b2Vec2 _size, b2BodyType _bodyType, bool _fixedRotation, float _density, float _friction) {
+void Entity::createPhysics(b2Vec2 _size, b2BodyType _bodyType, bool _fixedRotation, float _density, float _friction, bool _isSensor) {
 	RigidBody* rigidBody = createComponent<RigidBody>();
 	rigidBody->init(_fixedRotation);
 	rigidBody->setBodyType(_bodyType);
 
 	BoxCollider* collider = createComponent<BoxCollider>();
 	collider->setSize(_size);
-	collider->init(rigidBody);
+	collider->init(rigidBody, _isSensor);
 	collider->setDensity(_density);
 	collider->setFriction(_friction);
 }

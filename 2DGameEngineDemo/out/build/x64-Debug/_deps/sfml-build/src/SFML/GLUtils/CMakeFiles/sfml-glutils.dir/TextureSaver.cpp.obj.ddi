@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "_deps\\sfml-build\\src\\SFML\\GLUtils\\CMakeFiles\\sfml-glutils.dir\\TextureSaver.cpp.obj",
+            "outputs": [
+                "C:\\Users\\hugof\\Documents\\LevelWeb Studio\\Projects\\MyProjects\\Portfolio\\2DGameEngineDemo\\out\\build\\x64-Debug\\vc140.pdb",
+                "_deps\\sfml-build\\src\\SFML\\GLUtils\\CMakeFiles\\sfml-glutils.dir\\TextureSaver.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

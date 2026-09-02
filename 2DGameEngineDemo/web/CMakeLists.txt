@@ -54,48 +54,93 @@ target_link_options(hello_triangle PRIVATE
     "-sGL_EXPLICIT_UNIFORM_BINDING=1"
 )
 
-# --- MarioLike game (Engine + Game) ---------------------------------------
+# --- MarioLike game (Engine + Platformer) ---------------------------------
 set(ENGINE_DIR "${CMAKE_SOURCE_DIR}/../Engine")
-set(GAME_DIR "${CMAKE_SOURCE_DIR}/../Game")
+set(PLATFORMER_DIR "${CMAKE_SOURCE_DIR}/../Platformer")
 
 file(GLOB ENGINE_SOURCES CONFIGURE_DEPENDS "${ENGINE_DIR}/*.cpp")
 
-set(GAME_SOURCES
-    "${GAME_DIR}/MarioLike.cpp"
-    "${GAME_DIR}/FirstMarioScene.cpp"
-    "${GAME_DIR}/MapBehavior.cpp"
-    "${GAME_DIR}/PlayerBehavior.cpp"
-    "${GAME_DIR}/EnemyBehavior.cpp"
-    "${GAME_DIR}/SpikeBehavior.cpp"
-    "${GAME_DIR}/FlagBehavior.cpp"
-    "${GAME_DIR}/CoinBehavior.cpp"
-    "${GAME_DIR}/ProjectileBehavior.cpp"
-    "${GAME_DIR}/MenuScene.cpp"
-    "${GAME_DIR}/SettingsScene.cpp"
-    "${GAME_DIR}/GameOverScene.cpp"
-    "${GAME_DIR}/WebGameOverScene.cpp"
-    "${GAME_DIR}/TutorialHints.cpp"
+set(PLATFORMER_SOURCES
+    "${PLATFORMER_DIR}/MarioLike.cpp"
+    "${PLATFORMER_DIR}/FirstMarioScene.cpp"
+    "${PLATFORMER_DIR}/MapBehavior.cpp"
+    "${PLATFORMER_DIR}/PlayerBehavior.cpp"
+    "${PLATFORMER_DIR}/EnemyBehavior.cpp"
+    "${PLATFORMER_DIR}/SpikeBehavior.cpp"
+    "${PLATFORMER_DIR}/FlagBehavior.cpp"
+    "${PLATFORMER_DIR}/CoinBehavior.cpp"
+    "${PLATFORMER_DIR}/ProjectileBehavior.cpp"
+    "${PLATFORMER_DIR}/MenuScene.cpp"
+    "${PLATFORMER_DIR}/SettingsScene.cpp"
+    "${PLATFORMER_DIR}/GameOverScene.cpp"
+    "${PLATFORMER_DIR}/TutorialHints.cpp"
+    # WebGameOverScene.cpp intentionally excluded: it lives in Engine/ now
+    # (it was already fully generic, no platformer-specific code), so it's
+    # picked up by ENGINE_SOURCES above instead.
     # SecondMarioScene.cpp intentionally excluded: not registered in MarioLike.cpp,
     # kept in the repo for a possible future second level.
 )
 
-add_executable(game ${ENGINE_SOURCES} ${GAME_SOURCES})
-target_include_directories(game PRIVATE "${ENGINE_DIR}" "${GAME_DIR}")
-target_link_libraries(game PRIVATE SFML::Graphics SFML::Window SFML::System box2d)
+add_executable(platformer ${ENGINE_SOURCES} ${PLATFORMER_SOURCES})
+target_include_directories(platformer PRIVATE "${ENGINE_DIR}" "${PLATFORMER_DIR}")
+target_link_libraries(platformer PRIVATE SFML::Graphics SFML::Window SFML::System box2d)
 
-set_target_properties(game PROPERTIES SUFFIX ".html" OUTPUT_NAME "index")
-target_link_options(game PRIVATE
+set_target_properties(platformer PROPERTIES
+    SUFFIX ".html"
+    OUTPUT_NAME "index"
+    # Both games produce index.html/.js/.wasm/.data - without a distinct
+    # output directory per target, ninja errors out ("multiple rules
+    # generate index.html") since platformer and shmup would collide.
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/platformer"
+)
+target_link_options(platformer PRIVATE
     "-sUSE_WEBGL2=1"
     "-sALLOW_MEMORY_GROWTH=1"
     "-sMIN_WEBGL_VERSION=2"
     "-sGL_EXPLICIT_UNIFORM_LOCATION=1"
     "-sGL_EXPLICIT_UNIFORM_BINDING=1"
-    "--preload-file=${GAME_DIR}/Assets@/Assets"
+    "--preload-file=${PLATFORMER_DIR}/Assets@/Assets"
     "--shell-file=${CMAKE_SOURCE_DIR}/emscripten/shell.html"
     "-sEXPORTED_RUNTIME_METHODS=HEAP8,HEAPU8,HEAP16,HEAPU16,HEAP32,HEAPU32,HEAPF32,HEAPF64"
     # VRSFML's Window::display() unconditionally yields to the browser via an
     # async primitive on Emscripten (requestAnimationFrame or emscripten_sleep,
     # depending on vsync) to let the browser drive frame timing - this requires
     # Asyncify support, there is no way around it while using this library.
+    "-sASYNCIFY=1"
+)
+
+# --- Shmup game (Engine + Shmup) -------------------------------------------
+set(SHMUP_DIR "${CMAKE_SOURCE_DIR}/../Shmup")
+
+set(SHMUP_SOURCES
+    "${SHMUP_DIR}/Shmup.cpp"
+    "${SHMUP_DIR}/ShmupScene.cpp"
+    "${SHMUP_DIR}/ShipBehavior.cpp"
+    "${SHMUP_DIR}/BulletBehavior.cpp"
+    "${SHMUP_DIR}/ShmupEnemyBehavior.cpp"
+    "${SHMUP_DIR}/EnemySpawner.cpp"
+    "${SHMUP_DIR}/ScrollingBackground.cpp"
+    "${SHMUP_DIR}/ExplosionEffect.cpp"
+    "${SHMUP_DIR}/ShmupControlHint.cpp"
+)
+
+add_executable(shmup ${ENGINE_SOURCES} ${SHMUP_SOURCES})
+target_include_directories(shmup PRIVATE "${ENGINE_DIR}" "${SHMUP_DIR}")
+target_link_libraries(shmup PRIVATE SFML::Graphics SFML::Window SFML::System box2d)
+
+set_target_properties(shmup PROPERTIES
+    SUFFIX ".html"
+    OUTPUT_NAME "index"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/shmup"
+)
+target_link_options(shmup PRIVATE
+    "-sUSE_WEBGL2=1"
+    "-sALLOW_MEMORY_GROWTH=1"
+    "-sMIN_WEBGL_VERSION=2"
+    "-sGL_EXPLICIT_UNIFORM_LOCATION=1"
+    "-sGL_EXPLICIT_UNIFORM_BINDING=1"
+    "--preload-file=${SHMUP_DIR}/Assets@/Assets"
+    "--shell-file=${CMAKE_SOURCE_DIR}/emscripten/shell-shmup.html"
+    "-sEXPORTED_RUNTIME_METHODS=HEAP8,HEAPU8,HEAP16,HEAPU16,HEAP32,HEAPU32,HEAPF32,HEAPF64"
     "-sASYNCIFY=1"
 )
