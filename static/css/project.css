@@ -262,6 +262,14 @@ body {
     transform: scale(1.02);
 }
 
+/* Scoped to a button actually placed inside a .media-item (currently only
+   2d-game-engine.html's two screenshot+button pairs) - other pages' plain
+   image-only .media-item are unaffected since this selector simply matches
+   nothing there. */
+.media-item .play-project-button {
+    margin-top: 10px;
+}
+
 /* Tech blocks */
 .tech-badges-row {
     display: flex;

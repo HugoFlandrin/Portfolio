@@ -4,9 +4,10 @@
 #include "TransformComponent.h"
 #include "ICollisionEvent.h"
 
-// Player ship: follows the touch/mouse position (dynamic body chasing a
-// target point at a capped speed) or the arrow keys (direct velocity, see
-// update()), and fires automatically on a fixed timer. There is no manual
+// Player ship: dragged by the touch/mouse position - moves by exactly how
+// far the finger/cursor moved since last frame while held down, not toward
+// its absolute position (see update()) - or the arrow keys (direct
+// velocity), and fires automatically on a fixed timer. There is no manual
 // fire input by design: the player only ever manages movement (held touch on
 // mobile, held left mouse button or arrow keys on desktop).
 class ShipBehavior : public AComponent, public ICollisionEvent
@@ -24,9 +25,14 @@ class ShipBehavior : public AComponent, public ICollisionEvent
 	static constexpr float shipHalfSizeFraction = 0.05f;
 
 	float moveSpeed = 0.f;
-	// The ship is offset above the finger so it stays visible instead of
-	// hiding directly under the touch point.
-	sf::Vec2f touchOffset;
+
+	// Drives the drag-delta movement (see update()): whether the
+	// touch/mouse was already down last frame, and where it was then - a
+	// fresh press (wasDown transitioning false->true) deliberately produces
+	// zero delta on its first frame, so touching down far from the ship
+	// without moving the finger doesn't yank it toward that point.
+	bool wasDown = false;
+	sf::Vec2f lastRawPosition;
 
 	sf::Clock fireClock;
 	float fireInterval = 0.25f;

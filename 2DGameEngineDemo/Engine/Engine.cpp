@@ -96,11 +96,11 @@ void Engine::events()
             if (keyPressed->scancode == sf::Keyboard::Scan::Escape)
                 WebBridge::requestQuit();
         }
-#endif
-
+#else
         // Generic touch polling state, mirroring sf::Keyboard::isKeyPressed -
         // harmless on platforms/games that never read TouchInput (nothing in
-        // the platformer does).
+        // the platformer does). Native only - see updateWebTouchInput() for
+        // why the web build can't use SFML's touch events for this.
         if (const auto* touchBegan = event->getIf<sf::Event::TouchBegan>()) {
             TouchInput::instance()->setDown(true, touchBegan->position.toVec2f());
         }
@@ -110,8 +110,75 @@ void Engine::events()
         else if (const auto* touchEnded = event->getIf<sf::Event::TouchEnded>()) {
             TouchInput::instance()->setDown(false, touchEnded->position.toVec2f());
         }
+#endif
+    }
+
+#ifdef __EMSCRIPTEN__
+    updateWebTouchInput();
+#endif
+}
+
+#ifdef __EMSCRIPTEN__
+void Engine::updateWebTouchInput()
+{
+    // VRSFML creates a hidden 1x1 probe window to query WebGL capabilities
+    // during startup (SDLGlContext.cpp), which briefly attaches its own
+    // pointermove/pointerdown JS listeners to the SAME #canvas element our
+    // real game window uses, then gets destroyed without ever removing
+    // them. Because SDL's per-finger touch state is global (keyed only by
+    // finger id, not by window), every real touchmove fires both the dead
+    // probe window's listener and our real one; the SFML_EVENT_FINGER_MOTION
+    // event that carries the actual delta ends up tagged with the probe
+    // window's (now-unregistered) id and gets silently dropped by SFML's
+    // window lookup, so sf::Event::TouchMoved never arrives on the web
+    // build (isDown from TouchBegan/TouchEnded happens to survive this,
+    // moves never do). Bypassing SFML's touch pipeline for continuous
+    // position tracking - reading the finger's current position straight
+    // from a plain JS listener we own - sidesteps the bug entirely.
+    // Flat globals instead of one window.__rawTouch = {...} object literal:
+    // EM_ASM's underlying macro is a variadic C preprocessor macro, which
+    // only tracks () for argument grouping, not {} - a comma sitting inside
+    // braces but outside any parens (like the ones between object-literal
+    // properties here) gets misread as a macro-argument separator and
+    // splits the JS mid-statement, breaking the build.
+    static bool listenerInstalled = false;
+    if (!listenerInstalled) {
+        listenerInstalled = true;
+        EM_ASM({
+            window.__rawTouchDown = false;
+            window.__rawTouchXNorm = 0;
+            window.__rawTouchYNorm = 0;
+            var canvas = document.getElementById('canvas');
+            var updateFromTouch = function (e) {
+                if (e.touches.length > 0) {
+                    var t = e.touches[0];
+                    var rect = canvas.getBoundingClientRect();
+                    window.__rawTouchXNorm = (t.clientX - rect.left) / rect.width;
+                    window.__rawTouchYNorm = (t.clientY - rect.top) / rect.height;
+                    window.__rawTouchDown = true;
+                } else {
+                    window.__rawTouchDown = false;
+                }
+            };
+            canvas.addEventListener('touchstart', updateFromTouch, { passive: true });
+            canvas.addEventListener('touchmove', updateFromTouch, { passive: true });
+            canvas.addEventListener('touchend', updateFromTouch, { passive: true });
+            canvas.addEventListener('touchcancel', updateFromTouch, { passive: true });
+        });
+    }
+
+    const bool down = EM_ASM_INT({ return window.__rawTouchDown ? 1 : 0; }) != 0;
+    if (down) {
+        const double xNorm = EM_ASM_DOUBLE({ return window.__rawTouchXNorm; });
+        const double yNorm = EM_ASM_DOUBLE({ return window.__rawTouchYNorm; });
+        const sf::Vec2f windowSize = window.getSize().toVec2f();
+        TouchInput::instance()->setDown(true, { static_cast<float>(xNorm) * windowSize.x, static_cast<float>(yNorm) * windowSize.y });
+    }
+    else if (TouchInput::instance()->isDown()) {
+        TouchInput::instance()->setDown(false, TouchInput::instance()->getPosition());
     }
 }
+#endif
 
 void Engine::update(float _deltaTime)
 {

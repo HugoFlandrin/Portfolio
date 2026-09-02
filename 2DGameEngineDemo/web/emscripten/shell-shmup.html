@@ -20,6 +20,15 @@
     canvas#canvas {
       display: block;
       outline: none;
+      /* Without this, the browser's own gesture handling (scroll,
+         momentum, pull-to-refresh) can claim a sustained touch-and-drag
+         out from under the game after a short delay - the touch then
+         either stops delivering move events entirely or gets silently
+         cancelled, which read as "the ship stops responding after about a
+         second even though the finger is still down". touch-action: none
+         tells the browser this element handles 100% of its own touch
+         input, so there's nothing left for it to intercept. */
+      touch-action: none;
     }
   </style>
 </head>
