@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeAwake - Hugo Flandrin</title>
-    <meta name="description" content="An Unreal Engine project focused on atmosphere and level presentation.">
+    <title>Life Awake - Hugo Flandrin</title>
+    <meta name="description" content="A 3D puzzle-adventure built in Unreal Engine 5 by a 9-student team.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hugoflandrin.github.io/Portfolio/pages/lifeawake.html">
-    <meta property="og:title" content="LifeAwake - Hugo Flandrin">
-    <meta property="og:description" content="An Unreal Engine project focused on atmosphere and level presentation.">
+    <meta property="og:title" content="Life Awake - Hugo Flandrin">
+    <meta property="og:description" content="A 3D puzzle-adventure built in Unreal Engine 5 by a 9-student team.">
     <meta property="og:image" content="https://hugoflandrin.github.io/Portfolio/static/img/LifeAwakeLevelDemo.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LifeAwake - Hugo Flandrin">
-    <meta name="twitter:description" content="An Unreal Engine project focused on atmosphere and level presentation.">
+    <meta name="twitter:title" content="Life Awake - Hugo Flandrin">
+    <meta name="twitter:description" content="A 3D puzzle-adventure built in Unreal Engine 5 by a 9-student team.">
     <meta name="twitter:image" content="https://hugoflandrin.github.io/Portfolio/static/img/LifeAwakeLevelDemo.jpg">
     <link rel="icon" type="image/png" href="../static/img/Logo.png">
     <link rel="stylesheet" href="../static/css/project.css">
@@ -58,77 +58,97 @@
 
 <div class="project-container">
     <div class="project-left">
-        <h1>LifeAwake</h1>
+        <h1>Life Awake</h1>
 
-        <h2 data-i18n="project.overview">Overview</h2>
         <p class="subtitle" data-i18n="project.lifeawake.subtitle">
-            An Unreal Engine project focused on atmosphere and level presentation.
+            A puzzle-adventure built in Unreal Engine 5.
         </p>
 
         <p data-i18n="project.lifeawake.description">
-            LifeAwake is an Unreal Engine project built around environmental ambiance and level design. A video demonstration showcases the mood and visual direction of the experience.
+            Life Awake follows a small gecko on a journey to bring Isumera, the great tree whose roots once linked every world, back to life. Traveling between distinct realms through interactive portals, the gecko solves a variety of puzzles  pressure-plate sequences, rotating valves, light-reflection challenges, and telescope observations — with each one restoring a piece of Isumera. The game was built over a school year by a 9-person team (3D art, animation, gameplay programming, project management, and creative direction); I worked across nearly all of the gameplay side, from full features to single focused contributions, with the camera system being the one system built entirely by a teammate.
         </p>
-        <!-- TODO: Add detailed project description, gameplay scope, and development context -->
 
         <div class="tech-badges-row">
-            <span class="tech-badge">Unreal Engine</span>
-            <span class="tech-badge">Level design</span>
-            <span class="tech-badge">Atmosphere</span>
+            <span class="tech-badge">Unreal Engine 5.6</span>
+            <span class="tech-badge">Blueprint</span>
+            <span class="tech-badge">Puzzle Design</span>
+            <span class="tech-badge">Team of 9</span>
         </div>
 
-        <h2 data-i18n="project.techChallenges">Technical Challenges</h2>
-        <!-- TODO: Document specific technical challenges once development details are finalized -->
-        <p class="highlight" data-i18n="project.lifeawake.challengeHighlight">
-            Establishing a cohesive atmospheric experience through lighting, level layout, and environmental storytelling.
+        <h2 data-i18n="project.tech.title">Technical focus</h2>
+        <p class="tech-note" data-i18n="project.lifeawake.tech.note">
+            Several distinct puzzle types spread across visually different worlds needed to feel like one coherent game — shared interaction, portal-traversal, and progression systems let each world plug in its own puzzle logic without breaking that consistency.
         </p>
+
+        <h2 data-i18n="project.decisions.title">Key decisions</h2>
         <ul>
-            <li data-i18n="project.lifeawake.challenge1">Building readable navigation while preserving a strong mood-driven aesthetic</li>
-            <li data-i18n="project.lifeawake.challenge2">Integrating visual and audio elements for consistent ambiance</li>
-            <li data-i18n="project.lifeawake.challenge3">Iterating on level presentation under production constraints</li>
+            <li data-i18n="project.lifeawake.decision1">Every solved puzzle visibly regrows Isumera, giving a tangible sense of progress instead of a simple checklist</li>
+            <li data-i18n="project.lifeawake.decision2">One interaction system (clues, keys, chests) shared across all worlds, so each new puzzle type only had to plug in its own logic</li>
+            <li data-i18n="project.lifeawake.decision3">Contemplative pacing over pressure — puzzles favor observation and understanding over reflexes or timers</li>
         </ul>
 
-        <h2 data-i18n="project.technologies">Technologies</h2>
-        <!-- TODO: Confirm additional technologies used (Blueprint, C++, etc.) -->
+        <h2 data-i18n="project.workflow.title">Workflow</h2>
+        <p data-i18n="project.lifeawake.workflow">Puzzle design → Blueprint prototyping → integration into each world → playtest to tune difficulty and pacing.</p>
+
+        <h2 data-i18n="project.challenges">Challenges</h2>
+        <p class="highlight" data-i18n="project.lifeawake.challengeHighlight">
+            Coordinating gameplay work across a 9-person student team, on a school-year timeline, while keeping four very different puzzle mechanics feeling like one cohesive game.
+        </p>
         <ul>
-            <li data-i18n="project.lifeawake.tech1">Unreal Engine</li>
-            <li data-i18n="project.lifeawake.tech2">Level design &amp; lighting tools</li>
+            <li data-i18n="project.lifeawake.challenge1">Designing portal traversal and interaction systems generic enough to support pressure-plate, valve, light-reflection, and telescope puzzles alike</li>
+            <li data-i18n="project.lifeawake.challenge2">Keeping puzzle logic decoupled from level-specific content so art and gameplay could iterate in parallel</li>
+            <li data-i18n="project.lifeawake.challenge3">Tuning puzzle difficulty for a slow, contemplative pace without making progression feel unclear</li>
+        </ul>
+
+        <h2 data-i18n="project.whatBuilt">What I built</h2>
+        <ul>
+            <li data-i18n="project.lifeawake.built1">Puzzle and trial systems: rotating valves, light-reflection puzzles, and telescope observation</li>
+            <li data-i18n="project.lifeawake.built2">Portal traversal connecting the game's distinct worlds</li>
+            <li data-i18n="project.lifeawake.built3">Interaction and inventory systems — clue papers, keys, and chests</li>
+            <li data-i18n="project.lifeawake.built4">Progression logic tying puzzle completion to Isumera's regrowth</li>
+        </ul>
+
+        <h2 data-i18n="project.technologies">Technologies used</h2>
+        <ul>
+            <li>Unreal Engine 5.6</li>
+            <li>Blueprint scripting</li>
+            <li>Level design &amp; lighting tools</li>
         </ul>
 
         <h2 data-i18n="project.links">Links</h2>
         <div class="links">
             <a href="https://github.com/HugoFlandrin/LifeAwake" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
-            <a href="https://youtu.be/-DSy2qEk5MU" target="_blank" rel="noopener noreferrer" data-i18n="project.lifeawake.demoVideo">Demo video</a>
-            <!-- TODO: Add Itch.io link when build is published -->
+            <a href="https://hugoflandrin.itch.io/life-awake" target="_blank" rel="noopener noreferrer" data-i18n="project.itch">Itch.io</a>
         </div>
     </div>
 
     <div class="project-right">
         <div class="media-images">
             <figure class="media-item">
-                <img src="../static/img/LifeAwakeMainMenu.jpg" alt="LifeAwake main menu">
+                <img src="../static/img/LifeAwakeMainMenu.jpg" alt="Life Awake main menu">
             </figure>
         </div>
 
         <div class="media-video">
             <div class="video-viewer">
                 <div class="video-slide active">
-                    <video controls preload="none" poster="../static/img/LifeAwakeLevelDemo.jpg">
+                    <video controls preload="none" poster="../static/img/LifeAwakeLogo.jpg">
+                        <source src="../static/mp4/Projects/LifeAwake-Ambiant.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-slide">
+                    <video controls preload="none" poster="../static/img/LifeAwake-ChestClues.jpg">
                         <source src="../static/mp4/Projects/LifeAwake%20-%20DemoChest%26Clues.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
-                    <video controls preload="none" poster="../static/img/LifeAwakeLevelDemo.jpg">
+                    <video controls preload="none" poster="../static/img/LifeAwake-Dalle.jpg">
                         <source src="../static/mp4/Projects/LifeAwake%20-%20DemoDalle.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
-                    <video controls preload="none" poster="../static/img/LifeAwakeLevelDemo.jpg">
+                    <video controls preload="none" poster="../static/img/LifeAwake-Laser.jpg">
                         <source src="../static/mp4/Projects/LifeAwake%20-%20LaserDemo.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-slide">
-                    <video controls preload="none" poster="../static/img/LifeAwakeLevelDemo.jpg">
-                        <source src="../static/mp4/Projects/LifeAwake%20-%20TelescopeDemo.mp4" type="video/mp4">
                     </video>
                 </div>
                 <button class="prev-video" type="button" aria-label="Previous video">&#10094;</button>
