@@ -122,6 +122,13 @@ set(SHMUP_SOURCES
     "${SHMUP_DIR}/ScrollingBackground.cpp"
     "${SHMUP_DIR}/ExplosionEffect.cpp"
     "${SHMUP_DIR}/ShmupControlHint.cpp"
+    "${SHMUP_DIR}/CoopGameOverWatcher.cpp"
+    "${SHMUP_DIR}/PlayerScoreUI.cpp"
+    "${SHMUP_DIR}/PickupSpawner.cpp"
+    "${SHMUP_DIR}/CoinPickup.cpp"
+    "${SHMUP_DIR}/PowerUpPickup.cpp"
+    "${SHMUP_DIR}/ShieldEffect.cpp"
+    "${SHMUP_DIR}/CoopControlsHint.cpp"
 )
 
 add_executable(shmup ${ENGINE_SOURCES} ${SHMUP_SOURCES})

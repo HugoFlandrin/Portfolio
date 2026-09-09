@@ -12,7 +12,7 @@ void WebGameOverScene::init() {
 	setCamera();
 
 	SceneManager* sm = SceneManager::instance();
-	WebBridge::notifyGameOver(sm->getLastRunWon(), sm->getLastScore());
+	WebBridge::notifyGameOver(sm->getLastRunWon(), sm->getLastScore(), sm->getLastRunTwoPlayer(), sm->getLastScoreP1(), sm->getLastScoreP2());
 
 #ifdef __EMSCRIPTEN__
 	emscripten_cancel_main_loop();

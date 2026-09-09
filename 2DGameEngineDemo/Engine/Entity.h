@@ -46,5 +46,7 @@ public:
         components.erase(find(components.begin(), components.end(), _component));
     }
 
-    void createPhysics(b2Vec2 _size = b2Vec2(64, 64), b2BodyType _bodyType = b2_staticBody, bool _fixedRotation = true, float _density = 0.f, float _friction = 0.f, bool _isSensor = false);
+    // _groupIndex: see ACollider::init() - defaults to 0 (normal Box2D
+    // filtering, every existing call site unaffected).
+    void createPhysics(b2Vec2 _size = b2Vec2(64, 64), b2BodyType _bodyType = b2_staticBody, bool _fixedRotation = true, float _density = 0.f, float _friction = 0.f, bool _isSensor = false, int _groupIndex = 0);
 };

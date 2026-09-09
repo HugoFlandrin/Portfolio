@@ -1,4 +1,5 @@
 #pragma once
+#include <random>
 #include <SFML/System/Clock.hpp>
 #include "AComponent.h"
 #include "TransformComponent.h"
@@ -35,12 +36,32 @@ class ShmupEnemyBehavior : public AComponent, public ICollisionEvent
 	sf::Clock fireClock;
 	static constexpr float fireInterval = 1.8f;
 
+	// Who dealt the killing blow (2-player co-op individual scoring) -
+	// -1 (default) means "not attributed to a specific player", so
+	// update()'s death-complete branch falls back to crediting only the
+	// shared score, exactly as before this existed. Set by whichever
+	// gameplay code actually kills this enemy - see BulletBehavior::
+	// beginCollision() and ShipBehavior::beginCollision().
+	int killedByPlayer = -1;
+
+	// Rolled once per kill to decide whether a power-up drops - see
+	// update()'s death-complete branch and PowerUpPickup.
+	std::mt19937 rng{ std::random_device{}() };
+
 public:
 	// Spawns a fully-assembled enemy entity into _scene and adds it.
-	static void spawn(AScene* _scene, sf::Vec2f _position, EnemyType _type = EnemyType::Basic);
+	// _hpMultiplier/_speedMultiplier: infinite mode's long-run difficulty
+	// scaling (see EnemySpawner::update()) - applied on top of statsFor()'s
+	// base per-type stats so enemies keep growing tougher/faster well past
+	// the point where the spawn-rate/type-mix ramp alone caps out, instead of
+	// power-ups eventually letting the run be played forever risk-free.
+	// Default 1.f each: the timed (Score Attack) mode's call site is
+	// unaffected.
+	static void spawn(AScene* _scene, sf::Vec2f _position, EnemyType _type = EnemyType::Basic, float _hpMultiplier = 1.f, float _speedMultiplier = 1.f);
 
 	void init(int _scoreValue, EnemyType _type);
 	void update(float _deltaTime) override;
 	void beginCollision(ACollider* _me, ACollider* _other, b2Vec2 _normal) override;
 	void endCollision(ACollider* _me, ACollider* _other) override;
+	void setKilledByPlayer(int _playerId) { killedByPlayer = _playerId; }
 };

@@ -82,6 +82,20 @@ void AScene::addScore(int _amount) {
     score = std::max(0, score + _amount);
 }
 
+int AScene::getPlayerScore(int _playerId) {
+    if (_playerId < 0 || _playerId >= static_cast<int>(playerScores.size())) {
+        return 0;
+    }
+    return playerScores[_playerId];
+}
+
+void AScene::addPlayerScore(int _playerId, int _amount) {
+    if (_playerId >= 0 && _playerId < static_cast<int>(playerScores.size())) {
+        playerScores[_playerId] = std::max(0, playerScores[_playerId] + _amount);
+    }
+    addScore(_amount);
+}
+
 float AScene::getTimer() {
     return timer.getElapsedTime().asSeconds();
 }

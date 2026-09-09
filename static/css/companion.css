@@ -1,8 +1,3 @@
-/* =========================
-   COMPANION
-   A small character derived from the logo's pill motif —
-   floats in a corner and reacts to what the visitor reaches.
-========================= */
 
 #companion {
     position: fixed;
@@ -11,9 +6,7 @@
     flex-direction: column;
     align-items: flex-start;
     pointer-events: none;
-    /* left/top are set from JS (game-ui companion script) — this is what
-       makes it glide to stand next to whatever it's talking about instead
-       of teleporting. */
+
     transition: left 0.6s cubic-bezier(.4, 0, .2, 1), top 0.6s cubic-bezier(.4, 0, .2, 1);
 }
 
@@ -58,8 +51,6 @@
     96%           { transform: scaleY(0.12); }
 }
 
-/* Resting smile by default; while a bubble is up (.comp-talking on
-   #companion) it swaps to a small open mouth that chatters. */
 .comp-mouth-open {
     opacity: 0;
     transform: scaleY(0.4);

@@ -71,6 +71,14 @@
     // this based on its own coarse-pointer/narrow-viewport heuristic) -
     // showing keyboard advice to a touch player would be actively wrong.
     window.__shmupDevice = params.get("device") || "desktop";
+    // Read by Shmup.cpp (via EM_ASM) to pick which registered scene this run
+    // starts on: the default timed solo "score" run (ShmupLevel), or the
+    // endless 2-player "infinite" co-op run (ShmupInfinite) - see
+    // ShmupScene::setInfiniteMode()/setTwoPlayer(). Every entry point on the
+    // site now passes this explicitly (see game-embed.js triggers' own
+    // data-game-src), so "score" here is only the fallback for a bare URL
+    // with no ?mode at all.
+    window.__shmupMode = params.get("mode") || "score";
 
     // Must stay `var`, not `const`/`let`: the Emscripten-generated script
     // that follows also declares `var Module = ...` at the top level, and

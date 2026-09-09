@@ -11,21 +11,19 @@
     "<defs><linearGradient id=\"comp-grad\" gradientUnits=\"userSpaceOnUse\" x1=\"0\" y1=\"0\" x2=\"80\" y2=\"90\">" +
     '<stop offset="0" stop-color="#4da3ff"/><stop offset="1" stop-color="#9966ff"/>' +
     "</linearGradient></defs>" +
-    // Two small antennae (uneven heights, for a bit of personality) topped
-    // with little sensor balls — a scout that's always tuned in.
+
     '<rect x="24" y="10" width="7" height="14" rx="3.5" fill="url(#comp-grad)"/>' +
     '<circle cx="27.5" cy="10" r="4.5" fill="url(#comp-grad)"/>' +
     '<rect x="49" y="6" width="7" height="16" rx="3.5" fill="url(#comp-grad)"/>' +
     '<circle cx="52.5" cy="6" r="5" fill="url(#comp-grad)"/>' +
-    // Rounded head.
+
     '<rect x="8" y="18" width="64" height="60" rx="26" fill="url(#comp-grad)"/>' +
-    // Bar-shaped eyes — the same pill motif as the logo and loading bar.
+
     '<rect class="comp-eye comp-eye-l" x="24" y="42" width="10" height="16" rx="5"/>' +
     '<rect class="comp-eye comp-eye-r" x="46" y="42" width="10" height="16" rx="5"/>' +
     '<circle cx="18" cy="58" r="5" fill="#ff8a65" opacity="0.35"/>' +
     '<circle cx="62" cy="58" r="5" fill="#ff8a65" opacity="0.35"/>' +
-    // Resting smile, hidden while talking; a small open-mouth oval takes
-    // over in its place to sell the "talking" animation (see .comp-talking).
+
     '<path class="comp-mouth-closed" d="M30 66 Q40 72 50 66" stroke="#0b0f1f" stroke-width="3" stroke-linecap="round" fill="none"/>' +
     '<ellipse class="comp-mouth-open" cx="40" cy="68" rx="7" ry="5" fill="#0b0f1f"/>' +
     "</svg></div>";
@@ -42,13 +40,8 @@
     companion.style.top = top + "px";
   }
 
-  // Idle corner spot — set once, synchronously, before first paint, so it
-  // never itself plays as a "glide in from nowhere" animation.
   setPosition(24, window.innerHeight - sprite.offsetHeight - 36);
 
-  // Picks where, relative to the target, the companion should stand —
-  // left/right are always available; above/below only when there's
-  // enough room, and it won't repeat the same side twice in a row.
   function pickSide(rect) {
     const candidates = ["left", "right"];
     if (rect.top > 160) candidates.push("above");
@@ -87,9 +80,6 @@
       top = rect.bottom + margin;
     }
 
-    // Keep well clear of the edges, and never let it settle in the bottom
-    // quarter of the screen — a target near the page's bottom (e.g. the
-    // contact form) would otherwise pin it right against the edge.
     left = Math.max(20, Math.min(left, window.innerWidth - w - 20));
     const maxTop = Math.min(window.innerHeight - h - 28, window.innerHeight * 0.72 - h);
     top = Math.max(28, Math.min(top, maxTop));
@@ -109,7 +99,7 @@
   }
 
   let lastMoveTime = 0;
-  const MOVE_COOLDOWN_MS = 700; // absorbs scroll jitter right at a section boundary
+  const MOVE_COOLDOWN_MS = 700;
 
   function sayNear(key, targetEl) {
     const now = Date.now();
@@ -123,9 +113,6 @@
     if (lastKey) say(lastKey);
   });
 
-  // Re-fires every time the section crosses into view — scrolling back up
-  // to a section it already reacted to makes it react again, the same as
-  // scrolling down to a new one.
   function watchSection(el, callback) {
     if (!el) return;
     let wasIntersecting = false;

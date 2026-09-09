@@ -24,6 +24,13 @@ class BulletBehavior : public AComponent, public ICollisionEvent
 	TransformComponent* transformComp = nullptr;
 	float damage = 25.f;
 	BulletOwner owner = BulletOwner::Player;
+	// Which player fired this (Shmup's 2-player co-op - see ShipBehavior::
+	// fireBullet()) - -1 (default) means "not attributable to a specific
+	// player" (any Enemy bullet, or a Player bullet fired outside 2-player
+	// mode where individual attribution doesn't matter). Read on a killing
+	// blow to credit the right player's score - see beginCollision() and
+	// ShmupEnemyBehavior::setKilledByPlayer().
+	int ownerId = -1;
 	// Guards against a single bullet damaging two overlapping targets in the
 	// same physics step (deletion is deferred to the next scene update, so
 	// without this a bullet could still be "live" for a second contact event
@@ -33,10 +40,10 @@ class BulletBehavior : public AComponent, public ICollisionEvent
 public:
 	// Spawns a fully-assembled bullet entity (transform/render/physics/
 	// behavior) into _scene and adds it. _direction is expected normalized;
-	// speed is in px/s.
-	static void spawn(AScene* _scene, sf::Vec2f _position, sf::Vec2f _direction, float _speed, float _damage, BulletOwner _owner = BulletOwner::Player);
+	// speed is in px/s. _ownerId: see the field's own comment above.
+	static void spawn(AScene* _scene, sf::Vec2f _position, sf::Vec2f _direction, float _speed, float _damage, BulletOwner _owner = BulletOwner::Player, int _ownerId = -1);
 
-	void init(float _damage, BulletOwner _owner);
+	void init(float _damage, BulletOwner _owner, int _ownerId = -1);
 	void update(float _deltaTime) override;
 	void beginCollision(ACollider* _me, ACollider* _other, b2Vec2 _normal) override;
 	void endCollision(ACollider* _me, ACollider* _other) override;

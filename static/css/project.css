@@ -1,13 +1,10 @@
-/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   🎨 DEFAULT THEME
-========================= */
 :root {
     --bg-color: #43424b;
     --card-bg: #232020;
@@ -17,18 +14,12 @@
     --accent-color: #ff8a65;
 }
 
-/* =========================
-   🎭 THEMES
-========================= */
-
-/* ENGINE / TECH */
 body[data-theme="engine"] {
     --bg-color: #0f172a;
     --card-bg: #111827;
     --primary-color: #3b82f6;
 }
 
-/* HORROR */
 body[data-theme="escape"] {
     --bg-color: #301f1a;
     --card-bg: #2a1b1b;
@@ -40,7 +31,7 @@ body[data-theme="pokemon"] {
     --card-bg: #0f1a33;
     --text-color: #ffffff;
     --secondary-text: rgba(255, 255, 255, 0.72);
-    --primary-color: #ffd84d; 
+    --primary-color: #ffd84d;
 }
 
 body[data-theme="gametalk"] {
@@ -56,7 +47,7 @@ body[data-theme="nightlife"] {
     --card-bg: #120b24;
     --text-color: #ffffff;
     --secondary-text: rgba(255, 255, 255, 0.72);
-    --primary-color: #ff4fd8; 
+    --primary-color: #ff4fd8;
 }
 
 body[data-theme="platypus"] {
@@ -73,7 +64,6 @@ body[data-theme="engine3d"] {
     --primary-color: #22d3ee;
 }
 
-/* ANCIENT TEMPLE */
 body[data-theme="lifeawake"] {
     --bg-color: #13275e;
     --card-bg: #1c3374;
@@ -86,9 +76,16 @@ body[data-theme="prototype"] {
     --primary-color: #0ea5e9;
 }
 
-/* =========================
-   GLOBAL
-========================= */
+body[data-theme="shmup"] {
+    /* Sampled straight from the game's own play-area color (see
+       static/img/ShmupCoop.png) - the same "accent matches the project's
+       actual screenshot" pattern every other theme here follows (e.g.
+       engine's blue, lifeawake's green), rather than an invented sci-fi
+       palette unrelated to what the game actually looks like. */
+    --bg-color: #10130c;
+    --card-bg: #1a1f12;
+    --primary-color: #b6d53c;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -96,10 +93,6 @@ body {
     color: var(--text-color);
     line-height: 1.6;
 }
-
-/* =========================
-   NAVBAR (conservée)
-========================= */
 
 .navbar {
     position: sticky;
@@ -149,10 +142,6 @@ body {
     width: 100%;
 }
 
-/* =========================
-   LAYOUT
-========================= */
-
 .project-container {
     max-width: 1200px;
     margin: 80px auto;
@@ -163,10 +152,6 @@ body {
     align-items: flex-start;
     gap: 48px;
 }
-
-/* =========================
-   LEFT COLUMN
-========================= */
 
 .project-left {
     flex: 1;
@@ -200,19 +185,16 @@ body {
     margin-bottom: 10px;
 }
 
-/* Highlight text */
 .highlight {
     color: var(--primary-color);
     font-weight: 500;
 }
 
-/* Lists */
 .project-left ul {
     padding-left: 20px;
     margin-bottom: 20px;
 }
 
-/* Links */
 .links {
     margin-top: 10px;
 }
@@ -229,10 +211,6 @@ body {
     text-decoration: underline;
 }
 
-/* =========================
-   RIGHT COLUMN (MEDIA)
-========================= */
-
 .project-right {
     max-width: 36%;
     min-width: 280px;
@@ -244,7 +222,6 @@ body {
     align-self: flex-start;
 }
 
-/* IMAGES */
 .media-images {
     display: flex;
     flex-direction: column;
@@ -253,6 +230,8 @@ body {
 
 .media-item img {
     width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -262,15 +241,10 @@ body {
     transform: scale(1.02);
 }
 
-/* Scoped to a button actually placed inside a .media-item (currently only
-   2d-game-engine.html's two screenshot+button pairs) - other pages' plain
-   image-only .media-item are unaffected since this selector simply matches
-   nothing there. */
 .media-item .play-project-button {
     margin-top: 10px;
 }
 
-/* Tech blocks */
 .tech-badges-row {
     display: flex;
     flex-wrap: wrap;
@@ -399,7 +373,6 @@ body {
     display: block;
 }
 
-/* MODAL */
 #image-modal {
     display: flex;
     position: fixed;
@@ -434,7 +407,6 @@ body {
     transform: scale(1);
 }
 
-/* VIDEO */
 .media-video {
     width: 100%;
 }
@@ -456,7 +428,6 @@ body {
     border-radius: 10px;
 }
 
-/* ARROWS */
 .prev-video,
 .next-video {
     position: absolute;
@@ -478,10 +449,6 @@ body {
 .next-video:hover {
     background: rgba(0,0,0,0.8);
 }
-
-/* =========================
-   ARROWS
-========================= */
 
 .prev,
 .next {
@@ -510,9 +477,16 @@ body {
     right: 10px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.section-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .site-footer {
     margin-top: 60px;
@@ -552,10 +526,6 @@ body {
     font-size: 12px;
     color: var(--secondary-text);
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 900px) {
     .project-container {

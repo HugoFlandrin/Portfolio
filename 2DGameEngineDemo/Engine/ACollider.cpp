@@ -1,9 +1,10 @@
 #include "ACollider.h"
 
-void ACollider::init(RigidBody* _rigidBody, bool _isSensor) {
+void ACollider::init(RigidBody* _rigidBody, bool _isSensor, int _groupIndex) {
 	shapeDef = b2DefaultShapeDef();
 	shapeDef.enableContactEvents = true;
 	shapeDef.isSensor = _isSensor;
+	shapeDef.filter.groupIndex = _groupIndex;
 	// Box2D disables sensor overlap reporting by default on EVERY shape, be
 	// it the sensor itself or whatever it's meant to detect ("this applies
 	// to sensors and non-sensors" per b2ShapeDef::enableSensorEvents) - so
@@ -20,6 +21,12 @@ void  ACollider::setDensity(float _density) {
 }
 void  ACollider::setFriction(float _friction) {
 	b2Shape_SetFriction(shapeId, _friction);
+}
+
+void ACollider::disableCollision() {
+	b2Filter filter = b2Shape_GetFilter(shapeId);
+	filter.maskBits = 0;
+	b2Shape_SetFilter(shapeId, filter);
 }
 
 void ACollider::update(float _deltaTime) {}

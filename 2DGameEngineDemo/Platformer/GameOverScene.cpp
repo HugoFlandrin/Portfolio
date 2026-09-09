@@ -23,8 +23,12 @@ void GameOverScene::init() {
     looseText->addComponent(looseTextRender);
     addEntity(looseText);
 
+    std::string scoreLine = "Votre score est : " + std::to_string(sm->getLastScore());
+    if (sm->getLastRunTwoPlayer()) {
+        scoreLine += " (J1 : " + std::to_string(sm->getLastScoreP1()) + " - J2 : " + std::to_string(sm->getLastScoreP2()) + ")";
+    }
     Entity* scoreText = createEntity();
-    TextRenderer* scoreTextRender = new TextRenderer({ 960.f, 150.f }, *uiFont, ("Votre score est : " + std::to_string(sm->getLastScore())).c_str());
+    TextRenderer* scoreTextRender = new TextRenderer({ 960.f, 150.f }, *uiFont, scoreLine.c_str());
     scoreText->addComponent(scoreTextRender);
     addEntity(scoreText);
 

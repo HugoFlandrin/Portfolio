@@ -55,6 +55,22 @@ int main()
     level1.setShowControlHint(isDesktop);
     sceneManager->addScene(&level1);
 
+    // Second registered instance of the same scene class, switched to an
+    // endless survival run instead of the timed one (see
+    // ShmupScene::setInfiniteMode()) - kept under its own scene name so both
+    // can coexist and be selected independently.
+    static ShmupScene level1Infinite;
+    level1Infinite.setName("ShmupInfinite");
+    level1Infinite.setInfiniteMode(true);
+    // TEMP DEV: 2-player co-op is being built directly on top of the
+    // infinite scene (the intended flagship combo) so it's reachable from
+    // the same dev-only default entry point (see shell-shmup.html) without
+    // more URL fiddling - revisit whether infinite/2-player should be
+    // selectable independently once both are further along.
+    level1Infinite.setTwoPlayer(true);
+    level1Infinite.setShowControlHint(isDesktop);
+    sceneManager->addScene(&level1Infinite);
+
 #ifdef __EMSCRIPTEN__
     static WebGameOverScene gameOver;
 #else
@@ -63,7 +79,16 @@ int main()
     gameOver.setName("GameOver");
     sceneManager->addScene(&gameOver);
 
-    sceneManager->setCurrentScene(&level1);
+    // window.__shmupMode (see shell-shmup.html) picks which of the two
+    // scenes above this run starts on - same read-a-JS-global pattern as
+    // window.__shmupDevice above. Native desktop has no such global to read,
+    // so it always falls back to the default timed mode.
+#ifdef __EMSCRIPTEN__
+    bool startInfinite = EM_ASM_INT({ return window.__shmupMode === 'infinite' ? 1 : 0; });
+#else
+    bool startInfinite = false;
+#endif
+    sceneManager->setCurrentScene(startInfinite ? &level1Infinite : &level1);
     sceneManager->getCurrentScene()->init();
     sceneManager->getCurrentScene()->commitPendingEntities();
 

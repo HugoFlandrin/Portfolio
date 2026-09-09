@@ -33,6 +33,8 @@ void SceneManager::processChangeScene() {
 	if (nextScene != nullptr) {
 
 		lastScore = currentScene->getScore();
+		lastScoreP1 = currentScene->getPlayerScore(0);
+		lastScoreP2 = currentScene->getPlayerScore(1);
 		currentScene->end();
 		Engine::instance()->getPhysicSystem()->reset();
 		currentScene = nextScene;
@@ -60,12 +62,28 @@ int SceneManager::getLastScore() {
 	return lastScore;
 }
 
+int SceneManager::getLastScoreP1() {
+	return lastScoreP1;
+}
+
+int SceneManager::getLastScoreP2() {
+	return lastScoreP2;
+}
+
 void SceneManager::setLastRunWon(bool _won) {
 	lastRunWon = _won;
 }
 
 bool SceneManager::getLastRunWon() {
 	return lastRunWon;
+}
+
+void SceneManager::setLastRunTwoPlayer(bool _twoPlayer) {
+	lastRunTwoPlayer = _twoPlayer;
+}
+
+bool SceneManager::getLastRunTwoPlayer() {
+	return lastRunTwoPlayer;
 }
 
 SceneManager* SceneManager::instance()

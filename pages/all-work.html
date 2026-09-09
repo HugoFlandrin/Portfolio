@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +52,7 @@
             <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
             <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
             <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
-            <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+            <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
         </div>
     </nav>
 
@@ -62,7 +62,7 @@
                 <h2 data-i18n="home.allWork.title">All my work</h2>
             </div>
 
-            <section class="all-work-category">
+            <section class="all-work-category section-reveal">
                 <h3 data-i18n="home.allWork.cat.engines">Game Engines</h3>
                 <div class="projects-grid">
                     <article class="project-card" style="--accent:#3b82f6">
@@ -91,10 +91,23 @@
                             </div>
                         </a>
                     </article>
+                    <article class="project-card" style="--accent:#b6d53c">
+                        <a href="space-shooter.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../static/img/ShmupCoop.png" alt="Space Shooter">
+                                <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
+                            </div>
+                            <div class="project-title">
+                                <span class="project-tag" data-i18n="home.card.shmup.tag">Gameplay · C++ · Web port</span>
+                                <h3>Space Shooter</h3>
+                                <p class="project-card-summary" data-i18n="home.card.shmup.summary">2-player co-op · infinite survival mode</p>
+                            </div>
+                        </a>
+                    </article>
                 </div>
             </section>
 
-            <section class="all-work-category">
+            <section class="all-work-category section-reveal">
                 <h3 data-i18n="home.allWork.cat.unreal">Unreal Engine Projects</h3>
                 <div class="projects-grid">
                     <article class="project-card" style="--accent:#ff4d4d">
@@ -139,7 +152,7 @@
                 </div>
             </section>
 
-            <section class="all-work-category">
+            <section class="all-work-category section-reveal">
                 <h3 data-i18n="home.allWork.cat.unity">Unity Projects</h3>
                 <div class="projects-grid">
                     <article class="project-card" style="--accent:#f2946b">
@@ -158,7 +171,7 @@
                 </div>
             </section>
 
-            <section class="all-work-category">
+            <section class="all-work-category section-reveal">
                 <h3 data-i18n="home.allWork.cat.web">Web Development</h3>
                 <div class="projects-grid">
                     <article class="project-card" style="--accent:#a78bfa">
@@ -177,7 +190,7 @@
                 </div>
             </section>
 
-            <section class="all-work-category">
+            <section class="all-work-category section-reveal">
                 <h3 data-i18n="home.allWork.cat.prototypes">Technical Prototypes</h3>
                 <div class="projects-grid">
                     <article class="project-card" style="--accent:#0ea5e9">
@@ -222,7 +235,7 @@
                 </div>
             </section>
 
-            <section class="all-work-category">
+            <section class="all-work-category section-reveal">
                 <h3 data-i18n="home.allWork.cat.applications">Applications</h3>
                 <div class="projects-grid">
                     <article class="project-card" style="--accent:#ffd84d">
@@ -252,7 +265,7 @@
                 <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
             </div>
             <p class="footer-meta">
-                <span data-i18n="home.footer.version">Portfolio v1.3</span>
+                <span data-i18n="home.footer.version">Portfolio v1.4</span>
                 ·
                 <span data-i18n="home.footer.updated">Updated September 2026</span>
             </p>
@@ -261,7 +274,7 @@
 
     <script src="../static/js/i18n.js"></script>
     <script src="../static/js/navbar.js"></script>
-    <script src="../static/js/home.js"></script>
+    <script src="../static/js/section-reveal.js"></script>
     <script data-goatcounter="https://levelweb-studio.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
     <script src="../static/js/game-ui.js"></script>

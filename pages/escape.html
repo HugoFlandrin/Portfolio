@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,6 @@
 </div>
 -->
 
-<!-- NAVBAR -->
 <nav class="navbar">
     <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
         <span class="nav-toggle-bar"></span>
@@ -53,14 +52,12 @@
         <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
-        <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+        <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
     </div>
 </nav>
 
-<!-- MAIN LAYOUT -->
-<div class="project-container">
+<div class="project-container section-reveal">
 
-    <!-- LEFT COLUMN -->
     <div class="project-left">
 
         <h1>Escape</h1>
@@ -120,7 +117,6 @@
             <li>Blueprint / C++ (Unreal)</li>
         </ul>
 
-        <!-- LINKS -->
         <h2 data-i18n="project.links">Links</h2>
         <div class="links">
             <a href="https://github.com/HugoFlandrin/Escape" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
@@ -128,8 +124,6 @@
         </div>
 
     </div>
-
-    <!-- RIGHT COLUMN (MEDIA) -->
 
     <div class="project-right">
         <div class="media-images">
@@ -166,19 +160,19 @@
             <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
         </div>
         <p class="footer-meta">
-            <span data-i18n="home.footer.version">Portfolio v1.3</span>
+            <span data-i18n="home.footer.version">Portfolio v1.4</span>
             ·
             <span data-i18n="home.footer.updated">Updated September 2026</span>
         </p>
     </div>
 </footer>
 
-<!-- IMAGE MODAL -->
 <div id="image-modal" aria-hidden="true">
     <img id="modal-img" alt="Expanded screenshot">
 </div>
 
 <script src="../static/js/i18n.js"></script>
+<script src="../static/js/section-reveal.js"></script>
 <script src="../static/js/navbar.js"></script>
 <script src="../static/js/project.js"></script>
 <script data-goatcounter="https://levelweb-studio.goatcounter.com/count"

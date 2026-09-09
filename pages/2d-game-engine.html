@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,11 +53,11 @@
         <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
-        <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+        <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
     </div>
 </nav>
 
-<div class="project-container">
+<div class="project-container section-reveal">
     <div class="project-left">
         <h1>2D Game Engine</h1>
 
@@ -75,6 +75,10 @@
         <p data-i18n="project.engine.description">
             This project is a custom 2D engine built in C++ using SFML for rendering/input and Box2D for physics.
             A platformer demo validates the engine systems through a concrete gameplay scenario (movement, collisions, enemies, levels, UI).
+        </p>
+
+        <p class="tech-note" data-i18n-html="project.engine.shmupCrosslink">
+            This engine also powers <a href="space-shooter.html">Space Shooter</a>, a full 2-player co-op game built on top of it - a separate project in its own right, not just a second demo.
         </p>
 
         <h2 data-i18n="project.engine.arch.title">Architecture</h2>
@@ -197,9 +201,6 @@ scene-&gt;render();</pre>
 
     <div class="project-right">
         <div class="media-images">
-            <!-- Desktop: each screenshot gets its own play button right
-                 below it (see .hide-on-mobile - both hidden on mobile,
-                 replaced by the single button after this gallery). -->
             <figure class="media-item">
                 <img src="../static/img/2DGameEngineDemo.png" alt="Platformer demo - level layout and collision">
                 <button type="button" class="play-project-button hide-on-mobile" data-game-trigger data-device="desktop">
@@ -207,22 +208,11 @@ scene-&gt;render();</pre>
                     <span data-i18n="project.engine.playButton">Play the demo</span>
                 </button>
             </figure>
-            <figure class="media-item">
-                <img src="../static/img/ShmupDemo.png" alt="Space Shooter demo - vertical shoot-em-up">
-                <button type="button" class="play-project-button play-project-button--secondary hide-on-mobile" data-game-trigger data-game-src="../static/shmup/index.html" data-game-aspect="portrait">
-                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    <span data-i18n="project.engine.playShmupButton">Try the Space Shooter</span>
-                </button>
-            </figure>
         </div>
-        <!-- Mobile only: the Platformer needs a keyboard it doesn't have,
-             so this single CTA goes straight to the touch-friendly Space
-             Shooter instead - same pairing as the home page's featured
-             project slot, just as a button here instead of an image. -->
-        <button type="button" class="play-project-button hide-on-desktop" data-game-trigger data-game-src="../static/shmup/index.html" data-game-aspect="portrait" data-device="mobile">
+        <a href="space-shooter.html" class="play-project-button hide-on-desktop">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <span data-i18n="project.engine.playButton">Play the demo</span>
-        </button>
+            <span data-i18n="project.engine.mobileCta">This demo needs a keyboard - try Space Shooter instead</span>
+        </a>
     </div>
 </div>
 
@@ -235,7 +225,7 @@ scene-&gt;render();</pre>
             <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
         </div>
         <p class="footer-meta">
-            <span data-i18n="home.footer.version">Portfolio v1.3</span>
+            <span data-i18n="home.footer.version">Portfolio v1.4</span>
             ·
             <span data-i18n="home.footer.updated">Updated September 2026</span>
         </p>
@@ -274,6 +264,7 @@ scene-&gt;render();</pre>
 </div>
 
 <script src="../static/js/i18n.js"></script>
+<script src="../static/js/section-reveal.js"></script>
 <script src="../static/js/navbar.js"></script>
 <script src="../static/js/project.js"></script>
 <script src="../static/js/game-embed.js"></script>

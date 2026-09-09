@@ -1,41 +1,24 @@
-/* =========================
-   PAGE TRANSITION — fully disabled.
-   Wrapped in `if (false)` so none of this ever executes: no timers, no
-   click interception, no listeners, nothing that can touch navigation
-   timing. Delete the `if (false) {` line below and its matching closing
-   `}` (right after the IIFE's final `})();`) to bring it back.
-========================= */
+
 if (false) {
 (() => {
   const overlay = document.getElementById("page-transition");
   if (!overlay) return;
   const bar = overlay.querySelector(".pt-bar");
 
-  // Signal that JS is in control — CSS's failsafe fade (in case this
-  // script never ran) hands off to the precise transition-based timing.
   overlay.classList.add("pt-js");
 
-  // Total budget stays comfortably under 1s even on the click-through path:
-  // empty bar (visible) -> fill -> hold full -> navigate -> quick reveal.
-  const PRE_FILL_MS = 150; // time the empty bar stays visible before filling
-  const FILL_MS = 300;     // matches the CSS transition duration on .pt-bar
-  const HOLD_MS = 100;     // time the full bar stays visible before navigating
-  const ARRIVE_SETTLE_MS = 70; // brief pause on arrival before revealing the page
+  const PRE_FILL_MS = 150;
+  const FILL_MS = 300;
+  const HOLD_MS = 100;
+  const ARRIVE_SETTLE_MS = 70;
 
   function hideOverlay() {
     overlay.classList.add("pt-hide");
     overlay.classList.remove("pt-active");
   }
 
-  // Every load this script sees (fresh visit, reload, or arrival after an
-  // intercepted click) starts from "already full" (the bar's CSS resting
-  // state — no class needed, so there's no first-paint race) and just
-  // reveals the page. The fill animation itself only ever plays once,
-  // on the outgoing page.
   setTimeout(hideOverlay, ARRIVE_SETTLE_MS);
 
-  // Guard against the browser's back/forward cache restoring this page
-  // frozen mid-transition (overlay stuck visible and blocking clicks).
   window.addEventListener("pageshow", (e) => {
     if (e.persisted) hideOverlay();
   });
@@ -66,7 +49,7 @@ if (false) {
 
     function fillThenNavigate() {
       setTimeout(() => {
-        if (bar) bar.classList.remove("pt-empty"); // the one real fill animation
+        if (bar) bar.classList.remove("pt-empty");
         setTimeout(() => {
           window.location.href = link.href;
         }, FILL_MS + HOLD_MS);
@@ -74,19 +57,10 @@ if (false) {
     }
 
     if (bar) {
-      // Snap to empty with transitions disabled first, so this reset is
-      // instant and never itself plays as a visible (un)fill animation —
-      // without this, removing/re-adding the fill state mid-transition is
-      // what caused the bar to appear to fill twice.
+
       bar.classList.add("pt-instant");
       bar.classList.add("pt-empty");
-      // A forced reflow (offsetWidth) guarantees layout is recalculated,
-      // but not that the browser actually PAINTS that instant "empty"
-      // frame before the next line runs. Without waiting for a real paint,
-      // re-enabling the transition here animates from the last frame that
-      // *was* painted (still "full") down to empty — the bar visibly
-      // empties before filling. Two animation frames guarantee a real
-      // paint of the instant reset happens first.
+
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           bar.classList.remove("pt-instant");
@@ -100,13 +74,6 @@ if (false) {
 })();
 }
 
-/* =========================
-   ACHIEVEMENTS — temporarily disabled.
-   Wrapped in `if (false)` so none of this runs (no localStorage reads/
-   writes, no toasts). Delete the `if (false) {` line below and its
-   matching closing `}` (right after the IIFE's final `})();`) to restore.
-   Purely local (localStorage) — nothing tracked or sent anywhere.
-========================= */
 if (false) {
 (() => {
   const ACHIEVEMENTS = {
@@ -136,7 +103,7 @@ if (false) {
     try {
       localStorage.setItem(key, JSON.stringify([...set]));
     } catch {
-      /* private browsing / storage full — skip silently */
+
     }
   }
 

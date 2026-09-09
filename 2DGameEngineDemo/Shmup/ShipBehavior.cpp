@@ -3,12 +3,15 @@
 #include "AScene.h"
 #include "SceneManager.h"
 #include "RigidBody.h"
+#include "ACollider.h"
 #include "PhysicSystem.h"
+#include "Render.h"
 #include "TouchInput.h"
 #include "AliveComponent.h"
 #include "ShmupEnemyBehavior.h"
 #include "BulletBehavior.h"
 #include "ExplosionEffect.h"
+#include "ShieldEffect.h"
 #include "Engine.h"
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Mouse.hpp>
@@ -16,8 +19,10 @@
 #include <algorithm>
 #include <cmath>
 
-void ShipBehavior::init(float _playAreaWidth, float _playAreaHeight) {
+void ShipBehavior::init(float _playAreaWidth, float _playAreaHeight, int _playerId, ShipInputScheme _inputScheme) {
 	transformComp = getParent()->getComponent<TransformComponent>();
+	playerId = _playerId;
+	inputScheme = _inputScheme;
 	// followWithCamera=false: ShmupScene's camera is fixed to the whole play
 	// area (see ShmupScene::init()) and the background scrolls instead of the
 	// camera (see ScrollingBackground) - the target is still recorded because
@@ -50,20 +55,77 @@ void ShipBehavior::update(float _deltaTime) {
 	if (AliveComponent* alive = getParent()->getComponent<AliveComponent>()) {
 		if (alive->isDying()) {
 			rb->setLinearVelocity({ 0.f, 0.f });
+			// Physically inert from here on - a downed ship must stop being
+			// a solid obstacle (enemies were bumping/deflecting off it, and
+			// ShipBehavior::beginCollision() below was still happily
+			// destroying every enemy that touched it) without actually
+			// removing it from the scene. Safe/cheap to call every frame;
+			// see ACollider::disableCollision() for how and why.
+			if (ACollider* collider = getParent()->getComponent<ACollider>()) {
+				collider->disableCollision();
+			}
+			// Invisible too, not just physically inert - the explosion (see
+			// beginCollision()) already sold the moment of death; the
+			// underlying sprite lingering afterward read as a ghost ship
+			// still sitting on the battlefield. Fades the sprite itself out
+			// rather than the whole entity: still deliberately never
+			// removed/deleted (see below), so this only ever needs to touch
+			// the alpha of a Render that's guaranteed to exist.
+			if (Render* render = getParent()->getComponent<Render>()) {
+				render->getSprite().color.a = 0;
+			}
+			// Never removed/deleted here, even once its death sequence is
+			// fully done: CoopGameOverWatcher (see ShmupScene::init()) and
+			// this ship's HealthBarUI both hold a raw Entity* pointer to it
+			// that's never invalidated - freeing the entity turned both into
+			// dangling pointers, read every single frame afterward
+			// (undefined behavior: manifested as a freeze a variable delay
+			// after death, or a health bar animating garbage values, the
+			// exact symptoms this was reverted for). Only solo mode ever
+			// leaves this scene at all, via its deathScene ("GameOver")
+			// transitioning away before that ever matters here.
 			return;
+		}
+	}
+
+	// MultiShot power-up countdown (see applyMultiShotPowerUp()/fireBullet()) -
+	// ticks down regardless of input/movement this frame, same as fireClock
+	// below.
+	if (multiShotActive) {
+		multiShotTimer -= _deltaTime;
+		if (multiShotTimer <= 0.f) {
+			multiShotActive = false;
+		}
+	}
+
+	// Shield power-up (see applyShieldPowerUp()) has no timer - it stays
+	// active until AliveComponent::takeDamage() actually consumes it on a
+	// hit (bullet or collision), flipping isInvulnerable() back to false on
+	// its own. Notice that happening here rather than being told about it
+	// directly, since takeDamage() can be reached from several places
+	// (BulletBehavior, this ship's own beginCollision() below) - one poll
+	// covers all of them. ShieldEffect (the visual bubble) then polls
+	// isShieldActive() on its own every frame and removes itself the moment
+	// this flips back to false.
+	if (shieldActive) {
+		if (AliveComponent* alive = getParent()->getComponent<AliveComponent>()) {
+			if (!alive->isInvulnerable()) {
+				shieldActive = false;
+			}
 		}
 	}
 
 	float shipHalfSize = playAreaWidth * shipHalfSizeFraction;
 
-	// Desktop keyboard input: the arrow keys move the ship directly at
-	// moveSpeed in whatever direction is held (diagonals normalized), taking
-	// priority over mouse/touch so it doesn't fight a stale cursor position.
+	// Keyboard input: the configured keys (see ShipInputScheme) move the
+	// ship directly at moveSpeed in whatever direction is held (diagonals
+	// normalized), taking priority over mouse/touch so it doesn't fight a
+	// stale cursor position.
 	sf::Vec2f keyDirection{ 0.f, 0.f };
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::Left))  keyDirection.x -= 1.f;
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::Right)) keyDirection.x += 1.f;
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::Up))    keyDirection.y -= 1.f;
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::Down))  keyDirection.y += 1.f;
+	if (sf::Keyboard::isKeyPressed(inputScheme.left))  keyDirection.x -= 1.f;
+	if (sf::Keyboard::isKeyPressed(inputScheme.right)) keyDirection.x += 1.f;
+	if (sf::Keyboard::isKeyPressed(inputScheme.up))    keyDirection.y -= 1.f;
+	if (sf::Keyboard::isKeyPressed(inputScheme.down))  keyDirection.y += 1.f;
 	bool keyboardActive = keyDirection.x != 0.f || keyDirection.y != 0.f;
 
 	// Mouse/touch input: dragging the held left mouse button/finger moves the
@@ -74,25 +136,33 @@ void ShipBehavior::update(float _deltaTime) {
 	// actual window (see ShmupScene::init()/ShmupConstants.h), so a raw
 	// window-space mouse/touch position is NOT a world position 1:1 - it
 	// must go through the camera's viewport-aware screenToWorld (same as
-	// ButtonComponent::update()).
-	sf::RenderWindow* window = Engine::instance()->getWindow();
-	AScene* scene = SceneManager::instance()->getCurrentScene();
-	bool touchDown = TouchInput::instance()->isDown();
-	bool mouseDown = sf::Mouse::isButtonPressed(sf::Mouse::Button::Left);
-	bool isDown = mouseDown || touchDown;
-	// Touch takes priority over mouse when both read as active: a touch
-	// drag makes the browser synthesize a compatibility mousedown (so
-	// mouseDown reads true too), but that synthetic mouse position is only
-	// ever set once, at the touch's starting point - it never tracks the
-	// finger moving, unlike TouchInput's position which updates on every
-	// real TouchMoved event. Preferring mouse here froze rawPosition at the
-	// initial touch point for the whole drag, which is why the old
-	// chase-to-target model appeared to stop dead after reaching that point
-	// and the current drag-delta model never sees a nonzero delta at all.
-	sf::Vec2f rawScreenPosition = touchDown
-		? TouchInput::instance()->getPosition()
-		: sf::Mouse::getPosition(*window).toVec2f();
-	sf::Vec2f rawPosition = scene->getCamera()->screenToWorld(rawScreenPosition, window->getSize().toVec2f());
+	// ButtonComponent::update()). Skipped entirely when this ship's input
+	// scheme disables it (2-player co-op - see ShipInputScheme's own comment
+	// for why two ships can't both safely read the same global pointer).
+	bool touchDown = false;
+	bool mouseDown = false;
+	bool isDown = false;
+	sf::Vec2f rawPosition{};
+	if (inputScheme.enableTouchAndMouse) {
+		sf::RenderWindow* window = Engine::instance()->getWindow();
+		AScene* scene = SceneManager::instance()->getCurrentScene();
+		touchDown = TouchInput::instance()->isDown();
+		mouseDown = sf::Mouse::isButtonPressed(sf::Mouse::Button::Left);
+		isDown = mouseDown || touchDown;
+		// Touch takes priority over mouse when both read as active: a touch
+		// drag makes the browser synthesize a compatibility mousedown (so
+		// mouseDown reads true too), but that synthetic mouse position is only
+		// ever set once, at the touch's starting point - it never tracks the
+		// finger moving, unlike TouchInput's position which updates on every
+		// real TouchMoved event. Preferring mouse here froze rawPosition at the
+		// initial touch point for the whole drag, which is why the old
+		// chase-to-target model appeared to stop dead after reaching that point
+		// and the current drag-delta model never sees a nonzero delta at all.
+		sf::Vec2f rawScreenPosition = touchDown
+			? TouchInput::instance()->getPosition()
+			: sf::Mouse::getPosition(*window).toVec2f();
+		rawPosition = scene->getCamera()->screenToWorld(rawScreenPosition, window->getSize().toVec2f());
+	}
 
 	if (keyboardActive || isDown) {
 		movedOnce = true;
@@ -180,10 +250,73 @@ void ShipBehavior::update(float _deltaTime) {
 void ShipBehavior::fireBullet() {
 	AScene* scene = SceneManager::instance()->getCurrentScene();
 	sf::Vec2f nose = transformComp->getPosition() + sf::Vec2f(0.f, -playAreaHeight * 0.023f);
-	BulletBehavior::spawn(scene, nose, { 0.f, -1.f }, bulletSpeed, bulletDamage);
+
+	if (multiShotActive) {
+		// Two angled bullets instead of one straight shot - mirrored around
+		// center by multiShotSpreadAngle, direction vectors normalized by
+		// construction (sin^2+cos^2=1), same assumption BulletBehavior::
+		// spawn() already makes for the single-shot direction below. Was
+		// three lanes (including a straight-up one) at full speed, which
+		// stacked with a fast fireInterval read as an unbroken, unfair wall -
+		// dropping the center lane cuts MultiShot's total bullet output by a
+		// third instead of slowing the bullets themselves down.
+		const sf::Vec2f directions[2] = {
+			{ -std::sin(multiShotSpreadAngle), -std::cos(multiShotSpreadAngle) },
+			{ std::sin(multiShotSpreadAngle), -std::cos(multiShotSpreadAngle) },
+		};
+		for (const sf::Vec2f& direction : directions) {
+			BulletBehavior::spawn(scene, nose, direction, bulletSpeed, bulletDamage, BulletOwner::Player, playerId);
+		}
+	}
+	else {
+		BulletBehavior::spawn(scene, nose, { 0.f, -1.f }, bulletSpeed, bulletDamage, BulletOwner::Player, playerId);
+	}
+}
+
+void ShipBehavior::applyFasterFirePowerUp() {
+	fireInterval = std::max(minFireInterval, fireInterval * fasterFireMultiplier);
+}
+
+void ShipBehavior::applyMultiShotPowerUp() {
+	multiShotActive = true;
+	multiShotTimer = multiShotDuration;
+}
+
+void ShipBehavior::applyShieldPowerUp() {
+	// Only spawn a new bubble entity the first time the shield turns on -
+	// picking up a second Shield while one is already active is a no-op
+	// (already fully charged, nothing to refresh since there's no timer),
+	// the existing ShieldEffect keeps following/drawing for as long as
+	// isShieldActive() stays true.
+	bool alreadyActive = shieldActive;
+	shieldActive = true;
+	if (AliveComponent* alive = getParent()->getComponent<AliveComponent>()) {
+		alive->setInvulnerable(true);
+	}
+	if (!alreadyActive) {
+		ShieldEffect::spawn(SceneManager::instance()->getCurrentScene(), getParent());
+	}
+}
+
+void ShipBehavior::applyHealPowerUp() {
+	if (AliveComponent* alive = getParent()->getComponent<AliveComponent>()) {
+		alive->heal(healPowerUpAmount);
+	}
 }
 
 void ShipBehavior::beginCollision(ACollider* _me, ACollider* _other, b2Vec2 _normal) {
+	// A downed ship's collider is disabled the very next frame after it
+	// starts dying (see update()), so this shouldn't be reachable at all
+	// past that point - kept as an explicit guard anyway (defense in depth
+	// for the one frame between actually dying and that taking effect)
+	// rather than relying solely on the physics filter to keep a dead ship
+	// from destroying every enemy that still touches it.
+	if (AliveComponent* alive = getParent()->getComponent<AliveComponent>()) {
+		if (alive->isDying()) {
+			return;
+		}
+	}
+
 	Entity* otherEntity = _other->getParent();
 	if (otherEntity->getComponent<ShmupEnemyBehavior>() == nullptr) {
 		return;
@@ -195,14 +328,27 @@ void ShipBehavior::beginCollision(ACollider* _me, ACollider* _other, b2Vec2 _nor
 	// there's a brief beat for the hit to read before cutting to GameOver.
 	if (AliveComponent* enemyAlive = otherEntity->getComponent<AliveComponent>()) {
 		enemyAlive->takeDamage(enemyAlive->getMaxHp());
+		// Credit this ship's player for the kill (2-player co-op individual
+		// scoring) - see ShmupEnemyBehavior::update().
+		if (ShmupEnemyBehavior* enemyBehavior = otherEntity->getComponent<ShmupEnemyBehavior>()) {
+			enemyBehavior->setKilledByPlayer(playerId);
+		}
 	}
+	// A shielded ship takes no damage at all here (see
+	// AliveComponent::takeDamage()'s invulnerable guard) - the enemy still
+	// dies above, but this ship gets away with a small impact flash instead
+	// of the full destruction burst below, which would otherwise read as
+	// this ship having blown up too. The shield itself still breaks on this
+	// hit (takeDamage() consumes it), so ramming enemies for free kills only
+	// ever gets one for the price of one shield, not the whole run.
+	bool wasShielded = false;
 	if (AliveComponent* alive = getParent()->getComponent<AliveComponent>()) {
+		wasShielded = alive->isInvulnerable();
 		alive->takeDamage(alive->getMaxHp());
 	}
 
-	// Both explode: one burst per ship, at each one's own center.
 	AScene* scene = SceneManager::instance()->getCurrentScene();
-	ExplosionEffect::spawn(scene, transformComp->getPosition(), ExplosionType::Destruction);
+	ExplosionEffect::spawn(scene, transformComp->getPosition(), wasShielded ? ExplosionType::Impact : ExplosionType::Destruction);
 	ExplosionEffect::spawn(scene, otherEntity->getComponent<TransformComponent>()->getPosition(), ExplosionType::Destruction);
 }
 

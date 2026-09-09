@@ -6,12 +6,16 @@
 #include "ShipBehavior.h"
 #include "AliveComponent.h"
 #include "EnemySpawner.h"
+#include "PickupSpawner.h"
 #include "ScrollingBackground.h"
 #include "ScoreUpdate.h"
+#include "PlayerScoreUI.h"
 #include "TextRenderer.h"
 #include "HealthBarUI.h"
 #include "CountdownUI.h"
 #include "ShmupControlHint.h"
+#include "CoopControlsHint.h"
+#include "CoopGameOverWatcher.h"
 #include "SceneManager.h"
 #include "Engine.h"
 #include "RigidBody.h"
@@ -44,6 +48,14 @@ ShmupScene::ShmupScene() {}
 
 void ShmupScene::setShowControlHint(bool _show) {
 	showControlHint = _show;
+}
+
+void ShmupScene::setInfiniteMode(bool _infinite) {
+	infiniteMode = _infinite;
+}
+
+void ShmupScene::setTwoPlayer(bool _twoPlayer) {
+	twoPlayer = _twoPlayer;
 }
 
 void ShmupScene::init() {
@@ -81,9 +93,11 @@ void ShmupScene::init() {
 		: sf::Vec2f{ playAreaWidth, playAreaWidth / windowAspect };
 	setCameraLetterboxSize(letterboxedSize);
 
-	// A previous run might have ended in a win; make sure a fresh death
-	// doesn't inherit that flag and show the wrong end-of-game message.
+	// A previous run might have ended in a win (or been 2-player); make sure
+	// a fresh run doesn't inherit either flag and show the wrong end-of-game
+	// message/score breakdown.
 	SceneManager::instance()->setLastRunWon(false);
+	SceneManager::instance()->setLastRunTwoPlayer(twoPlayer);
 	startTimer();
 
 	ResourceManager* rm = ResourceManager::instance();
@@ -107,60 +121,151 @@ void ShmupScene::init() {
 		addEntity(bgTile);
 	}
 
-	//Player ship
-	Entity* ship = createEntity();
-	ship->createComponent<TransformComponent>()->init({ playAreaWidth / 2.f, playAreaHeight - 180.f }, { shipScale, shipScale });
-	ship->createComponent<ShipBehavior>()->init(playAreaWidth, playAreaHeight);
-	// canRegen=false: a regenerating health bar would make it effectively
-	// impossible to actually lose to enemy fire (chip damage would just heal
-	// back between hits) - only physically colliding with an enemy (an
-	// instant kill, see ShipBehavior::beginCollision()) should end the run.
-	ship->createComponent<AliveComponent>()->init(100.f, "GameOver", 0.9f, false);
-	// Dynamic, not kinematic: see BulletBehavior::spawn() - Box2D never
-	// generates contact events between two non-dynamic bodies, so the ship
-	// would never detect touching an (also-dynamic) enemy otherwise.
-	// Physics size slightly smaller than the sprite crop (shipRectW/H, was
-	// even bigger than it) so a hit reads as landing on the visible hull
-	// instead of registering just outside it.
-	ship->createPhysics({ 28.f * shipScale, 20.f * shipScale }, b2_dynamicBody, true, 1.f, 0.f);
-	ship->getComponent<RigidBody>()->setGravityScale(0.f);
+	//Player ship(s). In 2-player co-op, player 0 switches from touch/mouse +
+	// arrow keys to WASD/ZQSD only, and player 1 (arrow keys only) joins
+	// alongside it - see ShipInputScheme's own comment for why touch/mouse
+	// must stay off for both. Both get an empty deathScene there too, since
+	// one ship dying must not end the run by itself (see CoopGameOverWatcher
+	// below) - solo mode is unaffected, still "GameOver" as before.
+	auto createShip = [&](float _x, int _playerId, ShipInputScheme _inputScheme, sf::Color _tint) {
+		Entity* shipEntity = createEntity();
+		shipEntity->createComponent<TransformComponent>()->init({ _x, playAreaHeight - 180.f }, { shipScale, shipScale });
+		shipEntity->createComponent<ShipBehavior>()->init(playAreaWidth, playAreaHeight, _playerId, _inputScheme);
+		// canRegen=false: a regenerating health bar would make it effectively
+		// impossible to actually lose to enemy fire (chip damage would just
+		// heal back between hits) - only physically colliding with an enemy
+		// (an instant kill, see ShipBehavior::beginCollision()) should end
+		// the run.
+		shipEntity->createComponent<AliveComponent>()->init(100.f, twoPlayer ? "" : "GameOver", 0.9f, false);
+		// Dynamic, not kinematic: see BulletBehavior::spawn() - Box2D never
+		// generates contact events between two non-dynamic bodies, so the
+		// ship would never detect touching an (also-dynamic) enemy
+		// otherwise. Physics size slightly smaller than the sprite crop
+		// (shipRectW/H, was even bigger than it) so a hit reads as landing
+		// on the visible hull instead of registering just outside it.
+		// groupIndex -1 (shared by every ship - see ACollider::init()):
+		// ships must never physically collide with each other - not two
+		// living ships pushing one another off the play area, and not a
+		// downed ship (still solid, kept in the scene forever - see
+		// ShipBehavior::update()) blocking the other. Harmless in solo mode,
+		// where there's only ever one ship in that group.
+		shipEntity->createPhysics({ 28.f * shipScale, 20.f * shipScale }, b2_dynamicBody, true, 1.f, 0.f, false, -1);
+		shipEntity->getComponent<RigidBody>()->setGravityScale(0.f);
 
-	Render* shipRender = new Render(*rm->loadTexture("ships.png"), sf::Rect2i({ shipRectX, shipRectY }, { shipRectW, shipRectH }), { shipRectW / 2.f, shipRectH / 2.f });
-	ship->addComponent(shipRender);
-	addEntity(ship);
+		Render* shipRender = new Render(*rm->loadTexture("ships.png"), sf::Rect2i({ shipRectX, shipRectY }, { shipRectW, shipRectH }), { shipRectW / 2.f, shipRectH / 2.f });
+		// Tinted per-player so the two ships read as visually distinct at a
+		// glance despite sharing the same sprite - white leaves player 0's
+		// natural sprite color untouched.
+		shipRender->getSprite().color = _tint;
+		shipEntity->addComponent(shipRender);
+		addEntity(shipEntity);
+		return shipEntity;
+	};
+
+	ShipInputScheme player0Input;
+	if (twoPlayer) {
+		player0Input.up = sf::Keyboard::Scan::W;
+		player0Input.down = sf::Keyboard::Scan::S;
+		player0Input.left = sf::Keyboard::Scan::A;
+		player0Input.right = sf::Keyboard::Scan::D;
+		player0Input.enableTouchAndMouse = false;
+	}
+	Entity* ship = createShip(twoPlayer ? playAreaWidth * 0.3f : playAreaWidth / 2.f, 0, player0Input, sf::Color::White);
+
+	Entity* ship2 = nullptr;
+	if (twoPlayer) {
+		ShipInputScheme player1Input; // defaults (arrow keys) are already right
+		player1Input.enableTouchAndMouse = false;
+		ship2 = createShip(playAreaWidth * 0.7f, 1, player1Input, sf::Color(255, 150, 150));
+
+		Entity* watcherEntity = createEntity();
+		watcherEntity->createComponent<CoopGameOverWatcher>()->init(ship, ship2);
+		addEntity(watcherEntity);
+	}
 
 	//Wave director - no visuals of its own.
 	Entity* spawner = createEntity();
-	spawner->createComponent<EnemySpawner>()->init(playAreaWidth, playAreaHeight);
+	spawner->createComponent<EnemySpawner>()->init(playAreaWidth, playAreaHeight, infiniteMode);
 	addEntity(spawner);
+
+	//Coin pickups - active in every mode, entirely independent of the enemy
+	// wave director above (see PickupSpawner's own comment).
+	Entity* pickupSpawner = createEntity();
+	pickupSpawner->createComponent<PickupSpawner>()->init(playAreaWidth, playAreaHeight);
+	addEntity(pickupSpawner);
 
 	//HUD - fixed to the screen regardless of where the gameplay camera looks.
 	sf::Font* uiFont = rm->loadFont("Kenney Pixel.ttf");
 
 	// ScoreUpdate is created before scoreRender is added so its backing
 	// panel (drawn in ScoreUpdate::draw) renders behind the score text
-	// instead of over it - same ordering trick used by the platformer.
+	// instead of over it - same ordering trick used by the platformer. Used
+	// for the shared total in both modes, same top-center spot - just a
+	// bigger font in 2-player co-op, where it now shares the HUD with the
+	// two per-player scores below instead of being the only number on
+	// screen.
 	Entity* scoreEntity = createEntity();
-	TextRenderer* scoreRender = new TextRenderer({ playAreaWidth / 2.f, 40.f }, *uiFont, "Score : 0", 32);
+	TextRenderer* scoreRender = new TextRenderer({ playAreaWidth / 2.f, 40.f }, *uiFont, "Score : 0", twoPlayer ? 40 : 32);
 	scoreEntity->createComponent<ScoreUpdate>()->init(scoreRender);
 	scoreEntity->addComponent(scoreRender);
 	addUIEntity(scoreEntity);
 
-	Entity* healthBarEntity = createEntity();
-	healthBarEntity->createComponent<HealthBarUI>()->init({ 20.f, 70.f }, { 200.f, 24.f });
-	addUIEntity(healthBarEntity);
+	// One health bar per ship, each reading straight from its own ship
+	// entity (see HealthBarUI's Entity*-taking init() overload) instead of
+	// the scene's single camera-target slot, which can only ever point at
+	// one of the two ships in 2-player co-op. Each player's individual
+	// score (PlayerScoreUI) sits right below their own bar, centered on it.
+	if (twoPlayer) {
+		sf::Vec2f healthBarSize{ 200.f, 24.f };
+		sf::Vec2f healthBar1Pos{ 20.f, 70.f };
+		sf::Vec2f healthBar2Pos{ playAreaWidth - 220.f, 70.f };
 
-	// Same backing-panel-behind-text ordering trick as ScoreUpdate above.
-	Entity* timerEntity = createEntity();
-	TextRenderer* timerRender = new TextRenderer({ playAreaWidth - 110.f, 40.f }, *uiFont, "", 28);
-	timerEntity->createComponent<CountdownUI>()->init(timerRender, ShmupConstants::gameDuration);
-	timerEntity->addComponent(timerRender);
-	addUIEntity(timerEntity);
+		Entity* healthBar1 = createEntity();
+		healthBar1->createComponent<HealthBarUI>()->init(ship, healthBar1Pos, healthBarSize);
+		addUIEntity(healthBar1);
+
+		Entity* healthBar2 = createEntity();
+		healthBar2->createComponent<HealthBarUI>()->init(ship2, healthBar2Pos, healthBarSize);
+		addUIEntity(healthBar2);
+
+		const float scoreY = healthBar1Pos.y + healthBarSize.y + 26.f;
+		const int playerScoreFontSize = 34;
+
+		Entity* p1ScoreEntity = createEntity();
+		TextRenderer* p1ScoreRender = new TextRenderer({ healthBar1Pos.x + healthBarSize.x / 2.f, scoreY }, *uiFont, "", playerScoreFontSize);
+		p1ScoreEntity->createComponent<PlayerScoreUI>()->init(p1ScoreRender, 0);
+		p1ScoreEntity->addComponent(p1ScoreRender);
+		addUIEntity(p1ScoreEntity);
+
+		Entity* p2ScoreEntity = createEntity();
+		TextRenderer* p2ScoreRender = new TextRenderer({ healthBar2Pos.x + healthBarSize.x / 2.f, scoreY }, *uiFont, "", playerScoreFontSize);
+		p2ScoreEntity->createComponent<PlayerScoreUI>()->init(p2ScoreRender, 1);
+		p2ScoreEntity->addComponent(p2ScoreRender);
+		addUIEntity(p2ScoreEntity);
+	}
+	else {
+		Entity* healthBarEntity = createEntity();
+		healthBarEntity->createComponent<HealthBarUI>()->init({ 20.f, 70.f }, { 200.f, 24.f });
+		addUIEntity(healthBarEntity);
+	}
+
+	// Infinite mode has no time limit to count down to, so there's nothing
+	// meaningful for CountdownUI to show - just skip it there instead of
+	// displaying a countdown that would never end.
+	if (!infiniteMode) {
+		// Same backing-panel-behind-text ordering trick as ScoreUpdate above.
+		Entity* timerEntity = createEntity();
+		TextRenderer* timerRender = new TextRenderer({ playAreaWidth - 110.f, 40.f }, *uiFont, "", 28);
+		timerEntity->createComponent<CountdownUI>()->init(timerRender, ShmupConstants::gameDuration);
+		timerEntity->addComponent(timerRender);
+		addUIEntity(timerEntity);
+	}
 
 	// Desktop-only onboarding hint (see setShowControlHint()/ShmupScene.h) -
 	// touch players already have an obvious, self-explanatory control
-	// scheme (drag the ship around), so this would be redundant there.
-	if (showControlHint) {
+	// scheme (drag the ship around), so this would be redundant there. Not
+	// used in 2-player co-op - see the CoopControlsHint block below instead.
+	if (showControlHint && !twoPlayer) {
 #ifdef __EMSCRIPTEN__
 		bool english = WebBridge::isEnglish();
 #else
@@ -176,5 +281,31 @@ void ShmupScene::init() {
 		hintEntity->createComponent<ShmupControlHint>()->init(ship->getComponent<ShipBehavior>(), hintRender);
 		hintEntity->addComponent(hintRender);
 		addUIEntity(hintEntity);
+	}
+
+	// Co-op onboarding hint: a small keyboard diagram above each ship
+	// instead of a text sentence (see CoopControlsHint's own comment for
+	// why) - always shown regardless of device, since 2-player mode has no
+	// touch fallback to fall back on the way solo mode does.
+	if (twoPlayer) {
+		constexpr float hintOffsetY = 130.f;
+		const sf::Color player0Tint = sf::Color::White;
+		const sf::Color player1Tint = sf::Color(255, 150, 150);
+
+		Entity* hint1Entity = createEntity();
+		hint1Entity->createComponent<CoopControlsHint>()->init(
+			ship->getComponent<ShipBehavior>(), *uiFont,
+			{ playAreaWidth * 0.3f, playAreaHeight - 180.f - hintOffsetY },
+			{ "Z", "Q", "S", "D" }, player0Tint
+		);
+		addUIEntity(hint1Entity);
+
+		Entity* hint2Entity = createEntity();
+		hint2Entity->createComponent<CoopControlsHint>()->init(
+			ship2->getComponent<ShipBehavior>(), *uiFont,
+			{ playAreaWidth * 0.7f, playAreaHeight - 180.f - hintOffsetY },
+			{ "^", "<", "v", ">" }, player1Tint
+		);
+		addUIEntity(hint2Entity);
 	}
 }

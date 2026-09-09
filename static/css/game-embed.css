@@ -1,4 +1,4 @@
-/* Playable game overlay (Featured project) */
+
 #game-overlay {
     display: flex;
     position: fixed;
@@ -23,13 +23,19 @@
 
 .game-overlay-frame {
     position: relative;
-    width: min(1280px, 100%);
-    /* Without this, a short viewport (browser window not much taller than
-       it is wide) let the 16:9-derived height push past the bottom of the
-       screen, cutting off content and its own HUD - max-height combined
-       with aspect-ratio makes the browser shrink whichever axis is over,
-       instead of just the width via 100%. Matches #game-overlay's own
-       32px padding on each side. */
+    /* Width alone (with a plain max-height alongside aspect-ratio) isn't
+       enough on short viewports: when the max-height clamp kicks in, the
+       browser shrinks height but does NOT shrink width back down to match
+       (aspect-ratio doesn't re-resolve a definite width), leaving the frame
+       measurably wider than true 16:9 for its clamped height. The game then
+       requests a canvas at that slightly-too-wide size, and its own camera
+       letterboxes to compensate - showing as thin black bars down the
+       sides. Folding the max-height limit into the width formula itself
+       (third min() argument: the width that exactly fills that height at
+       this ratio) means aspect-ratio only ever has to grow height to match
+       an already-correct width, so it can never end up over-wide.
+    */
+    width: min(1280px, 100%, calc((100vh - 64px) * 16 / 9));
     max-height: calc(100vh - 64px);
     aspect-ratio: 16 / 9;
     background: #000;
@@ -45,12 +51,9 @@
     transform: scale(1);
 }
 
-/* Portrait games (e.g. the shmup) get a narrower, taller frame instead of
-   the platformer's default 16:9 landscape one - same max-height reasoning
-   as above applies here too, and matters even more since a 9:16 frame
-   needs much more vertical room per pixel of width. */
 .game-overlay-frame.is-portrait {
-    width: min(480px, 100%);
+    /* Same reasoning as the default width above, just for 9:16. */
+    width: min(480px, 100%, calc((100vh - 64px) * 9 / 16));
     max-height: calc(100vh - 64px);
     aspect-ratio: 9 / 16;
 }
@@ -60,10 +63,7 @@
     height: 100%;
     border: 0;
     display: block;
-    /* Belt-and-suspenders alongside the shmup shell's own touch-action:none
-       on its canvas - stops the host page's browser chrome from treating a
-       sustained drag on this element as a scroll/gesture before it even
-       reaches the iframe's content. */
+
     touch-action: none;
 }
 
@@ -94,7 +94,6 @@
     transform: scale(1.06);
 }
 
-/* End-of-run result popup, shown over the overlay */
 #game-result-popup {
     display: flex;
     position: fixed;
@@ -117,7 +116,6 @@
     visibility: visible;
 }
 
-/* Mobile "desktop only" notice - shares the result popup's overlay/card look */
 #game-mobile-notice {
     display: flex;
     position: fixed;
@@ -140,8 +138,6 @@
     visibility: visible;
 }
 
-/* Desktop "mobile only" notice - same look, shown for touch-only games
-   (e.g. the shmup) when opened from a non-touch device. */
 #game-desktop-notice {
     display: flex;
     position: fixed;
@@ -206,9 +202,6 @@
     flex-wrap: wrap;
 }
 
-/* Self-contained button look for the popup actions, so this file doesn't
-   depend on the host page also loading styles.css (project pages only load
-   project.css, which has no .btn classes). */
 .game-result-actions .btn {
     display: inline-flex;
     align-items: center;
@@ -243,7 +236,6 @@
     border-color: rgba(255, 255, 255, 0.18);
 }
 
-/* "Play the demo" button on the project page, under the screenshot. */
 .play-project-button {
     display: inline-flex;
     align-items: center;
@@ -272,9 +264,6 @@
     fill: #fff;
 }
 
-/* Secondary "also try the Space Shooter" CTA next to .play-project-button -
-   same shape, a quieter outline treatment so it doesn't compete with the
-   primary play button. */
 .play-project-button--secondary {
     background: transparent;
     border: 1px solid var(--border, rgba(255, 255, 255, 0.16));
@@ -287,23 +276,12 @@
     fill: currentColor;
 }
 
-/* Shared utility (loaded on both the home page and project pages) for
-   anything desktop-specific, e.g. the Space Shooter CTA above - hidden on
-   touch/narrow devices (roughly matches game-embed.js's isMobile()
-   heuristic). !important because this needs to win over whatever display
-   value the element's own base rule sets (block, inline-flex, ...). */
 @media (pointer: coarse), (max-width: 640px) {
     .hide-on-mobile {
         display: none !important;
     }
 }
 
-/* Complement of .hide-on-mobile above: shown only on touch/narrow devices,
-   hidden otherwise - e.g. the mobile variant of a primary CTA that swaps
-   games by device (see 2d-game-engine.html's two "Play the demo" buttons).
-   Hardcodes inline-flex for the shown state since every current use is on
-   a .play-project-button-shaped element; revisit if reused on something
-   with a different natural display value. */
 .hide-on-desktop {
     display: none;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,12 +53,11 @@
             <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
             <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
             <a href="pages/LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
-            <button class="lang-toggle" type="button" data-lang-toggle>FR</button>
+            <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
         </div>
     </nav>
 
     <main id="top">
-        <!-- Hero -->
         <section class="hero-section section-reveal">
             <div class="container">
                 <div class="hero-grid">
@@ -79,43 +78,44 @@
                         <div class="hero-cta">
                             <a href="static/resume/Hugo_Flandrin_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.resume">View Resume</a>
                             <a href="https://github.com/HugoFlandrin" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.github">GitHub</a>
-                            <a href="https://www.linkedin.com/in/hugoflandrin" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.linkedin">LinkedIn</a>
-                            <a href="pages/LevelWeb-Studio.html" class="btn btn-secondary" data-i18n="home.cta.freelance">My freelance activity</a>
+                            <a href="https://www.linkedin.com/in/hugo-flandrin-104476294/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.linkedin">LinkedIn</a>
+                            <a href="https://hugoflandrin.itch.io/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.itch">Itch.io</a>
+                            <a href="pages/LevelWeb-Studio.html" class="btn btn-outline" data-i18n="home.cta.freelance">My freelance activity</a>
                         </div>
                     </div>
                     <div class="hero-visual">
                         <div class="profile-image hero-profile">
-                            <img src="static/img/AboutMe.jpg" alt="Hugo Flandrin">
+                            <div class="coin-flipper">
+                                <div class="coin-face coin-face-front">
+                                    <img src="static/img/AboutMe.jpg" alt="Hugo Flandrin">
+                                </div>
+                                <div class="coin-face coin-face-back">
+                                    <img src="static/img/LogoWithName.png" alt="LevelWeb-Studio logo">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Currently looking for -->
         <section class="status-strip section-reveal">
             <div class="container">
                 <div class="status-card">
                     <span class="status-label" data-i18n="home.status.label">Currently looking for</span>
                     <p class="status-text" data-i18n="home.status.text">
-                        Internship or junior role - Gameplay Programmer, Engine Programmer, or Generalist Programmer (C++ / Unreal / custom engine).
+                        Internship or junior role - Gameplay, Engine, or Generalist Programmer.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Featured project -->
         <section class="featured-section section-reveal" id="featured">
             <div class="container">
                 <div class="section-header">
                     <h2 data-i18n="home.featured.title">Featured project</h2>
                 </div>
                 <article class="featured-card">
-                    <!-- Two variants of the same slot, swapped by CSS breakpoint
-                         (see .featured-media--desktop/--mobile in styles.css) -
-                         the Platformer needs a keyboard, so mobile visitors get
-                         the touch-friendly Space Shooter instead, with no choice
-                         screen or fallback notice in between. -->
                     <a href="pages/2d-game-engine.html" class="featured-media featured-media--desktop" id="featured-play-trigger" data-game-trigger data-device="desktop">
                         <img src="static/img/2DGameEngineDemo.png" alt="2D Game Engine demo - click to play">
                         <span class="featured-tag" data-i18n="home.featured.tag">Engine · C++ · SFML · Box2D</span>
@@ -126,8 +126,8 @@
                             <span class="featured-play-text" data-i18n="home.featured.playCue">Cliquer pour jouer</span>
                         </span>
                     </a>
-                    <a href="pages/2d-game-engine.html" class="featured-media featured-media--mobile" data-game-trigger data-game-src="static/shmup/index.html" data-game-aspect="portrait" data-device="mobile">
-                        <img src="static/img/ShmupDemo.png" alt="Space Shooter demo - tap to play">
+                    <a href="pages/space-shooter.html" class="featured-media featured-media--mobile" data-game-trigger data-game-src="static/shmup/index.html?mode=score" data-game-aspect="portrait" data-device="mobile">
+                        <img src="static/img/ShmupCoop.png" alt="Space Shooter demo - tap to play">
                         <span class="featured-tag" data-i18n="home.featured.tag">Engine · C++ · SFML · Box2D</span>
                         <span class="featured-play-badge" aria-hidden="true">
                             <span class="featured-play-circle">
@@ -152,27 +152,6 @@
             </div>
         </section>
 
-        <!-- Desktop-only bonus game: on mobile the Space Shooter is already
-             the featured project itself (see .featured-media--mobile
-             above), so this second entry point only shows on non-touch/wide
-             devices (see .desktop-game-section in styles.css) - deliberately
-             NOT part of the Platformer's own gameplay loop, just a separate
-             page-level CTA into the same overlay every other trigger uses. -->
-        <section class="desktop-game-section section-reveal" id="desktop-game">
-            <div class="container">
-                <div class="mobile-game-card">
-                    <div class="mobile-game-icon" aria-hidden="true">🚀</div>
-                    <div class="mobile-game-body">
-                        <span class="mobile-game-badge" data-i18n="home.shmup.badgeDesktop">Bonus game</span>
-                        <h3 data-i18n="home.shmup.title">Space Shooter</h3>
-                        <p data-i18n="home.shmup.summaryDesktop">A small vertical shoot-em-up built with the same C++ engine - play it with your mouse or the arrow keys.</p>
-                        <button type="button" class="btn btn-primary" data-game-trigger data-game-src="static/shmup/index.html" data-game-aspect="portrait" data-i18n="home.shmup.playDesktop">Play the Space Shooter</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional experience -->
         <section class="experience-section section-reveal" id="experience">
             <div class="container">
                 <div class="section-header">
@@ -222,7 +201,6 @@
             </div>
         </section>
 
-        <!-- Projects -->
         <section id="projects" class="projects-section section-reveal">
             <div class="container">
                 <div class="section-header">
@@ -268,16 +246,16 @@
                             </div>
                         </a>
                     </article>
-                    <article class="project-card" style="--accent:#f2946b">
-                        <a href="pages/platypus-of-corner.html" class="project-card-link">
+                    <article class="project-card" style="--accent:#b6d53c">
+                        <a href="pages/space-shooter.html" class="project-card-link">
                             <div class="project-image">
-                                <img src="static/img/PlatypusOfCorner.jpg" alt="Platypus Of Corner">
+                                <img src="static/img/ShmupCoop.png" alt="Space Shooter">
                                 <span class="project-card-enter" data-i18n="home.card.enter">▶ SEE</span>
                             </div>
                             <div class="project-title">
-                                <span class="project-tag" data-i18n="home.card.platypus.tag">Gameplay · Unity</span>
-                                <h3>Platypus Of Corner</h3>
-                                <p class="project-card-summary" data-i18n="home.card.platypus.summary">48h jam · 3D platformer</p>
+                                <span class="project-tag" data-i18n="home.card.shmup.tag">Gameplay · C++ · Web port</span>
+                                <h3>Space Shooter</h3>
+                                <p class="project-card-summary" data-i18n="home.card.shmup.summary">2-player co-op · infinite survival mode</p>
                             </div>
                         </a>
                     </article>
@@ -314,7 +292,6 @@
             </div>
         </section>
 
-        <!-- Contact -->
         <section class="contact-section section-reveal" id="contact">
             <div class="container">
                 <div class="section-header">
@@ -349,7 +326,7 @@
                 <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
             </div>
             <p class="footer-meta">
-                <span data-i18n="home.footer.version">Portfolio v1.3</span>
+                <span data-i18n="home.footer.version">Portfolio v1.4</span>
                 ·
                 <span data-i18n="home.footer.updated">Updated September 2026</span>
             </p>
@@ -394,7 +371,8 @@
 
     <script src="static/js/i18n.js"></script>
     <script src="static/js/navbar.js"></script>
-    <script src="static/js/home.js"></script>
+    <script src="static/js/section-reveal.js"></script>
+    <script src="static/js/coin-flip.js"></script>
     <script src="static/js/game-embed.js"></script>
     <script data-goatcounter="https://levelweb-studio.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>

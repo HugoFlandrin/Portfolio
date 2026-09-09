@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter - Hugo Flandrin</title>
+    <meta name="description" content="A 2-player co-op vertical shoot-em-up built in C++, ported to the browser via WebAssembly - playable on mobile and desktop.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hugoflandrin.github.io/Portfolio/pages/space-shooter.html">
+    <meta property="og:title" content="Space Shooter - Hugo Flandrin">
+    <meta property="og:description" content="A 2-player co-op vertical shoot-em-up built in C++, ported to the browser via WebAssembly - playable on mobile and desktop.">
+    <meta property="og:image" content="https://hugoflandrin.github.io/Portfolio/static/img/ShmupCoop.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Space Shooter - Hugo Flandrin">
+    <meta name="twitter:description" content="A 2-player co-op vertical shoot-em-up built in C++, ported to the browser via WebAssembly - playable on mobile and desktop.">
+    <meta name="twitter:image" content="https://hugoflandrin.github.io/Portfolio/static/img/ShmupCoop.png">
+    <link rel="icon" type="image/png" href="../static/img/Logo.png">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/game-embed.css">
+    <link rel="stylesheet" href="../static/css/game-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-theme="shmup">
+
+<nav class="navbar">
+    <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-links" id="nav-menu">
+        <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="../index.html#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
+    </div>
+</nav>
+
+<div class="project-container section-reveal">
+    <div class="project-left">
+        <h1>Space Shooter</h1>
+
+        <p class="subtitle" data-i18n="project.shmup.subtitle">
+            A 2-player co-op vertical shoot-em-up, built on my custom C++ engine and shipped as a browser-playable web port.
+        </p>
+
+        <div class="tech-badges-row">
+            <span class="tech-badge">C++17</span>
+            <span class="tech-badge">SFML</span>
+            <span class="tech-badge">Box2D</span>
+            <span class="tech-badge">Emscripten / WASM</span>
+            <span class="tech-badge">Co-op multiplayer</span>
+        </div>
+
+        <p data-i18n="project.shmup.description">
+            Space Shooter started as a simple validation demo for the 2D engine's Box2D integration, but grew into a full game in its own right: local 2-player co-op, an infinite survival mode with an escalating difficulty curve, individual and global scoring, and a set of power-ups balanced through several rounds of playtesting. The whole game compiles to WebAssembly via Emscripten, so it runs directly in the browser - with distinct input handling for touch (mobile) and keyboard (desktop) from the same C++ codebase.
+        </p>
+
+        <h2 data-i18n="project.tech.title">Technical focus</h2>
+        <p class="tech-note" data-i18n="project.shmup.tech.note">
+            Every system had to work identically for one or two ships sharing the same scene, without assuming a single player: camera targeting, health UI, scoring, and pickups all read from whichever ship instance triggered them, not a fixed slot.
+        </p>
+
+        <h2 data-i18n="project.decisions.title">Key decisions</h2>
+        <ul>
+            <li data-i18n="project.shmup.decision1">A dead teammate doesn't end a co-op run - ending it on the first death would punish the surviving player for their partner's mistake, especially in a mode built around long survival runs</li>
+            <li data-i18n="project.shmup.decision2">Infinite mode's difficulty had to keep pace with power-up stacking, not just player skill - enemy HP and speed climb on a second, much slower ramp than the spawn-rate curve, specifically to counter what stacked power-ups make possible over a long run</li>
+            <li data-i18n="project.shmup.decision3">The Shield power-up blocks exactly one hit then breaks, with no duration timer - simpler to balance, and it can't be turned into free, unlimited enemy-ramming the way a timed invincibility window would</li>
+        </ul>
+
+        <h2 data-i18n="project.workflow.title">Workflow</h2>
+        <p data-i18n="project.shmup.workflow">Each new mechanic (co-op, scoring, pickups, power-ups) went through the same loop: implement → test in real conditions via a local server → rebalance from feedback. Several power-ups went through more than one rebalancing pass this way, tuned against actual play instead of just theory.</p>
+
+        <h2 data-i18n="project.challenges">Challenges</h2>
+        <p class="highlight" data-i18n="project.shmup.challengeHighlight">
+            Getting a fast, physics-driven C++ game to run smoothly in a browser, and to stay fair from a 90-second run to a twenty-minute one.
+        </p>
+        <ul>
+            <li data-i18n="project.shmup.challenge1">Porting to Emscripten/WebAssembly with unified touch and keyboard input</li>
+            <li data-i18n="project.shmup.challenge2">Keeping co-op stable when a ship dies mid-run, without dangling pointers</li>
+            <li data-i18n="project.shmup.challenge3">Balancing power-ups so they stay exciting without trivializing runs</li>
+        </ul>
+
+        <h2 data-i18n="project.whatBuilt">What I built</h2>
+        <ul>
+            <li data-i18n="project.shmup.built1">Infinite survival mode with a two-stage difficulty ramp on top of the original Score Attack mode</li>
+            <li data-i18n="project.shmup.built2">Local 2-player co-op with independent scoring and no run-ending on a single death</li>
+            <li data-i18n="project.shmup.built3">A power-up system (faster fire, multi-shot, shield, heal) and a full Emscripten/WebAssembly web port</li>
+            <li data-i18n="project.shmup.built4">Engine-side additions the game needed: per-player scoring, a reusable damage-immunity flag, and safe inert-entity handling</li>
+        </ul>
+
+        <h2 data-i18n="project.technologies">Technologies used</h2>
+        <ul>
+            <li>C++17</li>
+            <li>SFML (VRSFML fork)</li>
+            <li>Box2D v3</li>
+            <li>Emscripten / WebAssembly</li>
+        </ul>
+
+        <h2 data-i18n="project.links">Links</h2>
+        <div class="links">
+            <a href="https://github.com/HugoFlandrin/2D-Game-Engine" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
+            <a href="2d-game-engine.html" data-i18n="project.shmup.engineLink">Engine project</a>
+        </div>
+    </div>
+
+    <div class="project-right">
+        <div class="media-images">
+            <figure class="media-item">
+                <img src="../static/img/ShmupCoop.png" alt="Space Shooter - 2-player co-op gameplay">
+                <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+                    <button type="button" class="play-project-button" style="margin-top:0" data-game-trigger data-game-src="../static/shmup/index.html?mode=infinite" data-game-aspect="portrait">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span data-i18n="project.shmup.playButtonDuo">Play Space Shooter (duo)</span>
+                    </button>
+                    <button type="button" class="play-project-button play-project-button--secondary" style="margin-top:0" data-game-trigger data-game-src="../static/shmup/index.html?mode=score" data-game-aspect="portrait">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span data-i18n="project.shmup.playButtonSolo">Play Space Shooter (solo)</span>
+                    </button>
+                </div>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="../static/resume/Hugo_Flandrin_Resume.pdf" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.resume">Resume</a>
+            <a href="https://github.com/HugoFlandrin" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/hugo-flandrin-104476294/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+        </div>
+        <p class="footer-meta">
+            <span data-i18n="home.footer.version">Portfolio v1.4</span>
+            ·
+            <span data-i18n="home.footer.updated">Updated September 2026</span>
+        </p>
+    </div>
+</footer>
+
+<div id="image-modal" aria-hidden="true">
+    <img id="modal-img" alt="Expanded screenshot">
+</div>
+
+<div id="game-overlay" aria-hidden="true">
+    <div class="game-overlay-frame">
+        <button type="button" class="game-overlay-close" id="game-overlay-close" aria-label="Close game">✕</button>
+        <iframe id="game-frame" title="Space Shooter - playable game"></iframe>
+    </div>
+</div>
+
+<div id="game-result-popup" aria-hidden="true">
+    <div class="game-result-card">
+        <h3 id="game-result-title"></h3>
+        <p id="game-result-score"></p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-primary" id="game-result-retry" data-i18n="home.featured.playAgain">Play again</button>
+            <button type="button" class="btn btn-secondary" id="game-result-close" data-i18n="home.featured.closeGame">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/i18n.js"></script>
+<script src="../static/js/section-reveal.js"></script>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/project.js"></script>
+<script src="../static/js/game-embed.js"></script>
+<script data-goatcounter="https://levelweb-studio.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script src="../static/js/game-ui.js"></script>
+</body>
+</html>

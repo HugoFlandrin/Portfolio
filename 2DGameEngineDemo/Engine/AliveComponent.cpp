@@ -16,6 +16,15 @@ float AliveComponent::getHpRatio() {
 }
 
 void AliveComponent::takeDamage(float _amount) {
+	if (invulnerable) {
+		// A shield blocks exactly one hit, then breaks (see ShipBehavior::
+		// applyShieldPowerUp()) - consumed here rather than on a timer, so
+		// whoever grants this just needs to poll isInvulnerable() to notice
+		// it was used up.
+		invulnerable = false;
+		return;
+	}
+
 	hp -= _amount;
 	sinceLastHit.restart();
 
@@ -37,6 +46,10 @@ void AliveComponent::update(float _deltaTime) {
 	if (canRegen && hp < maxHp && sinceLastHit.getElapsedTime().asSeconds() > regenDelay) {
 		hp = std::min(maxHp, hp + regenRate * _deltaTime);
 	}
+}
+
+void AliveComponent::heal(float _amount) {
+	hp = std::min(maxHp, hp + _amount);
 }
 
 void AliveComponent::init(float _maxHp, std::string _deathScene, float _deathDelay, bool _canRegen) {

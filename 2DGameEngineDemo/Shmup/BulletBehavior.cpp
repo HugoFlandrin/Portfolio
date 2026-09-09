@@ -13,30 +13,30 @@
 #include "ShmupConstants.h"
 
 namespace {
-	// A small ring glyph, not a purpose-made projectile sprite - a first-pass
-	// crop that happens to read fine as a bullet at this size, easy to
-	// retarget once shmupTiles.png gets a real one.
-	constexpr int bulletRectX = 149;
-	constexpr int bulletRectY = 8;
-	constexpr int bulletRectSize = 6;
+	// A proper bullet icon from shmupTiles.png's icon row (16x16 cells,
+	// y=16..32, "ligne 2, colonne 1").
+	constexpr int bulletRectX = 0;
+	constexpr int bulletRectY = 16;
+	constexpr int bulletRectSize = 16;
 
-	// Was 12x18 - much bigger than the 6x6 sprite crop below once scaled up,
-	// so a hit registered well before the bullet visually reached anything.
-	// Slightly smaller than the crop itself for a snug hitbox.
-	constexpr float bulletWidth = 5.f;
-	constexpr float bulletHeight = 5.f;
+	// Slightly smaller than the crop itself for a snug hitbox - same
+	// absolute hitbox size as before this sprite swap (5*3 = 15), so hit
+	// detection feel is unchanged even though the sprite/scale changed.
+	constexpr float bulletWidth = 10.f;
+	constexpr float bulletHeight = 10.f;
 
-	// The source crop is a tiny 6x6 icon - barely visible at play area
-	// scale, so it's drawn 3x native size, with the physics box scaled to
-	// match so the hitbox agrees with what's on screen.
-	constexpr float bulletScale = 3.f;
+	// The new sprite already reads clearly at native size (unlike the old
+	// 6x6 ring glyph, which needed heavy magnification just to be visible) -
+	// drawn a bit above native size to stay a similar on-screen footprint to
+	// before (was 6*3 = 18px).
+	constexpr float bulletScale = 1.5f;
 }
 
-void BulletBehavior::spawn(AScene* _scene, sf::Vec2f _position, sf::Vec2f _direction, float _speed, float _damage, BulletOwner _owner) {
+void BulletBehavior::spawn(AScene* _scene, sf::Vec2f _position, sf::Vec2f _direction, float _speed, float _damage, BulletOwner _owner, int _ownerId) {
 	Entity* bullet = _scene->createEntity();
 
 	bullet->createComponent<TransformComponent>()->init(_position, { bulletScale, bulletScale });
-	bullet->createComponent<BulletBehavior>()->init(_damage, _owner);
+	bullet->createComponent<BulletBehavior>()->init(_damage, _owner, _ownerId);
 	// Dynamic, not kinematic: Box2D never generates contact/sensor events
 	// between two non-dynamic bodies (kinematic-vs-kinematic included), so a
 	// bullet would silently pass through enemies otherwise. Gravity is
@@ -72,10 +72,11 @@ void BulletBehavior::spawn(AScene* _scene, sf::Vec2f _position, sf::Vec2f _direc
 	_scene->addEntity(bullet);
 }
 
-void BulletBehavior::init(float _damage, BulletOwner _owner) {
+void BulletBehavior::init(float _damage, BulletOwner _owner, int _ownerId) {
 	transformComp = getParent()->getComponent<TransformComponent>();
 	damage = _damage;
 	owner = _owner;
+	ownerId = _ownerId;
 }
 
 void BulletBehavior::update(float _deltaTime) {
@@ -110,6 +111,17 @@ void BulletBehavior::beginCollision(ACollider* _me, ACollider* _other, b2Vec2 _n
 	// just destroyed; anything that survives just gets a small flash right
 	// where the bullet hit.
 	if (isKillingBlow) {
+		// Credit whoever fired this bullet for the kill (2-player co-op
+		// individual scoring - see ShmupEnemyBehavior::update()). Enemy
+		// bullets killing the ship don't go through here - the ship isn't
+		// scored via ShmupEnemyBehavior at all - so this is only ever
+		// reached for owner == Player, but the check stays explicit rather
+		// than assumed.
+		if (owner == BulletOwner::Player) {
+			if (ShmupEnemyBehavior* enemyBehavior = otherEntity->getComponent<ShmupEnemyBehavior>()) {
+				enemyBehavior->setKilledByPlayer(ownerId);
+			}
+		}
 		ExplosionEffect::spawn(scene, otherEntity->getComponent<TransformComponent>()->getPosition(), ExplosionType::Destruction);
 	}
 	else {

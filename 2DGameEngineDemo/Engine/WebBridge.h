@@ -6,8 +6,11 @@
 // since they are only ever called from web-only code paths.
 namespace WebBridge {
 	// Tells the hosting web page the run just ended (win/loss + score) so it
-	// can show its own HTML popup instead of an in-canvas menu.
-	void notifyGameOver(bool won, int score);
+	// can show its own HTML popup instead of an in-canvas menu. _twoPlayer/
+	// _scoreP1/_scoreP2 (all default off/0, so existing solo call sites are
+	// unaffected) let that popup show Shmup 2-player co-op's individual
+	// score breakdown alongside the shared total in _score.
+	void notifyGameOver(bool won, int score, bool twoPlayer = false, int scoreP1 = 0, int scoreP2 = 0);
 
 	// Tells the hosting web page the player asked to close the game (Escape
 	// key) so it can tear down the embedding iframe/overlay.

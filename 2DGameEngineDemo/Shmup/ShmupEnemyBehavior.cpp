@@ -9,6 +9,7 @@
 #include "ResourceManager.h"
 #include "AliveComponent.h"
 #include "BulletBehavior.h"
+#include "PowerUpPickup.h"
 #include "ShmupConstants.h"
 
 namespace {
@@ -38,6 +39,12 @@ namespace {
 	// never takes the player negative.
 	constexpr int missedPenalty = 30;
 
+	// Chance a kill drops a power-up (see update()'s death-complete branch) -
+	// a bonus tied to actually landing the kill, not a passive timer like
+	// coins (see PickupSpawner). Deliberately uncommon: a power-up should
+	// feel like a nice surprise, not something to expect every few kills.
+	constexpr float powerUpDropChance = 0.08f;
+
 	struct EnemyStats {
 		int rectX;
 		int rectY;
@@ -65,9 +72,11 @@ namespace {
 	}
 }
 
-void ShmupEnemyBehavior::spawn(AScene* _scene, sf::Vec2f _position, EnemyType _type) {
+void ShmupEnemyBehavior::spawn(AScene* _scene, sf::Vec2f _position, EnemyType _type, float _hpMultiplier, float _speedMultiplier) {
 	Entity* enemy = _scene->createEntity();
 	EnemyStats stats = statsFor(_type);
+	stats.hp *= _hpMultiplier;
+	stats.fallSpeedFraction *= _speedMultiplier;
 
 	enemy->createComponent<TransformComponent>()->init(_position, { enemyScale, enemyScale });
 	enemy->createComponent<ShmupEnemyBehavior>()->init(stats.scoreValue, _type);
@@ -113,7 +122,39 @@ void ShmupEnemyBehavior::update(float _deltaTime) {
 			rb->setLinearVelocity({ 0.f, 0.f });
 		}
 		if (alive->isDeathSequenceComplete()) {
-			scene->addScore(scoreValue);
+			// killedByPlayer stays -1 (crediting only the shared score,
+			// same as before individual scoring existed) unless whatever
+			// actually killed this enemy attributed itself - see
+			// BulletBehavior::beginCollision() and ShipBehavior::beginCollision().
+			if (killedByPlayer >= 0) {
+				scene->addPlayerScore(killedByPlayer, scoreValue);
+			}
+			else {
+				scene->addScore(scoreValue);
+			}
+
+			// Power-up drop roll (see PowerUpPickup) - independent of coins
+			// (PickupSpawner), and of who actually gets credit for the kill
+			// above (a kill nobody could be individually attributed to can
+			// still drop one).
+			std::uniform_real_distribution<float> dropChance(0.f, 1.f);
+			if (dropChance(rng) < powerUpDropChance) {
+				// MultiShot is still the strongest of the four (two
+				// simultaneous shots stacks multiplicatively with
+				// FasterFire) - weighted well below the others so it reads
+				// as a rare, exciting find rather than something to expect
+				// every few drops. FasterFire/Shield/Heal are roughly even.
+				std::discrete_distribution<int> typeDist({ 30.0, 12.0, 28.0, 30.0 });
+				PowerUpType droppedType;
+				switch (typeDist(rng)) {
+					case 0:  droppedType = PowerUpType::FasterFire; break;
+					case 1:  droppedType = PowerUpType::MultiShot; break;
+					case 2:  droppedType = PowerUpType::Shield; break;
+					default: droppedType = PowerUpType::Heal; break;
+				}
+				PowerUpPickup::spawn(scene, transformComp->getPosition(), droppedType);
+			}
+
 			scene->removeEntity(getParent());
 		}
 		return;

@@ -2,7 +2,6 @@
   const STORAGE_KEY = "lang";
   const SUPPORTED = ["en", "fr"];
 
-  /** @type {Record<string, Record<string, string>>} */
   const dict = {
     en: {
       "nav.home": "Home",
@@ -19,10 +18,11 @@
       "home.cta.resume": "View Resume",
       "home.cta.github": "GitHub",
       "home.cta.linkedin": "LinkedIn",
+      "home.cta.itch": "Itch.io",
       "home.cta.freelance": "My freelance activity",
       "home.status.label": "Currently looking for",
       "home.status.text":
-        "Internship or junior role - Gameplay Programmer, Engine Programmer, or Generalist Programmer (C++ / Unreal / custom engine).",
+        "Internship or junior role - Gameplay, Engine, or Generalist Programmer.",
       "home.featured.title": "Featured project",
       "home.featured.tag": "Engine · C++ · SFML · Box2D",
       "home.featured.summary":
@@ -34,21 +34,16 @@
       "home.featured.playCue": "Click to play",
       "home.featured.playCueMobile": "Tap to play",
       "home.featured.playAgain": "Play again",
-      "home.featured.closeGame": "Close", 
+      "home.featured.closeGame": "Close",
       "home.featured.mobileNotice":
         "This demo needs a keyboard and isn't playable on mobile yet - come back on a desktop to try it!",
       "home.featured.resultWin": "Victory!",
       "home.featured.resultLoss": "Defeat",
       "home.featured.resultScore": "Score:",
       "home.shmup.badge": "Mobile exclusive",
-      "home.shmup.badgeDesktop": "Bonus game",
-      "home.shmup.title": "Space Shooter",
       "home.shmup.summary":
         "A small vertical shoot-em-up built with the same C++ engine, made for touch: drag to move, it fires on its own.",
-      "home.shmup.summaryDesktop":
-        "A small vertical shoot-em-up built with the same C++ engine - play it with your mouse or the arrow keys.",
       "home.shmup.play": "Play on your phone",
-      "home.shmup.playDesktop": "Play the Space Shooter",
       "home.shmup.desktopNotice": "This game is built for touch controls - come back on your phone to try it!",
       "home.experience.title": "Professional experience",
       "home.exp1.type": "Freelance",
@@ -83,6 +78,8 @@
       "home.card.engine.summary": "C++ · SFML · Box2D · modular architecture",
       "home.card.engine3d.tag": "Engine · 3D",
       "home.card.engine3d.summary": "C++ · OpenGL · lighting · model loading",
+      "home.card.shmup.tag": "Gameplay · C++ · Web port",
+      "home.card.shmup.summary": "2-player co-op · infinite survival mode",
       "home.card.lifeawake.tag": "Puzzle · UE5",
       "home.card.lifeawake.summary": "3D puzzle-adventure · portals & puzzles",
       "home.card.ue.minecraft.tag": "Prototype · UE",
@@ -103,7 +100,7 @@
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
         "This portfolio highlights engineering decisions and system design - built as a lightweight static site (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.3",
+      "home.footer.version": "Portfolio v1.4",
       "home.footer.updated": "Updated September 2026",
 
       "ach.unlocked": "Achievement unlocked",
@@ -126,7 +123,6 @@
       "comp.allwork.web": "Full-stack Go, because gameplay isn't the only thing I ship.",
       "comp.allwork.prototypes": "Isolated systems, not full games: proving one mechanic at a time.",
       "comp.allwork.applications": "A WPF desktop app, just to prove I'm not only a web/game dev.",
-
 
       "home.contact.title": "Contact",
       "home.contact.name": "Name",
@@ -305,7 +301,43 @@
       "project.engine.t3.title": "Phase 3 - Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
       "project.engine.playButton": "Play the demo",
-      "project.engine.playShmupButton": "Try the Space Shooter",
+      "project.engine.shmupCrosslink":
+        'This engine also powers <a href="space-shooter.html">Space Shooter</a>, a full 2-player co-op game built on top of it - a separate project in its own right, not just a second demo.',
+      "project.engine.mobileCta": "This demo needs a keyboard - try Space Shooter instead",
+
+      "project.shmup.subtitle":
+        "A 2-player co-op vertical shoot-em-up, built on my custom C++ engine and shipped as a browser-playable web port.",
+      "project.shmup.description":
+        "Space Shooter started as a simple validation demo for the 2D engine's Box2D integration, but grew into a full game in its own right: local 2-player co-op, an infinite survival mode with an escalating difficulty curve, individual and global scoring, and a set of power-ups balanced through several rounds of playtesting. The whole game compiles to WebAssembly via Emscripten, so it runs directly in the browser - with distinct input handling for touch (mobile) and keyboard (desktop) from the same C++ codebase.",
+      "project.shmup.tech.note":
+        "Every system had to work identically for one or two ships sharing the same scene, without assuming a single player: camera targeting, health UI, scoring, and pickups all read from whichever ship instance triggered them, not a fixed slot.",
+      "project.shmup.decision1":
+        "A dead teammate doesn't end a co-op run - ending it on the first death would punish the surviving player for their partner's mistake, especially in a mode built around long survival runs",
+      "project.shmup.decision2":
+        "Infinite mode's difficulty had to keep pace with power-up stacking, not just player skill - enemy HP and speed climb on a second, much slower ramp than the spawn-rate curve, specifically to counter what stacked power-ups make possible over a long run",
+      "project.shmup.decision3":
+        "The Shield power-up blocks exactly one hit then breaks, with no duration timer - simpler to balance, and it can't be turned into free, unlimited enemy-ramming the way a timed invincibility window would",
+      "project.shmup.workflow":
+        "Each new mechanic (co-op, scoring, pickups, power-ups) went through the same loop: implement → test in real conditions via a local server → rebalance from feedback. Several power-ups went through more than one rebalancing pass this way, tuned against actual play instead of just theory.",
+      "project.shmup.challengeHighlight":
+        "Getting a fast, physics-driven C++ game to run smoothly in a browser, and to stay fair from a 90-second run to a twenty-minute one.",
+      "project.shmup.challenge1":
+        "Porting to Emscripten/WebAssembly with unified touch and keyboard input",
+      "project.shmup.challenge2":
+        "Keeping co-op stable when a ship dies mid-run, without dangling pointers",
+      "project.shmup.challenge3":
+        "Balancing power-ups so they stay exciting without trivializing runs",
+      "project.shmup.built1":
+        "Infinite survival mode with a two-stage difficulty ramp on top of the original Score Attack mode",
+      "project.shmup.built2":
+        "Local 2-player co-op with independent scoring and no run-ending on a single death",
+      "project.shmup.built3":
+        "A power-up system (faster fire, multi-shot, shield, heal) and a full Emscripten/WebAssembly web port",
+      "project.shmup.built4":
+        "Engine-side additions the game needed: per-player scoring, a reusable damage-immunity flag, and safe inert-entity handling",
+      "project.shmup.playButtonDuo": "Play Space Shooter (duo)",
+      "project.shmup.playButtonSolo": "Play Space Shooter (solo)",
+      "project.shmup.engineLink": "Engine project",
 
       "project.engine3d.subtitle":
         "A C++ 3D game engine built with OpenGL - modular rendering architecture validated through a basic demo scene.",
@@ -468,10 +500,11 @@
       "home.cta.resume": "Voir le CV",
       "home.cta.github": "GitHub",
       "home.cta.linkedin": "LinkedIn",
+      "home.cta.itch": "Itch.io",
       "home.cta.freelance": "Mon activité freelance",
       "home.status.label": "Actuellement à la recherche de",
       "home.status.text":
-        "Stage ou poste junior - Programmeur Gameplay, Programmeur Moteur, ou Programmeur Généraliste (C++ / Unreal / moteur maison).",
+        "Stage ou poste junior - Programmeur Gameplay, Moteur, ou Généraliste.",
       "home.featured.title": "Projet phare",
       "home.featured.tag": "Moteur · C++ · SFML · Box2D",
       "home.featured.summary":
@@ -490,14 +523,9 @@
       "home.featured.resultLoss": "Défaite",
       "home.featured.resultScore": "Score :",
       "home.shmup.badge": "Exclusivité mobile",
-      "home.shmup.badgeDesktop": "Jeu bonus",
-      "home.shmup.title": "Space Shooter",
       "home.shmup.summary":
         "Un petit shoot-em-up vertical construit avec le même moteur C++, pensé pour le tactile : glissez pour vous déplacer, il tire tout seul.",
-      "home.shmup.summaryDesktop":
-        "Un petit shoot-em-up vertical construit avec le même moteur C++ - jouable à la souris ou avec les flèches directionnelles.",
       "home.shmup.play": "Jouer sur ton téléphone",
-      "home.shmup.playDesktop": "Jouer au Space Shooter",
       "home.shmup.desktopNotice": "Ce jeu est pensé pour le tactile - reviens depuis ton téléphone pour l'essayer !",
       "home.experience.title": "Expérience professionnelle",
       "home.exp1.type": "Freelance",
@@ -532,6 +560,8 @@
       "home.card.engine.summary": "C++ · SFML · Box2D · architecture modulaire",
       "home.card.engine3d.tag": "Moteur · 3D",
       "home.card.engine3d.summary": "C++ · OpenGL · éclairage · chargement de modèles",
+      "home.card.shmup.tag": "Gameplay · C++ · Portage web",
+      "home.card.shmup.summary": "Co-op 2 joueurs · mode de survie infini",
       "home.card.lifeawake.tag": "Puzzle · UE5",
       "home.card.lifeawake.summary": "Aventure-puzzle en 3D · portails & énigmes",
       "home.card.ue.minecraft.tag": "Prototype · UE",
@@ -552,7 +582,7 @@
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
         "Ce portfolio met en avant les choix d'ingénierie et l'organisation des systèmes - site statique léger (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.3",
+      "home.footer.version": "Portfolio v1.4",
       "home.footer.updated": "Mis à jour - septembre 2026",
 
       "ach.unlocked": "Succès débloqué",
@@ -575,7 +605,6 @@
       "comp.allwork.web": "Full-stack en Go, parce que le gameplay n'est pas la seule chose que je livre.",
       "comp.allwork.prototypes": "Des systèmes isolés, pas des jeux complets : une mécanique à la fois.",
       "comp.allwork.applications": "Une appli desktop en WPF, histoire de prouver que je ne fais pas que du web/jeu.",
-
 
       "home.contact.title": "Contact",
       "home.contact.name": "Nom",
@@ -759,7 +788,43 @@
       "project.engine.t3.title": "Phase 3 - Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
       "project.engine.playButton": "Jouer à la démo",
-      "project.engine.playShmupButton": "Essayer le Space Shooter",
+      "project.engine.shmupCrosslink":
+        'Ce moteur fait aussi tourner <a href="space-shooter.html">Space Shooter</a>, un vrai jeu co-op à 2 joueurs construit dessus - un projet à part entière, pas juste une seconde démo.',
+      "project.engine.mobileCta": "Cette démo nécessite un clavier - essayez plutôt Space Shooter",
+
+      "project.shmup.subtitle":
+        "Un shoot-em-up vertical co-op à 2 joueurs, construit sur mon moteur C++ maison et porté jusqu'au navigateur.",
+      "project.shmup.description":
+        "Space Shooter a commencé comme une simple démo de validation pour l'intégration Box2D du moteur 2D, avant de devenir un vrai jeu à part entière : co-op local à 2 joueurs, mode de survie infini avec une courbe de difficulté croissante, score individuel et global, et un système de boost équilibré au fil de plusieurs sessions de playtest. Le jeu entier compile vers WebAssembly via Emscripten et tourne donc directement dans le navigateur - avec une gestion distincte du tactile (mobile) et du clavier (PC) à partir de la même base de code C++.",
+      "project.shmup.tech.note":
+        "Chaque système devait fonctionner à l'identique pour un ou deux vaisseaux partageant la même scène, sans supposer un joueur unique : la caméra, l'UI de vie, le score et les pickups lisent tous depuis le vaisseau qui les a déclenchés, jamais un emplacement fixe.",
+      "project.shmup.decision1":
+        "La mort d'un coéquipier ne termine pas la partie en co-op - terminer dès la première mort pénaliserait le joueur survivant pour l'erreur de l'autre, surtout dans un mode pensé pour des runs de survie longues",
+      "project.shmup.decision2":
+        "La difficulté du mode infini devait suivre l'empilement des boost, pas seulement la compétence du joueur - les PV et la vitesse des ennemis montent sur une seconde rampe, bien plus lente que celle du taux de spawn, pensée pour contrer ce que les boost empilés permettent sur une longue run",
+      "project.shmup.decision3":
+        "Le boost Bouclier bloque exactement un coup puis se brise, sans minuteur - plus simple à équilibrer, et impossible à transformer en collisions illimitées gratuites comme le permettrait une invincibilité temporisée",
+      "project.shmup.workflow":
+        "Chaque nouvelle mécanique (co-op, score, pickups, boost) suivait la même boucle : implémentation → test en condition réelle via un serveur local → réajustement. Plusieurs boost ont été rééquilibrés plus d'une fois de cette façon, ajustés sur du jeu réel plutôt que sur la seule théorie.",
+      "project.shmup.challengeHighlight":
+        "Faire tourner un jeu C++ rapide et piloté par la physique sans accroc dans un navigateur, et rester équilibré aussi bien sur 90 secondes que sur vingt minutes.",
+      "project.shmup.challenge1":
+        "Portage vers Emscripten/WebAssembly avec tactile et clavier unifiés",
+      "project.shmup.challenge2":
+        "Garder le co-op stable à la mort d'un vaisseau en cours de partie, sans pointeur pendouillant",
+      "project.shmup.challenge3":
+        "Équilibrer les boost pour qu'ils restent excitants sans rendre la partie triviale",
+      "project.shmup.built1":
+        "Mode de survie infini avec une rampe de difficulté en deux temps, ajoutée au mode Score Attack d'origine",
+      "project.shmup.built2":
+        "Co-op local à 2 joueurs avec score individuel et pas de fin de partie sur une seule mort",
+      "project.shmup.built3":
+        "Un système de boost (tir rapide, tir multiple, bouclier, soin) et un portage web complet en Emscripten/WebAssembly",
+      "project.shmup.built4":
+        "Ajouts côté moteur nécessaires au jeu : score par joueur, un flag d'immunité réutilisable, et une gestion sûre des entités inertes",
+      "project.shmup.playButtonDuo": "Jouer à Space Shooter (duo)",
+      "project.shmup.playButtonSolo": "Jouer à Space Shooter (solo)",
+      "project.shmup.engineLink": "Projet du moteur",
 
       "project.engine3d.subtitle":
         "Un moteur de jeu 3D en C++ avec OpenGL - architecture de rendu modulaire validée par une scène de démo basique.",
@@ -913,11 +978,11 @@
   function getLang() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved && SUPPORTED.includes(saved)) return saved;
-    return "en";
+    return "fr";
   }
 
   function setLang(lang) {
-    const next = SUPPORTED.includes(lang) ? lang : "en";
+    const next = SUPPORTED.includes(lang) ? lang : "fr";
     localStorage.setItem(STORAGE_KEY, next);
     apply(next);
   }
@@ -984,4 +1049,3 @@
     init();
   }
 })();
-

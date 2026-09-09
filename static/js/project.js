@@ -55,13 +55,13 @@
       try {
         v.pause();
       } catch {
-        /* ignore */
+
       }
     });
   }
 
   if (!videoSlides.length) {
-    /* no video on this page */
+
   } else if (videoSlides.length <= 1) {
     if (prevVideoBtn) prevVideoBtn.style.display = "none";
     if (nextVideoBtn) nextVideoBtn.style.display = "none";

@@ -24,11 +24,26 @@ class AliveComponent : public AComponent
 	float deathTimer = 0.f;
 	float deathDelay = 0.9f;
 
+	// Set by whoever grants temporary immunity (e.g. ShipBehavior's Shield
+	// power-up - see applyShieldPowerUp()) - takeDamage() becomes a no-op
+	// while true, regardless of source (bullet or collision), since both
+	// already funnel through this single choke point. Cleared automatically
+	// the moment it actually blocks a hit (see takeDamage()) - a shield is
+	// single-use, not a timed window - so whoever set it just needs to poll
+	// isInvulnerable() to notice it was consumed.
+	bool invulnerable = false;
+
 public:
 	float getHp();
 	float getMaxHp();
 	float getHpRatio();
 	void takeDamage(float _amount);
+	// Restores hp, clamped at maxHp - e.g. ShipBehavior's Heal power-up (see
+	// applyHealPowerUp()). Unlike takeDamage(), doesn't touch
+	// sinceLastHit/dying - healing isn't "getting hit".
+	void heal(float _amount);
+	void setInvulnerable(bool _invulnerable) { invulnerable = _invulnerable; }
+	bool isInvulnerable() const { return invulnerable; }
 	// True from the instant hp reaches 0, regardless of whether a
 	// deathScene is set - lets gameplay code (e.g. ShipBehavior) freeze
 	// whoever's dying in place instead of them drifting away from where

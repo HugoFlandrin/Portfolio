@@ -5,6 +5,12 @@
 #include <algorithm>
 
 void HealthBarUI::init(sf::Vec2f _position, sf::Vec2f _size) {
+	init(nullptr, _position, _size);
+}
+
+void HealthBarUI::init(Entity* _target, sf::Vec2f _position, sf::Vec2f _size) {
+	target = _target;
+
 	background.position = _position;
 	background.setSize(_size);
 	background.setFillColor(sf::Color(40, 40, 40, 200));
@@ -18,7 +24,7 @@ void HealthBarUI::init(sf::Vec2f _position, sf::Vec2f _size) {
 
 void HealthBarUI::update(float _deltaTime) {
 	AScene* scene = SceneManager::instance()->getCurrentScene();
-	Entity* player = scene ? scene->getCameraTarget() : nullptr;
+	Entity* player = target ? target : (scene ? scene->getCameraTarget() : nullptr);
 	AliveComponent* alive = player ? player->getComponent<AliveComponent>() : nullptr;
 
 	float targetRatio = alive ? std::clamp(alive->getHpRatio(), 0.f, 1.f) : displayedRatio;

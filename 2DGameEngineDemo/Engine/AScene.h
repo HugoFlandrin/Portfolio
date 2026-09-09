@@ -1,4 +1,5 @@
 #pragma once
+#include <array>
 #include <string>
 #include <vector>
 #include "Entity.h"
@@ -21,6 +22,11 @@ class AScene
 	int entitiesId = 0;
 
 	int score = 0;
+	// Per-player scores, on top of the shared score above - see
+	// addPlayerScore(). Only meaningfully used by Shmup's 2-player co-op
+	// mode; every other scene just never calls addPlayerScore(), leaving
+	// these at 0 and unread.
+	std::array<int, 2> playerScores{};
 	sf::Clock timer;
 	sf::View camera;
 
@@ -58,6 +64,13 @@ public:
 	int getScore();
 	void setScore();
 	void addScore(int _amount);
+	// Per-player score on top of the shared one above - _playerId is
+	// clamped/ignored if out of range (0/1 today), so a bad id just quietly
+	// skips the individual credit instead of crashing. Always also calls
+	// addScore(_amount), so the shared total stays correct regardless of
+	// whether anything reads the individual scores.
+	int getPlayerScore(int _playerId);
+	void addPlayerScore(int _playerId, int _amount);
 	float getTimer();
 	void startTimer();
 	sf::View* getCamera();
