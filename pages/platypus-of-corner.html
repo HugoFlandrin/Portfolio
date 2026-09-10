@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platypus Of Corner - Hugo Flandrin</title>
-    <meta name="description" content="A dreamlike 3D platformer made in Unity during a 48h Game Jam.">
+    <meta name="description" content="A dreamlike 3D platformer made in Unity during a 48h Game Jam, now playable directly in your browser.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hugoflandrin.github.io/Portfolio/pages/platypus-of-corner.html">
     <meta property="og:title" content="Platypus Of Corner - Hugo Flandrin">
-    <meta property="og:description" content="A dreamlike 3D platformer made in Unity during a 48h Game Jam.">
+    <meta property="og:description" content="A dreamlike 3D platformer made in Unity during a 48h Game Jam, now playable directly in your browser.">
     <meta property="og:image" content="https://hugoflandrin.github.io/Portfolio/static/img/PlatypusOfCorner.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Platypus Of Corner - Hugo Flandrin">
-    <meta name="twitter:description" content="A dreamlike 3D platformer made in Unity during a 48h Game Jam.">
+    <meta name="twitter:description" content="A dreamlike 3D platformer made in Unity during a 48h Game Jam, now playable directly in your browser.">
     <meta name="twitter:image" content="https://hugoflandrin.github.io/Portfolio/static/img/PlatypusOfCorner.jpg">
     <link rel="icon" type="image/png" href="../static/img/Logo.png">
     <link rel="stylesheet" href="../static/css/project.css">
     <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/game-embed.css">
     <link rel="stylesheet" href="../static/css/game-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -61,7 +62,7 @@
         <h1>Platypus Of Corner</h1>
 
         <p class="subtitle" data-i18n="project.platypus.subtitle">
-            A dreamlike 3D platformer made in Unity during a 48h Game Jam.
+            A dreamlike 3D platformer made in Unity during a 48h Game Jam, now playable directly in your browser.
         </p>
 
         <p data-i18n="project.platypus.description">
@@ -72,6 +73,7 @@
         <div class="tech-badges-row">
             <span class="tech-badge">Unity</span>
             <span class="tech-badge">C#</span>
+            <span class="tech-badge">WebGL</span>
             <span class="tech-badge">48h Game Jam</span>
         </div>
 
@@ -102,6 +104,7 @@
             <li data-i18n="project.platypus.built1">Time-limited exploration (3 minutes) with 3 collectible fragments</li>
             <li data-i18n="project.platypus.built2">3D platforming + small puzzles and interactions (E key)</li>
             <li data-i18n="project.platypus.built3">Player controls: movement (ZQSD) + camera (arrow keys)</li>
+            <li data-i18n="project.platypus.built4">A Unity WebGL port with a custom JS bridge for in-browser scoring and game-over reporting</li>
         </ul>
 
         <h2 data-i18n="project.technologies">Technologies used</h2>
@@ -123,8 +126,16 @@
         <div class="media-images">
             <figure class="media-item">
                 <img src="../static/img/PlatypusOfCorner.jpg" alt="Platypus Of Corner screenshot">
+                <button type="button" class="play-project-button hide-on-mobile" data-game-trigger data-game-src="../static/platypus/index.html" data-device="desktop">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <span data-i18n="project.platypus.playButton">Play the demo</span>
+                </button>
             </figure>
         </div>
+        <a href="space-shooter.html" class="play-project-button hide-on-desktop">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span data-i18n="project.platypus.mobileCta">This demo needs a keyboard - try Space Shooter instead</span>
+        </a>
     </div>
 </div>
 
@@ -148,10 +159,38 @@
     <img id="modal-img" alt="Expanded screenshot">
 </div>
 
+<div id="game-overlay" aria-hidden="true">
+    <div class="game-overlay-frame">
+        <button type="button" class="game-overlay-close" id="game-overlay-close" aria-label="Close game">✕</button>
+        <iframe id="game-frame" title="Platypus Of Corner - playable game"></iframe>
+    </div>
+</div>
+
+<div id="game-result-popup" aria-hidden="true">
+    <div class="game-result-card">
+        <h3 id="game-result-title"></h3>
+        <p id="game-result-score"></p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-primary" id="game-result-retry" data-i18n="home.featured.playAgain">Play again</button>
+            <button type="button" class="btn btn-secondary" id="game-result-close" data-i18n="home.featured.closeGame">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="game-mobile-notice" aria-hidden="true">
+    <div class="game-result-card">
+        <p data-i18n="home.featured.mobileNotice">This demo needs a keyboard and isn't playable on mobile yet - come back on a desktop to try it!</p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-primary" id="game-mobile-notice-close" data-i18n="home.featured.closeGame">Close</button>
+        </div>
+    </div>
+</div>
+
 <script src="../static/js/i18n.js"></script>
 <script src="../static/js/section-reveal.js"></script>
 <script src="../static/js/navbar.js"></script>
 <script src="../static/js/project.js"></script>
+<script src="../static/js/game-embed.js"></script>
 <script data-goatcounter="https://levelweb-studio.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 <script src="../static/js/game-ui.js"></script>

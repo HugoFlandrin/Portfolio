@@ -22,7 +22,7 @@
 
   const scriptSrc = document.currentScript?.src || "";
   const basePath = scriptSrc.replace(/static\/js\/game-embed\.js.*$/, "");
-  const DEFAULT_GAME_SRC = `${basePath}static/game/index.html`;
+  const DEFAULT_GAME_SRC = `${basePath}static/platformer/index.html`;
 
   // Must match the CSS breakpoint that swaps .featured-media--desktop/mobile
   // and hide-on-mobile/hide-on-desktop (see styles.css/game-embed.css):

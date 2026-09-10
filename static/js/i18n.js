@@ -92,7 +92,7 @@
       "home.card.escape.summary": "First-person thriller · puzzles · atmosphere",
       "home.card.nightlife.tag": "Gameplay · UE5",
       "home.card.nightlife.summary": "5-day hackathon · branching choices",
-      "home.card.platypus.tag": "Gameplay · Unity",
+      "home.card.platypus.tag": "Gameplay · Unity · Web port",
       "home.card.platypus.summary": "48h jam · 3D platformer",
       "home.card.gametalk.tag": "Full-stack · Go",
       "home.card.gametalk.summary": "API + server · forum systems",
@@ -328,7 +328,7 @@
       "project.shmup.challenge3":
         "Balancing power-ups so they stay exciting without trivializing runs",
       "project.shmup.built1":
-        "Infinite survival mode with a two-stage difficulty ramp on top of the original Score Attack mode",
+        "Infinite survival mode with a two-stage difficulty ramp, alongside the original 90-second solo mode",
       "project.shmup.built2":
         "Local 2-player co-op with independent scoring and no run-ending on a single death",
       "project.shmup.built3":
@@ -436,9 +436,9 @@
       "project.ue.boardgame.tech2": "Gameplay scripting",
 
       "project.platypus.subtitle":
-        "A dreamlike 3D platformer made in Unity during a 48h Game Jam.",
+        "A dreamlike 3D platformer made in Unity during a 48h Game Jam, now playable directly in your browser.",
       "project.platypus.description":
-        "Platypus of Corner is a short 3D platformer created in 48 hours with the theme Onirique (dreamlike). You play as a mysterious creature trapped in a surreal floating world, racing against time to recover 3 dream fragments.",
+        "Platypus of Corner is a short 3D platformer created in 48 hours with the theme Onirique (dreamlike). You play as a mysterious creature trapped in a surreal floating world, racing against time to recover 3 dream fragments. Originally a downloadable build, it has since been ported to WebGL so you can play it right here, no download required.",
       "project.platypus.challengeHighlight":
         "Building a complete platformer experience in 48 hours required fast iteration, clean scope, and strong readability.",
       "project.platypus.challenge1":
@@ -453,11 +453,15 @@
         "3D platforming plus small puzzles and interactions (E key)",
       "project.platypus.built3":
         "Player controls: movement (ZQSD) plus camera (arrow keys)",
+      "project.platypus.built4":
+        "A Unity WebGL port with a custom JS bridge for in-browser scoring and game-over reporting",
       "project.platypus.tech.note":
         "Tight scope: one movement controller, three collectibles, timer-driven pressure, and E-key interactions reused across levels.",
       "project.platypus.decision1": "Single interaction component for puzzles and pickups",
       "project.platypus.decision2": "Readable silhouettes and floating paths for dreamlike navigation",
       "project.platypus.decision3": "Polish budget spent on jump feel and camera",
+      "project.platypus.playButton": "Play Platypus Of Corner",
+      "project.platypus.mobileCta": "Platypus Of Corner needs a keyboard - try Space Shooter instead",
 
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",
@@ -574,7 +578,7 @@
       "home.card.escape.summary": "Thriller FPS · énigmes · atmosphère",
       "home.card.nightlife.tag": "Gameplay · UE5",
       "home.card.nightlife.summary": "Hackathon 5 jours · choix narratifs",
-      "home.card.platypus.tag": "Gameplay · Unity",
+      "home.card.platypus.tag": "Gameplay · Unity · Portage web",
       "home.card.platypus.summary": "Jam 48h · platformer 3D",
       "home.card.gametalk.tag": "Full-stack · Go",
       "home.card.gametalk.summary": "API + serveur · système forum",
@@ -815,7 +819,7 @@
       "project.shmup.challenge3":
         "Équilibrer les boost pour qu'ils restent excitants sans rendre la partie triviale",
       "project.shmup.built1":
-        "Mode de survie infini avec une rampe de difficulté en deux temps, ajoutée au mode Score Attack d'origine",
+        "Mode de survie infini avec une rampe de difficulté en deux temps, aux côtés du mode solo de 90 secondes d'origine",
       "project.shmup.built2":
         "Co-op local à 2 joueurs avec score individuel et pas de fin de partie sur une seule mort",
       "project.shmup.built3":
@@ -923,9 +927,9 @@
       "project.ue.boardgame.tech2": "Scripting gameplay",
 
       "project.platypus.subtitle":
-        "Un platformer 3D onirique réalisé sur Unity pendant une Game Jam de 48h.",
+        "Un platformer 3D onirique réalisé sur Unity pendant une Game Jam de 48h, désormais jouable directement dans votre navigateur.",
       "project.platypus.description":
-        "Platypus of Corner est un court platformer 3D créé en 48 heures sur le thème Onirique. Vous incarnez une créature mystérieuse piégée dans un monde flottant surréaliste, qui doit récupérer 3 fragments de rêve avant la fin du temps.",
+        "Platypus of Corner est un court platformer 3D créé en 48 heures sur le thème Onirique. Vous incarnez une créature mystérieuse piégée dans un monde flottant surréaliste, qui doit récupérer 3 fragments de rêve avant la fin du temps. À l'origine une build à télécharger, il a depuis été porté en WebGL pour être jouable directement ici, sans téléchargement.",
       "project.platypus.challengeHighlight":
         "Construire une expérience de platformer complète en 48 heures a demandé des itérations rapides, un scope propre et une forte lisibilité.",
       "project.platypus.challenge1":
@@ -940,11 +944,15 @@
         "Platforming 3D avec petites énigmes et interactions (touche E)",
       "project.platypus.built3":
         "Contrôles joueur : déplacement (ZQSD) et caméra (flèches)",
+      "project.platypus.built4":
+        "Un portage Unity WebGL avec un pont JS sur mesure pour le score et la fin de partie dans le navigateur",
       "project.platypus.tech.note":
         "Scope serré : un contrôleur, trois collectibles, timer, interactions touche E réutilisées.",
       "project.platypus.decision1": "Un composant d'interaction pour énigmes et collectibles",
       "project.platypus.decision2": "Silhouettes lisibles et chemins flottants pour l'exploration onirique",
       "project.platypus.decision3": "Budget polish sur le saut et la caméra",
+      "project.platypus.playButton": "Jouer à Platypus Of Corner",
+      "project.platypus.mobileCta": "Platypus Of Corner nécessite un clavier - essayez plutôt Space Shooter",
 
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",
