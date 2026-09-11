@@ -237,6 +237,34 @@ body {
     transition: transform 0.2s ease;
 }
 
+.demo-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    max-height: 48vh;
+    max-width: 270px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #000;
+}
+
+.demo-video:fullscreen,
+.demo-video:-webkit-full-screen {
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+}
+
+.demo-video-actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px auto 0;
+    max-width: 270px;
+}
+
 .media-item img:hover {
     transform: scale(1.02);
 }

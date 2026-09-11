@@ -111,8 +111,10 @@
     <div class="project-right">
         <div class="media-images">
             <figure class="media-item">
-                <img src="../static/img/ShmupCoop.png" alt="Space Shooter - 2-player co-op gameplay">
-                <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+                <video class="demo-video" poster="../static/img/SpaceShooterLogo.png" controls playsinline preload="metadata">
+                    <source src="../static/mp4/Projects/SpaceShooter.mp4" type="video/mp4">
+                </video>
+                <div class="demo-video-actions">
                     <button type="button" class="play-project-button" style="margin-top:0" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=infinite" data-game-aspect="portrait">
                         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         <span data-i18n="project.shmup.playButtonDuo">Play Space Shooter (duo)</span>
