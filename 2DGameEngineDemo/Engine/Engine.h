@@ -26,12 +26,21 @@ class Engine
 
     sf::Clock clock;
     bool running = true;
+    // Skips physics/gameplay update while true (see tick()) - the frame
+    // still renders (whatever was last drawn stays on screen, frozen) and
+    // clock still restarts every tick, so there's no deltaTime spike the
+    // instant this flips back to false. Driven by Shmup's settings panel
+    // (see WebBridge's ShmupSetPaused) while it's open; every other game
+    // never touches this, so it just stays false for them.
+    bool paused = false;
 
 public:
     Engine();
     void run();
     void tick();
     sf::RenderWindow* getWindow();
+    void setPaused(bool _paused) { paused = _paused; }
+    bool isPaused() const { return paused; }
     static Engine* instance();
     // Must be called before the first Engine::instance() call (which is
     // when the singleton - and its OS window - actually gets constructed);

@@ -8,6 +8,7 @@
 #include "BoxCollider.h"
 #include "Render.h"
 #include "ResourceManager.h"
+#include "AudioManager.h"
 #include "ShmupConstants.h"
 #include <optional>
 
@@ -105,15 +106,19 @@ void PowerUpPickup::update(float _deltaTime) {
 
 		if (const auto intersection = sf::findIntersection(powerUpBounds, shipBounds)) {
 			if (type == PowerUpType::FasterFire) {
+				AudioManager::instance()->playSound("PowerUp-ShootSpeed.mp3");
 				ship->applyFasterFirePowerUp();
 			}
 			else if (type == PowerUpType::MultiShot) {
+				AudioManager::instance()->playSound("PowerUp-ShootSplit.mp3");
 				ship->applyMultiShotPowerUp();
 			}
 			else if (type == PowerUpType::Shield) {
+				AudioManager::instance()->playSound("PowerUp-Shield.mp3");
 				ship->applyShieldPowerUp();
 			}
 			else {
+				AudioManager::instance()->playSound("PowerUp-Regeneration.mp3");
 				ship->applyHealPowerUp();
 			}
 			scene->removeEntity(getParent());

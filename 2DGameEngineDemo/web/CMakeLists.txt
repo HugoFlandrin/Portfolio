@@ -8,10 +8,21 @@ endif()
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# NOTE: an AudioWorklet-based fix for background-music audio distortion
+# (pthread + MA_ENABLE_AUDIO_WORKLETS + a coi-serviceworker.js shim for
+# GitHub Pages' lack of custom headers) was attempted here and reverted -
+# confirmed cross-origin isolation itself worked, but crashed during actual
+# AudioWorklet node creation ("Cannot read properties of null (reading
+# 'processorOptions')"), matching github.com/emscripten-core/emscripten
+# issue #26720 - reported as a Chromium-side bug, supposedly fixed upstream
+# in Chrome, but still reproduced in real-world testing. Left as a possible
+# revisit later if that turns out to get fixed browser-side; not attempted
+# again without a concrete signal it's actually resolved.
+
 include(FetchContent)
 
 # --- VRSFML (Emscripten-ready SFML fork) ---------------------------------
-set(SFML_BUILD_AUDIO OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_AUDIO ON CACHE BOOL "" FORCE)
 set(SFML_BUILD_NETWORK OFF CACHE BOOL "" FORCE)
 set(SFML_BUILD_IMGUI OFF CACHE BOOL "" FORCE)
 set(SFML_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
@@ -133,7 +144,7 @@ set(SHMUP_SOURCES
 
 add_executable(shmup ${ENGINE_SOURCES} ${SHMUP_SOURCES})
 target_include_directories(shmup PRIVATE "${ENGINE_DIR}" "${SHMUP_DIR}")
-target_link_libraries(shmup PRIVATE SFML::Graphics SFML::Window SFML::System box2d)
+target_link_libraries(shmup PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Audio box2d)
 
 set_target_properties(shmup PROPERTIES
     SUFFIX ".html"

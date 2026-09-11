@@ -8,6 +8,7 @@
 #include "Render.h"
 #include "ResourceManager.h"
 #include "AliveComponent.h"
+#include "ACollider.h"
 #include "BulletBehavior.h"
 #include "PowerUpPickup.h"
 #include "ShmupConstants.h"
@@ -120,6 +121,21 @@ void ShmupEnemyBehavior::update(float _deltaTime) {
 		// while already destroyed.
 		if (RigidBody* rb = getParent()->getComponent<RigidBody>()) {
 			rb->setLinearVelocity({ 0.f, 0.f });
+		}
+		// Physically inert the instant it starts dying - same reasoning and
+		// pattern as ShipBehavior::update()'s own disableCollision() call.
+		// Without this, a still-solid "dying" enemy (frozen here for
+		// enemyDeathDelay before it's actually removed below) could still be
+		// hit by a second bullet or rammed by a ship in that window - most
+		// visible with fast/rapid-fire bullets (stacked FasterFire), where
+		// two bullets can land on the same enemy within a frame or two of
+		// each other. Both hits would otherwise see hp already <=0 and each
+		// independently fire their own kill credit/score/explosion/Death
+		// sound (see BulletBehavior::beginCollision()), reading as the same
+		// enemy dying twice. Safe/cheap to call every frame while dying, same
+		// as ShipBehavior's.
+		if (ACollider* collider = getParent()->getComponent<ACollider>()) {
+			collider->disableCollision();
 		}
 		if (alive->isDeathSequenceComplete()) {
 			// killedByPlayer stays -1 (crediting only the shared score,

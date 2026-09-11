@@ -67,7 +67,7 @@ endif()
 include(FetchContent)
 
 # --- VRSFML (same fork/version as the web build) --------------------------
-set(SFML_BUILD_AUDIO OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_AUDIO ON CACHE BOOL "" FORCE)
 set(SFML_BUILD_NETWORK OFF CACHE BOOL "" FORCE)
 set(SFML_BUILD_IMGUI OFF CACHE BOOL "" FORCE)
 set(SFML_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
@@ -189,7 +189,7 @@ copy_assets_for(platformer "${PLATFORMER_DIR}/Assets")
 # reuses the same fully generic scene the Platformer/GameHub already use.
 add_executable(shmup ${ENGINE_SOURCES} ${SHMUP_SOURCES} "${PLATFORMER_DIR}/GameOverScene.cpp")
 target_include_directories(shmup PRIVATE "${ENGINE_DIR}" "${SHMUP_DIR}" "${PLATFORMER_DIR}")
-target_link_libraries(shmup PRIVATE SFML::Graphics SFML::Window SFML::System box2d)
+target_link_libraries(shmup PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Audio box2d)
 copy_assets_for(shmup "${SHMUP_DIR}/Assets")
 
 # --- GameHub (both games, starts on a game-select menu) -----------------

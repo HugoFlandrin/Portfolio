@@ -112,6 +112,15 @@
 
     resultPopup.classList.remove("is-open");
     resultPopup.setAttribute("aria-hidden", "true");
+
+    // Only present on pages with a settings panel (Space Shooter) - reset
+    // here too so it doesn't linger visually "open" the next time this
+    // overlay opens on a fresh game instance, which always boots unpaused.
+    const settingsPanel = document.getElementById("game-settings-panel");
+    const settingsBackdrop = document.getElementById("game-settings-backdrop");
+    settingsPanel?.classList.remove("is-open");
+    settingsPanel?.setAttribute("aria-hidden", "true");
+    settingsBackdrop?.classList.remove("is-active");
   };
 
   const showResult = (won, score, twoPlayer, scoreP1, scoreP2) => {

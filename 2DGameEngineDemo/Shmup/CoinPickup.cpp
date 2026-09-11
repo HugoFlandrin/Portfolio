@@ -8,6 +8,7 @@
 #include "BoxCollider.h"
 #include "Render.h"
 #include "ResourceManager.h"
+#include "AudioManager.h"
 #include "ShmupConstants.h"
 #include <optional>
 
@@ -99,6 +100,7 @@ void CoinPickup::update(float _deltaTime) {
 		sf::Rect2f shipBounds(shipTransform->getPosition() - shipSize / 2.f, shipSize);
 
 		if (const auto intersection = sf::findIntersection(coinBounds, shipBounds)) {
+			AudioManager::instance()->playSound("Coin.mp3");
 			scene->addPlayerScore(ship->getPlayerId(), value);
 			scene->removeEntity(getParent());
 			return;

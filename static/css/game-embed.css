@@ -84,7 +84,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -92,6 +92,132 @@
     background: var(--accent, #ff8a65);
     color: #1a1a1a;
     transform: scale(1.06);
+}
+
+.game-overlay-settings {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+    background: rgba(10, 12, 20, 0.75);
+    backdrop-filter: blur(4px);
+    color: var(--text, rgba(255, 255, 255, 0.92));
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.game-overlay-settings svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.game-overlay-settings:hover {
+    background: var(--accent, #ff8a65);
+    color: #1a1a1a;
+    transform: scale(1.06) rotate(20deg);
+}
+
+#game-settings-panel {
+    position: absolute;
+    top: 60px;
+    left: 12px;
+    z-index: 2;
+    background: rgba(10, 12, 20, 0.92);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+    border-radius: 10px;
+    padding: 16px;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+#game-settings-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Sits above the iframe (a plain, unpositioned element - any positioned
+   sibling already paints above it regardless of z-index) but below the
+   gear/close buttons and the panel itself. Only intercepts clicks while the
+   panel is open: a click anywhere on the visible game area then closes the
+   panel and resumes play instead of reaching the iframe underneath. */
+#game-settings-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#game-settings-backdrop.is-active {
+    pointer-events: auto;
+}
+
+#game-settings-panel h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text, rgba(255, 255, 255, 0.92));
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.settings-row:last-child {
+    margin-bottom: 0;
+}
+
+.settings-row label {
+    flex: 1;
+    font-size: 13px;
+    color: var(--text, rgba(255, 255, 255, 0.85));
+}
+
+.settings-row input[type="range"] {
+    width: 90px;
+}
+
+.settings-row .settings-mute-btn {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text, rgba(255, 255, 255, 0.85));
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.settings-row .settings-mute-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.settings-row .settings-mute-btn.is-muted {
+    background: var(--accent, #ff8a65);
+    color: #1a1a1a;
 }
 
 #game-result-popup {
@@ -305,5 +431,15 @@
     .game-overlay-close {
         top: 8px;
         right: 8px;
+    }
+
+    .game-overlay-settings {
+        top: 8px;
+        left: 8px;
+    }
+
+    #game-settings-panel {
+        top: 56px;
+        left: 8px;
     }
 }

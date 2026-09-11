@@ -12,6 +12,7 @@
 #include "BulletBehavior.h"
 #include "ExplosionEffect.h"
 #include "ShieldEffect.h"
+#include "AudioManager.h"
 #include "Engine.h"
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Mouse.hpp>
@@ -346,6 +347,10 @@ void ShipBehavior::beginCollision(ACollider* _me, ACollider* _other, b2Vec2 _nor
 		wasShielded = alive->isInvulnerable();
 		alive->takeDamage(alive->getMaxHp());
 	}
+
+	// The enemy always dies here regardless of wasShielded (see above) - one
+	// Death cue covers that, whether or not this ship also went down with it.
+	AudioManager::instance()->playSound("Death.mp3");
 
 	AScene* scene = SceneManager::instance()->getCurrentScene();
 	ExplosionEffect::spawn(scene, transformComp->getPosition(), wasShielded ? ExplosionType::Impact : ExplosionType::Destruction);

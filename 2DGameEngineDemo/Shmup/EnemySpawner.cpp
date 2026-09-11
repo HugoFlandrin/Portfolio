@@ -4,6 +4,7 @@
 #include "SceneManager.h"
 #include "ShmupEnemyBehavior.h"
 #include "ShmupConstants.h"
+#include "AudioManager.h"
 #include <array>
 #include <cmath>
 
@@ -117,7 +118,15 @@ void EnemySpawner::update(float _deltaTime) {
 
 	if (elapsed >= ShmupConstants::gameDuration) {
 		// Surviving the clock is the win condition - see ShmupConstants.h.
+		// Victory instead of the CoopGameOverWatcher's GameOver cue - this
+		// branch is only ever reached on a win (a loss always goes through
+		// that watcher instead - see its own comment), so the two sounds
+		// never compete for the same moment.
 		SceneManager::instance()->setLastRunWon(true);
+		// Play before stopping the music, not after - see
+		// CoopGameOverWatcher.cpp's own comment on this exact ordering.
+		AudioManager::instance()->playSound("Victory.mp3");
+		AudioManager::instance()->stopMusic();
 		SceneManager::instance()->requestChangeScene("GameOver");
 		return;
 	}

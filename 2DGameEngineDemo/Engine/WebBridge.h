@@ -22,3 +22,23 @@ namespace WebBridge {
 	// site's i18n dictionary in C++.
 	bool isEnglish();
 }
+
+// Opposite direction from the rest of this file: these are called FROM the
+// hosting page's JS INTO C++, not the other way around - the settings panel
+// on the game's project page posts a message to the game iframe, and
+// shell-shmup.html's own message listener forwards it here by calling
+// Module._ShmupSet*(...) directly (the exported C symbol for each
+// EMSCRIPTEN_KEEPALIVE function below). Plain `extern "C"` (not inside
+// WebBridge's namespace) so the exported symbol names stay unmangled and
+// predictable from JS. _volume is 0..1; _muted/_paused are a C bool (0/1).
+extern "C" {
+	void ShmupSetMusicVolume(float _volume);
+	void ShmupSetSfxVolume(float _volume);
+	void ShmupSetMusicMuted(int _muted);
+	void ShmupSetSfxMuted(int _muted);
+
+	// Freezes/resumes gameplay simulation (see Engine::tick()) while the
+	// settings panel is open - the frame keeps rendering either way, just
+	// frozen on whatever was last drawn.
+	void ShmupSetPaused(int _paused);
+}

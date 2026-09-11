@@ -6,6 +6,7 @@
 #include "PhysicSystem.h"
 #include "Render.h"
 #include "ResourceManager.h"
+#include "AudioManager.h"
 #include "ShmupEnemyBehavior.h"
 #include "ShipBehavior.h"
 #include "AliveComponent.h"
@@ -30,9 +31,22 @@ namespace {
 	// drawn a bit above native size to stay a similar on-screen footprint to
 	// before (was 6*3 = 18px).
 	constexpr float bulletScale = 1.5f;
+
+	// Enemy shots are rare (only EnemyType::Shooter fires at all), so this
+	// stays close to full volume, just slightly under player-facing cues
+	// like pickups/impacts. The player's own shot sound was removed
+	// entirely (see spawn()) - it fires constantly (short fireInterval,
+	// stacked further by FasterFire), and with everything else the game
+	// already has playing (music, pickups, impacts, deaths...) a cue for
+	// every single shot was too invasive to be worth it.
+	constexpr float enemyShootVolume = 0.8f;
 }
 
 void BulletBehavior::spawn(AScene* _scene, sf::Vec2f _position, sf::Vec2f _direction, float _speed, float _damage, BulletOwner _owner, int _ownerId) {
+	if (_owner == BulletOwner::Enemy) {
+		AudioManager::instance()->playSound("EnemiesShoot.mp3", enemyShootVolume);
+	}
+
 	Entity* bullet = _scene->createEntity();
 
 	bullet->createComponent<TransformComponent>()->init(_position, { bulletScale, bulletScale });
@@ -122,9 +136,11 @@ void BulletBehavior::beginCollision(ACollider* _me, ACollider* _other, b2Vec2 _n
 				enemyBehavior->setKilledByPlayer(ownerId);
 			}
 		}
+		AudioManager::instance()->playSound("Death.mp3");
 		ExplosionEffect::spawn(scene, otherEntity->getComponent<TransformComponent>()->getPosition(), ExplosionType::Destruction);
 	}
 	else {
+		AudioManager::instance()->playSound("ShootImpact.mp3");
 		ExplosionEffect::spawn(scene, transformComp->getPosition(), ExplosionType::Impact);
 	}
 

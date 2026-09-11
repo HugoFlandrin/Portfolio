@@ -173,7 +173,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/MIB055~1/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -592,7 +592,6 @@ SDL_XINPUT:BOOL=ON
 //Value Computed by CMake
 SFML_BINARY_DIR:STATIC=C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/out/build/x64-Debug/_deps/sfml-build
 
-//ON to build SFML's Audio module.
 SFML_BUILD_AUDIO:BOOL=OFF
 
 SFML_BUILD_DOC:BOOL=OFF
@@ -605,10 +604,8 @@ SFML_BUILD_GLUTILS:BOOL=ON
 //ON to build SFML's Graphics module.
 SFML_BUILD_GRAPHICS:BOOL=ON
 
-//ON to build SFML's ImGui module.
 SFML_BUILD_IMGUI:BOOL=OFF
 
-//ON to build SFML's Network module.
 SFML_BUILD_NETWORK:BOOL=OFF
 
 SFML_BUILD_TEST_SUITE:BOOL=OFF
@@ -633,7 +630,6 @@ SFML_ENABLE_PCH:BOOL=OFF
 //Enable sanitizers
 SFML_ENABLE_SANITIZERS:BOOL=OFF
 
-//TRUE to enable lifetime tracking, FALSE to disable it
 SFML_ENABLE_STACK_TRACES:BOOL=OFF
 
 //Enable standard library assertions
@@ -892,7 +888,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

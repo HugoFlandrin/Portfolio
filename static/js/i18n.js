@@ -144,6 +144,7 @@
       "project.demoVideo": "Demo video",
       "project.github": "GitHub",
       "project.itch": "Itch.io",
+      "project.copyright": "Copyright",
 
       "project.escape.subtitle":
         "A psychological thriller made with Unreal Engine 5 (escape-room inspired).",
@@ -316,9 +317,11 @@
       "project.shmup.decision2":
         "Infinite mode's difficulty had to keep pace with power-up stacking, not just player skill - enemy HP and speed climb on a second, much slower ramp than the spawn-rate curve, specifically to counter what stacked power-ups make possible over a long run",
       "project.shmup.decision3":
-        "The Shield power-up blocks exactly one hit then breaks, with no duration timer - simpler to balance, and it can't be turned into free, unlimited enemy-ramming the way a timed invincibility window would",
+        "Sound design leaned fully into 80s arcade cabinets - short, punchy chiptune-style cues over anything modern or cinematic, to match the pixel art instead of fighting it",
       "project.shmup.workflow":
         "Each new mechanic (co-op, scoring, pickups, power-ups) went through the same loop: implement → test in real conditions via a local server → rebalance from feedback. Several power-ups went through more than one rebalancing pass this way, tuned against actual play instead of just theory.",
+      "project.shmup.musicCredit":
+        "Background music: \"Sweet 70s\" by Clement Panchout, from his <a href=\"https://clement-panchout.itch.io/yet-another-free-music-pack\" target=\"_blank\" rel=\"noopener noreferrer\">Yet Another Free Music Pack</a>.",
       "project.shmup.challengeHighlight":
         "Getting a fast, physics-driven C++ game to run smoothly in a browser, and to stay fair from a 90-second run to a twenty-minute one.",
       "project.shmup.challenge1":
@@ -338,6 +341,12 @@
       "project.shmup.playButtonDuo": "Play Space Shooter (duo)",
       "project.shmup.playButtonSolo": "Play Space Shooter (solo)",
       "project.shmup.engineLink": "Engine project",
+      "project.shmup.settingsAriaLabel": "Audio settings",
+      "project.shmup.settingsTitle": "Audio settings",
+      "project.shmup.musicLabel": "Music",
+      "project.shmup.sfxLabel": "Sound effects",
+      "project.shmup.muteMusicAriaLabel": "Mute music",
+      "project.shmup.muteSfxAriaLabel": "Mute sound effects",
 
       "project.engine3d.subtitle":
         "A C++ 3D game engine built with OpenGL - modular rendering architecture validated through a basic demo scene.",
@@ -630,6 +639,7 @@
       "project.demoVideo": "Vidéo de démo",
       "project.github": "GitHub",
       "project.itch": "Itch.io",
+      "project.copyright": "Copyright",
 
       "project.escape.subtitle":
         "Un thriller psychologique réalisé avec Unreal Engine 5 (inspiré des escape games).",
@@ -807,9 +817,11 @@
       "project.shmup.decision2":
         "La difficulté du mode infini devait suivre l'empilement des boost, pas seulement la compétence du joueur - les PV et la vitesse des ennemis montent sur une seconde rampe, bien plus lente que celle du taux de spawn, pensée pour contrer ce que les boost empilés permettent sur une longue run",
       "project.shmup.decision3":
-        "Le boost Bouclier bloque exactement un coup puis se brise, sans minuteur - plus simple à équilibrer, et impossible à transformer en collisions illimitées gratuites comme le permettrait une invincibilité temporisée",
+        "Le sound design est parti à fond sur les bornes d'arcade 80s - des sons courts et percutants façon chiptune plutôt que quelque chose de moderne ou cinématique, pour coller au pixel art au lieu de le contredire",
       "project.shmup.workflow":
         "Chaque nouvelle mécanique (co-op, score, pickups, boost) suivait la même boucle : implémentation → test en condition réelle via un serveur local → réajustement. Plusieurs boost ont été rééquilibrés plus d'une fois de cette façon, ajustés sur du jeu réel plutôt que sur la seule théorie.",
+      "project.shmup.musicCredit":
+        "Musique de fond : \"Sweet 70s\" par Clement Panchout, tirée de son <a href=\"https://clement-panchout.itch.io/yet-another-free-music-pack\" target=\"_blank\" rel=\"noopener noreferrer\">Yet Another Free Music Pack</a>.",
       "project.shmup.challengeHighlight":
         "Faire tourner un jeu C++ rapide et piloté par la physique sans accroc dans un navigateur, et rester équilibré aussi bien sur 90 secondes que sur vingt minutes.",
       "project.shmup.challenge1":
@@ -829,6 +841,12 @@
       "project.shmup.playButtonDuo": "Jouer à Space Shooter (duo)",
       "project.shmup.playButtonSolo": "Jouer à Space Shooter (solo)",
       "project.shmup.engineLink": "Projet du moteur",
+      "project.shmup.settingsAriaLabel": "Réglages audio",
+      "project.shmup.settingsTitle": "Réglages audio",
+      "project.shmup.musicLabel": "Musique",
+      "project.shmup.sfxLabel": "Effets sonores",
+      "project.shmup.muteMusicAriaLabel": "Couper la musique",
+      "project.shmup.muteSfxAriaLabel": "Couper les effets sonores",
 
       "project.engine3d.subtitle":
         "Un moteur de jeu 3D en C++ avec OpenGL - architecture de rendu modulaire validée par une scène de démo basique.",

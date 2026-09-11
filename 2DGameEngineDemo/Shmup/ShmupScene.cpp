@@ -16,6 +16,7 @@
 #include "ShmupControlHint.h"
 #include "CoopControlsHint.h"
 #include "CoopGameOverWatcher.h"
+#include "AudioManager.h"
 #include "SceneManager.h"
 #include "Engine.h"
 #include "RigidBody.h"
@@ -59,6 +60,12 @@ void ShmupScene::setTwoPlayer(bool _twoPlayer) {
 }
 
 void ShmupScene::init() {
+	// Starts on the very first run and just keeps looping - a no-op on every
+	// later call (replays, switching modes) so the ambiance never restarts
+	// or stacks a second copy on top of itself (see playMusicLooping()'s own
+	// comment).
+	AudioManager::instance()->playMusicLooping("Clement Panchout - Sweet 70s.mp3");
+
 	// A fixed mobile-portrait play area (see ShmupConstants.h), independent
 	// of the actual (usually much wider, desktop) window size - every
 	// gameplay bound in this scene/its entities is derived from this instead
@@ -177,11 +184,17 @@ void ShmupScene::init() {
 		ShipInputScheme player1Input; // defaults (arrow keys) are already right
 		player1Input.enableTouchAndMouse = false;
 		ship2 = createShip(playAreaWidth * 0.7f, 1, player1Input, sf::Color(255, 150, 150));
-
-		Entity* watcherEntity = createEntity();
-		watcherEntity->createComponent<CoopGameOverWatcher>()->init(ship, ship2);
-		addEntity(watcherEntity);
 	}
+
+	// Plays the GameOver sound the instant the run actually ends, in both
+	// modes - in solo (ship2=nullptr), the scene change itself is still
+	// driven by that ship's own AliveComponent deathScene set in createShip()
+	// above, so triggerSceneChange is false there; in 2-player co-op this
+	// still also owns the actual scene change, unchanged from before (see
+	// CoopGameOverWatcher's own comment).
+	Entity* watcherEntity = createEntity();
+	watcherEntity->createComponent<CoopGameOverWatcher>()->init(ship, ship2, twoPlayer);
+	addEntity(watcherEntity);
 
 	//Wave director - no visuals of its own.
 	Entity* spawner = createEntity();
@@ -205,7 +218,11 @@ void ShmupScene::init() {
 	// two per-player scores below instead of being the only number on
 	// screen.
 	Entity* scoreEntity = createEntity();
-	TextRenderer* scoreRender = new TextRenderer({ playAreaWidth / 2.f, 40.f }, *uiFont, "Score : 0", twoPlayer ? 40 : 32);
+	// y=65, not the top edge (was 40): leaves clearance under the settings
+	// gear/close buttons in the hosting page's overlay chrome, which sit
+	// right above the canvas - see game-embed.css's .game-overlay-close/
+	// .game-overlay-settings.
+	TextRenderer* scoreRender = new TextRenderer({ playAreaWidth / 2.f, 65.f }, *uiFont, "Score : 0", twoPlayer ? 40 : 32);
 	scoreEntity->createComponent<ScoreUpdate>()->init(scoreRender);
 	scoreEntity->addComponent(scoreRender);
 	addUIEntity(scoreEntity);
@@ -217,8 +234,9 @@ void ShmupScene::init() {
 	// score (PlayerScoreUI) sits right below their own bar, centered on it.
 	if (twoPlayer) {
 		sf::Vec2f healthBarSize{ 200.f, 24.f };
-		sf::Vec2f healthBar1Pos{ 20.f, 70.f };
-		sf::Vec2f healthBar2Pos{ playAreaWidth - 220.f, 70.f };
+		// y=95, not 70 - see the score TextRenderer's own comment above.
+		sf::Vec2f healthBar1Pos{ 20.f, 95.f };
+		sf::Vec2f healthBar2Pos{ playAreaWidth - 220.f, 95.f };
 
 		Entity* healthBar1 = createEntity();
 		healthBar1->createComponent<HealthBarUI>()->init(ship, healthBar1Pos, healthBarSize);
@@ -245,7 +263,8 @@ void ShmupScene::init() {
 	}
 	else {
 		Entity* healthBarEntity = createEntity();
-		healthBarEntity->createComponent<HealthBarUI>()->init({ 20.f, 70.f }, { 200.f, 24.f });
+		// y=95, not 70 - see the score TextRenderer's own comment above.
+		healthBarEntity->createComponent<HealthBarUI>()->init({ 20.f, 95.f }, { 200.f, 24.f });
 		addUIEntity(healthBarEntity);
 	}
 
@@ -255,7 +274,8 @@ void ShmupScene::init() {
 	if (!infiniteMode) {
 		// Same backing-panel-behind-text ordering trick as ScoreUpdate above.
 		Entity* timerEntity = createEntity();
-		TextRenderer* timerRender = new TextRenderer({ playAreaWidth - 110.f, 40.f }, *uiFont, "", 28);
+		// y=65, not 40 - see the score TextRenderer's own comment above.
+		TextRenderer* timerRender = new TextRenderer({ playAreaWidth - 110.f, 65.f }, *uiFont, "", 28);
 		timerEntity->createComponent<CountdownUI>()->init(timerRender, ShmupConstants::gameDuration);
 		timerEntity->addComponent(timerRender);
 		addUIEntity(timerEntity);

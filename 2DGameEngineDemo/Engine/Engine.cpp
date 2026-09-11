@@ -65,8 +65,10 @@ void Engine::tick()
     float deltaTime = clock.restart().asSeconds();
 
     events();
-    physics->update(deltaTime);
-    update(deltaTime);
+    if (!paused) {
+        physics->update(deltaTime);
+        update(deltaTime);
+    }
     render();
     sceneManager->processChangeScene();
 

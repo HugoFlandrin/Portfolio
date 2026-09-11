@@ -88,7 +88,39 @@
       canvas: canvas,
       print: (...args) => console.log(...args),
       printErr: (...args) => console.error(...args),
+      // Tells the hosting page it's now safe to call the Module._ShmupSet*
+      // exports below - sent as its own message (rather than just racing a
+      // fixed delay after the iframe's "load" event) since the wasm module
+      // still has to finish an async fetch/instantiate after this HTML
+      // document itself has loaded, and that gap is not bounded.
+      onRuntimeInitialized: () => {
+        if (window.parent) {
+          window.parent.postMessage({ type: "shmupReady" }, "*");
+        }
+      },
     };
+
+    // Settings panel bridge: the hosting page (outside this iframe) posts
+    // volume/mute changes here; forwarded into C++ via the matching
+    // EMSCRIPTEN_KEEPALIVE export (see Engine/WebBridge.cpp) each exposed on
+    // Module as "_" + its C symbol name. Guarded per-call (not just once)
+    // since a message can in principle arrive before the wasm module has
+    // finished instantiating.
+    window.addEventListener("message", function (event) {
+      var data = event.data;
+      if (!data || typeof data !== "object") return;
+      if (data.type === "setMusicVolume" && Module._ShmupSetMusicVolume) {
+        Module._ShmupSetMusicVolume(data.value);
+      } else if (data.type === "setSfxVolume" && Module._ShmupSetSfxVolume) {
+        Module._ShmupSetSfxVolume(data.value);
+      } else if (data.type === "setMusicMuted" && Module._ShmupSetMusicMuted) {
+        Module._ShmupSetMusicMuted(data.value ? 1 : 0);
+      } else if (data.type === "setSfxMuted" && Module._ShmupSetSfxMuted) {
+        Module._ShmupSetSfxMuted(data.value ? 1 : 0);
+      } else if (data.type === "setPaused" && Module._ShmupSetPaused) {
+        Module._ShmupSetPaused(data.value ? 1 : 0);
+      }
+    });
   </script>
   {{{ SCRIPT }}}
 </body>
