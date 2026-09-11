@@ -39,13 +39,13 @@ class AudioManager
 	// from mute so the UI can remember the last volume while silenced,
 	// matching typical OS/app volume UX. Applied on top of each individual
 	// playSound() call's own _volume (itself already tuned per-cue - see
-	// e.g. BulletBehavior.cpp's player/enemy shot volumes). sfxVolume
-	// defaults to half, not full: the tuned-per-cue volumes read as too loud
-	// at 100% - matched by the settings panel's slider also starting at its
-	// center/50 position (see pages/space-shooter.html), so the slider still
-	// reaches today's full-strength mix at its max instead of silently
-	// capping below what it visually shows.
-	float musicVolume = 1.f;
+	// e.g. BulletBehavior.cpp's player/enemy shot volumes). Both default to
+	// half, not full: at 100% the music was drowning out the tuned-per-cue
+	// sfx almost entirely - matched by the settings panel's two sliders also
+	// starting at their center/50 position (see pages/space-shooter.html),
+	// so either slider still reaches today's full-strength mix at its max
+	// instead of silently capping below what it visually shows.
+	float musicVolume = 0.5f;
 	float sfxVolume = 0.5f;
 	bool musicMuted = false;
 	bool sfxMuted = false;

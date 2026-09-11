@@ -18,10 +18,11 @@
   };
 
   const state = {
-    musicVolume: Number(localStorage.getItem(STORAGE.musicVolume) ?? 100),
-    // 50, not 100: matches AudioManager's own sfxVolume default (see its own
-    // comment) - the tuned-per-cue volumes read as too loud at full, so the
-    // slider starts at its center instead of its max.
+    // 50, not 100, for both: matches AudioManager's own musicVolume/
+    // sfxVolume defaults (see their own comments) - the music was drowning
+    // out the sfx at full volume, so both sliders start at their center
+    // instead of their max, same as each other.
+    musicVolume: Number(localStorage.getItem(STORAGE.musicVolume) ?? 50),
     sfxVolume: Number(localStorage.getItem(STORAGE.sfxVolume) ?? 50),
     musicMuted: localStorage.getItem(STORAGE.musicMuted) === "true",
     sfxMuted: localStorage.getItem(STORAGE.sfxMuted) === "true",

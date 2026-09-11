@@ -24,13 +24,13 @@
   const basePath = scriptSrc.replace(/static\/js\/game-embed\.js.*$/, "");
   const DEFAULT_GAME_SRC = `${basePath}static/platformer/index.html`;
 
-  // Must match the CSS breakpoint that swaps .featured-media--desktop/mobile
-  // and hide-on-mobile/hide-on-desktop (see styles.css/game-embed.css):
-  // "(pointer: coarse), (max-width: 640px)". Checking pointer type alone
-  // used to disagree with that CSS on a narrow *desktop* window (mouse, but
-  // <=640px wide) - the CSS would swap to the mobile-styled trigger while
-  // this still classified it as desktop, so clicking it wrongly showed the
-  // "come back on your phone" notice instead of opening the game.
+  // Must match the CSS breakpoint that swaps hide-on-mobile/hide-on-desktop
+  // (see game-embed.css): "(pointer: coarse), (max-width: 640px)". Checking
+  // pointer type alone used to disagree with that CSS on a narrow *desktop*
+  // window (mouse, but <=640px wide) - the CSS would swap to the
+  // mobile-styled trigger while this still classified it as desktop, so
+  // clicking it wrongly showed the "come back on your phone" notice instead
+  // of opening the game.
   const isMobile = () =>
     window.matchMedia("(pointer: coarse)").matches ||
     !window.matchMedia("(pointer: fine)").matches ||
@@ -98,6 +98,16 @@
     activeSrc = trigger?.dataset.gameSrc || DEFAULT_GAME_SRC;
     overlayFrameEl?.classList.toggle("is-portrait", trigger?.dataset.gameAspect === "portrait");
 
+    // The settings gear only means anything for Space Shooter (the only
+    // build wired to WebBridge's ShmupSet* audio exports) - pages that can
+    // also open the platformer from the same overlay (2d-game-engine.html)
+    // would otherwise show a gear that silently does nothing once that
+    // other game is loaded instead.
+    const settingsToggle = document.getElementById("game-settings-toggle");
+    if (settingsToggle) {
+      settingsToggle.hidden = !activeSrc.includes("space-shooter");
+    }
+
     frame.src = buildFrameSrc(activeSrc);
     overlay.classList.add("is-open");
     overlay.setAttribute("aria-hidden", "false");
@@ -152,6 +162,11 @@
         openNotice(desktopNotice);
         return;
       }
+      // A trigger can itself sit inside a notice (e.g. the mobile notice's
+      // own "play solo instead" fallback button - see space-shooter.html) -
+      // close it so it doesn't linger on top of the overlay it just opened.
+      closeNotice(mobileNotice);
+      closeNotice(desktopNotice);
       openOverlay(trigger);
     });
 

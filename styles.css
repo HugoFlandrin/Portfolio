@@ -313,26 +313,55 @@ a {
     cursor: pointer;
 }
 
-.featured-media--mobile {
-    display: none;
-}
-
-@media (pointer: coarse), (max-width: 640px) {
-    .featured-media--desktop {
-        display: none;
-    }
-
-    .featured-media--mobile {
-        display: block;
-    }
-}
-
 .featured-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.35s ease;
     transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
+}
+
+/* Two purpose-made crops (see index.html), not one image stretched across
+   both layouts: static/img/SpaceShooterPC.png is a wide landscape scene,
+   static/img/SpaceShooterMobile.png the original tall portrait logo/poster
+   art - a single source object-fit: cover'd into the OTHER box shape would
+   crop away most of itself (a portrait image alone in this box was the
+   original "the featured image is too big/zoomed in" complaint: at this
+   box's roughly 1.6:1 landscape ratio, covering with a 0.585-ratio portrait
+   source crops out about 60% of its height). --desktop is shown by default;
+   --mobile takes over below, alongside the aspect-ratio override right
+   under it that gives it a portrait-shaped box of its own to actually fit
+   in without that same heavy a crop. */
+.featured-media-img--mobile {
+    display: none;
+}
+
+@media (pointer: coarse), (max-width: 640px) {
+    .featured-media-img--desktop {
+        display: none;
+    }
+
+    .featured-media-img--mobile {
+        display: block;
+    }
+
+    /* Matches SpaceShooterMobile.png's own ~0.585 ratio closely enough that
+       object-fit: cover only trims a modest sliver off the top/bottom,
+       instead of the ~60% a landscape box would. width: 100% is explicit,
+       not left to the grid's own stretch default: aspect-ratio combined
+       with the max-height cap below otherwise resolved this box's width
+       from the CAPPED height instead of the container - on a narrow phone
+       that shrank it to a visibly narrower box than the card itself,
+       leaving a gap on one side instead of filling the width. Capped by
+       viewport height (not a flat px value) so a very narrow, very tall
+       phone viewport can't stretch this past a sensible size within the
+       card. */
+    .featured-media {
+        min-height: 0;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        max-height: 65vh;
+    }
 }
 
 .featured-card:hover .featured-media img {

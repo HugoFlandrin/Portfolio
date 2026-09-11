@@ -18,6 +18,20 @@ struct ShipInputScheme
 	sf::Keyboard::Scan down = sf::Keyboard::Scan::Down;
 	sf::Keyboard::Scan left = sf::Keyboard::Scan::Left;
 	sf::Keyboard::Scan right = sf::Keyboard::Scan::Right;
+	// Solo-only alternate keyset, checked alongside up/down/left/right (see
+	// ShipBehavior::update()) rather than instead of it, so the player can
+	// freely mix either layout. Scan::W/A/S/D are the same physical keys
+	// 2-player co-op's player 0 already uses (see ShmupScene::init(), whose
+	// on-screen hint labels them "Z","Q","S","D" - the printed letters at
+	// those positions on an AZERTY keyboard, which scancodes name after
+	// their QWERTY position). Only ever read when enableTouchAndMouse is
+	// true (solo's own default-constructed scheme) - each of 2-player
+	// co-op's two schemes must stay exclusive to its own keys, so these are
+	// simply never checked there, regardless of what they're left at.
+	sf::Keyboard::Scan altUp = sf::Keyboard::Scan::W;
+	sf::Keyboard::Scan altDown = sf::Keyboard::Scan::S;
+	sf::Keyboard::Scan altLeft = sf::Keyboard::Scan::A;
+	sf::Keyboard::Scan altRight = sf::Keyboard::Scan::D;
 	bool enableTouchAndMouse = true;
 };
 

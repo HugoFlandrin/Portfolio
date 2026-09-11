@@ -26,13 +26,12 @@
       "home.featured.title": "Featured project",
       "home.featured.tag": "Engine · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics) validated by a full platformer demo. This demo is playable directly in your browser - just click the screenshot.",
+        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics), showcased through Space Shooter - a full solo shoot-em-up, with a 2-player co-op mode built on the same engine. Playable directly in your browser, on desktop and mobile - just click the screenshot.",
       "home.featured.point1": "Deterministic update order & scene transitions",
       "home.featured.point2": "Box2D integrated with gameplay entities",
       "home.featured.point3": "Architecture designed for maintainable engine growth",
       "home.featured.cta": "Explore technical breakdown",
-      "home.featured.playCue": "Click to play",
-      "home.featured.playCueMobile": "Tap to play",
+      "home.featured.playCue": "Click or tap to play",
       "home.featured.playAgain": "Play again",
       "home.featured.closeGame": "Close",
       "home.featured.mobileNotice":
@@ -44,7 +43,6 @@
       "home.shmup.summary":
         "A small vertical shoot-em-up built with the same C++ engine, made for touch: drag to move, it fires on its own.",
       "home.shmup.play": "Play on your phone",
-      "home.shmup.desktopNotice": "This game is built for touch controls - come back on your phone to try it!",
       "home.experience.title": "Professional experience",
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 - Present",
@@ -79,7 +77,7 @@
       "home.card.engine3d.tag": "Engine · 3D",
       "home.card.engine3d.summary": "C++ · OpenGL · lighting · model loading",
       "home.card.shmup.tag": "Gameplay · C++ · Web port",
-      "home.card.shmup.summary": "2-player co-op · infinite survival mode",
+      "home.card.shmup.summary": "Solo & 2-player co-op · infinite survival",
       "home.card.lifeawake.tag": "Puzzle · UE5",
       "home.card.lifeawake.summary": "3D puzzle-adventure · portals & puzzles",
       "home.card.ue.minecraft.tag": "Prototype · UE",
@@ -248,9 +246,9 @@
       "project.nightlife.decision3": "Navigation landmarks in night city for readability",
 
       "project.engine.subtitle":
-        "A C++ 2D game engine (SFML + Box2D) with a platformer demo.",
+        "A C++ 2D game engine (SFML + Box2D), with Space Shooter as its flagship playable demo.",
       "project.engine.description":
-        "This project is a custom 2D engine built in C++ using SFML for rendering/input and Box2D for physics. A platformer demo validates the engine systems through a concrete gameplay scenario (movement, collisions, enemies, levels, UI).",
+        "This project is a custom 2D engine built in C++ using SFML for rendering/input and Box2D for physics. Its main showcase is Space Shooter, a full solo shoot-em-up built on top of it - with a 2-player co-op mode too - not just a demo, but a complete game in its own right.",
       "project.engine.challengeHighlight":
         "Building a modular engine means defining clear system boundaries while keeping the demo game fun and stable.",
       "project.engine.challenge1":
@@ -293,7 +291,7 @@
       "project.engine.decision3": "Explicit scene transitions to avoid stale physics bodies",
       "project.engine.workflow.title": "Development workflow",
       "project.engine.workflow.body":
-        "Iteration cycle: implement engine feature → validate in platformer demo → refactor boundaries → document update order. Git branches per system (physics, UI, levels).",
+        "Iteration cycle: implement engine feature → validate in the demo games → refactor boundaries → document update order. Git branches per system (physics, UI, levels).",
       "project.engine.timeline.title": "Progression",
       "project.engine.t1.title": "Phase 1 - Core loop",
       "project.engine.t1.body": "Window, input, scene switching, empty gameplay scene",
@@ -301,13 +299,14 @@
       "project.engine.t2.body": "Box2D integration, movement, collisions, basic enemies",
       "project.engine.t3.title": "Phase 3 - Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
-      "project.engine.playButton": "Play the demo",
-      "project.engine.shmupCrosslink":
-        'This engine also powers <a href="space-shooter.html">Space Shooter</a>, a full 2-player co-op game built on top of it - a separate project in its own right, not just a second demo.',
-      "project.engine.mobileCta": "This demo needs a keyboard - try Space Shooter instead",
+      "project.engine.playSpaceShooter": "Play Space Shooter",
+      "project.engine.playButton": "Play the platformer (bonus demo)",
+      "project.engine.platformerBonus":
+        "The engine's original platformer demo is still included too, kept as a bonus: the concrete scenario (movement, collisions, enemies, levels, UI) the core systems were first built and tested against.",
+      "project.engine.mobileCta": "Try Space Shooter instead",
 
       "project.shmup.subtitle":
-        "A 2-player co-op vertical shoot-em-up, built on my custom C++ engine and shipped as a browser-playable web port.",
+        "A vertical shoot-em-up built on my custom C++ engine and shipped as a browser-playable web port - solo, or with a 2-player co-op mode.",
       "project.shmup.description":
         "Space Shooter started as a simple validation demo for the 2D engine's Box2D integration, but grew into a full game in its own right: local 2-player co-op, an infinite survival mode with an escalating difficulty curve, individual and global scoring, and a set of power-ups balanced through several rounds of playtesting. The whole game compiles to WebAssembly via Emscripten, so it runs directly in the browser - with distinct input handling for touch (mobile) and keyboard (desktop) from the same C++ codebase.",
       "project.shmup.tech.note":
@@ -340,6 +339,8 @@
         "Engine-side additions the game needed: per-player scoring, a reusable damage-immunity flag, and safe inert-entity handling",
       "project.shmup.playButtonDuo": "Play Space Shooter (duo)",
       "project.shmup.playButtonSolo": "Play Space Shooter (solo)",
+      "project.shmup.duoMobileNotice": "This game mode is only available on PC.",
+      "project.shmup.playSoloFallback": "Play solo mode",
       "project.shmup.engineLink": "Engine project",
       "project.shmup.settingsAriaLabel": "Audio settings",
       "project.shmup.settingsTitle": "Audio settings",
@@ -521,13 +522,12 @@
       "home.featured.title": "Projet phare",
       "home.featured.tag": "Moteur · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique) validé par une démo platformer complète. Cette démo est jouable directement dans votre navigateur - il suffit de cliquer sur la capture d'écran.",
+        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique), mis en valeur par Space Shooter - un shoot-em-up jouable en solo, avec un mode coopératif à 2 joueurs sur le même moteur. Jouable directement dans votre navigateur, sur PC comme mobile - il suffit de cliquer sur la capture d'écran.",
       "home.featured.point1": "Ordre d'update déterministe et transitions de scènes",
       "home.featured.point2": "Box2D intégré aux entités gameplay",
       "home.featured.point3": "Architecture pensée pour faire évoluer le moteur",
       "home.featured.cta": "Voir le détail technique",
-      "home.featured.playCue": "Cliquer pour jouer",
-      "home.featured.playCueMobile": "Toucher pour jouer",
+      "home.featured.playCue": "Cliquer ou toucher pour jouer",
       "home.featured.playAgain": "Rejouer",
       "home.featured.closeGame": "Fermer",
       "home.featured.mobileNotice":
@@ -539,7 +539,6 @@
       "home.shmup.summary":
         "Un petit shoot-em-up vertical construit avec le même moteur C++, pensé pour le tactile : glissez pour vous déplacer, il tire tout seul.",
       "home.shmup.play": "Jouer sur ton téléphone",
-      "home.shmup.desktopNotice": "Ce jeu est pensé pour le tactile - reviens depuis ton téléphone pour l'essayer !",
       "home.experience.title": "Expérience professionnelle",
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 - Aujourd'hui",
@@ -574,7 +573,7 @@
       "home.card.engine3d.tag": "Moteur · 3D",
       "home.card.engine3d.summary": "C++ · OpenGL · éclairage · chargement de modèles",
       "home.card.shmup.tag": "Gameplay · C++ · Portage web",
-      "home.card.shmup.summary": "Co-op 2 joueurs · mode de survie infini",
+      "home.card.shmup.summary": "Solo & coop à 2 · survie infinie",
       "home.card.lifeawake.tag": "Puzzle · UE5",
       "home.card.lifeawake.summary": "Aventure-puzzle en 3D · portails & énigmes",
       "home.card.ue.minecraft.tag": "Prototype · UE",
@@ -748,9 +747,9 @@
       "project.nightlife.decision3": "Repères de navigation dans la ville nocturne",
 
       "project.engine.subtitle":
-        "Un moteur de jeu 2D en C++ (SFML + Box2D) avec une démo de platformer.",
+        "Un moteur de jeu 2D en C++ (SFML + Box2D), avec Space Shooter comme démo phare jouable.",
       "project.engine.description":
-        "Ce projet est un moteur 2D personnalisé développé en C++ avec SFML pour le rendu/les entrées et Box2D pour la physique. Une démo de platformer valide les systèmes du moteur via un scénario de gameplay concret (déplacements, collisions, ennemis, niveaux, interface).",
+        "Ce projet est un moteur 2D personnalisé développé en C++ avec SFML pour le rendu/les entrées et Box2D pour la physique. Sa vitrine principale est Space Shooter, un véritable shoot-em-up jouable en solo construit dessus - avec aussi un mode coopératif à 2 joueurs - pas une simple démo, mais un jeu complet à part entière.",
       "project.engine.challengeHighlight":
         "Construire un moteur modulaire implique de définir des frontières de systèmes claires tout en gardant la démo fun et stable.",
       "project.engine.challenge1":
@@ -793,7 +792,7 @@
       "project.engine.decision3": "Transitions de scène explicites pour éviter les corps physiques obsolètes",
       "project.engine.workflow.title": "Workflow de développement",
       "project.engine.workflow.body":
-        "Feature moteur → validation dans la démo platformer → refactor des frontières → documentation de l'ordre d'update.",
+        "Feature moteur → validation dans les jeux de démo → refactor des frontières → documentation de l'ordre d'update.",
       "project.engine.timeline.title": "Progression",
       "project.engine.t1.title": "Phase 1 - Boucle cœur",
       "project.engine.t1.body": "Fenêtre, entrées, changement de scène, scène gameplay vide",
@@ -801,13 +800,14 @@
       "project.engine.t2.body": "Intégration Box2D, déplacements, collisions, ennemis basiques",
       "project.engine.t3.title": "Phase 3 - Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
-      "project.engine.playButton": "Jouer à la démo",
-      "project.engine.shmupCrosslink":
-        'Ce moteur fait aussi tourner <a href="space-shooter.html">Space Shooter</a>, un vrai jeu co-op à 2 joueurs construit dessus - un projet à part entière, pas juste une seconde démo.',
-      "project.engine.mobileCta": "Cette démo nécessite un clavier - essayez plutôt Space Shooter",
+      "project.engine.playSpaceShooter": "Jouer à Space Shooter",
+      "project.engine.playButton": "Jouer au platformer (démo bonus)",
+      "project.engine.platformerBonus":
+        "La démo platformer d'origine du moteur reste également incluse, conservée en bonus : le scénario concret (déplacements, collisions, ennemis, niveaux, interface) sur lequel les systèmes du moteur ont d'abord été construits et testés.",
+      "project.engine.mobileCta": "Essayer Space Shooter à la place",
 
       "project.shmup.subtitle":
-        "Un shoot-em-up vertical co-op à 2 joueurs, construit sur mon moteur C++ maison et porté jusqu'au navigateur.",
+        "Un shoot-em-up vertical construit sur mon moteur C++ maison et porté jusqu'au navigateur - en solo, ou en coop à 2 joueurs.",
       "project.shmup.description":
         "Space Shooter a commencé comme une simple démo de validation pour l'intégration Box2D du moteur 2D, avant de devenir un vrai jeu à part entière : co-op local à 2 joueurs, mode de survie infini avec une courbe de difficulté croissante, score individuel et global, et un système de boost équilibré au fil de plusieurs sessions de playtest. Le jeu entier compile vers WebAssembly via Emscripten et tourne donc directement dans le navigateur - avec une gestion distincte du tactile (mobile) et du clavier (PC) à partir de la même base de code C++.",
       "project.shmup.tech.note":
@@ -840,6 +840,8 @@
         "Ajouts côté moteur nécessaires au jeu : score par joueur, un flag d'immunité réutilisable, et une gestion sûre des entités inertes",
       "project.shmup.playButtonDuo": "Jouer à Space Shooter (duo)",
       "project.shmup.playButtonSolo": "Jouer à Space Shooter (solo)",
+      "project.shmup.duoMobileNotice": "Ce mode de jeu n'est accessible que sur PC.",
+      "project.shmup.playSoloFallback": "Jouer au mode solo",
       "project.shmup.engineLink": "Projet du moteur",
       "project.shmup.settingsAriaLabel": "Réglages audio",
       "project.shmup.settingsTitle": "Réglages audio",

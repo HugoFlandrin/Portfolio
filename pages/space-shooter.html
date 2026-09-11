@@ -108,7 +108,7 @@
         </div>
 
         <h2 data-i18n="project.copyright">Copyright</h2>
-        <p data-i18n-html="project.shmup.musicCredit">
+        <p class="copyright-note" data-i18n-html="project.shmup.musicCredit">
             Background music: "Sweet 70s" by Clement Panchout, from his <a href="https://clement-panchout.itch.io/yet-another-free-music-pack" target="_blank" rel="noopener noreferrer">Yet Another Free Music Pack</a>.
         </p>
     </div>
@@ -116,11 +116,11 @@
     <div class="project-right">
         <div class="media-images">
             <figure class="media-item">
-                <video class="demo-video" poster="../static/img/SpaceShooterLogo.png" controls playsinline preload="metadata">
+                <video class="demo-video" poster="../static/img/SpaceShooterMobile.png" controls playsinline preload="metadata">
                     <source src="../static/mp4/Projects/SpaceShooter.mp4" type="video/mp4">
                 </video>
                 <div class="demo-video-actions">
-                    <button type="button" class="play-project-button" style="margin-top:0" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=infinite" data-game-aspect="portrait">
+                    <button type="button" class="play-project-button" style="margin-top:0" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=infinite" data-game-aspect="portrait" data-device="desktop">
                         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         <span data-i18n="project.shmup.playButtonDuo">Play Space Shooter (duo)</span>
                     </button>
@@ -164,7 +164,7 @@
             <h3 data-i18n="project.shmup.settingsTitle">Audio settings</h3>
             <div class="settings-row">
                 <label for="music-volume" data-i18n="project.shmup.musicLabel">Music</label>
-                <input type="range" id="music-volume" min="0" max="100" value="100">
+                <input type="range" id="music-volume" min="0" max="100" value="50">
                 <button type="button" class="settings-mute-btn" id="music-mute" aria-pressed="false" data-i18n-aria-label="project.shmup.muteMusicAriaLabel" aria-label="Mute music">
                     <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
                 </button>
@@ -189,6 +189,16 @@
         <div class="game-result-actions">
             <button type="button" class="btn btn-primary" id="game-result-retry" data-i18n="home.featured.playAgain">Play again</button>
             <button type="button" class="btn btn-secondary" id="game-result-close" data-i18n="home.featured.closeGame">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="game-mobile-notice" aria-hidden="true">
+    <div class="game-result-card">
+        <p data-i18n="project.shmup.duoMobileNotice">This game mode is only available on PC.</p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-secondary" id="game-mobile-notice-close" data-i18n="home.featured.closeGame">Close</button>
+            <button type="button" class="btn btn-primary" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=score" data-game-aspect="portrait" data-i18n="project.shmup.playSoloFallback">Play solo mode</button>
         </div>
     </div>
 </div>

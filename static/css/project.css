@@ -77,14 +77,26 @@ body[data-theme="prototype"] {
 }
 
 body[data-theme="shmup"] {
-    /* Sampled straight from the game's own play-area color (see
-       static/img/ShmupCoop.png) - the same "accent matches the project's
-       actual screenshot" pattern every other theme here follows (e.g.
-       engine's blue, lifeawake's green), rather than an invented sci-fi
-       palette unrelated to what the game actually looks like. */
-    --bg-color: #10130c;
-    --card-bg: #1a1f12;
-    --primary-color: #b6d53c;
+    /* Every color here is sampled from the project's own logo
+       (static/img/SpaceShooterMobile.png/SpaceShooterPC.png), not invented:
+       --primary-color is the logo's orange/ochre "SHOOTER" text - light blue
+       was tried here first, but 3D Game Engine's own theme already uses a
+       near-identical sky blue (#22d3ee, see all-work.html), so this frees
+       that color up and gives Space Shooter its own distinct identity.
+       --accent-color is the game's own play-area green (#b6d53c) - it used
+       to be --primary-color, but that put it directly on top of the
+       identical green in every screenshot thumbnail (all-work.html/
+       index.html's "▶ VOIR" hover), reading as camouflaged, illegible text.
+       Scoped down to just the tech-badge borders here instead (see below),
+       it still reads clearly as "this page's own green" without repeating
+       that mistake. --bg-color/--card-bg take the logo's own dark navy box
+       color (the light blue's natural, muted-dark home) - the old near-black
+       background didn't tie back to anything in the project; this does,
+       without being the green that would fight the "▶ VOIR" fix above. */
+    --bg-color: #0a1226;
+    --card-bg: #16233d;
+    --primary-color: #fdba74;
+    --accent-color: #b6d53c;
 }
 
 body {
@@ -211,6 +223,14 @@ body {
     text-decoration: underline;
 }
 
+/* The Copyright section's music-credit link, in this page's own green
+   (see the shmup theme's own comment above) - it's otherwise a bare <a>
+   with no styling of its own (unlike .links a above), so without this it
+   would just render as the browser's default link blue. */
+body[data-theme="shmup"] .copyright-note a {
+    color: var(--accent-color);
+}
+
 .project-right {
     max-width: 36%;
     min-width: 280px;
@@ -288,6 +308,15 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.14);
     background: rgba(255, 255, 255, 0.06);
     color: var(--text-color);
+}
+
+/* This page's own second accent (the game's own green, see the shmup
+   theme's own comment above) - every other theme leaves badges in the
+   generic grey/white above, since only this one has a second accent to
+   spend. */
+body[data-theme="shmup"] .tech-badge {
+    border-color: rgba(182, 213, 60, 0.35);
+    color: var(--accent-color);
 }
 
 .tech-note {

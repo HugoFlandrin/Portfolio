@@ -127,6 +127,16 @@ void ShipBehavior::update(float _deltaTime) {
 	if (sf::Keyboard::isKeyPressed(inputScheme.right)) keyDirection.x += 1.f;
 	if (sf::Keyboard::isKeyPressed(inputScheme.up))    keyDirection.y -= 1.f;
 	if (sf::Keyboard::isKeyPressed(inputScheme.down))  keyDirection.y += 1.f;
+	// Solo's alternate ZQSD keyset (see ShipInputScheme's own comment) - added
+	// on top of, not instead of, the primary keys above: holding one from each
+	// set at once just adds up before normalization below, so it can never
+	// move faster than either alone.
+	if (inputScheme.enableTouchAndMouse) {
+		if (sf::Keyboard::isKeyPressed(inputScheme.altLeft))  keyDirection.x -= 1.f;
+		if (sf::Keyboard::isKeyPressed(inputScheme.altRight)) keyDirection.x += 1.f;
+		if (sf::Keyboard::isKeyPressed(inputScheme.altUp))    keyDirection.y -= 1.f;
+		if (sf::Keyboard::isKeyPressed(inputScheme.altDown))  keyDirection.y += 1.f;
+	}
 	bool keyboardActive = keyDirection.x != 0.f || keyDirection.y != 0.f;
 
 	// Mouse/touch input: dragging the held left mouse button/finger moves the

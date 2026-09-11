@@ -274,8 +274,13 @@ void ShmupScene::init() {
 	if (!infiniteMode) {
 		// Same backing-panel-behind-text ordering trick as ScoreUpdate above.
 		Entity* timerEntity = createEntity();
-		// y=65, not 40 - see the score TextRenderer's own comment above.
-		TextRenderer* timerRender = new TextRenderer({ playAreaWidth - 110.f, 65.f }, *uiFont, "", 28);
+		// y=95, not 65 like the score text: at the right edge, y=65 still sits
+		// inside the hosting page's close button (top-right, see
+		// game-embed.css's .game-overlay-close) - the score avoids it purely by
+		// being centered, far from either corner button, but the timer sits
+		// right under it there. y=95 matches the solo health bar's row below,
+		// which is already clear of it.
+		TextRenderer* timerRender = new TextRenderer({ playAreaWidth - 110.f, 95.f }, *uiFont, "", 28);
 		timerEntity->createComponent<CountdownUI>()->init(timerRender, ShmupConstants::gameDuration);
 		timerEntity->addComponent(timerRender);
 		addUIEntity(timerEntity);
@@ -292,11 +297,16 @@ void ShmupScene::init() {
 		bool english = false;
 #endif
 		Entity* hintEntity = createEntity();
+		// Mentions both control schemes now that solo also accepts ZQSD
+		// alongside the arrow keys (see ShipInputScheme) - two lines and a
+		// bigger size than before (28 -> 34) so it stays readable with the
+		// extra text; the panel behind it (see ShmupControlHint::fitPanelToText())
+		// grows to fit either language/size automatically.
 		TextRenderer* hintRender = new TextRenderer(
 			{ playAreaWidth / 2.f, playAreaHeight / 2.f },
 			*uiFont,
-			english ? "Use the arrow keys to move" : "Utilise les flèches directionnelles",
-			28
+			english ? "Move with the arrow keys\nor with WASD" : "Déplace-toi avec les flèches directionnelles\nou avec ZQSD",
+			34
 		);
 		hintEntity->createComponent<ShmupControlHint>()->init(ship->getComponent<ShipBehavior>(), hintRender);
 		hintEntity->addComponent(hintRender);

@@ -119,6 +119,14 @@
     fill: currentColor;
 }
 
+/* [hidden] alone loses to the plain .game-overlay-settings rule above (equal
+   specificity, declared later) - this pairs the attribute with the class for
+   higher specificity so game-embed.js can actually hide the gear when the
+   loaded game isn't Space Shooter (see its own comment on this attribute). */
+.game-overlay-settings[hidden] {
+    display: none;
+}
+
 .game-overlay-settings:hover {
     background: var(--accent, #ff8a65);
     color: #1a1a1a;
