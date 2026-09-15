@@ -20,6 +20,13 @@ class EnemySpawner : public AComponent
 	// enemies don't land on top of each other - see update().
 	float lastSpawnX = -10000.f;
 	bool infiniteMode = false;
+	// Infinite mode only - see update()'s own comment on exactly what this
+	// changes. Solo gets its own spawn-interval curve (anchored to the
+	// timed demo's proven rate, not a softened copy of duo's) and a pulled-in
+	// long-haul HP/speed ceiling, since a lone ship can only ever be in one
+	// place to catch a falling power-up, unlike the 2-player co-op run this
+	// mode's numbers were originally tuned against.
+	bool soloDifficulty = false;
 
 public:
 	// _playAreaWidth/_playAreaHeight: the actual play area (see
@@ -27,6 +34,8 @@ public:
 	// width so they stay sensibly placed regardless of what size SDL
 	// actually reports for the canvas on a given device. _infiniteMode
 	// defaults to false so the existing timed-mode call site is unaffected.
-	void init(float _playAreaWidth, float _playAreaHeight, bool _infiniteMode = false);
+	// _soloDifficulty only matters when _infiniteMode is also true (see
+	// ShmupScene::init(), which passes !twoPlayer here).
+	void init(float _playAreaWidth, float _playAreaHeight, bool _infiniteMode = false, bool _soloDifficulty = false);
 	void update(float _deltaTime) override;
 };

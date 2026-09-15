@@ -203,13 +203,13 @@ scene-&gt;render();</pre>
         <div class="media-images">
             <figure class="media-item">
                 <img src="../static/img/SpaceShooterPC.png" alt="Space Shooter - the engine's flagship demo">
-                <button type="button" class="play-project-button" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=score" data-game-aspect="portrait">
+                <button type="button" class="play-project-button" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=score" data-game-aspect="portrait" data-game-demo="true">
                     <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    <span data-i18n="project.engine.playSpaceShooter">Play Space Shooter</span>
+                    <span data-i18n="project.engine.playSpaceShooter">Play the Space Shooter demo</span>
                 </button>
                 <button type="button" class="play-project-button play-project-button--secondary" data-game-trigger data-device="desktop">
                     <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    <span data-i18n="project.engine.playButton">Play the platformer (bonus demo)</span>
+                    <span data-i18n="project.engine.playButton">Play the bonus demo (platformer)</span>
                 </button>
             </figure>
         </div>
@@ -270,6 +270,7 @@ scene-&gt;render();</pre>
         <p id="game-result-score"></p>
         <div class="game-result-actions">
             <button type="button" class="btn btn-primary" id="game-result-retry" data-i18n="home.featured.playAgain">Play again</button>
+            <a href="space-shooter.html" class="btn btn-primary" id="game-result-discover" hidden data-i18n="home.featured.discoverGame">Discover Space Shooter</a>
             <button type="button" class="btn btn-secondary" id="game-result-close" data-i18n="home.featured.closeGame">Close</button>
         </div>
     </div>
@@ -280,7 +281,7 @@ scene-&gt;render();</pre>
         <p data-i18n="home.featured.mobileNotice">This demo needs a keyboard and isn't playable on mobile yet - come back on a desktop to try it!</p>
         <div class="game-result-actions">
             <button type="button" class="btn btn-secondary" id="game-mobile-notice-close" data-i18n="home.featured.closeGame">Close</button>
-            <button type="button" class="btn btn-primary" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=score" data-game-aspect="portrait" data-i18n="project.engine.mobileCta">Try Space Shooter instead</button>
+            <button type="button" class="btn btn-primary" data-game-trigger data-game-src="../static/space-shooter/index.html?mode=score" data-game-aspect="portrait" data-game-demo="true" data-i18n="project.engine.mobileCta">Try Space Shooter instead</button>
         </div>
     </div>
 </div>

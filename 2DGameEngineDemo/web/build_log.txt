@@ -1,0 +1,75 @@
+﻿.\build_shmup_only.bat : Setting up EMSDK environment (suppress these messages with EMSDK_QUIET=1)
+Au caractère Ligne:1 : 410
++ ... \Portfolio\2DGameEngineDemo\web"; .\build_shmup_only.bat 2>&1 | Out-F ...
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Setting up EMSD... EMSDK_QUIET=1):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Adding directories to PATH:
+PATH += C:\Users\hugof\Documents\LevelWeb Studio\Projects\MyProjects\Portfolio\2DGameEngineDemo\web\emsdk
+PATH += C:\Users\hugof\Documents\LevelWeb 
+Studio\Projects\MyProjects\Portfolio\2DGameEngineDemo\web\emsdk\upstream\emscripten
+
+Setting environment variables:
+PATH = C:\Users\hugof\Documents\LevelWeb 
+Studio\Projects\MyProjects\Portfolio\2DGameEngineDemo\web\emsdk;C:\Users\hugof\Documents\LevelWeb 
+Studio\Projects\MyProjects\Portfolio\2DGameEngineDemo\web\emsdk\upstream\emscripten;C:\php;C:\Program 
+Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program 
+Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\hugof\AppData\Local\Programs\Python\Pytho
+n311\Scripts\;C:\Users\hugof\AppData\Local\Programs\Python\Python311\;C:\Users\hugof\AppData\Local\Programs\Python\Laun
+cher\;C:\Users\hugof\AppData\Local\Microsoft\WindowsApps;C:\Users\hugof\AppData\Local\Programs\Microsoft VS Code\bin;C:
+\Users\hugof\AppData\Local\GitHubDesktop\bin;C:\Users\hugof\go\bin;C:\Users\hugof\.dotnet\tools;C:\ffmpeg\bin;C:\Window
+s\System32\WindowsPowerShell\v1.0\;C:\Windows\System32;C:\Users\hugof\AppData\Local\Programs\cursor\resources\app\bin;C
+:\Users\hugof\AppData\Roaming\npm;C:\Users\hugof\AppData\Local\Programs\Ollama;C:\Users\hugof\AppData\Local\Python\bin;
+C:\Users\hugof\AppData\Local\Programs\Python\Python313;C:\Users\hugof\AppData\Local\Programs\Python\Python311;C:\Progra
+m Files\nodejs;C:\Program Files\Git\mingw64\bin
+EMSDK = C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/emsdk
+EMSDK_NODE = C:\Users\hugof\Documents\LevelWeb 
+Studio\Projects\MyProjects\Portfolio\2DGameEngineDemo\web\emsdk\node\22.16.0_64bit\bin\node.exe
+EMSDK_PYTHON = C:\Users\hugof\Documents\LevelWeb 
+Studio\Projects\MyProjects\Portfolio\2DGameEngineDemo\web\emsdk\python\3.13.3_64bit\python.exe
+Clearing existing environment variable: EMSDK_PY
+[0/2] Re-checking globbed directories...
+[1/48] Scanning "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupEnemyBehavior.cpp" for CXX dependencies
+[2/48] Scanning "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/EnemySpawner.cpp" for CXX dependencies
+[3/48] Scanning "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/Shmup.cpp" for CXX dependencies
+[4/48] Scanning "C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupScene.cpp" for CXX dependencies
+[5/48] Generating CXX dyndep file CMakeFiles/shmup.dir/CXX.dd
+[6/11] Building CXX object CMakeFiles/shmup.dir/C_/Users/hugof/Documents/LevelWeb_Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupEnemyBehavior.cpp.o
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupEnemyBehavior.cpp:1:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup\ShmupEnemyBehavior.h:6:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\ICollisionEvent.h:2:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\ACollider.h:4:
+C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\RigidBody.h:36:15: warning: 'update' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   36 |         virtual void update(float _deltaTime);
+      |                      ^
+C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\AComponent.h:17:15: note: overridden virtual function is here
+   17 |         virtual void update(float _deltaTime) = 0;
+      |                      ^
+1 warning generated.
+[7/11] Building CXX object CMakeFiles/shmup.dir/C_/Users/hugof/Documents/LevelWeb_Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/EnemySpawner.cpp.o
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/EnemySpawner.cpp:5:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup\ShmupEnemyBehavior.h:6:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\ICollisionEvent.h:2:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\ACollider.h:4:
+C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\RigidBody.h:36:15: warning: 'update' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   36 |         virtual void update(float _deltaTime);
+      |                      ^
+C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\AComponent.h:17:15: note: overridden virtual function is here
+   17 |         virtual void update(float _deltaTime) = 0;
+      |                      ^
+1 warning generated.
+[8/11] Building CXX object CMakeFiles/shmup.dir/C_/Users/hugof/Documents/LevelWeb_Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/Shmup.cpp.o
+[9/11] Building CXX object CMakeFiles/shmup.dir/C_/Users/hugof/Documents/LevelWeb_Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupScene.cpp.o
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup/ShmupScene.cpp:6:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/Shmup\ShipBehavior.h:6:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\ICollisionEvent.h:2:
+In file included from C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\ACollider.h:4:
+C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\RigidBody.h:36:15: warning: 'update' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   36 |         virtual void update(float _deltaTime);
+      |                      ^
+C:/Users/hugof/Documents/LevelWeb Studio/Projects/MyProjects/Portfolio/2DGameEngineDemo/web/../Engine\AComponent.h:17:15: note: overridden virtual function is here
+   17 |         virtual void update(float _deltaTime) = 0;
+      |                      ^
+1 warning generated.
+[10/11] Linking CXX executable shmup\index.html

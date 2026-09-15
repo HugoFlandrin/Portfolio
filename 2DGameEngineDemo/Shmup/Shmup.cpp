@@ -56,20 +56,27 @@ int main()
     sceneManager->addScene(&level1);
 
     // Second registered instance of the same scene class, switched to an
-    // endless survival run instead of the timed one (see
-    // ShmupScene::setInfiniteMode()) - kept under its own scene name so both
-    // can coexist and be selected independently.
+    // endless 2-player co-op survival run instead of the timed solo one
+    // (see ShmupScene::setInfiniteMode()/setTwoPlayer()) - kept under its
+    // own scene name so all three can coexist and be selected independently.
     static ShmupScene level1Infinite;
     level1Infinite.setName("ShmupInfinite");
     level1Infinite.setInfiniteMode(true);
-    // TEMP DEV: 2-player co-op is being built directly on top of the
-    // infinite scene (the intended flagship combo) so it's reachable from
-    // the same dev-only default entry point (see shell-shmup.html) without
-    // more URL fiddling - revisit whether infinite/2-player should be
-    // selectable independently once both are further along.
     level1Infinite.setTwoPlayer(true);
     level1Infinite.setShowControlHint(isDesktop);
     sceneManager->addScene(&level1Infinite);
+
+    // Third instance: the same endless survival run, but solo - its
+    // EnemySpawner gets a softened curve instead of the one above's, which
+    // was tuned assuming two ships' worth of firepower/pickup coverage (see
+    // ShmupScene::init()'s EnemySpawner::init() call and EnemySpawner's own
+    // comment on soloDifficulty).
+    static ShmupScene level2InfiniteSolo;
+    level2InfiniteSolo.setName("ShmupInfiniteSolo");
+    level2InfiniteSolo.setInfiniteMode(true);
+    level2InfiniteSolo.setTwoPlayer(false);
+    level2InfiniteSolo.setShowControlHint(isDesktop);
+    sceneManager->addScene(&level2InfiniteSolo);
 
 #ifdef __EMSCRIPTEN__
     static WebGameOverScene gameOver;
@@ -79,16 +86,23 @@ int main()
     gameOver.setName("GameOver");
     sceneManager->addScene(&gameOver);
 
-    // window.__shmupMode (see shell-shmup.html) picks which of the two
+    // window.__shmupMode (see shell-shmup.html) picks which of the three
     // scenes above this run starts on - same read-a-JS-global pattern as
     // window.__shmupDevice above. Native desktop has no such global to read,
-    // so it always falls back to the default timed mode.
+    // so it always falls back to the default timed solo mode.
 #ifdef __EMSCRIPTEN__
-    bool startInfinite = EM_ASM_INT({ return window.__shmupMode === 'infinite' ? 1 : 0; });
+    int modeCode = EM_ASM_INT({
+        if (window.__shmupMode === 'infinite') return 1;
+        if (window.__shmupMode === 'infinite-solo') return 2;
+        return 0;
+    });
 #else
-    bool startInfinite = false;
+    int modeCode = 0;
 #endif
-    sceneManager->setCurrentScene(startInfinite ? &level1Infinite : &level1);
+    ShmupScene* startScene = &level1;
+    if (modeCode == 1) startScene = &level1Infinite;
+    else if (modeCode == 2) startScene = &level2InfiniteSolo;
+    sceneManager->setCurrentScene(startScene);
     sceneManager->getCurrentScene()->init();
     sceneManager->getCurrentScene()->commitPendingEntities();
 

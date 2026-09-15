@@ -58,6 +58,26 @@ namespace {
 	constexpr float infiniteMaxHpMultiplier = 3.f;
 	constexpr float infiniteMaxSpeedMultiplier = 2.f;
 
+	// Solo infinite's own spawn-interval curve, rather than scaling the duo
+	// one by a flat multiplier: that first attempt started even softer than
+	// the timed 90s demo's own flat [0.7s, 1.8s] rate (already well tuned by
+	// playtesting - see the non-infinite branch below), leaving early/mid
+	// solo runs with long idle stretches waiting on the next enemy. Matching
+	// the demo's own rate exactly then turned out too strong right from the
+	// opening seconds of an infinite run (no 90s end in sight to play toward,
+	// unlike the demo) - starting a bit softer than the demo but ramping
+	// down past it gives a gentle opening while still escalating for real.
+	constexpr float soloMinIntervalStart = 0.9f;
+	constexpr float soloMaxIntervalStart = 2.1f;
+	constexpr float soloMinIntervalEnd = 0.45f;
+	constexpr float soloMaxIntervalEnd = 1.0f;
+	// The long-haul HP/speed ramp's ceiling is still pulled in for solo
+	// (applied as a scale on how far it climbs *above* 1x, not a flat
+	// number, so it still starts at the same 1x baseline as duo) - a lone
+	// ship can only ever be in one place to catch a falling power-up, so it
+	// can't out-stack duo's power-up economy to match duo's own ceiling.
+	constexpr float soloStatRampScale = 0.65f;
+
 	float lerp(float _a, float _b, float _t) {
 		return _a + (_b - _a) * _t;
 	}
@@ -84,11 +104,12 @@ namespace {
 	}
 }
 
-void EnemySpawner::init(float _playAreaWidth, float _playAreaHeight, bool _infiniteMode) {
+void EnemySpawner::init(float _playAreaWidth, float _playAreaHeight, bool _infiniteMode, bool _soloDifficulty) {
 	playAreaWidth = _playAreaWidth;
 	spawnY = -_playAreaHeight * 0.031f;
 	nextSpawnTime = firstSpawnDelay;
 	infiniteMode = _infiniteMode;
+	soloDifficulty = _soloDifficulty;
 }
 
 void EnemySpawner::update(float _deltaTime) {
@@ -105,12 +126,17 @@ void EnemySpawner::update(float _deltaTime) {
 
 		float difficultyT = std::min(elapsed / infiniteRampDuration, 1.f);
 		float statScaleT = std::min(elapsed / infiniteStatRampDuration, 1.f);
-		float hpMultiplier = lerp(1.f, infiniteMaxHpMultiplier, statScaleT);
-		float speedMultiplier = lerp(1.f, infiniteMaxSpeedMultiplier, statScaleT);
+		float statScale = soloDifficulty ? soloStatRampScale : 1.f;
+		float hpMultiplier = 1.f + (lerp(1.f, infiniteMaxHpMultiplier, statScaleT) - 1.f) * statScale;
+		float speedMultiplier = 1.f + (lerp(1.f, infiniteMaxSpeedMultiplier, statScaleT) - 1.f) * statScale;
 		ShmupEnemyBehavior::spawn(scene, { x, spawnY }, pickRandomTypeRamped(rng, difficultyT), hpMultiplier, speedMultiplier);
 
-		float minInterval = lerp(infiniteMinIntervalStart, infiniteMinIntervalEnd, difficultyT);
-		float maxInterval = lerp(infiniteMaxIntervalStart, infiniteMaxIntervalEnd, difficultyT);
+		float minInterval = soloDifficulty
+			? lerp(soloMinIntervalStart, soloMinIntervalEnd, difficultyT)
+			: lerp(infiniteMinIntervalStart, infiniteMinIntervalEnd, difficultyT);
+		float maxInterval = soloDifficulty
+			? lerp(soloMaxIntervalStart, soloMaxIntervalEnd, difficultyT)
+			: lerp(infiniteMaxIntervalStart, infiniteMaxIntervalEnd, difficultyT);
 		std::uniform_real_distribution<float> intervalDist(minInterval, maxInterval);
 		nextSpawnTime = elapsed + intervalDist(rng);
 		return;

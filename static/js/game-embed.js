@@ -7,10 +7,16 @@
   const closeBtn = document.getElementById("game-overlay-close");
 
   const resultPopup = document.getElementById("game-result-popup");
+  const resultCard = resultPopup?.querySelector(".game-result-card");
   const resultTitle = document.getElementById("game-result-title");
   const resultScore = document.getElementById("game-result-score");
   const retryBtn = document.getElementById("game-result-retry");
   const closeResultBtn = document.getElementById("game-result-close");
+  // Only present on pages with a "demo" entry point (home page, engine
+  // page) - see showResult()'s own comment on what these are for. A single
+  // button (solo and duo used to be two separate ones) since both just lead
+  // to the same Space Shooter project page either way.
+  const discoverBtn = document.getElementById("game-result-discover");
 
   const mobileNotice = document.getElementById("game-mobile-notice");
   const mobileNoticeClose = document.getElementById("game-mobile-notice-close");
@@ -61,6 +67,12 @@
   frame.addEventListener("load", focusGameFrame);
 
   let activeSrc = DEFAULT_GAME_SRC;
+  // Set from the trigger's own data-game-demo (see openOverlay()) - marks
+  // this run as one of the "try it right here" entry points (home page,
+  // engine page), which always play the same solo/90s run. showResult()
+  // reads this to swap in a demo-flavored end screen instead of the normal
+  // win/loss one - see its own comment for why.
+  let isDemoContext = false;
 
   const buildFrameSrc = (src) => {
     const lang = window.__i18n?.getLang() ?? "en";
@@ -96,6 +108,7 @@
 
   const openOverlay = (trigger) => {
     activeSrc = trigger?.dataset.gameSrc || DEFAULT_GAME_SRC;
+    isDemoContext = trigger?.dataset.gameDemo === "true";
     overlayFrameEl?.classList.toggle("is-portrait", trigger?.dataset.gameAspect === "portrait");
 
     // The settings gear only means anything for Space Shooter (the only
@@ -135,38 +148,78 @@
 
   const showResult = (won, score, twoPlayer, scoreP1, scoreP2) => {
     const t = window.__i18n?.t ?? ((key) => key);
+
+    // Demo entry points (home page, engine page) always run the same
+    // solo/90s Score Attack, so "Victory!"/"Defeat" + Retry doesn't fit -
+    // there's nothing to "win" or "lose" in a fixed showcase run. Swap in a
+    // dedicated end screen instead: no verdict, no retry, just a thank-you
+    // and a nudge toward the two real modes on the project page.
+    if (isDemoContext) {
+      resultTitle.textContent = t("home.featured.demoEndTitle");
+      resultTitle.className = "";
+      resultCard?.classList.add("is-demo");
+      // A <br> (not a space) between the thank-you line and the score, plus
+      // its own span so CSS can size it to fit on one line - see
+      // game-embed.css's .is-demo rules.
+      resultScore.innerHTML = `<span class="game-result-demo-line">${t("home.featured.demoEndBody")}</span><br>${t("home.featured.resultScore")} ${score}`;
+      if (retryBtn) retryBtn.hidden = true;
+      if (discoverBtn) discoverBtn.hidden = false;
+      resultPopup.classList.add("is-open");
+      resultPopup.setAttribute("aria-hidden", "false");
+      return;
+    }
+
     resultTitle.textContent = won ? t("home.featured.resultWin") : t("home.featured.resultLoss");
     resultTitle.className = won ? "is-win" : "is-loss";
-    let scoreLine = `${t("home.featured.resultScore")} ${score}`;
+    resultCard?.classList.remove("is-demo");
+    const scoreLine = `${t("home.featured.resultScore")} ${score}`;
     if (twoPlayer) {
-
       const isFrench = (window.__i18n?.getLang?.() ?? "en") === "fr";
       const p1Label = isFrench ? "J1" : "P1";
       const p2Label = isFrench ? "J2" : "P2";
-      scoreLine += ` (${p1Label}: ${scoreP1} · ${p2Label}: ${scoreP2})`;
+      // A <br> (not inline parentheses) between the global score and the
+      // per-player breakdown - see the demo line above for the same reasoning.
+      resultScore.innerHTML = `${scoreLine}<br>${p1Label}: ${scoreP1} · ${p2Label}: ${scoreP2}`;
+    } else {
+      resultScore.textContent = scoreLine;
     }
-    resultScore.textContent = scoreLine;
+    if (retryBtn) retryBtn.hidden = false;
+    if (discoverBtn) discoverBtn.hidden = true;
     resultPopup.classList.add("is-open");
     resultPopup.setAttribute("aria-hidden", "false");
   };
 
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
-      e.preventDefault();
       const device = trigger.dataset.device;
       if (device === "desktop" && isMobile()) {
+        e.preventDefault();
         openNotice(mobileNotice);
         return;
       }
       if (device === "mobile" && !isMobile()) {
+        e.preventDefault();
         openNotice(desktopNotice);
         return;
       }
       // A trigger can itself sit inside a notice (e.g. the mobile notice's
       // own "play solo instead" fallback button - see space-shooter.html) -
-      // close it so it doesn't linger on top of the overlay it just opened.
+      // close it so it doesn't linger on top of whatever it just opened.
       closeNotice(mobileNotice);
       closeNotice(desktopNotice);
+
+      // A separately-hosted game (see platypus-of-corner.html - its build
+      // got heavy enough to warrant its own repo/Pages site instead of
+      // living in this one) opens in its own tab via the trigger's real
+      // href/target instead of the embedded overlay. No preventDefault here
+      // and no synthetic window.open(): letting the browser's native anchor
+      // navigation run is what makes ctrl/cmd-click, middle-click, and
+      // right-click "open in new tab" all keep working for free.
+      if (trigger.dataset.externalUrl) {
+        return;
+      }
+
+      e.preventDefault();
       openOverlay(trigger);
     });
 

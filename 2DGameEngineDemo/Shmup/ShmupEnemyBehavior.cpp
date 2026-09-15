@@ -85,8 +85,14 @@ void ShmupEnemyBehavior::spawn(AScene* _scene, sf::Vec2f _position, EnemyType _t
 	// Dynamic, not kinematic: see BulletBehavior::spawn() - Box2D never
 	// generates contact events between two non-dynamic bodies, so neither
 	// bullets nor the (also-dynamic) ship would ever detect touching an
-	// enemy otherwise.
-	enemy->createPhysics({ enemyPhysicsWidth * enemyScale, enemyPhysicsHeight * enemyScale }, b2_dynamicBody, true, 1.f, 0.f);
+	// enemy otherwise. groupIndex -2 (shared by every enemy, distinct from
+	// ships' own -1 - see ShmupScene::init()'s createShip): two enemies must
+	// never physically collide with (and shove) each other when their fall
+	// paths cross, only ever with ships/bullets. A different negative value
+	// than ships' -1 on purpose - Box2D's group filter only suppresses
+	// collision between shapes sharing the *same* negative group, so enemies
+	// still collide with ships normally despite both using negative groups.
+	enemy->createPhysics({ enemyPhysicsWidth * enemyScale, enemyPhysicsHeight * enemyScale }, b2_dynamicBody, true, 1.f, 0.f, false, -2);
 	enemy->getComponent<RigidBody>()->setGravityScale(0.f);
 
 	RigidBody* rb = enemy->getComponent<RigidBody>();

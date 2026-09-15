@@ -196,9 +196,11 @@ void ShmupScene::init() {
 	watcherEntity->createComponent<CoopGameOverWatcher>()->init(ship, ship2, twoPlayer);
 	addEntity(watcherEntity);
 
-	//Wave director - no visuals of its own.
+	//Wave director - no visuals of its own. Solo infinite gets a softened
+	// version of the curve (see EnemySpawner's own comment) - only matters
+	// when infiniteMode is also true, so this is a no-op for solo/90s.
 	Entity* spawner = createEntity();
-	spawner->createComponent<EnemySpawner>()->init(playAreaWidth, playAreaHeight, infiniteMode);
+	spawner->createComponent<EnemySpawner>()->init(playAreaWidth, playAreaHeight, infiniteMode, !twoPlayer);
 	addEntity(spawner);
 
 	//Coin pickups - active in every mode, entirely independent of the enemy

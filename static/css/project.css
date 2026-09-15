@@ -293,6 +293,25 @@ body[data-theme="shmup"] .copyright-note a {
     margin-top: 10px;
 }
 
+/* The solo/duo mode buttons pick a mode, neither is more "primary" than the
+   other, so they shouldn't read as one filled/one outlined anymore - both
+   get this page's own accent green as background and its own primary
+   orange as text/icon, overriding whichever of the two variant classes
+   (.play-project-button / --secondary) each one happens to carry. A black
+   text outline (stroke + a 4-direction shadow fallback for browsers without
+   -webkit-text-stroke) keeps the orange text readable against the green. */
+.demo-video-actions .play-project-button,
+.demo-video-actions .play-project-button--secondary {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.demo-video-actions .play-project-button svg {
+    fill: currentColor;
+}
+
 .tech-badges-row {
     display: flex;
     flex-wrap: wrap;

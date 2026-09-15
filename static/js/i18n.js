@@ -39,6 +39,9 @@
       "home.featured.resultWin": "Victory!",
       "home.featured.resultLoss": "Defeat",
       "home.featured.resultScore": "Score:",
+      "home.featured.demoEndTitle": "Demo complete",
+      "home.featured.demoEndBody": "Thanks for playing the Space Shooter demo!",
+      "home.featured.discoverGame": "Discover Space Shooter",
       "home.shmup.badge": "Mobile exclusive",
       "home.shmup.summary":
         "A small vertical shoot-em-up built with the same C++ engine, made for touch: drag to move, it fires on its own.",
@@ -299,8 +302,8 @@
       "project.engine.t2.body": "Box2D integration, movement, collisions, basic enemies",
       "project.engine.t3.title": "Phase 3 - Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
-      "project.engine.playSpaceShooter": "Play Space Shooter",
-      "project.engine.playButton": "Play the platformer (bonus demo)",
+      "project.engine.playSpaceShooter": "Play the Space Shooter demo",
+      "project.engine.playButton": "Play the bonus demo (platformer)",
       "project.engine.platformerBonus":
         "The engine's original platformer demo is still included too, kept as a bonus: the concrete scenario (movement, collisions, enemies, levels, UI) the core systems were first built and tested against.",
       "project.engine.mobileCta": "Try Space Shooter instead",
@@ -330,7 +333,7 @@
       "project.shmup.challenge3":
         "Balancing power-ups so they stay exciting without trivializing runs",
       "project.shmup.built1":
-        "Infinite survival mode with a two-stage difficulty ramp, alongside the original 90-second solo mode",
+        "Infinite survival mode - solo or 2-player co-op, each with its own difficulty curve - alongside the original 90-second demo run",
       "project.shmup.built2":
         "Local 2-player co-op with independent scoring and no run-ending on a single death",
       "project.shmup.built3":
@@ -535,6 +538,9 @@
       "home.featured.resultWin": "Victoire !",
       "home.featured.resultLoss": "Défaite",
       "home.featured.resultScore": "Score :",
+      "home.featured.demoEndTitle": "Fin de la démo",
+      "home.featured.demoEndBody": "Merci d'avoir joué à la démo de Space Shooter !",
+      "home.featured.discoverGame": "Découvrir Space Shooter",
       "home.shmup.badge": "Exclusivité mobile",
       "home.shmup.summary":
         "Un petit shoot-em-up vertical construit avec le même moteur C++, pensé pour le tactile : glissez pour vous déplacer, il tire tout seul.",
@@ -800,8 +806,8 @@
       "project.engine.t2.body": "Intégration Box2D, déplacements, collisions, ennemis basiques",
       "project.engine.t3.title": "Phase 3 - Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
-      "project.engine.playSpaceShooter": "Jouer à Space Shooter",
-      "project.engine.playButton": "Jouer au platformer (démo bonus)",
+      "project.engine.playSpaceShooter": "Jouer à la démo de Space Shooter",
+      "project.engine.playButton": "Jouer à la démo bonus (platformer)",
       "project.engine.platformerBonus":
         "La démo platformer d'origine du moteur reste également incluse, conservée en bonus : le scénario concret (déplacements, collisions, ennemis, niveaux, interface) sur lequel les systèmes du moteur ont d'abord été construits et testés.",
       "project.engine.mobileCta": "Essayer Space Shooter à la place",
@@ -831,7 +837,7 @@
       "project.shmup.challenge3":
         "Équilibrer les boost pour qu'ils restent excitants sans rendre la partie triviale",
       "project.shmup.built1":
-        "Mode de survie infini avec une rampe de difficulté en deux temps, aux côtés du mode solo de 90 secondes d'origine",
+        "Mode de survie infini - solo ou co-op à 2 joueurs, chacun avec sa propre courbe de difficulté - aux côtés du mode démo de 90 secondes d'origine",
       "project.shmup.built2":
         "Co-op local à 2 joueurs avec score individuel et pas de fin de partie sur une seule mort",
       "project.shmup.built3":
