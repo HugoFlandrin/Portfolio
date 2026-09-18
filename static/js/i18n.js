@@ -11,6 +11,11 @@
       "nav.contact": "Contact",
       "nav.lang": "FR",
       "nav.menuToggle": "Open navigation menu",
+      "nav.side.home": "Home",
+      "nav.side.featured": "Featured project",
+      "nav.side.experience": "Experience",
+      "nav.side.projects": "My projects",
+      "nav.side.contact": "Contact",
 
       "home.hero.eyebrow": "Gameplay & Engine Programmer",
       "home.hero.lead":
@@ -527,6 +532,11 @@
       "nav.contact": "Contact",
       "nav.lang": "EN",
       "nav.menuToggle": "Ouvrir le menu de navigation",
+      "nav.side.home": "Accueil",
+      "nav.side.featured": "Projet phare",
+      "nav.side.experience": "Expérience",
+      "nav.side.projects": "Mes projets",
+      "nav.side.contact": "Contact",
 
       "home.hero.eyebrow": "Programmeur Gameplay & Moteur",
       "home.hero.lead":

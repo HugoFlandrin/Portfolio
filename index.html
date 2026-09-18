@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="static/css/companion.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home-page">
     <!-- Page transition temporarily disabled — remove this comment wrapper to restore:
     <div id="page-transition" aria-hidden="true">
         <div class="pt-badge">
@@ -47,15 +47,21 @@
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
         </button>
-        <div class="nav-links" id="nav-menu">
+                        <div class="nav-links" id="nav-menu">
             <a href="#top" class="nav-link" data-i18n="nav.home">Home</a>
-            <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
-            <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
-            <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+            <a href="pages/all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
             <a href="pages/LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
             <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
         </div>
     </nav>
+
+    <aside class="home-side-nav" aria-label="Section navigation">
+        <button type="button" class="home-side-link is-active" data-target="#top" data-i18n="nav.side.home">Home</button>
+        <button type="button" class="home-side-link" data-target="#featured" data-i18n="nav.side.featured">Featured Project</button>
+        <button type="button" class="home-side-link" data-target="#experience" data-i18n="nav.side.experience">Experience</button>
+        <button type="button" class="home-side-link" data-target="#projects" data-i18n="nav.side.projects">My projects</button>
+        <button type="button" class="home-side-link" data-target="#contact" data-i18n="nav.side.contact">Contact</button>
+    </aside>
 
     <main id="top">
         <section class="hero-section section-reveal">
