@@ -89,6 +89,8 @@
       "home.card.ue.stamina.summary": "Running · exhaustion · recovery",
       "home.card.ue.boardgame.tag": "Prototype · UE",
       "home.card.ue.boardgame.summary": "Dice rolling & movement",
+      "home.card.unity.shoot.tag": "Prototype · Unity",
+      "home.card.unity.shoot.summary": "Shoot · animation · physic",
       "home.card.escape.tag": "Gameplay · UE5",
       "home.card.escape.summary": "First-person thriller · puzzles · atmosphere",
       "home.card.nightlife.tag": "Gameplay · UE5",
@@ -448,6 +450,21 @@
       "project.ue.boardgame.tech1": "Unreal Engine",
       "project.ue.boardgame.tech2": "Gameplay scripting",
 
+      "project.unity.shoot.subtitle":
+        "Unity technical prototype - character animation and ball shooting based on shot angle.",
+      "project.unity.shoot.description":
+        "This Unity prototype focuses on a simple shooting mechanic: the character can switch between an idle state and a kicking animation, while the ball receives a force when the shot is performed. The shooting force is determined by the selected shot angle. It is a technical demonstration of an isolated gameplay system, not a complete game.",
+      "project.unity.shoot.challengeHighlight":
+        "Coordinating the character animation with the shot input and applying the correct physical force to the ball according to the shooting angle.",
+      "project.unity.shoot.challenge1":
+        "Character idle and kicking animation states",
+      "project.unity.shoot.challenge2":
+        "Ball physics and force application when the kick connects",
+      "project.unity.shoot.challenge3":
+        "Shot direction and force based on the selected shooting angle",
+      "project.unity.shoot.tech1": "Unity",
+      "project.unity.shoot.tech2": "Gameplay scripting",
+
       "project.platypus.subtitle":
         "A dreamlike 3D platformer made in Unity during a 48h Game Jam, now playable directly in your browser.",
       "project.platypus.description":
@@ -588,6 +605,8 @@
       "home.card.ue.stamina.summary": "Course · épuisement · récupération",
       "home.card.ue.boardgame.tag": "Prototype · UE",
       "home.card.ue.boardgame.summary": "Lancer de dés & déplacement",
+      "home.card.unity.shoot.tag": "Prototype · Unity",
+      "home.card.unity.shoot.summary": "Tir · animation · physique",
       "home.card.escape.tag": "Gameplay · UE5",
       "home.card.escape.summary": "Thriller FPS · énigmes · atmosphère",
       "home.card.nightlife.tag": "Gameplay · UE5",
@@ -951,6 +970,21 @@
         "Flux de tour et gestion d'état pour la progression sur le plateau",
       "project.ue.boardgame.tech1": "Unreal Engine",
       "project.ue.boardgame.tech2": "Scripting gameplay",
+
+      "project.unity.shoot.subtitle":
+        "Prototype technique Unity - animation de personnage et tir de balle en fonction de l'angle de tir.",
+      "project.unity.shoot.description":
+        "Ce prototype Unity se concentre sur un mécanisme de tir simple : le personnage peut passer d'un état d'inaction à une animation de coup de pied, tandis que le ballon subit une force lorsque le tir est effectué. La force du tir est déterminée par l'angle de tir sélectionné. Il s'agit d'une démonstration technique d'un système de gameplay isolé, et non d'un jeu complet.",
+      "project.unity.shoot.challengeHighlight":
+        "Coordonner l'animation du personnage avec les données de tir et appliquer la force physique appropriée à la balle en fonction de l'angle de tir.",
+      "project.unity.shoot.challenge1":
+        "États d'animation du personnage au repos et lors du tir",
+      "project.unity.shoot.challenge2":
+        "Physique du ballon et application de la force lorsque le tir touche la cible",
+      "project.unity.shoot.challenge3":
+        "Direction et puissance du tir en fonction de l'angle de tir sélectionné",
+      "project.unity.shoot.tech1": "Unity",
+      "project.unity.shoot.tech2": "Scripting gameplay",
 
       "project.platypus.subtitle":
         "Un platformer 3D onirique réalisé sur Unity pendant une Game Jam de 48h, désormais jouable directement dans votre navigateur.",
