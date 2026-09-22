@@ -25,9 +25,9 @@
       "home.cta.linkedin": "LinkedIn",
       "home.cta.itch": "Itch.io",
       "home.cta.freelance": "My freelance activity",
-      "home.status.label": "Currently looking for",
+      "home.status.label": "Developer · Open to collaboration",
       "home.status.text":
-        "Internship or junior role - Gameplay, Engine, or Generalist Programmer.",
+        "I am already building and shipping projects in Gameplay, Engine, and Generalist Programming. If you have an interesting project, let’s talk !",
       "home.featured.title": "Featured project",
       "home.featured.tag": "Engine · C++ · SFML · Box2D",
       "home.featured.summary":
@@ -501,27 +501,27 @@
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",
       "freelance.subtitle":
-        "LevelWeb Studio is my freelance activity focused on web and video game development. Through this structure, I work on concrete and rewarding projects, ranging from modern web applications to gameplay and technical programming. It allows me to continuously improve my skills while gaining real-world experience in software development, client communication, and project management.",
+        "LevelWeb Studio is my independent development activity focused on web and video game development. I build concrete solutions ranging from modern web applications to gameplay systems and technical prototypes, with a focus on useful, maintainable results.",
       "freelance.what.title": "What I can help with",
       "freelance.what.item1": "Web development (front-end & back-end)",
       "freelance.what.item2": "Video game development (gameplay / tools / prototypes)",
       "freelance.what.item3": "Improving and maintaining existing projects",
-      "freelance.profile.title": "Profile",
+      "freelance.profile.title": "My approach",
       "freelance.profile.body":
-        "I have around 1 year of experience, mainly doing front-end and back-end modifications on existing websites. I position myself as a junior / beginner profile: motivated, rigorous, and focused on shipping useful improvements.",
+        "Developer equally comfortable with web, gameplay, and engine work, I build web and game projects, from improving existing products to creating new features and prototypes. I bring a practical, rigorous approach and stay open to discussing collaborations that need these skills.",
       "freelance.experience.title": "Past freelance missions",
       "freelance.exp1.title": "Ongoing website maintenance - front-end, back-end & SQL",
       "freelance.exp1.body":
         "First freelance mission: maintaining a client's production website, handling front-end, back-end, and SQL changes whenever new features or fixes were requested.",
       "freelance.exp2.title": "Full website rebuild - ASP.NET Core",
       "freelance.exp2.body":
-        "The same client then brought me on to fully rebuild the site on a more modern stack (ASP.NET Core), replacing the legacy implementation.",
+        "The same client then brought me on to fully rebuild the site on a more modern stack (ASP.NET Core), replacing the legacy implementation (this rebuild was ultimately completed as an internship).",
       "freelance.rates.title": "Rates",
       "freelance.rates.body":
         "Negotiable depending on scope, timeline, and project constraints.",
       "freelance.cta.title": "Let’s talk",
       "freelance.cta.body":
-        "If you have a project in mind (new build, improvements, bug fixes, or a prototype), send me a message and we’ll discuss the best collaboration format.",
+        "I genuinely enjoy discovering new projects and turning good ideas into concrete results. If you have a project in mind (new build, improvements, bug fixes, or a prototype), send me a message - I’d be happy to hear about it and find the best way to collaborate.",
       "freelance.cta.contactLink": "Go to contact",
     },
     fr: {
@@ -546,9 +546,9 @@
       "home.cta.linkedin": "LinkedIn",
       "home.cta.itch": "Itch.io",
       "home.cta.freelance": "Mon activité freelance",
-      "home.status.label": "Actuellement à la recherche de",
+      "home.status.label": "Développeur · Ouvert aux collaborations",
       "home.status.text":
-        "Stage ou poste junior - Programmeur Gameplay, Moteur, ou Généraliste.",
+        "Je travaille déjà sur des projets de gameplay, de moteur et de programmation généraliste. Vous avez un projet intéressant ? Parlons-en !",
       "home.featured.title": "Projet phare",
       "home.featured.tag": "Moteur · C++ · SFML · Box2D",
       "home.featured.summary":
@@ -1027,28 +1027,28 @@
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",
       "freelance.subtitle":
-        "LevelWeb Studio est mon activité indépendante axée sur le développement web et de jeux vidéo. Dans le cadre de cette structure, je travaille sur des projets concrets et enrichissants, allant des applications web modernes à la programmation technique et au gameplay. Cela me permet d'améliorer continuellement mes compétences tout en acquérant une expérience pratique dans le développement logiciel, la communication avec les clients et la gestion de projets.",
+        "LevelWeb Studio est mon activité indépendante de développement web et de jeux vidéo. Je conçois des solutions concrètes, des applications web modernes aux systèmes de gameplay et prototypes techniques, avec une attention portée à l'utilité et à la maintenabilité.",
       "freelance.what.title": "Ce que je peux faire",
       "freelance.what.item1": "Développement web (front-end & back-end)",
       "freelance.what.item2":
         "Développement de jeux vidéo (gameplay / outils / prototypes)",
       "freelance.what.item3": "Amélioration et maintenance de projets existants",
-      "freelance.profile.title": "Profil",
+      "freelance.profile.title": "Mon approche",
       "freelance.profile.body":
-        "J’ai environ 1 an d’expérience, principalement sur des prestations de modifications front-end et back-end sur des sites internet existants. Je me positionne comme un profil jeune / débutant : motivé, rigoureux, et orienté résultats.",
+        "Développeur aussi à l'aise en web qu'en gameplay et engine, je travaille sur des projets web et jeu vidéo, de l'amélioration de produits existants à la création de fonctionnalités et de prototypes. J'adopte une approche concrète et rigoureuse, et je reste ouvert aux discussions pour construire une collaboration adaptée.",
       "freelance.experience.title": "Missions freelance passées",
       "freelance.exp1.title": "Maintenance de site - front-end, back-end & SQL",
       "freelance.exp1.body":
         "Première mission freelance : maintenance du site en production d'un client, avec des modifications front-end, back-end et SQL à chaque nouvelle demande de fonctionnalité ou correctif.",
       "freelance.exp2.title": "Refonte complète du site - ASP.NET Core",
       "freelance.exp2.body":
-        "Le même client m'a ensuite confié une refonte complète du site sur une stack plus moderne (ASP.NET Core), en remplacement de l'implémentation existante.",
+        "Le même client m'a ensuite confié une refonte complète du site sur une stack plus moderne (ASP.NET Core), en remplacement de l'implémentation existante (cette refonte a finalement été réalisée sous la forme d'un stage).",
       "freelance.rates.title": "Rémunération",
       "freelance.rates.body":
         "Négociable selon le périmètre, les délais et les contraintes du projet.",
       "freelance.cta.title": "Discutons",
       "freelance.cta.body":
-        "Si vous avez un projet en tête (création, améliorations, corrections de bugs, ou prototype), envoyez-moi un message et nous définirons ensemble le format de collaboration le plus adapté.",
+        "J'aime vraiment découvrir de nouveaux projets et transformer de bonnes idées en résultats concrets. Si vous avez un projet en tête (création, améliorations, corrections de bugs ou prototype), envoyez-moi un message : je serai heureux d'en discuter avec vous et de trouver la meilleure façon de collaborer.",
       "freelance.cta.contactLink": "Aller au contact",
     },
   };
