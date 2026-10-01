@@ -15,7 +15,7 @@
   // Only present on pages with a "demo" entry point (home page, engine
   // page) - see showResult()'s own comment on what these are for. A single
   // button (solo and duo used to be two separate ones) since both just lead
-  // to the same Space Shooter project page either way.
+  // to the same Last Wing: Endless Waves project page either way.
   const discoverBtn = document.getElementById("game-result-discover");
 
   const mobileNotice = document.getElementById("game-mobile-notice");
@@ -96,6 +96,33 @@
       ? `&w=${Math.round(frame.offsetWidth)}&h=${Math.round(frame.offsetHeight)}`
       : "";
 
+    // How far down (in the Shmup HUD's own 720-wide virtual-unit layout
+    // space - see ShmupConstants::playAreaWidth) the gear/close buttons'
+    // own bottom edge reaches, so the WASM side can keep its top-corner HUD
+    // (health bar, score) clear of them by actual measurement instead of a
+    // margin hardcoded in C++ and tuned against whichever few viewport
+    // sizes happened to get tested. Both buttons are fixed-size HTML
+    // (40x40 CSS px) sitting on top of the canvas; as the embedding iframe
+    // gets narrower/shorter their footprint in virtual units keeps growing
+    // (no upper bound), so a fixed virtual-unit margin that was safe on
+    // every size actually tried kept overlapping again on a narrower one
+    // nobody had (see ShmupScene.cpp's own history of this exact bug).
+    // offsetTop/Height, not getBoundingClientRect, for the same transform-
+    // immunity reasoning as the size measurement above - both buttons are
+    // transformed along with .game-overlay-frame during its own open
+    // animation.
+    const settingsToggle = document.getElementById("game-settings-toggle");
+    let uiSafeTop = "";
+    if (frame && frame.offsetWidth) {
+      const scale = 720 / frame.offsetWidth;
+      const bottoms = [settingsToggle, closeBtn]
+        .filter((btn) => btn && !btn.hidden)
+        .map((btn) => (btn.offsetTop + btn.offsetHeight) * scale);
+      if (bottoms.length) {
+        uiSafeTop = `&uiSafeTop=${Math.ceil(Math.max(...bottoms))}`;
+      }
+    }
+
     const device = isMobile() ? "mobile" : "desktop";
     // A trigger's own data-game-src can already carry a query string (e.g.
     // "?mode=infinite" to pick a specific Shmup run) - append with "&" in
@@ -103,7 +130,7 @@
     // as a literal character inside the "mode" value rather than starting
     // a new param, silently swallowing lang/w/h/device.
     const separator = src.includes("?") ? "&" : "?";
-    return `${src}${separator}lang=${lang}${size}&device=${device}`;
+    return `${src}${separator}lang=${lang}${size}${uiSafeTop}&device=${device}`;
   };
 
   const openOverlay = (trigger) => {
@@ -111,20 +138,31 @@
     isDemoContext = trigger?.dataset.gameDemo === "true";
     overlayFrameEl?.classList.toggle("is-portrait", trigger?.dataset.gameAspect === "portrait");
 
-    // The settings gear only means anything for Space Shooter (the only
+    // The settings gear only means anything for Last Wing: Endless Waves (the only
     // build wired to WebBridge's ShmupSet* audio exports) - pages that can
     // also open the platformer from the same overlay (2d-game-engine.html)
     // would otherwise show a gear that silently does nothing once that
     // other game is loaded instead.
     const settingsToggle = document.getElementById("game-settings-toggle");
     if (settingsToggle) {
-      settingsToggle.hidden = !activeSrc.includes("space-shooter");
+      settingsToggle.hidden = !activeSrc.includes("last-wing");
     }
 
-    frame.src = buildFrameSrc(activeSrc);
+    // Opened (and thus laid out/sized) BEFORE measuring the frame below -
+    // was the other way around, which could occasionally measure the frame
+    // mid-layout (e.g. right on the very first open, before the browser had
+    // ever had a reason to lay out this off-screen content) and get back
+    // 0x0. That 0x0 then got baked into the iframe's own src as "&w=0&h=0",
+    // which shell-shmup.html's own isStandalone check (parseInt("0",10) is
+    // falsy, same as no value at all) reads identically to no size ever
+    // having been passed - showing its own standalone-only gear/settings
+    // button on top of this page's real one, which just silently did
+    // nothing since nothing here drives it. See shell-shmup.html's own
+    // isEmbedded check for the belt-and-suspenders fix on that side too.
     overlay.classList.add("is-open");
     overlay.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    frame.src = buildFrameSrc(activeSrc);
   };
 
   const closeOverlay = () => {
@@ -136,7 +174,7 @@
     resultPopup.classList.remove("is-open");
     resultPopup.setAttribute("aria-hidden", "true");
 
-    // Only present on pages with a settings panel (Space Shooter) - reset
+    // Only present on pages with a settings panel (Last Wing: Endless Waves) - reset
     // here too so it doesn't linger visually "open" the next time this
     // overlay opens on a fresh game instance, which always boots unpaused.
     const settingsPanel = document.getElementById("game-settings-panel");
@@ -203,7 +241,7 @@
         return;
       }
       // A trigger can itself sit inside a notice (e.g. the mobile notice's
-      // own "play solo instead" fallback button - see space-shooter.html) -
+      // own "play solo instead" fallback button - see last-wing.html) -
       // close it so it doesn't linger on top of whatever it just opened.
       closeNotice(mobileNotice);
       closeNotice(desktopNotice);
@@ -224,6 +262,12 @@
     });
 
     trigger.addEventListener("mousemove", (e) => {
+      // Dropped again on every move, not just once on re-entry: a fast
+      // leave+re-enter can land the next mousemove before mouseleave's own
+      // 0.35s recenter transition has finished, which would otherwise still
+      // be in effect and make live tracking lag behind the cursor instead
+      // of snapping straight to it (see .is-recentering in styles.css).
+      trigger.classList.remove("is-recentering");
       const rect = trigger.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
       const y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -232,6 +276,10 @@
     });
 
     trigger.addEventListener("mouseleave", () => {
+      // Only this reset should animate - see .is-recentering in styles.css,
+      // added here and stripped again on the next mousemove above so live
+      // cursor-tracking itself stays instant the rest of the time.
+      trigger.classList.add("is-recentering");
       trigger.style.setProperty("--zoom-x", "50%");
       trigger.style.setProperty("--zoom-y", "50%");
     });

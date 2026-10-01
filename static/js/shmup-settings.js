@@ -32,6 +32,17 @@
     frame.contentWindow?.postMessage({ type, value }, "*");
   };
 
+  // Drives the mute button's own volume-bar icon (see the SVG's vol-bar-1/
+  // vol-bar-2 rects in index.html/pages/last-wing.html and the matching
+  // CSS in game-embed.css) - volume alone, nothing to do with mute (see
+  // syncUI()'s own is-muted class, which swaps the bars for a cross
+  // regardless of what this returns): 0 bars at 0%, 1 bar at/under half,
+  // 2 bars above half, same break points an OS volume indicator would use.
+  const volumeLevel = (volume) => {
+    if (volume <= 0) return 0;
+    return volume > 50 ? 2 : 1;
+  };
+
   const applyAll = () => {
     send("setMusicVolume", state.musicVolume / 100);
     send("setSfxVolume", state.sfxVolume / 100);
@@ -44,8 +55,10 @@
     sfxVolumeInput.value = state.sfxVolume;
     musicMuteBtn.classList.toggle("is-muted", state.musicMuted);
     musicMuteBtn.setAttribute("aria-pressed", String(state.musicMuted));
+    musicMuteBtn.dataset.level = volumeLevel(state.musicVolume);
     sfxMuteBtn.classList.toggle("is-muted", state.sfxMuted);
     sfxMuteBtn.setAttribute("aria-pressed", String(state.sfxMuted));
+    sfxMuteBtn.dataset.level = volumeLevel(state.sfxVolume);
   };
 
   syncUI();
@@ -88,12 +101,14 @@
   musicVolumeInput.addEventListener("input", () => {
     state.musicVolume = Number(musicVolumeInput.value);
     localStorage.setItem(STORAGE.musicVolume, String(state.musicVolume));
+    musicMuteBtn.dataset.level = volumeLevel(state.musicVolume);
     send("setMusicVolume", state.musicVolume / 100);
   });
 
   sfxVolumeInput.addEventListener("input", () => {
     state.sfxVolume = Number(sfxVolumeInput.value);
     localStorage.setItem(STORAGE.sfxVolume, String(state.sfxVolume));
+    sfxMuteBtn.dataset.level = volumeLevel(state.sfxVolume);
     send("setSfxVolume", state.sfxVolume / 100);
   });
 

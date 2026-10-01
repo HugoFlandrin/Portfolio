@@ -122,7 +122,7 @@
 /* [hidden] alone loses to the plain .game-overlay-settings rule above (equal
    specificity, declared later) - this pairs the attribute with the class for
    higher specificity so game-embed.js can actually hide the gear when the
-   loaded game isn't Space Shooter (see its own comment on this attribute). */
+   loaded game isn't Last Wing: Endless Waves (see its own comment on this attribute). */
 .game-overlay-settings[hidden] {
     display: none;
 }
@@ -226,6 +226,40 @@
 .settings-row .settings-mute-btn.is-muted {
     background: var(--accent, #ff8a65);
     color: #1a1a1a;
+}
+
+/* Volume-bar indicator (the two small rects next to the speaker cone in the
+   SVG - see index.html/pages/last-wing.html) - all three start hidden.
+   [data-level] (set by shmup-settings.js's volumeLevel(), volume alone -
+   nothing to do with mute) reveals however many bars match the current
+   volume: 0 at 0%, 1 at/under half, 2 above half - but only while NOT muted
+   (:not(.is-muted)): muted hides the bars regardless of level and shows the
+   cross instead (below), rather than the two ever mixing - a muted button
+   reads as muted even if the last volume before muting was high. fill is
+   inherited from .settings-mute-btn svg's own fill:currentColor above, so
+   only opacity needs toggling here. */
+.settings-row .settings-mute-btn .vol-bar-1,
+.settings-row .settings-mute-btn .vol-bar-2,
+.settings-row .settings-mute-btn .vol-cross {
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.settings-row .settings-mute-btn[data-level="1"]:not(.is-muted) .vol-bar-1 {
+    opacity: 1;
+}
+
+.settings-row .settings-mute-btn[data-level="2"]:not(.is-muted) .vol-bar-1,
+.settings-row .settings-mute-btn[data-level="2"]:not(.is-muted) .vol-bar-2 {
+    opacity: 1;
+}
+
+/* Cross (see the SVG's vol-cross rects) - muted only, independent of
+   volume/level: this is "sound off" (the mute toggle), not "volume at 0%",
+   which instead shows no bars and no cross (see above) - two different
+   states the icon needs to tell apart. */
+.settings-row .settings-mute-btn.is-muted .vol-cross {
+    opacity: 1;
 }
 
 #game-result-popup {

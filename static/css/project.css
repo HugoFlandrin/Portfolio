@@ -78,11 +78,11 @@ body[data-theme="prototype"] {
 
 body[data-theme="shmup"] {
     /* Every color here is sampled from the project's own logo
-       (static/img/SpaceShooterMobile.png/SpaceShooterPC.png), not invented:
+       (static/img/LastWingMobile.png/LastWingPC.png), not invented:
        --primary-color is the logo's orange/ochre "SHOOTER" text - light blue
        was tried here first, but 3D Game Engine's own theme already uses a
        near-identical sky blue (#22d3ee, see all-work.html), so this frees
-       that color up and gives Space Shooter its own distinct identity.
+       that color up and gives Last Wing: Endless Waves its own distinct identity.
        --accent-color is the game's own play-area green (#b6d53c) - it used
        to be --primary-color, but that put it directly on top of the
        identical green in every screenshot thumbnail (all-work.html/
@@ -264,7 +264,13 @@ body[data-theme="shmup"] .copyright-note a {
     max-height: 48vh;
     max-width: 270px;
     margin: 0 auto;
-    object-fit: cover;
+    /* contain, not cover: the actual recording already matches this box's
+       9:16 ratio exactly, so contain changes nothing for it - but the poster
+       (LastWing-EndlessWaves.png, square) would otherwise get ~44% of its
+       width cover-cropped away before the video starts playing. contain
+       letterboxes it instead (centered, against the same black background
+       below), showing the full logo. */
+    object-fit: contain;
     border-radius: 10px;
     background: #000;
 }
@@ -281,8 +287,13 @@ body[data-theme="shmup"] .copyright-note a {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 10px auto 0;
-    max-width: 270px;
+    margin: 0 auto;
+    width: max-content;
+    max-width: 100%;
+}
+
+.demo-video-actions .play-project-button span {
+    white-space: nowrap;
 }
 
 .media-item img:hover {

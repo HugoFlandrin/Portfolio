@@ -31,7 +31,7 @@
       "home.featured.title": "Featured project",
       "home.featured.tag": "Engine · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics), showcased through Space Shooter - a full solo shoot-em-up, with a 2-player co-op mode built on the same engine. Playable directly in your browser, on desktop and mobile - just click the screenshot.",
+        "Custom C++ engine with modular systems (game loop, scenes, rendering, physics), showcased through Last Wing: Endless Waves - a full solo shoot-em-up, with a 2-player co-op mode built on the same engine. Playable directly in your browser, on desktop and mobile - just click the screenshot.",
       "home.featured.point1": "Deterministic update order & scene transitions",
       "home.featured.point2": "Box2D integrated with gameplay entities",
       "home.featured.point3": "Architecture designed for maintainable engine growth",
@@ -45,8 +45,8 @@
       "home.featured.resultLoss": "Defeat",
       "home.featured.resultScore": "Score:",
       "home.featured.demoEndTitle": "Demo complete",
-      "home.featured.demoEndBody": "Thanks for playing the Space Shooter demo!",
-      "home.featured.discoverGame": "Discover Space Shooter",
+      "home.featured.demoEndBody": "Thanks for playing the Last Wing: Endless Waves demo!",
+      "home.featured.discoverGame": "Discover Last Wing: Endless Waves",
       "home.shmup.badge": "Mobile exclusive",
       "home.shmup.summary":
         "A small vertical shoot-em-up built with the same C++ engine, made for touch: drag to move, it fires on its own.",
@@ -55,21 +55,20 @@
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 - Present",
       "home.exp1.role": "Web & Game Development - Freelance",
-      "home.exp1.item1": "Front-end and back-end updates on production websites",
-      "home.exp1.item2": "Feature delivery, bug fixes, and iterative client feedback loops",
-      "home.exp1.item3": "Small-scope game and web prototypes under time constraints",
+      "home.exp1.item1": "Ongoing front-end, back-end & SQL maintenance on a client's production website",
+      "home.exp1.item2": "Full site rebuild on a modern stack (ASP.NET Core), completed as an internship",
       "home.exp2.type": "Academic / Personal",
       "home.exp2.period": "2023 - Present",
-      "home.exp2.role": "Gameplay & Engine Projects - Lead Programmer",
+      "home.exp2.role": "Gameplay & Engine Projects - Solo Developer",
       "home.exp2.item1": "Designed and implemented a modular 2D game engine (SFML + Box2D)",
-      "home.exp2.item2": "Shipped gameplay systems for UE5 and Unity projects (jam & semester scope)",
+      "home.exp2.item2": "Shipped Last Wing: Endless Waves, a full shoot-em-up with 2-player co-op, compiled to WebAssembly",
       "home.exp2.item3": "Owned technical architecture decisions, debugging, and milestone delivery",
       "home.exp3.type": "University",
-      "home.exp3.period": "Team projects",
-      "home.exp3.role": "Game Development - Programmer",
-      "home.exp3.item1": "Collaborated on multidisciplinary teams (design, art, audio)",
-      "home.exp3.item2": "Delivered playable builds under hackathon and coursework deadlines",
-      "home.exp3.item3": "Built player interactions, pacing systems, and level scripting",
+      "home.exp3.period": "Oct 2025 - May 2026",
+      "home.exp3.role": "Life Awake - Gameplay Programmer",
+      "home.exp3.item1": "Designing worlds distinct and recognizable enough to feel varied, without breaking the game's overall coherence",
+      "home.exp3.item2": "Puzzle and trial systems: rotating valves, light-reflection puzzles, and telescope observation",
+      "home.exp3.item3": "Portal traversal connecting the game's distinct worlds",
       "home.projects.title": "Projects",
       "home.projects.viewAll": "View all my work",
       "home.card.enter": "▶ SEE",
@@ -108,8 +107,8 @@
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
         "This portfolio highlights engineering decisions and system design - built as a lightweight static site (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.4",
-      "home.footer.updated": "Updated September 2026",
+      "home.footer.version": "Portfolio v1.5",
+      "home.footer.updated": "Updated October 2026",
 
       "ach.unlocked": "Achievement unlocked",
       "ach.explorer": "Explorer (3 projects visited)",
@@ -256,9 +255,9 @@
       "project.nightlife.decision3": "Navigation landmarks in night city for readability",
 
       "project.engine.subtitle":
-        "A C++ 2D game engine (SFML + Box2D), with Space Shooter as its flagship playable demo.",
+        "A C++ 2D game engine (SFML + Box2D), with Last Wing: Endless Waves as its flagship playable demo.",
       "project.engine.description":
-        "This project is a custom 2D engine built in C++ using SFML for rendering/input and Box2D for physics. Its main showcase is Space Shooter, a full solo shoot-em-up built on top of it - with a 2-player co-op mode too - not just a demo, but a complete game in its own right.",
+        "This project is a custom 2D engine built in C++ using SFML for rendering/input and Box2D for physics. Its main showcase is Last Wing: Endless Waves, a full solo shoot-em-up built on top of it - with a 2-player co-op mode too - not just a demo, but a complete game in its own right.",
       "project.engine.challengeHighlight":
         "Building a modular engine means defining clear system boundaries while keeping the demo game fun and stable.",
       "project.engine.challenge1":
@@ -309,16 +308,16 @@
       "project.engine.t2.body": "Box2D integration, movement, collisions, basic enemies",
       "project.engine.t3.title": "Phase 3 - Content & UI",
       "project.engine.t3.body": "Two levels, menus, score/timer, game over flow",
-      "project.engine.playSpaceShooter": "Play the Space Shooter demo",
+      "project.engine.playSpaceShooter": "Play the Last Wing: Endless Waves demo",
       "project.engine.playButton": "Play the bonus demo (platformer)",
       "project.engine.platformerBonus":
         "The engine's original platformer demo is still included too, kept as a bonus: the concrete scenario (movement, collisions, enemies, levels, UI) the core systems were first built and tested against.",
-      "project.engine.mobileCta": "Try Space Shooter instead",
+      "project.engine.mobileCta": "Try Last Wing: Endless Waves instead",
 
       "project.shmup.subtitle":
         "A vertical shoot-em-up built on my custom C++ engine and shipped as a browser-playable web port - solo, or with a 2-player co-op mode.",
       "project.shmup.description":
-        "Space Shooter started as a simple validation demo for the 2D engine's Box2D integration, but grew into a full game in its own right: local 2-player co-op, an infinite survival mode with an escalating difficulty curve, individual and global scoring, and a set of power-ups balanced through several rounds of playtesting. The whole game compiles to WebAssembly via Emscripten, so it runs directly in the browser - with distinct input handling for touch (mobile) and keyboard (desktop) from the same C++ codebase.",
+        "Last Wing: Endless Waves started as a simple validation demo for the 2D engine's Box2D integration, but grew into a full game in its own right: local 2-player co-op, an infinite survival mode with an escalating difficulty curve, individual and global scoring, and a set of power-ups balanced through several rounds of playtesting. The whole game compiles to WebAssembly via Emscripten, so it runs directly in the browser - with distinct input handling for touch (mobile) and keyboard (desktop) from the same C++ codebase.",
       "project.shmup.tech.note":
         "Every system had to work identically for one or two ships sharing the same scene, without assuming a single player: camera targeting, health UI, scoring, and pickups all read from whichever ship instance triggered them, not a fixed slot.",
       "project.shmup.decision1":
@@ -347,8 +346,8 @@
         "A power-up system (faster fire, multi-shot, shield, heal) and a full Emscripten/WebAssembly web port",
       "project.shmup.built4":
         "Engine-side additions the game needed: per-player scoring, a reusable damage-immunity flag, and safe inert-entity handling",
-      "project.shmup.playButtonDuo": "Play Space Shooter (duo)",
-      "project.shmup.playButtonSolo": "Play Space Shooter (solo)",
+      "project.shmup.playButtonDuo": "Last Wing: Endless Waves (duo)",
+      "project.shmup.playButtonSolo": "Last Wing: Endless Waves (solo)",
       "project.shmup.duoMobileNotice": "This game mode is only available on PC.",
       "project.shmup.playSoloFallback": "Play solo mode",
       "project.shmup.engineLink": "Engine project",
@@ -496,7 +495,7 @@
       "project.platypus.decision2": "Readable silhouettes and floating paths for dreamlike navigation",
       "project.platypus.decision3": "Polish budget spent on jump feel and camera",
       "project.platypus.playButton": "Play Platypus Of Corner",
-      "project.platypus.mobileCta": "Platypus Of Corner needs a keyboard - try Space Shooter instead",
+      "project.platypus.mobileCta": "Platypus Of Corner needs a keyboard - try Last Wing: Endless Waves instead",
 
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",
@@ -552,7 +551,7 @@
       "home.featured.title": "Projet phare",
       "home.featured.tag": "Moteur · C++ · SFML · Box2D",
       "home.featured.summary":
-        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique), mis en valeur par Space Shooter - un shoot-em-up jouable en solo, avec un mode coopératif à 2 joueurs sur le même moteur. Jouable directement dans votre navigateur, sur PC comme mobile - il suffit de cliquer sur la capture d'écran.",
+        "Moteur C++ maison avec systèmes modulaires (boucle de jeu, scènes, rendu, physique), mis en valeur par Last Wing: Endless Waves - un shoot-em-up jouable en solo, avec un mode coopératif à 2 joueurs sur le même moteur. Jouable directement dans votre navigateur, sur PC comme mobile - il suffit de cliquer sur la capture d'écran.",
       "home.featured.point1": "Ordre d'update déterministe et transitions de scènes",
       "home.featured.point2": "Box2D intégré aux entités gameplay",
       "home.featured.point3": "Architecture pensée pour faire évoluer le moteur",
@@ -566,8 +565,8 @@
       "home.featured.resultLoss": "Défaite",
       "home.featured.resultScore": "Score :",
       "home.featured.demoEndTitle": "Fin de la démo",
-      "home.featured.demoEndBody": "Merci d'avoir joué à la démo de Space Shooter !",
-      "home.featured.discoverGame": "Découvrir Space Shooter",
+      "home.featured.demoEndBody": "Merci d'avoir joué à la démo de Last Wing: Endless Waves !",
+      "home.featured.discoverGame": "Découvrir Last Wing: Endless Waves",
       "home.shmup.badge": "Exclusivité mobile",
       "home.shmup.summary":
         "Un petit shoot-em-up vertical construit avec le même moteur C++, pensé pour le tactile : glissez pour vous déplacer, il tire tout seul.",
@@ -576,21 +575,20 @@
       "home.exp1.type": "Freelance",
       "home.exp1.period": "2025 - Aujourd'hui",
       "home.exp1.role": "Développement Web & Jeu - Freelance",
-      "home.exp1.item1": "Modifications front-end et back-end sur des sites en production",
-      "home.exp1.item2": "Livraison de fonctionnalités, corrections et boucles client",
-      "home.exp1.item3": "Prototypes web et jeu à périmètre réduit sous contrainte de temps",
+      "home.exp1.item1": "Maintenance front-end, back-end & SQL d'un site client en production",
+      "home.exp1.item2": "Refonte complète du site sur une stack moderne (ASP.NET Core), réalisée sous forme de stage",
       "home.exp2.type": "Académique / Personnel",
       "home.exp2.period": "2023 - Aujourd'hui",
-      "home.exp2.role": "Projets Gameplay & Moteur - Lead programmeur",
+      "home.exp2.role": "Projets Gameplay & Moteur - Développeur solo",
       "home.exp2.item1": "Conception et implémentation d'un moteur 2D modulaire (SFML + Box2D)",
-      "home.exp2.item2": "Systèmes gameplay livrés sur UE5 et Unity (jam & projets universitaires)",
+      "home.exp2.item2": "Développement de Last Wing: Endless Waves, un shoot-em-up complet avec coop à 2 joueurs, compilé en WebAssembly",
       "home.exp2.item3": "Décisions d'architecture, debug et respect des jalons",
       "home.exp3.type": "Université",
-      "home.exp3.period": "Projets d'équipe",
-      "home.exp3.role": "Développement Jeu - Programmeur",
-      "home.exp3.item1": "Collaboration multidisciplinaire (game design, art, audio)",
-      "home.exp3.item2": "Builds jouables livrés en hackathon et projets de cours",
-      "home.exp3.item3": "Interactions joueur, rythme et scripting de niveaux",
+      "home.exp3.period": "Oct. 2025 - Mai 2026",
+      "home.exp3.role": "Life Awake - Programmeur Gameplay",
+      "home.exp3.item1": "Concevoir des mondes assez distincts et reconnaissables pour varier l'expérience, sans nuire à la cohérence globale",
+      "home.exp3.item2": "Systèmes d'énigmes et d'épreuves : valves rotatives, jeux de réflexion de lumière et observation au télescope",
+      "home.exp3.item3": "Traversée des portails reliant les différents mondes du jeu",
       "home.projects.title": "Projets",
       "home.projects.viewAll": "Voir tout mon travail",
       "home.card.enter": "▶ VOIR",
@@ -629,8 +627,8 @@
       "home.card.pokemon.summary": "WPF · MVVM · SQL Server",
       "home.footer.about":
         "Ce portfolio met en avant les choix d'ingénierie et l'organisation des systèmes - site statique léger (HTML/CSS/JS).",
-      "home.footer.version": "Portfolio v1.4",
-      "home.footer.updated": "Mis à jour - septembre 2026",
+      "home.footer.version": "Portfolio v1.5",
+      "home.footer.updated": "Mis à jour - octobre 2026",
 
       "ach.unlocked": "Succès débloqué",
       "ach.explorer": "Explorateur (3 projets visités)",
@@ -782,9 +780,9 @@
       "project.nightlife.decision3": "Repères de navigation dans la ville nocturne",
 
       "project.engine.subtitle":
-        "Un moteur de jeu 2D en C++ (SFML + Box2D), avec Space Shooter comme démo phare jouable.",
+        "Un moteur de jeu 2D en C++ (SFML + Box2D), avec Last Wing: Endless Waves comme démo phare jouable.",
       "project.engine.description":
-        "Ce projet est un moteur 2D personnalisé développé en C++ avec SFML pour le rendu/les entrées et Box2D pour la physique. Sa vitrine principale est Space Shooter, un véritable shoot-em-up jouable en solo construit dessus - avec aussi un mode coopératif à 2 joueurs - pas une simple démo, mais un jeu complet à part entière.",
+        "Ce projet est un moteur 2D personnalisé développé en C++ avec SFML pour le rendu/les entrées et Box2D pour la physique. Sa vitrine principale est Last Wing: Endless Waves, un véritable shoot-em-up jouable en solo construit dessus - avec aussi un mode coopératif à 2 joueurs - pas une simple démo, mais un jeu complet à part entière.",
       "project.engine.challengeHighlight":
         "Construire un moteur modulaire implique de définir des frontières de systèmes claires tout en gardant la démo fun et stable.",
       "project.engine.challenge1":
@@ -835,16 +833,16 @@
       "project.engine.t2.body": "Intégration Box2D, déplacements, collisions, ennemis basiques",
       "project.engine.t3.title": "Phase 3 - Contenu & UI",
       "project.engine.t3.body": "Deux niveaux, menus, score/timer, flux game over",
-      "project.engine.playSpaceShooter": "Jouer à la démo de Space Shooter",
+      "project.engine.playSpaceShooter": "Jouer à la démo de Last Wing: Endless Waves",
       "project.engine.playButton": "Jouer à la démo bonus (platformer)",
       "project.engine.platformerBonus":
         "La démo platformer d'origine du moteur reste également incluse, conservée en bonus : le scénario concret (déplacements, collisions, ennemis, niveaux, interface) sur lequel les systèmes du moteur ont d'abord été construits et testés.",
-      "project.engine.mobileCta": "Essayer Space Shooter à la place",
+      "project.engine.mobileCta": "Essayer Last Wing: Endless Waves à la place",
 
       "project.shmup.subtitle":
         "Un shoot-em-up vertical construit sur mon moteur C++ maison et porté jusqu'au navigateur - en solo, ou en coop à 2 joueurs.",
       "project.shmup.description":
-        "Space Shooter a commencé comme une simple démo de validation pour l'intégration Box2D du moteur 2D, avant de devenir un vrai jeu à part entière : co-op local à 2 joueurs, mode de survie infini avec une courbe de difficulté croissante, score individuel et global, et un système de boost équilibré au fil de plusieurs sessions de playtest. Le jeu entier compile vers WebAssembly via Emscripten et tourne donc directement dans le navigateur - avec une gestion distincte du tactile (mobile) et du clavier (PC) à partir de la même base de code C++.",
+        "Last Wing: Endless Waves a commencé comme une simple démo de validation pour l'intégration Box2D du moteur 2D, avant de devenir un vrai jeu à part entière : co-op local à 2 joueurs, mode de survie infini avec une courbe de difficulté croissante, score individuel et global, et un système de boost équilibré au fil de plusieurs sessions de playtest. Le jeu entier compile vers WebAssembly via Emscripten et tourne donc directement dans le navigateur - avec une gestion distincte du tactile (mobile) et du clavier (PC) à partir de la même base de code C++.",
       "project.shmup.tech.note":
         "Chaque système devait fonctionner à l'identique pour un ou deux vaisseaux partageant la même scène, sans supposer un joueur unique : la caméra, l'UI de vie, le score et les pickups lisent tous depuis le vaisseau qui les a déclenchés, jamais un emplacement fixe.",
       "project.shmup.decision1":
@@ -873,8 +871,8 @@
         "Un système de boost (tir rapide, tir multiple, bouclier, soin) et un portage web complet en Emscripten/WebAssembly",
       "project.shmup.built4":
         "Ajouts côté moteur nécessaires au jeu : score par joueur, un flag d'immunité réutilisable, et une gestion sûre des entités inertes",
-      "project.shmup.playButtonDuo": "Jouer à Space Shooter (duo)",
-      "project.shmup.playButtonSolo": "Jouer à Space Shooter (solo)",
+      "project.shmup.playButtonDuo": "Last Wing: Endless Waves (duo)",
+      "project.shmup.playButtonSolo": "Last Wing: Endless Waves (solo)",
       "project.shmup.duoMobileNotice": "Ce mode de jeu n'est accessible que sur PC.",
       "project.shmup.playSoloFallback": "Jouer au mode solo",
       "project.shmup.engineLink": "Projet du moteur",
@@ -1022,7 +1020,7 @@
       "project.platypus.decision2": "Silhouettes lisibles et chemins flottants pour l'exploration onirique",
       "project.platypus.decision3": "Budget polish sur le saut et la caméra",
       "project.platypus.playButton": "Jouer à Platypus Of Corner",
-      "project.platypus.mobileCta": "Platypus Of Corner nécessite un clavier - essayez plutôt Space Shooter",
+      "project.platypus.mobileCta": "Platypus Of Corner nécessite un clavier - essayez plutôt Last Wing: Endless Waves",
 
       "freelance.meta.title": "LevelWeb-Studio - Hugo Flandrin",
       "freelance.title": "LevelWeb-Studio",

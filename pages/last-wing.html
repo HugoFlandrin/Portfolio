@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Wing: Endless Waves - Hugo Flandrin</title>
+    <meta name="description" content="A 2-player co-op vertical shoot-em-up built in C++, ported to the browser via WebAssembly - playable on mobile and desktop.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hugoflandrin.github.io/Portfolio/pages/last-wing.html">
+    <meta property="og:title" content="Last Wing: Endless Waves - Hugo Flandrin">
+    <meta property="og:description" content="A 2-player co-op vertical shoot-em-up built in C++, ported to the browser via WebAssembly - playable on mobile and desktop.">
+    <meta property="og:image" content="https://hugoflandrin.github.io/Portfolio/static/img/LastWingCoop.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Last Wing: Endless Waves - Hugo Flandrin">
+    <meta name="twitter:description" content="A 2-player co-op vertical shoot-em-up built in C++, ported to the browser via WebAssembly - playable on mobile and desktop.">
+    <meta name="twitter:image" content="https://hugoflandrin.github.io/Portfolio/static/img/LastWingCoop.png">
+    <link rel="icon" type="image/png" href="../static/img/Logo.png">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/game-embed.css">
+    <link rel="stylesheet" href="../static/css/game-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-theme="shmup">
+
+<nav class="navbar">
+    <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggle" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+    </button>
+            <div class="nav-links" id="nav-menu">
+            <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="all-work.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+            <a href="LevelWeb-Studio.html" class="nav-link" data-i18n="nav.freelance">LevelWeb-Studio</a>
+            <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
+        </div>
+</nav>
+
+<div class="project-container section-reveal">
+    <div class="project-left">
+        <h1>Last Wing: Endless Waves</h1>
+
+        <p class="subtitle" data-i18n="project.shmup.subtitle">
+            A 2-player co-op vertical shoot-em-up, built on my custom C++ engine and shipped as a browser-playable web port.
+        </p>
+
+        <div class="tech-badges-row">
+            <span class="tech-badge">C++17</span>
+            <span class="tech-badge">SFML</span>
+            <span class="tech-badge">Box2D</span>
+            <span class="tech-badge">Emscripten / WASM</span>
+            <span class="tech-badge">Co-op multiplayer</span>
+        </div>
+
+        <p data-i18n="project.shmup.description">
+            Last Wing: Endless Waves started as a simple validation demo for the 2D engine's Box2D integration, but grew into a full game in its own right: local 2-player co-op, an infinite survival mode with an escalating difficulty curve, individual and global scoring, and a set of power-ups balanced through several rounds of playtesting. The whole game compiles to WebAssembly via Emscripten, so it runs directly in the browser - with distinct input handling for touch (mobile) and keyboard (desktop) from the same C++ codebase.
+        </p>
+
+        <h2 data-i18n="project.tech.title">Technical focus</h2>
+        <p class="tech-note" data-i18n="project.shmup.tech.note">
+            Every system had to work identically for one or two ships sharing the same scene, without assuming a single player: camera targeting, health UI, scoring, and pickups all read from whichever ship instance triggered them, not a fixed slot.
+        </p>
+
+        <h2 data-i18n="project.decisions.title">Key decisions</h2>
+        <ul>
+            <li data-i18n="project.shmup.decision1">A dead teammate doesn't end a co-op run - ending it on the first death would punish the surviving player for their partner's mistake, especially in a mode built around long survival runs</li>
+            <li data-i18n="project.shmup.decision2">Infinite mode's difficulty had to keep pace with power-up stacking, not just player skill - enemy HP and speed climb on a second, much slower ramp than the spawn-rate curve, specifically to counter what stacked power-ups make possible over a long run</li>
+            <li data-i18n="project.shmup.decision3">The Shield power-up blocks exactly one hit then breaks, with no duration timer - simpler to balance, and it can't be turned into free, unlimited enemy-ramming the way a timed invincibility window would</li>
+        </ul>
+
+        <h2 data-i18n="project.workflow.title">Workflow</h2>
+        <p data-i18n="project.shmup.workflow">Each new mechanic (co-op, scoring, pickups, power-ups) went through the same loop: implement → test in real conditions via a local server → rebalance from feedback. Several power-ups went through more than one rebalancing pass this way, tuned against actual play instead of just theory.</p>
+
+        <h2 data-i18n="project.challenges">Challenges</h2>
+        <p class="highlight" data-i18n="project.shmup.challengeHighlight">
+            Getting a fast, physics-driven C++ game to run smoothly in a browser, and to stay fair from a 90-second run to a twenty-minute one.
+        </p>
+        <ul>
+            <li data-i18n="project.shmup.challenge1">Porting to Emscripten/WebAssembly with unified touch and keyboard input</li>
+            <li data-i18n="project.shmup.challenge2">Keeping co-op stable when a ship dies mid-run, without dangling pointers</li>
+            <li data-i18n="project.shmup.challenge3">Balancing power-ups so they stay exciting without trivializing runs</li>
+        </ul>
+
+        <h2 data-i18n="project.whatBuilt">What I built</h2>
+        <ul>
+            <li data-i18n="project.shmup.built1">Infinite survival mode with a two-stage difficulty ramp, alongside the original 90-second solo mode</li>
+            <li data-i18n="project.shmup.built2">Local 2-player co-op with independent scoring and no run-ending on a single death</li>
+            <li data-i18n="project.shmup.built3">A power-up system (faster fire, multi-shot, shield, heal) and a full Emscripten/WebAssembly web port</li>
+            <li data-i18n="project.shmup.built4">Engine-side additions the game needed: per-player scoring, a reusable damage-immunity flag, and safe inert-entity handling</li>
+        </ul>
+
+        <h2 data-i18n="project.technologies">Technologies used</h2>
+        <ul>
+            <li>C++17</li>
+            <li>SFML (VRSFML fork)</li>
+            <li>Box2D v3</li>
+            <li>Emscripten / WebAssembly</li>
+        </ul>
+
+        <h2 data-i18n="project.links">Links</h2>
+        <div class="links">
+            <a href="https://github.com/HugoFlandrin/2D-Game-Engine" target="_blank" rel="noopener noreferrer" data-i18n="project.github">GitHub</a>
+            <a href="2d-game-engine.html" data-i18n="project.shmup.engineLink">Engine project</a>
+        </div>
+
+        <h2 data-i18n="project.copyright">Copyright</h2>
+        <p class="copyright-note" data-i18n-html="project.shmup.musicCredit">
+            Background music: "Sweet 70s" by Clement Panchout, from his <a href="https://clement-panchout.itch.io/yet-another-free-music-pack" target="_blank" rel="noopener noreferrer">Yet Another Free Music Pack</a>.
+        </p>
+    </div>
+
+    <div class="project-right">
+        <div class="media-images">
+            <figure class="media-item">
+                <video class="demo-video" poster="../static/img/LastWing-EndlessWaves.png" controls playsinline preload="metadata">
+                    <source src="../static/mp4/Projects/LastWing.mp4" type="video/mp4">
+                </video>
+            </figure>
+            <div class="demo-video-actions">
+                <button type="button" class="play-project-button" style="margin-top:0" data-game-trigger data-game-src="../static/last-wing/index.html?mode=infinite" data-game-aspect="portrait" data-device="desktop">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <span data-i18n="project.shmup.playButtonDuo">Last Wing: Endless Waves (duo)</span>
+                </button>
+                <button type="button" class="play-project-button play-project-button--secondary" style="margin-top:0" data-game-trigger data-game-src="../static/last-wing/index.html?mode=infinite-solo" data-game-aspect="portrait">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <span data-i18n="project.shmup.playButtonSolo">Last Wing: Endless Waves (solo)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="../static/resume/Hugo_Flandrin_Resume.pdf" target="_blank" rel="noopener noreferrer" data-i18n="home.cta.resume">Resume</a>
+            <a href="https://github.com/HugoFlandrin" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/hugo-flandrin-104476294/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://hugoflandrin.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+        </div>
+        <p class="footer-meta">
+            <span data-i18n="home.footer.version">Portfolio v1.5</span>
+            ·
+            <span data-i18n="home.footer.updated">Updated October 2026</span>
+        </p>
+    </div>
+</footer>
+
+<div id="image-modal" aria-hidden="true">
+    <img id="modal-img" alt="Expanded screenshot">
+</div>
+
+<div id="game-overlay" aria-hidden="true">
+    <div class="game-overlay-frame">
+        <button type="button" class="game-overlay-close" id="game-overlay-close" aria-label="Close game">✕</button>
+        <button type="button" class="game-overlay-settings" id="game-settings-toggle" data-i18n-aria-label="project.shmup.settingsAriaLabel" aria-label="Audio settings">
+            <svg viewBox="0 0 24 24"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+        </button>
+        <div id="game-settings-panel" aria-hidden="true">
+            <h3 data-i18n="project.shmup.settingsTitle">Audio settings</h3>
+            <div class="settings-row">
+                <label for="music-volume" data-i18n="project.shmup.musicLabel">Music</label>
+                <input type="range" id="music-volume" min="0" max="100" value="50">
+                <button type="button" class="settings-mute-btn" id="music-mute" aria-pressed="false" data-level="1" data-i18n-aria-label="project.shmup.muteMusicAriaLabel" aria-label="Mute music">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z"/><rect class="vol-bar-1" x="14.5" y="8.5" width="2.4" height="7" rx="1.2"/><rect class="vol-bar-2" x="18.5" y="5.5" width="2.4" height="13" rx="1.2"/><rect class="vol-cross" x="14.5" y="11" width="8" height="2" rx="1" transform="rotate(45 18.5 12)"/><rect class="vol-cross" x="14.5" y="11" width="8" height="2" rx="1" transform="rotate(-45 18.5 12)"/></svg>
+                </button>
+            </div>
+            <div class="settings-row">
+                <label for="sfx-volume" data-i18n="project.shmup.sfxLabel">Sound effects</label>
+                <input type="range" id="sfx-volume" min="0" max="100" value="50">
+                <button type="button" class="settings-mute-btn" id="sfx-mute" aria-pressed="false" data-level="1" data-i18n-aria-label="project.shmup.muteSfxAriaLabel" aria-label="Mute sound effects">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z"/><rect class="vol-bar-1" x="14.5" y="8.5" width="2.4" height="7" rx="1.2"/><rect class="vol-bar-2" x="18.5" y="5.5" width="2.4" height="13" rx="1.2"/><rect class="vol-cross" x="14.5" y="11" width="8" height="2" rx="1" transform="rotate(45 18.5 12)"/><rect class="vol-cross" x="14.5" y="11" width="8" height="2" rx="1" transform="rotate(-45 18.5 12)"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="game-settings-backdrop"></div>
+        <iframe id="game-frame" title="Last Wing: Endless Waves - playable game"></iframe>
+    </div>
+</div>
+
+<div id="game-result-popup" aria-hidden="true">
+    <div class="game-result-card">
+        <h3 id="game-result-title"></h3>
+        <p id="game-result-score"></p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-primary" id="game-result-retry" data-i18n="home.featured.playAgain">Play again</button>
+            <button type="button" class="btn btn-secondary" id="game-result-close" data-i18n="home.featured.closeGame">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="game-mobile-notice" aria-hidden="true">
+    <div class="game-result-card">
+        <p data-i18n="project.shmup.duoMobileNotice">This game mode is only available on PC.</p>
+        <div class="game-result-actions">
+            <button type="button" class="btn btn-secondary" id="game-mobile-notice-close" data-i18n="home.featured.closeGame">Close</button>
+            <button type="button" class="btn btn-primary" data-game-trigger data-game-src="../static/last-wing/index.html?mode=infinite-solo" data-game-aspect="portrait" data-i18n="project.shmup.playSoloFallback">Play solo mode</button>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/i18n.js"></script>
+<script src="../static/js/section-reveal.js"></script>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/project.js"></script>
+<script src="../static/js/game-embed.js"></script>
+<script src="../static/js/shmup-settings.js"></script>
+<script data-goatcounter="https://levelweb-studio.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script src="../static/js/game-ui.js"></script>
+</body>
+</html>
